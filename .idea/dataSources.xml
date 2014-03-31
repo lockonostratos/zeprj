@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1756903684">
+    <data-source source="LOCAL" name="Rails zeprj: development" uuid="dbbedfb7-89d1-4320-8d33-3508335d92a9">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/zeprj_development</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfffdfc6dfdedfc3dfc7dfcbdfdedfcf</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails zeprj: test" uuid="60c31699-2dc2-4b7e-bba8-00a52f46f04f">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/zeprj_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfffdfc6dfdedfc3dfc7dfcbdfdedfcf</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails zeprj: production" uuid="f5fcf508-8130-43ae-9585-e4eb0807e79c">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/zeprj_production</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfffdfc6dfdedfc3dfc7dfcbdfdedfcf</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
