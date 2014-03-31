@@ -1,0 +1,33 @@
+<h1>Listing gera_accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Display name</th>
+      <th>Login name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gera_accounts.each do |gera_account| %>
+      <tr>
+        <td><%= gera_account.display_name %></td>
+        <td><%= gera_account.login_name %></td>
+        <td><%= gera_account.email %></td>
+        <td><%= gera_account.password %></td>
+        <td><%= link_to 'Show', gera_account %></td>
+        <td><%= link_to 'Edit', edit_gera_account_path(gera_account) %></td>
+        <td><%= link_to 'Destroy', gera_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gera account', new_gera_account_path %>
