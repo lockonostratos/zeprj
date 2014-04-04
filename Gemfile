@@ -32,7 +32,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Custom gems
+gem 'simple_form'
 gem 'foundation-rails'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development do
   gem 'rails_layout'

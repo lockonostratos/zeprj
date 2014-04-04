@@ -13,11 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20140331090530) do
 
-  create_table "gera_accounts", force: true do |t|
+  create_table "accounts", force: true do |t|
     t.string   "display_name"
     t.string   "login_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "phone"
+    t.integer  "status"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

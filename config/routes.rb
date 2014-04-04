@@ -1,6 +1,13 @@
 Zeprj::Application.routes.draw do
-  root :to => 'home#welcome'
-  resources :gera_accounts
+
+  get 'signin', :to => 'sessions#new', as: 'signin'
+  get 'signout', :to => 'sessions#destroy', as: 'signout'
+  get 'signup', :to => 'accounts#new', as: 'signup'
+
+  root :to => 'sessions#new'
+
+  resources :accounts
+  resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

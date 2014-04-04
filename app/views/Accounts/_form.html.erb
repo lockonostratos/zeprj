@@ -1,10 +1,10 @@
-<%= form_for(@gera_account) do |f| %>
-  <% if @gera_account.errors.any? %>
+<%= form_for(@account) do |f| %>
+  <% if @account.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@gera_account.errors.count, "error") %> prohibited this gera_account from being saved:</h2>
+      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
 
       <ul>
-      <% @gera_account.errors.full_messages.each do |msg| %>
+      <% @account.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -22,6 +22,14 @@
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
   </div>
   <div class="field">
     <%= f.label :password %><br>

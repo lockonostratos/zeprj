@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HomeControllerTest < ActionController::TestCase
   test "should get welcome" do
-    get :welcome
+    get :new
     assert_response :success
   end
 

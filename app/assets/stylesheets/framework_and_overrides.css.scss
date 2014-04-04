@@ -1,6 +1,11 @@
 // import the CSS framework
 @import "foundation";
+@import "theme_default";
 
+// override fonts
+h1, h2, h3, h4, h5, h6, button, .button {
+  font-family: $font-main;
+}
 // override for the 'Home' navigation link
 .top-bar .name {
   font-size: rem-calc(13);
@@ -35,14 +40,20 @@
 .submit {
   @extend .button;
   @extend .radius;
-  }
+}
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background-color: #eee;
-  }
+  padding: 0;
+}
+
 section {
   @extend .row;
   margin-top: 20px;
-  }
+}
+
+
+button, .button, .submit {
+  padding: 0.5rem;
+}

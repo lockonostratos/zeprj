@@ -1,0 +1,72 @@
+@import "theme_default";
+
+.signin-body {
+  background: $background-login;
+}
+
+.signin-panel {
+  background: #ffffff;
+  max-width: 330px;
+  border-radius: 5px;
+  margin: 100px auto;
+
+  h2.heading {
+    background: $tone-main;
+    border-bottom: 10px solid $tone-dark;
+    border-radius: 5px 5px 0 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+    padding: 35px 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  input[type="text"], input[type="password"] {
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  a, a:hover {
+    color: $element-main;
+  }
+
+  .checkbox {
+    color: #B6B6B6;
+    font-weight: 300;
+  }
+
+  .signin-button {
+    background: #1FB5AC;
+    font-weight: 300;
+    margin: 20px 0 5px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .registration {
+    color: #eee;
+    padding-top: 10px;
+    padding-right: 5px;
+  }
+}
+
+.signin-wrap {
+  .signin-row {
+    padding: 20px;
+
+    &.gray {
+      background: #EAEAEC;
+    }
+
+    input:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
