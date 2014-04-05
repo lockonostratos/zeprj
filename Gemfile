@@ -35,14 +35,14 @@ end
 # Custom gems
 gem 'simple_form'
 gem 'foundation-rails'
-gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development do
   gem 'rails_layout'
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'

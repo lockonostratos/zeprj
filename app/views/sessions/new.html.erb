@@ -1,17 +1,16 @@
 <%= form_tag ({:action => 'create'}), :class => 'signin-panel' do %>
-    <h2 class="heading">đăng nhập eds</h2>
+    <h2 class="heading">đăng nhập eds <%= "nhớ mày rồi #{current_user.email}" if current_user %></h2>
     <div class="signin-wrap">
       <div class="gray signin-row">
-        <%= text_field_tag :name, params[:name], :placeholder => 'Tên đăng nhập' %>
+        <%= text_field_tag :email, params[:email], :placeholder => 'Địa chỉ email' %>
         <%= password_field_tag :password, params[:password], :placeholder => 'Mật khẩu' %>
       </div>
       <div class="signin-row">
         <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Nhớ tài khoản
-                <span class="pull-right">
-                    <a href="#" data-toggle="modal"> Quên mật khẩu?</a>
-
-                </span>
+          <%= check_box_tag :remember_me, 1, params[:remember_me] %> Nhớ tài khoản
+            <span class="pull-right">
+              <a href="#" data-toggle="modal"> Quên mật khẩu?</a>
+            </span>
         </label>
 
         <button type="submit" class="signin-button">ĐĂNG NHẬP</button>

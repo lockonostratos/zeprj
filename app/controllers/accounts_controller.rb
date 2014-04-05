@@ -24,7 +24,8 @@ class AccountsController < ApplicationController
   # POST /Accounts
   # POST /Accounts.json
   def create
-    @account = Account.new(gera_account_params)
+    @account = Account.new(account_params)
+    @account.password_confirmation = @account.password;
 
     respond_to do |format|
       if @account.save
@@ -41,7 +42,7 @@ class AccountsController < ApplicationController
   # PATCH/PUT /Accounts/1.json
   def update
     respond_to do |format|
-      if @account.update(gera_account_params)
+      if @account.update(account_params)
         format.html { redirect_to @account, notice: 'Gera account was successfully updated.' }
         format.json { head :no_content }
       else
@@ -68,7 +69,7 @@ class AccountsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def gera_account_params
+    def account_params
       params.require(:account).permit(:display_name, :login_name, :email, :phone, :status, :password)
     end
 end

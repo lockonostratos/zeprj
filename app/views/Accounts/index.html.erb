@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th>Display name</th>
-      <th>Login name</th>
       <th>Email</th>
       <th>Phone</th>
       <th>Status</th>
@@ -16,14 +15,13 @@
   </thead>
 
   <tbody>
-    <% @accounts.each do |gera_account| %>
+    <% @accounts.each do |account| %>
       <tr>
-        <td><%= gera_account.display_name %></td>
-        <td><%= gera_account.login_name %></td>
-        <td><%= gera_account.email %></td>
-        <td><%= gera_account.phone %></td>
-        <td><%= gera_account.status %></td>
-        <td><%= gera_account.password %></td>
+        <td><%= account.display_name %></td>
+        <td><%= account.email %></td>
+        <td><%= account.phone %></td>
+        <td><%= account.status %></td>
+        <td><%= account.password %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>

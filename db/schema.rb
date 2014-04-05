@@ -14,13 +14,12 @@
 ActiveRecord::Schema.define(version: 20140331090530) do
 
   create_table "accounts", force: true do |t|
+    t.string   "auth_token"
     t.string   "display_name"
-    t.string   "login_name"
     t.string   "email"
     t.string   "phone"
+    t.string   "password_digest"
     t.integer  "status"
-    t.string   "password_hash"
-    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
