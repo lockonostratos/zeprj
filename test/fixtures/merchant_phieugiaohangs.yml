@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  donhang_id: 1
+  date_giao: 2014-04-08 14:00:04
+  nguoigiao_id: 1
+  tennguoinhan: MyString
+  diachi: MyString
+  all_money: 1
+  tratruoc: 1
+  phivanchuyen: 1
+  ghichu: MyString
+  trangthai: 1
+
+two:
+  donhang_id: 1
+  date_giao: 2014-04-08 14:00:04
+  nguoigiao_id: 1
+  tennguoinhan: MyString
+  diachi: MyString
+  all_money: 1
+  tratruoc: 1
+  phivanchuyen: 1
+  ghichu: MyString
+  trangthai: 1

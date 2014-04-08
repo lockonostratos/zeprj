@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  warehouse_id_xuat: 1
+  warehouse_id_nhan: 1
+  create_id: 1
+  description: MyString
+
+two:
+  warehouse_id_xuat: 1
+  warehouse_id_nhan: 1
+  create_id: 1
+  description: MyString

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trahang_id: 1
+  product_id: 1
+  qualtity: 1
+
+two:
+  trahang_id: 1
+  product_id: 1
+  qualtity: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dondathang_id: 1
+  date_trahang: 2014-04-08 14:06:59
+  lydo: MyString
+
+two:
+  dondathang_id: 1
+  date_trahang: 2014-04-08 14:06:59
+  lydo: MyString

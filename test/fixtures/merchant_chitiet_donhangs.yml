@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dondathang_id: 1
+  product_code: 1
+  qualtity: 1
+  qualtity_soluongtra: 1
+  price: 1
+  giamgia: 1
+
+two:
+  dondathang_id: 1
+  product_code: 1
+  qualtity: 1
+  qualtity_soluongtra: 1
+  price: 1
+  giamgia: 1
