@@ -1,7 +1,7 @@
 class CreateMerchantDondathangs < ActiveRecord::Migration
   def change
     create_table :merchant_dondathangs do |t|
-      t.integer :warehouse_id
+      t.belongs_to :merchant_warehouse
       t.datetime :date_dat
       t.datetime :date_giao
       t.integer :create_id

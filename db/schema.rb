@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408070807) do
+ActiveRecord::Schema.define(version: 20140411033436) do
 
   create_table "accounts", force: true do |t|
     t.string   "auth_token"
@@ -24,21 +24,35 @@ ActiveRecord::Schema.define(version: 20140408070807) do
     t.datetime "updated_at"
   end
 
-  create_table "merchant_acounts", force: true do |t|
-    t.integer  "role_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "merchant_branches", force: true do |t|
+    t.integer  "merchant_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "merchant_acounts", force: true do |t|
+    t.integer  "merchant_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchant_chitiet_dondathangs", force: true do |t|
+    t.integer  "merchant_product_chitiet_id"
+    t.integer  "merchant_dondathang_id"
+    t.integer  "qualtity"
+    t.integer  "price"
+    t.integer  "giamgia"
+    t.string   "tinhtrang"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "merchant_chitiet_donhangs", force: true do |t|
-    t.integer  "dondathang_id"
+    t.integer  "merchant_dondathang_id"
     t.integer  "product_code"
+    t.integer  "skull_code"
     t.integer  "qualtity"
     t.integer  "qualtity_soluongtra"
     t.integer  "price"
@@ -47,24 +61,44 @@ ActiveRecord::Schema.define(version: 20140408070807) do
     t.datetime "updated_at"
   end
 
-  create_table "merchant_chitiet_trahangs", force: true do |t|
-    t.integer  "trahang_id"
-    t.integer  "product_id"
-    t.integer  "qualtity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_chitietkiemtons", force: true do |t|
-    t.integer  "product_id"
+  create_table "merchant_chitiet_kiemtons", force: true do |t|
+    t.integer  "merchant_product_chitiet_id"
+    t.integer  "merchant_kiemton_receipe_id"
     t.integer  "qualtity"
     t.integer  "qualtity_thucte"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "merchant_chitiet_trahangs", force: true do |t|
+    t.integer  "merchant_chitiet_trahang_id"
+    t.integer  "merchant_product_chitiet_id"
+    t.integer  "qualtity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchant_customer_mackay_profiles", force: true do |t|
+    t.integer  "merchant_customer_id"
+    t.string   "m1_1"
+    t.string   "m1_2"
+    t.string   "m1_3"
+    t.string   "m2_1"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchant_customers", force: true do |t|
+    t.integer  "merchant_id"
+    t.string   "account_name"
+    t.string   "password"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "merchant_dondathangs", force: true do |t|
-    t.integer  "warehouse_id"
+    t.integer  "merchant_warehouse_id"
     t.datetime "date_dat"
     t.datetime "date_giao"
     t.integer  "create_id"
@@ -84,14 +118,22 @@ ActiveRecord::Schema.define(version: 20140408070807) do
   end
 
   create_table "merchant_import_receipes", force: true do |t|
+    t.integer  "merchant_warehouse_id"
     t.integer  "warehouse_id_xuat"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "merchant_kiemton_receipes", force: true do |t|
+    t.integer  "merchant_warehouse_id"
+    t.string   "decription"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "merchant_phieugiaohangs", force: true do |t|
-    t.integer  "donhang_id"
+    t.integer  "merchant_dondathang_id"
     t.datetime "date_giao"
     t.integer  "nguoigiao_id"
     t.string   "tennguoinhan"
@@ -106,12 +148,14 @@ ActiveRecord::Schema.define(version: 20140408070807) do
   end
 
   create_table "merchant_providers", force: true do |t|
+    t.integer  "merchant_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "merchant_skulls", force: true do |t|
+    t.integer  "merchant_id"
     t.string   "skullcode"
     t.string   "description"
     t.datetime "created_at"
@@ -119,7 +163,7 @@ ActiveRecord::Schema.define(version: 20140408070807) do
   end
 
   create_table "merchant_trahangs", force: true do |t|
-    t.integer  "dondathang_id"
+    t.integer  "merchant_dondathang_id"
     t.datetime "date_trahang"
     t.string   "lydo"
     t.datetime "created_at"
@@ -127,6 +171,7 @@ ActiveRecord::Schema.define(version: 20140408070807) do
   end
 
   create_table "merchant_warehouse_products", force: true do |t|
+    t.integer  "merchant_warehouse_id"
     t.string   "name"
     t.integer  "qualtiy_all"
     t.integer  "price"
@@ -135,6 +180,7 @@ ActiveRecord::Schema.define(version: 20140408070807) do
   end
 
   create_table "merchant_warehouses", force: true do |t|
+    t.integer  "merchant_branche_id"
     t.string   "name"
     t.string   "location"
     t.datetime "created_at"
@@ -142,15 +188,15 @@ ActiveRecord::Schema.define(version: 20140408070807) do
   end
 
   create_table "merchant_xuat_histories", force: true do |t|
-    t.integer  "xuat_id"
-    t.integer  "product_id"
+    t.integer  "merchant_xuat_receipe_id"
+    t.integer  "merchant_product_chitiet_id"
     t.integer  "qualtity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "merchant_xuat_receipes", force: true do |t|
-    t.integer  "warehouse_id_xuat"
+    t.integer  "merchant_warehouse_id"
     t.integer  "warehouse_id_nhan"
     t.integer  "create_id"
     t.string   "description"
@@ -160,17 +206,17 @@ ActiveRecord::Schema.define(version: 20140408070807) do
 
   create_table "merchants", force: true do |t|
     t.integer  "headquater"
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "warehouse_product_chitiets", force: true do |t|
     t.string   "product_code"
-    t.integer  "skull_id"
-    t.integer  "provider_id"
-    t.integer  "import_id"
-    t.integer  "warehouse_id"
+    t.integer  "merchant_skull_id"
+    t.integer  "merchant_provider_id"
+    t.integer  "merchant_import_receipe_id"
+    t.integer  "merchant_warehouses_id"
     t.string   "name"
     t.integer  "qualtity"
     t.integer  "qualtity_khadi"

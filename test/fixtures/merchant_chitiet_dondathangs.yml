@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qualtity: 1
+  price: 1
+  giamgia: 1
+  tinhtrang: MyString
+
+two:
+  qualtity: 1
+  price: 1
+  giamgia: 1
+  tinhtrang: MyString

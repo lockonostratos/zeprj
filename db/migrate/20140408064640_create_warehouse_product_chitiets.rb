@@ -2,10 +2,10 @@ class CreateWarehouseProductChitiets < ActiveRecord::Migration
   def change
     create_table :warehouse_product_chitiets do |t|
       t.string :product_code
-      t.integer :skull_id
-      t.integer :provider_id
-      t.integer :import_id
-      t.integer :warehouse_id
+      t.belongs_to :merchant_skull
+      t.belongs_to :merchant_provider
+      t.belongs_to :merchant_import_receipe
+      t.belongs_to :merchant_warehouses
       t.string :name
       t.integer :qualtity
       t.integer :qualtity_khadi

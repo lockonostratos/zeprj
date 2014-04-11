@@ -1,8 +1,9 @@
 class CreateMerchantChitietDonhangs < ActiveRecord::Migration
   def change
     create_table :merchant_chitiet_donhangs do |t|
-      t.integer :dondathang_id
+      t.belongs_to :merchant_dondathang
       t.integer :product_code
+      t.integer :skull_code
       t.integer :qualtity
       t.integer :qualtity_soluongtra
       t.integer :price

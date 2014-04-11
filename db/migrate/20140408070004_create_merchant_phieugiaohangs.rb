@@ -1,7 +1,7 @@
 class CreateMerchantPhieugiaohangs < ActiveRecord::Migration
   def change
     create_table :merchant_phieugiaohangs do |t|
-      t.integer :donhang_id
+      t.belongs_to :merchant_dondathang
       t.datetime :date_giao
       t.integer :nguoigiao_id
       t.string :tennguoinhan
