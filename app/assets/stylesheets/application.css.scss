@@ -1,18 +1,142 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "compass";
+@import "theme_default";
+@import "framework_and_overrides";
+@import "scaffolds";
+@import "font-awesome";
+
+//@mixin tile-wrapper-maker($size) {
+//  width: ($tile-size * $size) + ($tile-space * $size);
+////  display: inline-flex;
+////  flex-direction: column;
+////  flex-wrap: wrap;
+////  align-content: flex-start;
+//  float: left;
+//  margin-right: $tile-space;
+//}
+
+@mixin tile-wrapper-maker($size) {
+  width: ($tile-size * $size) + ($tile-space * $size);
+  float: left;
+  margin-right: $tile-space;
+  margin-bottom: $tile-space;
+  position: relative;
+}
+
+
+body {
+  background-color: $background-default;
+  color: #333;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
 
 .pull-right { float: right; }
 .pull-left  { float: left; }
+
+.application-wrapper {
+  background-color: #fff;
+  i { color: #999; }
+
+  padding: $application-padding-phone;
+
+  .left-off-canvas-menu {
+    margin: -$application-padding-phone 0 -$application-padding-phone -$application-padding-phone;
+  }
+
+  .metro {
+    margin-right: -$application-padding;
+
+    .tile {
+      height: $tile-size;
+      width: $tile-size;
+      margin-right: $tile-space;
+      margin-bottom: $tile-space;
+      @include border-radius($tile-radius);
+      background-color: #eee;
+      float: left;
+
+      &.double {
+        width: $tile-size * 2 + $tile-space;
+      }
+
+      &.huge {
+        width: $tile-size * 2 + $tile-space;
+        @media #{$medium-up} { height: $tile-size * 2 + $tile-space; }
+      }
+
+      //Tile Colors
+      &.orange { background-color: #F37735; }
+      &.yellow { background-color: #FFC425; }
+      &.blue { background-color: #00AEDB; }
+      &.dark-blue { background-color: #374961; }
+      &.lime { background-color: #8ACF1A; }
+      &.green { background-color: #00B159; }
+      &.light-green { background-color: #1CBB9B; }
+      &.purple { background-color: #91009B; }
+      &.pink { background-color: #D845A0; }
+      &.gray { background-color: #97A5A6; }
+      &.light-gray { background-color: #BFC2C7; }
+
+// Use gradients
+//      &.orange { @include background(linear-gradient(top left, #F37735, darken(#F37735, $darken-amount))); }
+//      &.yellow { @include background(linear-gradient(top left, #FFC425, darken(#FFC425, $darken-amount))); }
+//      &.blue { @include background(linear-gradient(top left, #00AEDB, darken(#00AEDB, $darken-amount))); }
+//      &.dark-blue { @include background(linear-gradient(top left, #374961, darken(#374961, $darken-amount))); }
+//      &.lime { @include background(linear-gradient(top left, #8ACF1A, darken(#8ACF1A, $darken-amount))); }
+//      &.green { @include background(linear-gradient(top left, #00B159, darken(#00B159, $darken-amount))); }
+//      &.light-green { @include background(linear-gradient(top left, #1CBB9B, darken(#1CBB9B, $darken-amount))); }
+//      &.purple { @include background(linear-gradient(top left, #91009B, darken(#91009B, $darken-amount))); }
+//      &.pink { @include background(linear-gradient(top left, #D845A0, darken(#D845A0, $darken-amount))); }
+//      &.gray { @include background(linear-gradient(top left, #97A5A6, darken(#97A5A6, $darken-amount))); }
+//      &.light-gray { @include background(linear-gradient(top left, #BFC2C7, darken(#BFC2C7, $darken-amount))); }
+    }
+  }
+}
+
+//Overrides for difference screens
+
+//asdsalkdsaldj
+h1, h1, h3, h4, h5, h6 {
+  &.light { font-weight: 300; }
+  &.bold { font-weight: 600; }
+}
+
+@media #{$small-only} {
+  .tile-wrapper-1, .tile-wrapper-2, .tile-wrapper-3, .tile-wrapper-4, .tile-wrapper-5 {
+    @include tile-wrapper-maker(2);
+  }
+
+  .tile-wrapper-small-2{ @include tile-wrapper-maker(2) }
+  .tile-wrapper-small-3{ @include tile-wrapper-maker(3) }
+  .tile-wrapper-small-4{ @include tile-wrapper-maker(4) }
+  .tile-wrapper-small-5{ @include tile-wrapper-maker(5) }
+}
+
+@media #{$medium-up} {
+  .tile-wrapper-2{ @include tile-wrapper-maker(2) }
+  .tile-wrapper-3{ @include tile-wrapper-maker(3) }
+  .tile-wrapper-4{ @include tile-wrapper-maker(4) }
+  .tile-wrapper-5{ @include tile-wrapper-maker(5) }
+}
+
+@media #{$medium-only} {
+  body { background-color: #fff; }
+  .application-wrapper {
+    height: 100%;
+    max-width: none;
+  }
+}
+
+@media #{$large-up} {
+  .application-wrapper {
+    margin-top: 1rem;
+    @include border-radius(0.25rem);
+    @include box-shadow(#aaa 0 0 0.3rem);
+    padding: $application-padding;
+
+    .left-off-canvas-menu {
+      margin: -$application-padding 0 -$application-padding -$application-padding;
+    }
+  }
+}

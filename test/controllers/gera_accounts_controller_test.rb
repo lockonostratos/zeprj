@@ -8,7 +8,7 @@ class GeraAccountsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:Accounts)
+    assert_not_nil assigns(:accounts)
   end
 
   test "should get new" do

@@ -1,28 +1,41 @@
 class AccountsController < ApplicationController
+  skip_before_filter :check_user_permission, :only => [:new, :create]
   before_action :set_gera_account, only: [:show, :edit, :update, :destroy]
 
-  # GET /Accounts
-  # GET /Accounts.json
+  # GET /accounts
+  # GET /accounts.json
   def index
     @accounts = Account.all
   end
 
-  # GET /Accounts/1
-  # GET /Accounts/1.json
+  # GET /accounts/1
+  # GET /accounts/1.json
   def show
+    @user = current_user
+    unless @user.nil?
+      respond_to do |format|
+        format.html
+        format.json { render json: { user: @user.as_json(only: :email) } }
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.json { render json: { }, status: :accepted }
+      end
+    end
   end
 
-  # GET /Accounts/new
+  # GET /accounts/new
   def new
     @account = Account.new
   end
 
-  # GET /Accounts/1/edit
+  # GET /accounts/1/edit
   def edit
   end
 
-  # POST /Accounts
-  # POST /Accounts.json
+  # POST /accounts
+  # POST /accounts.json
   def create
     @account = Account.new(account_params)
     @account.password_confirmation = @account.password;
@@ -38,8 +51,8 @@ class AccountsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /Accounts/1
-  # PATCH/PUT /Accounts/1.json
+  # PATCH/PUT /accounts/1
+  # PATCH/PUT /accounts/1.json
   def update
     respond_to do |format|
       if @account.update(account_params)
@@ -52,8 +65,8 @@ class AccountsController < ApplicationController
     end
   end
 
-  # DELETE /Accounts/1
-  # DELETE /Accounts/1.json
+  # DELETE /accounts/1
+  # DELETE /accounts/1.json
   def destroy
     @account.destroy
     respond_to do |format|

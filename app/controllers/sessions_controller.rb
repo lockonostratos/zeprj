@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_filter :check_user_permission, :only => [:new, :create]
+
   def new
   end
 
@@ -11,10 +13,10 @@ class SessionsController < ApplicationController
         cookies[:auth_token] = account.auth_token
       end
 
-      redirect_to signin_path, :notice => 'Chao mung tro lai'
+      redirect_to welcome_path, :notice => 'Chao mung tro lai'
     else
       flash.now.alert = 'Dang nhap that bai'
-      render "new"
+      render 'new'
     end
   end
 

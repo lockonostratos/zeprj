@@ -17,6 +17,16 @@ h1, h2, h3, h4, h5, h6, button, .button {
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes
+.application-wrapper {
+  .row {
+    margin: 0;
+  }
+  .columns, .column {
+    $column-gutter: 0;
+    @include grid-column;
+  }
+}
+
 @mixin twelve-columns {
   @extend .small-12;
   @extend .columns;
@@ -29,7 +39,7 @@ h1, h2, h3, h4, h5, h6, button, .button {
 // create your own classes
 // to make views framework-neutral
 .column {
-  @include six-columns-centered;
+    @include six-columns-centered;
   }
 .form {
   @include grid-column(6);
