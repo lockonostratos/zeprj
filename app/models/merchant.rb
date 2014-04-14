@@ -1,3 +1,3 @@
 class Merchant < ActiveRecord::Base
-  validates :name, presence: true
+  has_one :account
 end

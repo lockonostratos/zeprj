@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140411033436) do
+ActiveRecord::Schema.define(version: 20140411100003) do
 
   create_table "accounts", force: true do |t|
     t.string   "auth_token"
@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(version: 20140411033436) do
     t.datetime "updated_at"
   end
 
-  create_table "merchant_branches", force: true do |t|
+  create_table "merchant_acounts", force: true do |t|
     t.integer  "merchant_id"
-    t.string   "name"
+    t.boolean  "name3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_acounts", force: true do |t|
+  create_table "merchant_branches", force: true do |t|
     t.integer  "merchant_id"
     t.string   "name"
     t.datetime "created_at"
