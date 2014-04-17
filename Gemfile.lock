@@ -152,6 +152,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  active_model_serializers
   bcrypt (~> 3.1.7)
   bcrypt-ruby (~> 3.1.2)
   coffee-rails (~> 4.0.0)

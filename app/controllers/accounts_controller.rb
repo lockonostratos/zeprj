@@ -6,16 +6,21 @@ class AccountsController < ApplicationController
   # GET /accounts.json
   def index
     @accounts = Account.all
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @accounts}
+    end
   end
 
   # GET /accounts/1
   # GET /accounts/1.json
   def show
-    @user = current_user
-    unless @user.nil?
+    @account = current_user
+    unless @account.nil?
       respond_to do |format|
         format.html
-        format.json { render json: { user: @user.as_json(only: :email) } }
+        format.json { render json: @account }
       end
     else
       respond_to do |format|
@@ -38,7 +43,7 @@ class AccountsController < ApplicationController
   # POST /accounts.json
   def create
     @account = Account.new(account_params)
-    @account.password_confirmation = @account.password;
+    @account.password_confirmation = @account.password
 
     respond_to do |format|
       if @account.save
