@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mer id:</strong>
+  <%= @mer_skull.mer_id %>
+</p>
+<p>
+  <strong>Skull code:</strong>
+  <%= @mer_skull.skull_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mer_skull.description %>
+</p>
+<p><b>Merchant</b>
+<%= link_to @mer_skull.mer.name, @mer_skull.mer %></p>
+<%= link_to 'Edit', edit_mer_skull_path(@mer_skull) %> |
+<%= link_to 'Back', mer_skulls_path %>

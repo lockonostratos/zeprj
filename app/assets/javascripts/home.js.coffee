@@ -9,7 +9,3 @@ window.Zeprj = Ember.Application.create({
   LOG_TRANSITION: true
 #  rootElement: '#application'
 });
-
-Zeprj.ApplicationController = Ember.Controller.extend
-  currentUser: ->
-    null

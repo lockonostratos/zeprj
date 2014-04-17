@@ -1,0 +1,31 @@
+<h1>Listing mer_warehouses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Branche</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mer_warehouses.each do |mer_warehouse| %>
+      <tr>
+        <td><%= mer_warehouse.branche_id %></td>
+        <td><%= mer_warehouse.name %></td>
+        <td><%= mer_warehouse.location %></td>
+        <td><%= link_to 'Show', mer_warehouse %></td>
+        <td><%= link_to 'Edit', edit_mer_warehouse_path(mer_warehouse) %></td>
+        <td><%= link_to 'Destroy', mer_warehouse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mer warehouse', new_mer_warehouse_path %>

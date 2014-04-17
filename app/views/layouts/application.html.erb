@@ -10,6 +10,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body <%= 'class=signin-body' if current_action?('sessions', 'new') %> >
+
+  <ul>
+    <li><a href="/mers">Merchant</a> </li>
+    <li><a href="/mer_skulls">Skull</a> </li>
+    <li><a href="/branches">Branche</a> </li>
+    <li><a href="/mer_warehouses">Warehouse</a> </li>
+
+  </ul>
+
     <main id="application" role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
@@ -18,6 +27,8 @@
     <%# Modernizr is required for Zurb Foundation %>
     <%= javascript_include_tag 'vendor/modernizr' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
     <%= yield :scripts %>
   </body>
 </html>

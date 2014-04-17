@@ -1,0 +1,15 @@
+<%= simple_form_for(@warehouse) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :product_code %>
+    <%= f.input :skull_code %>
+    <%= f.input :merchant_warehouse %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

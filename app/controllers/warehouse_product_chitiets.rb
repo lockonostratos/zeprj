@@ -1,0 +1,2 @@
+class WarehousesProductChitietsController < ApplicationController
+end

@@ -1,0 +1,30 @@
+<h1>Listing mer_skulls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mer id</th>
+      <th>Skull code</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mer_skulls.each do |mer_skull| %>
+      <tr>
+        <td><%= mer_skull.mer_id %></td>
+        <td><%= mer_skull.skull_code %></td>
+        <td><%= mer_skull.description %></td>
+        <td><%= link_to 'Show', mer_skull %></td>
+        <td><%= link_to 'Edit', edit_mer_skull_path(mer_skull) %></td>
+        <td><%= link_to 'Destroy', mer_skull, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mer skull', new_mer_skull_path %>
