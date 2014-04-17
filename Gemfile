@@ -44,6 +44,8 @@ gem 'handlebars-source'
 gem 'compass-rails'
 gem 'font-awesome-sass'
 
+gem 'active_model_serializers'
+
 group :development do
   gem 'rails_layout'
 end
