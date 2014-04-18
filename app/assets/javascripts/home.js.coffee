@@ -5,7 +5,7 @@
 #= require zeprj
 
 # for more details see: http://emberjs.com/guides/application/
-window.App = Ember.Application.create({
+window.Zeprj = Ember.Application.create({
   LOG_TRANSITION: true
 #  rootElement: '#application'
 });

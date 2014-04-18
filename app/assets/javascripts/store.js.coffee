@@ -4,11 +4,11 @@
 
 #App.ApplicationAdapter = DS.FixtureAdapter;
 
-App.Adapter = DS.RESTAdapter.extend({
-  bulkCommit: false
-});
 
-App.ApplicationStore = DS.Store.extend({
+
+Zeprj.ApplicationStore = DS.Store.extend({
   revision: 12,
-  adapter:  App.Adapter
+  adapter: DS.RESTAdapter.extend({
+    bulkCommit: false
+  })
 });
