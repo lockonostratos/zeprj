@@ -6,7 +6,8 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :merchant_acounts do |t|
+    create_table :merchant_accounts do |t|
+      t.belongs_to :account, :null => false
       t.belongs_to :merchant, :null => false
       t.string :name, :null => false
       t.integer :role_id, :null => false , :default => 0
@@ -23,8 +24,9 @@ class InitializeDatabase < ActiveRecord::Migration
 
     create_table :merchant_skulls do |t|
       t.belongs_to :merchant, :null => false
-      t.string :skull_code
+      t.string :skull_code, :null => false
       t.string :description
+      t.integer :create_id, :null => false
 
       t.timestamps
     end
@@ -205,6 +207,29 @@ class InitializeDatabase < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    create_table :gera_accounts do |t|
+      t.belongs_to :accounts
+      t.integer :role_id
+
+      t.timestamps
+    end
+
+    create_table :agencies do |t|
+      t.string :name
+      t.integer :headquater_id
+
+      t.timestamps
+    end
+
+    create_table :agency_accounts do |t|
+      t.belongs_to :accounts
+      t.belongs_to :agencies
+      t.integer :role_id
+      t.timestamps
+    end
+
+
 
   end
 end

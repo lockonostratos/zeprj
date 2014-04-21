@@ -1,16 +1,6 @@
 Zeprj::Application.routes.draw do
-  resources :mer_warehouses
 
-  resources :branches
 
-  resources :mers
-
-  resources :mer_skulls
-
-  resources :warehouses
-
-  get "merchant_branches/index"
-  get "merchant/index"
   root :to => 'home#welcome', as: 'welcome'
 
   get 'signin', :to => 'sessions#new', as: 'signin'
