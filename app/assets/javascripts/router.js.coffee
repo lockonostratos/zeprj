@@ -1,6 +1,6 @@
 # For more information see: http://emberjs.com/guides/routing/
 
-App.Router.map ()->
+Zeprj.Router.map ()->
   @resource('index', { path: ''} )
   @resource('warehouses', ->
     @resource('warehouse', { path: '/:id' })

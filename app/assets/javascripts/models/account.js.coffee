@@ -1,8 +1,8 @@
-App.Account = DS.Model.extend
+Zeprj.Account = DS.Model.extend
   email: DS.attr('string')
   display_name: DS.attr('string')
 
-App.Account.FIXTURES = [
+Zeprj.Account.FIXTURES = [
   { id: 1, email: 'cloud@', display_name: 'cloud'},
   { id: 2, email: 'lee@', display_name: 'llee'},
   { id: 3, email: 'hao@', display_name: 'hao'},
