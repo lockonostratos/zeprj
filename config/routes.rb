@@ -1,15 +1,6 @@
 Zeprj::Application.routes.draw do
-  resources :mer_warehouses
 
-  resources :branches
 
-  resources :mers
-
-  resources :mer_skulls
-
-  resources :warehouses
-
-  get "merchant_branches/index"
   get "merchant/index"
   root :to => 'home#welcome', as: 'welcome'
 
@@ -19,6 +10,7 @@ Zeprj::Application.routes.draw do
 
   resources :accounts
   resources :sessions
+  resources :merchants
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

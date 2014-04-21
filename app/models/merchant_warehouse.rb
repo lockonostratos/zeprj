@@ -1,2 +1,2 @@
-class MerchantWarehouse< ActiveRecord::Base
+class MerchantWarehouse < ActiveRecord::Base
 end

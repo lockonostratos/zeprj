@@ -6,8 +6,10 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :merchant_acounts do |t|
-      t.belongs_to :merchant, :null => false
+    create_table :merchant_accounts do |t|
+      t.belongs_to :account, :null => false
+      t.belongs_to :merchants, :null => false
+      t.belongs_to :merchant_branche, :null => false , :default => 0
       t.string :name, :null => false
       t.integer :role_id, :null => false , :default => 0
 
@@ -15,22 +17,23 @@ class InitializeDatabase < ActiveRecord::Migration
     end
 
     create_table :merchant_providers do |t|
-      t.belongs_to :merchant, :null => false
+      t.belongs_to :merchants, :null => false
       t.string :name, :null => false
 
       t.timestamps
     end
 
     create_table :merchant_skulls do |t|
-      t.belongs_to :merchant, :null => false
-      t.string :skull_code
+      t.belongs_to :merchants, :null => false
+      t.string :skull_code, :null => false
       t.string :description
+      t.integer :create_id, :null => false
 
       t.timestamps
     end
 
     create_table :merchant_branches do |t|
-      t.belongs_to :merchant, :null => false
+      t.belongs_to :merchants, :null => false
       t.string :name, :null => false
 
       t.timestamps
@@ -75,6 +78,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :qualtity_khadi, :null => false
       t.integer :qualtity_ton, :null => false
       t.decimal :price, :presence => 15
+      t.datetime :hansudung
 
       t.timestamps
     end
@@ -90,7 +94,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     create_table :merchant_xuat_histories do |t|
       t.belongs_to :merchant_xuat_receipe, :null => false
-      t.belongs_to :merchant_product_chitiet, :null => false
+      t.belongs_to :warehouse_product_chitiets, :null => false
       t.integer :qualtity, :null => false
 
       t.timestamps
@@ -153,7 +157,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     create_table :merchant_chitiet_trahangs do |t|
       t.belongs_to :merchant_chitiet_trahang, :null => false
-      t.belongs_to :merchant_product_chitiet, :null => false
+      t.belongs_to :warehouse_product_chitiets, :null => false
       t.integer :qualtity, :null => false
 
       t.timestamps
@@ -168,7 +172,7 @@ class InitializeDatabase < ActiveRecord::Migration
     end
 
     create_table :merchant_chitiet_kiemtons do |t|
-      t.belongs_to :merchant_product_chitiet, :null => false
+      t.belongs_to :warehouse_product_chitiets, :null => false
       t.belongs_to :merchant_kiemton_receipe, :null => false
       t.integer :qualtity, :null => false
       t.integer :qualtity_thucte, :null => false
@@ -177,7 +181,7 @@ class InitializeDatabase < ActiveRecord::Migration
     end
 
     create_table :merchant_chitiet_dondathangs do |t|
-      t.belongs_to :merchant_product_chitiet, :null => false
+      t.belongs_to :warehouse_product_chitiets, :null => false
       t.belongs_to :merchant_dondathang, :null => false
       t.integer :qualtity, :null => false
       t.decimal :price, :null => false
@@ -188,7 +192,7 @@ class InitializeDatabase < ActiveRecord::Migration
     end
 
     create_table :merchant_customers do |t|
-      t.belongs_to :merchant
+      t.belongs_to :merchants
       t.string :account_name
       t.string :password
       t.string :email
@@ -205,6 +209,29 @@ class InitializeDatabase < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    create_table :gera_accounts do |t|
+      t.belongs_to :accounts
+      t.integer :role_id
+
+      t.timestamps
+    end
+
+    create_table :agencies do |t|
+      t.string :name
+      t.integer :headquater_id
+
+      t.timestamps
+    end
+
+    create_table :agency_accounts do |t|
+      t.belongs_to :accounts
+      t.belongs_to :agencies
+      t.integer :role_id
+      t.timestamps
+    end
+
+
 
   end
 end

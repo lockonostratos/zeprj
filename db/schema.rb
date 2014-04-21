@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417085233) do
+ActiveRecord::Schema.define(version: 20140418070744) do
 
   create_table "accounts", force: true do |t|
     t.string   "auth_token"
@@ -22,32 +22,36 @@ ActiveRecord::Schema.define(version: 20140417085233) do
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "creator_id"
+    t.string   "last_name"
+    t.string   "first_name"
+    t.integer  "parent_id"
   end
 
-  create_table "branches", force: true do |t|
-    t.integer  "mer_id"
+  create_table "agencies", force: true do |t|
     t.string   "name"
+    t.integer  "headquater_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "mer_skulls", force: true do |t|
-    t.integer  "mer_id"
-    t.string   "skull_code"
-    t.text     "description"
+  create_table "agency_accounts", force: true do |t|
+    t.integer  "accounts_id"
+    t.integer  "agencies_id"
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "mer_warehouses", force: true do |t|
-    t.integer  "branche_id"
-    t.string   "name"
-    t.string   "location"
+  create_table "gera_accounts", force: true do |t|
+    t.integer  "accounts_id"
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_acounts", force: true do |t|
+  create_table "merchant_accounts", force: true do |t|
+    t.integer  "account_id",              null: false
     t.integer  "merchant_id",             null: false
     t.string   "name",                    null: false
     t.integer  "role_id",     default: 0, null: false
@@ -63,12 +67,12 @@ ActiveRecord::Schema.define(version: 20140417085233) do
   end
 
   create_table "merchant_chitiet_dondathangs", force: true do |t|
-    t.integer  "merchant_product_chitiet_id",                          null: false
-    t.integer  "merchant_dondathang_id",                               null: false
-    t.integer  "qualtity",                                             null: false
-    t.decimal  "price",                       precision: 10, scale: 0, null: false
-    t.decimal  "giamgia",                     precision: 10, scale: 0, null: false
-    t.string   "tinhtrang",                                            null: false
+    t.integer  "warehouse_product_chitiets_id",                          null: false
+    t.integer  "merchant_dondathang_id",                                 null: false
+    t.integer  "qualtity",                                               null: false
+    t.decimal  "price",                         precision: 10, scale: 0, null: false
+    t.decimal  "giamgia",                       precision: 10, scale: 0, null: false
+    t.string   "tinhtrang",                                              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,18 +90,18 @@ ActiveRecord::Schema.define(version: 20140417085233) do
   end
 
   create_table "merchant_chitiet_kiemtons", force: true do |t|
-    t.integer  "merchant_product_chitiet_id", null: false
-    t.integer  "merchant_kiemton_receipe_id", null: false
-    t.integer  "qualtity",                    null: false
-    t.integer  "qualtity_thucte",             null: false
+    t.integer  "warehouse_product_chitiets_id", null: false
+    t.integer  "merchant_kiemton_receipe_id",   null: false
+    t.integer  "qualtity",                      null: false
+    t.integer  "qualtity_thucte",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "merchant_chitiet_trahangs", force: true do |t|
-    t.integer  "merchant_chitiet_trahang_id", null: false
-    t.integer  "merchant_product_chitiet_id", null: false
-    t.integer  "qualtity",                    null: false
+    t.integer  "merchant_chitiet_trahang_id",   null: false
+    t.integer  "warehouse_product_chitiets_id", null: false
+    t.integer  "qualtity",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -182,8 +186,9 @@ ActiveRecord::Schema.define(version: 20140417085233) do
 
   create_table "merchant_skulls", force: true do |t|
     t.integer  "merchant_id", null: false
-    t.string   "skull_code"
+    t.string   "skull_code",  null: false
     t.string   "description"
+    t.integer  "create_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -216,9 +221,9 @@ ActiveRecord::Schema.define(version: 20140417085233) do
   end
 
   create_table "merchant_xuat_histories", force: true do |t|
-    t.integer  "merchant_xuat_receipe_id",    null: false
-    t.integer  "merchant_product_chitiet_id", null: false
-    t.integer  "qualtity",                    null: false
+    t.integer  "merchant_xuat_receipe_id",      null: false
+    t.integer  "warehouse_product_chitiets_id", null: false
+    t.integer  "qualtity",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -239,13 +244,6 @@ ActiveRecord::Schema.define(version: 20140417085233) do
     t.datetime "updated_at"
   end
 
-  create_table "mers", force: true do |t|
-    t.integer  "head"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "warehouse_product_chitiets", force: true do |t|
     t.string   "product_code",                                        null: false
     t.integer  "merchant_skull_id",                                   null: false
@@ -257,16 +255,6 @@ ActiveRecord::Schema.define(version: 20140417085233) do
     t.integer  "qualtity_khadi",                                      null: false
     t.integer  "qualtity_ton",                                        null: false
     t.decimal  "price",                      precision: 10, scale: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "warehouses", force: true do |t|
-    t.string   "product_code"
-    t.string   "skull_code"
-    t.integer  "merchant_warehouse"
-    t.string   "name"
-    t.decimal  "price",              precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

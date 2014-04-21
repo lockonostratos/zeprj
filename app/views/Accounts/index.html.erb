@@ -2,20 +2,20 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Display name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Status</th>
-      <th>Password</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
+  <tr>
+    <th>Display name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Status</th>
+    <th>Password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @accounts.each do |account| %>
+  <% @accounts.each do |account| %>
       <tr>
         <td><%= account.display_name %></td>
         <td><%= account.email %></td>
@@ -26,7 +26,7 @@
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
