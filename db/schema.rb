@@ -67,12 +67,12 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "merchant_chitiet_dondathangs", force: true do |t|
-    t.integer  "merchant_product_chitiet_id",                          null: false
-    t.integer  "merchant_dondathang_id",                               null: false
-    t.integer  "qualtity",                                             null: false
-    t.decimal  "price",                       precision: 10, scale: 0, null: false
-    t.decimal  "giamgia",                     precision: 10, scale: 0, null: false
-    t.string   "tinhtrang",                                            null: false
+    t.integer  "warehouse_product_chitiets_id",                          null: false
+    t.integer  "merchant_dondathang_id",                                 null: false
+    t.integer  "qualtity",                                               null: false
+    t.decimal  "price",                         precision: 10, scale: 0, null: false
+    t.decimal  "giamgia",                       precision: 10, scale: 0, null: false
+    t.string   "tinhtrang",                                              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -90,18 +90,18 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "merchant_chitiet_kiemtons", force: true do |t|
-    t.integer  "merchant_product_chitiet_id", null: false
-    t.integer  "merchant_kiemton_receipe_id", null: false
-    t.integer  "qualtity",                    null: false
-    t.integer  "qualtity_thucte",             null: false
+    t.integer  "warehouse_product_chitiets_id", null: false
+    t.integer  "merchant_kiemton_receipe_id",   null: false
+    t.integer  "qualtity",                      null: false
+    t.integer  "qualtity_thucte",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "merchant_chitiet_trahangs", force: true do |t|
-    t.integer  "merchant_chitiet_trahang_id", null: false
-    t.integer  "merchant_product_chitiet_id", null: false
-    t.integer  "qualtity",                    null: false
+    t.integer  "merchant_chitiet_trahang_id",   null: false
+    t.integer  "warehouse_product_chitiets_id", null: false
+    t.integer  "qualtity",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -186,8 +186,9 @@ ActiveRecord::Schema.define(version: 20140418070744) do
 
   create_table "merchant_skulls", force: true do |t|
     t.integer  "merchant_id", null: false
-    t.string   "skull_code"
+    t.string   "skull_code",  null: false
     t.string   "description"
+    t.integer  "create_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -220,9 +221,9 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "merchant_xuat_histories", force: true do |t|
-    t.integer  "merchant_xuat_receipe_id",    null: false
-    t.integer  "merchant_product_chitiet_id", null: false
-    t.integer  "qualtity",                    null: false
+    t.integer  "merchant_xuat_receipe_id",      null: false
+    t.integer  "warehouse_product_chitiets_id", null: false
+    t.integer  "qualtity",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
