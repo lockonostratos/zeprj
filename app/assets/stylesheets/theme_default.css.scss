@@ -1,19 +1,27 @@
-//Fonts
+//Fonts--------------------------------------------------------------->
 $font-main: 'Open Sans',sans-serif;
 
-//Colors
+//Colors-------------------------------------------------------------->
 $tone-main: #AEC785;
 $tone-dark: #A0B87E;
 $element-main: #1FB5AC;
 $background-default: #e5e5e5;
 $background-login: #32323A;
 
-//Sizes
-$application-padding: 1rem;
-$application-padding-phone: 0.2rem;
-$tile-size: 8.2rem;
-$tile-space: 0.4rem;
+//navigator
+$navigator-background: #EEE;
+$navigator-background-reserve: #666;
+$navigator-font: lighten($navigator-background, 50%);
+$navigator-font-reserve: darken($navigator-background-reserve, 50%);
 
-//Radiuses
+//Sizes--------------------------------------------------------------->
+//paddings
+$application-padding: 0.3rem; //for large screen only!
+
+$tile-size: 8.5rem;
+$tile-space: 0.3rem;
+$content-min-height:25rem;
+
+//Radiuses------------------------------------------------------------>
 $tile-radius: 0.15rem;
 $tile-radius-phone: 0.1rem;
