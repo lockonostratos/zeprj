@@ -115,7 +115,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #San pham------------------------------------------------>
     create_table :product_summaries do |t|
       t.string :product_code, :null => false
-      t.string :skull_code, :null => false
+      t.string :skull_code, :null => false, :default => 0
       t.integer :warehouse, :null => false
       t.string :name, :null => false
       t.integer :qualtiy, :null => false
@@ -127,7 +127,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #Bang CHI TIET san pham!--------------------------------->
     create_table :products do |t|
       t.string :product_code, :null => false
-      t.belongs_to :skull, :null => false
+      t.string :skull_code, :null => false, :default => 0
       t.belongs_to :provider, :null => false
       t.belongs_to :warehouse, :null => false
       t.belongs_to :import, :null => false

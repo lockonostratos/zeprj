@@ -181,26 +181,26 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "product_summaries", force: true do |t|
-    t.string   "product_code",                          null: false
-    t.string   "skull_code",                            null: false
-    t.integer  "warehouse",                             null: false
-    t.string   "name",                                  null: false
-    t.integer  "qualtiy",                               null: false
+    t.string   "product_code",                                        null: false
+    t.string   "skull_code",                            default: "0", null: false
+    t.integer  "warehouse",                                           null: false
+    t.string   "name",                                                null: false
+    t.integer  "qualtiy",                                             null: false
     t.decimal  "price",        precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
-    t.string   "product_code",                               null: false
-    t.integer  "skull_id",                                   null: false
-    t.integer  "provider_id",                                null: false
-    t.integer  "warehouse_id",                               null: false
-    t.integer  "import_id",                                  null: false
-    t.string   "name",                                       null: false
-    t.integer  "import_quality",                             null: false
-    t.integer  "available_quality",                          null: false
-    t.integer  "instock_quality",                            null: false
+    t.string   "product_code",                                             null: false
+    t.string   "skull_code",                                 default: "0", null: false
+    t.integer  "provider_id",                                              null: false
+    t.integer  "warehouse_id",                                             null: false
+    t.integer  "import_id",                                                null: false
+    t.string   "name",                                                     null: false
+    t.integer  "import_quality",                                           null: false
+    t.integer  "available_quality",                                        null: false
+    t.integer  "instock_quality",                                          null: false
     t.decimal  "import_price",      precision: 10, scale: 0
     t.datetime "expire"
     t.datetime "created_at"

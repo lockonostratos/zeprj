@@ -1,4 +1,4 @@
-<h1>Listing merchant_warehouse_products</h1>
+<h1>Listing products</h1>
 
 <table>
   <thead>
@@ -16,17 +16,17 @@
   </thead>
 
   <tbody>
-    <% @products.each do |merchant_warehouse_product| %>
+    <% @products.each do |product| %>
       <tr>
-        <td><%= merchant_warehouse_product.product_code %></td>
-        <td><%= merchant_warehouse_product.skull_code %></td>
-        <td><%= merchant_warehouse_product.merchant_warehouse %></td>
-        <td><%= merchant_warehouse_product.name %></td>
-        <td><%= merchant_warehouse_product.qualtiy_all %></td>
-        <td><%= merchant_warehouse_product.price %></td>
-        <td><%= link_to 'Show', merchant_warehouse_product %></td>
-        <td><%= link_to 'Edit', edit_merchant_warehouse_product_path(merchant_warehouse_product) %></td>
-        <td><%= link_to 'Destroy', merchant_warehouse_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= product.product_code %></td>
+        <td><%= product.skull_code %></td>
+        <td><%= product.merchant_warehouse %></td>
+        <td><%= product.name %></td>
+        <td><%= product.qualtiy_all %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Merchant warehouse product', new_merchant_warehouse_product_path %>
+<%= link_to 'New Merchant warehouse product', new_product_path %>
