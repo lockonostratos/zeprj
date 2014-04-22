@@ -36,77 +36,92 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "agency_accounts", force: true do |t|
-    t.integer  "accounts_id"
-    t.integer  "agencies_id"
+    t.integer  "account_id"
+    t.integer  "agency_id"
     t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "gera_accounts", force: true do |t|
-    t.integer  "accounts_id"
-    t.integer  "role_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_accounts", force: true do |t|
-    t.integer  "account_id",              null: false
-    t.integer  "merchant_id",             null: false
-    t.string   "name",                    null: false
-    t.integer  "role_id",     default: 0, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_branches", force: true do |t|
+  create_table "branches", force: true do |t|
     t.integer  "merchant_id", null: false
     t.string   "name",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_chitiet_dondathangs", force: true do |t|
-    t.integer  "warehouse_product_chitiets_id",                          null: false
-    t.integer  "merchant_dondathang_id",                                 null: false
-    t.integer  "qualtity",                                               null: false
-    t.decimal  "price",                         precision: 10, scale: 0, null: false
-    t.decimal  "giamgia",                       precision: 10, scale: 0, null: false
-    t.string   "tinhtrang",                                              null: false
+  create_table "customers", force: true do |t|
+    t.integer  "merchant_id"
+    t.integer  "merchant_account_id"
+    t.string   "account_name"
+    t.string   "password"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_chitiet_donhangs", force: true do |t|
-    t.integer  "merchant_dondathang_id",                                      null: false
-    t.integer  "product_code",                                                null: false
-    t.integer  "skull_code",                                                  null: false
-    t.integer  "qualtity",                                                    null: false
-    t.integer  "qualtity_soluongtra",                             default: 0, null: false
-    t.decimal  "price",                  precision: 10, scale: 0,             null: false
-    t.decimal  "giamgia",                precision: 10, scale: 0,             null: false
+  create_table "deliveries", force: true do |t|
+    t.integer  "order_id",                                     null: false
+    t.integer  "merchant_account_id",                          null: false
+    t.datetime "delivery_date",                                null: false
+    t.decimal  "transportation_fee",  precision: 10, scale: 0, null: false
+    t.string   "comment",                                      null: false
+    t.integer  "status",                                       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_chitiet_kiemtons", force: true do |t|
-    t.integer  "warehouse_product_chitiets_id", null: false
-    t.integer  "merchant_kiemton_receipe_id",   null: false
-    t.integer  "qualtity",                      null: false
-    t.integer  "qualtity_thucte",               null: false
+  create_table "export_details", force: true do |t|
+    t.integer  "export_id",  null: false
+    t.integer  "product_id", null: false
+    t.integer  "quality",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_chitiet_trahangs", force: true do |t|
-    t.integer  "merchant_chitiet_trahang_id",   null: false
-    t.integer  "warehouse_product_chitiets_id", null: false
-    t.integer  "qualtity",                      null: false
+  create_table "exports", force: true do |t|
+    t.integer  "merchant_account_id", null: false
+    t.integer  "warehouse_id",        null: false
+    t.integer  "target_warehouse_id"
+    t.text     "description",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_customer_mackay_profiles", force: true do |t|
+  create_table "gera_accounts", force: true do |t|
+    t.integer  "account_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "imports", force: true do |t|
+    t.integer  "warehouse_id", null: false
+    t.text     "description",  null: false
+    t.integer  "create_id",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inventories", force: true do |t|
+    t.integer  "warehouse_id",        null: false
+    t.integer  "merchant_account_id", null: false
+    t.text     "decription",          null: false
+    t.boolean  "success",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inventory_details", force: true do |t|
+    t.integer  "product_id",       null: false
+    t.integer  "inventory_id",     null: false
+    t.integer  "original_quality", null: false
+    t.integer  "real_quality",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mackay_profiles", force: true do |t|
     t.integer  "merchant_customer_id"
     t.string   "m1_1"
     t.string   "m1_2"
@@ -116,145 +131,120 @@ ActiveRecord::Schema.define(version: 20140418070744) do
     t.datetime "updated_at"
   end
 
-  create_table "merchant_customers", force: true do |t|
-    t.integer  "merchant_id"
-    t.string   "account_name"
-    t.string   "password"
-    t.string   "email"
+  create_table "merchant_accounts", force: true do |t|
+    t.integer  "account_id",              null: false
+    t.integer  "merchant_id",             null: false
+    t.integer  "branch_id",   default: 0, null: false
+    t.integer  "role_id",     default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_dondathangs", force: true do |t|
-    t.integer  "merchant_warehouse_id",                                      null: false
-    t.datetime "date_dat",                                                   null: false
-    t.datetime "date_giao",                                                  null: false
-    t.integer  "create_id",                                                  null: false
-    t.integer  "nguoimua_id",                                                null: false
-    t.string   "diachigiao",                                                 null: false
-    t.string   "tennguoinhan",                                               null: false
-    t.string   "sdt",                                                        null: false
-    t.decimal  "all_money",             precision: 10, scale: 0,             null: false
-    t.decimal  "giamgia",               precision: 10, scale: 0, default: 0, null: false
-    t.decimal  "khuyenmaitienmat",      precision: 10, scale: 0, default: 0, null: false
-    t.integer  "pttt",                                                       null: false
-    t.decimal  "money_tratruoc",        precision: 10, scale: 0, default: 0, null: false
-    t.integer  "tinhtrangdonhang",                               default: 0, null: false
-    t.integer  "trahang",                                        default: 0, null: false
+  create_table "merchants", force: true do |t|
+    t.integer  "headquater_id", default: 0, null: false
+    t.integer  "owner_id",                  null: false
+    t.string   "name",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_import_receipes", force: true do |t|
-    t.integer  "merchant_warehouse_id", null: false
-    t.integer  "warehouse_id_xuat",     null: false
-    t.text     "description",           null: false
-    t.integer  "create_id",             null: false
+  create_table "order_details", force: true do |t|
+    t.integer  "order_id",                                            null: false
+    t.integer  "product_id",                                          null: false
+    t.integer  "quality",                                             null: false
+    t.integer  "return_quality",                          default: 0, null: false
+    t.decimal  "price",          precision: 10, scale: 0,             null: false
+    t.decimal  "discount_cash",  precision: 10, scale: 0,             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_kiemton_receipes", force: true do |t|
-    t.integer  "merchant_warehouse_id", null: false
-    t.text     "decription",            null: false
-    t.integer  "create_id",             null: false
+  create_table "orders", force: true do |t|
+    t.integer  "branch_id",                                                null: false
+    t.integer  "warehouse_id",                                             null: false
+    t.integer  "merchant_account_id",                                      null: false
+    t.integer  "customer_id",                                              null: false
+    t.integer  "return_id",                                    default: 0, null: false
+    t.datetime "creation_date",                                            null: false
+    t.datetime "delivery_date",                                            null: false
+    t.string   "delivery_address",                                         null: false
+    t.string   "contact_name",                                             null: false
+    t.string   "contact_phone",                                            null: false
+    t.decimal  "total_price",         precision: 10, scale: 0,             null: false
+    t.decimal  "deposit",             precision: 10, scale: 0,             null: false
+    t.decimal  "discount_cash",       precision: 10, scale: 0, default: 0, null: false
+    t.decimal  "final_price",         precision: 10, scale: 0,             null: false
+    t.integer  "payment_method",                                           null: false
+    t.integer  "status",                                       default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_phieugiaohangs", force: true do |t|
-    t.integer  "merchant_dondathang_id",                          null: false
-    t.datetime "date_giao",                                       null: false
-    t.integer  "nguoigiao_id",                                    null: false
-    t.string   "tennguoinhan",                                    null: false
-    t.text     "diachi",                                          null: false
-    t.decimal  "all_money",              precision: 10, scale: 0, null: false
-    t.decimal  "tratruoc",               precision: 10, scale: 0, null: false
-    t.decimal  "phivanchuyen",           precision: 10, scale: 0, null: false
-    t.text     "ghichu",                                          null: false
-    t.integer  "trangthai",                                       null: false
+  create_table "product_summaries", force: true do |t|
+    t.string   "product_code",                          null: false
+    t.string   "skull_code",                            null: false
+    t.integer  "warehouse",                             null: false
+    t.string   "name",                                  null: false
+    t.integer  "qualtiy",                               null: false
+    t.decimal  "price",        precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_providers", force: true do |t|
+  create_table "products", force: true do |t|
+    t.string   "product_code",                               null: false
+    t.integer  "skull_id",                                   null: false
+    t.integer  "provider_id",                                null: false
+    t.integer  "warehouse_id",                               null: false
+    t.integer  "import_id",                                  null: false
+    t.string   "name",                                       null: false
+    t.integer  "import_quality",                             null: false
+    t.integer  "available_quality",                          null: false
+    t.integer  "instock_quality",                            null: false
+    t.decimal  "import_price",      precision: 10, scale: 0
+    t.datetime "expire"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "providers", force: true do |t|
     t.integer  "merchant_id", null: false
     t.string   "name",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_skulls", force: true do |t|
-    t.integer  "merchant_id", null: false
-    t.string   "skull_code",  null: false
+  create_table "return_details", force: true do |t|
+    t.integer  "return_id",       null: false
+    t.integer  "product_id",      null: false
+    t.integer  "current_quality", null: false
+    t.integer  "return_quality",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "returns", force: true do |t|
+    t.integer  "order_id",            null: false
+    t.integer  "merchant_account_id", null: false
+    t.datetime "creation_date",       null: false
+    t.string   "comment",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skulls", force: true do |t|
+    t.integer  "merchant_id",         null: false
+    t.integer  "merchant_account_id", null: false
+    t.string   "skull_code",          null: false
     t.string   "description"
-    t.integer  "create_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_trahangs", force: true do |t|
-    t.integer  "merchant_dondathang_id", null: false
-    t.datetime "date_trahang",           null: false
-    t.text     "lydo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_warehouse_products", force: true do |t|
-    t.string   "product_code",                                null: false
-    t.string   "skull_code",                                  null: false
-    t.integer  "merchant_warehouse",                          null: false
-    t.string   "name",                                        null: false
-    t.integer  "qualtiy_all",                                 null: false
-    t.decimal  "price",              precision: 10, scale: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_warehouses", force: true do |t|
-    t.integer  "merchant_branche_id", null: false
-    t.string   "name",                null: false
-    t.string   "location"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_xuat_histories", force: true do |t|
-    t.integer  "merchant_xuat_receipe_id",      null: false
-    t.integer  "warehouse_product_chitiets_id", null: false
-    t.integer  "qualtity",                      null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchant_xuat_receipes", force: true do |t|
-    t.integer  "merchant_warehouse_id", null: false
-    t.integer  "warehouse_id_nhan",     null: false
-    t.integer  "create_id",             null: false
-    t.text     "description",           null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merchants", force: true do |t|
-    t.integer  "headquater", null: false
+  create_table "warehouses", force: true do |t|
+    t.integer  "branch_id",  null: false
     t.string   "name",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "warehouse_product_chitiets", force: true do |t|
-    t.string   "product_code",                                        null: false
-    t.integer  "merchant_skull_id",                                   null: false
-    t.integer  "merchant_provider_id",                                null: false
-    t.integer  "merchant_import_receipe_id",                          null: false
-    t.integer  "merchant_warehouses_id",                              null: false
-    t.string   "name",                                                null: false
-    t.integer  "qualtity",                                            null: false
-    t.integer  "qualtity_khadi",                                      null: false
-    t.integer  "qualtity_ton",                                        null: false
-    t.decimal  "price",                      precision: 10, scale: 0
+    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

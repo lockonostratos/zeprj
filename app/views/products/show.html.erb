@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product code:</strong>
+  <%= @product.product_code %>
+</p>
+
+<p>
+  <strong>Skull code:</strong>
+  <%= @product.skull_code %>
+</p>
+
+<p>
+  <strong>Merchant warehouse:</strong>
+  <%= @product.merchant_warehouse %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Quality all:</strong>
+  <%= @product.qualtiy_all %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<%= link_to 'Edit', edit_merchant_warehouse_product_path(@product) %> |
+<%= link_to 'Back', merchant_warehouse_products_path %>

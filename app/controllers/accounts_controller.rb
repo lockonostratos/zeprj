@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   skip_before_filter :check_user_permission, :only => [:new, :create]
-  before_action :set_gera_account, only: [:show, :edit, :update, :destroy]
+  before_action :set_account, only: [:show, :edit, :update, :destroy]
 
   # GET /accounts
   # GET /accounts.json
@@ -84,7 +84,7 @@ class AccountsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_gera_account
+    def set_account
       @account = Account.find(params[:id])
     end
 

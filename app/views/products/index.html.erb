@@ -1,0 +1,37 @@
+<h1>Listing merchant_warehouse_products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product code</th>
+      <th>Skull code</th>
+      <th>Merchant warehouse</th>
+      <th>Name</th>
+      <th>Quality all</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |merchant_warehouse_product| %>
+      <tr>
+        <td><%= merchant_warehouse_product.product_code %></td>
+        <td><%= merchant_warehouse_product.skull_code %></td>
+        <td><%= merchant_warehouse_product.merchant_warehouse %></td>
+        <td><%= merchant_warehouse_product.name %></td>
+        <td><%= merchant_warehouse_product.qualtiy_all %></td>
+        <td><%= merchant_warehouse_product.price %></td>
+        <td><%= link_to 'Show', merchant_warehouse_product %></td>
+        <td><%= link_to 'Edit', edit_merchant_warehouse_product_path(merchant_warehouse_product) %></td>
+        <td><%= link_to 'Destroy', merchant_warehouse_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Merchant warehouse product', new_merchant_warehouse_product_path %>

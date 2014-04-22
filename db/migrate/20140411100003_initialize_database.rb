@@ -1,198 +1,54 @@
 class InitializeDatabase < ActiveRecord::Migration
   def change
+    #Tai khoan Gera
+    create_table :gera_accounts do |t|
+      t.belongs_to :account
+      t.integer :role_id
+
+      t.timestamps
+    end
+
+    #Nha cung cap
+    create_table :agencies do |t|
+      t.string :name
+      t.integer :headquater_id
+
+      t.timestamps
+    end
+
+    create_table :agency_accounts do |t|
+      t.belongs_to :account
+      t.belongs_to :agency
+      t.integer :role_id
+
+      t.timestamps
+    end
+    #MERCHANTS SECTION------------------------------------------------------------------------------------------->
+
+    #Dai ly ban le------------------------------------------->
     create_table :merchants do |t|
-      t.integer :headquater, :null => false
+      t.integer :headquater_id, :null => false, :default => 0
+      t.integer :owner_id, :null => false
       t.string :name, :null => false
       t.timestamps
     end
 
+    #Tai khoan cua dai ly------------------------------------>
     create_table :merchant_accounts do |t|
-      t.belongs_to :account, :null => false
-      t.belongs_to :merchants, :null => false
-      t.belongs_to :merchant_branche, :null => false , :default => 0
-      t.string :name, :null => false
-      t.integer :role_id, :null => false , :default => 0
+      t.belongs_to :account, :null => false #xem lai phan ke thua
+      t.belongs_to :merchant, :null => false
+      t.belongs_to :branch, :null => false , :default => 0
+
+      t.integer :role_id, :null => false , :default => 0 #bang role o dau?
 
       t.timestamps
     end
 
-    create_table :merchant_providers do |t|
-      t.belongs_to :merchants, :null => false
-      t.string :name, :null => false
+    #Khach hang---------------------------------------------->
+    create_table :customers do |t|
+      t.belongs_to :merchant
+      t.belongs_to :merchant_account
 
-      t.timestamps
-    end
-
-    create_table :merchant_skulls do |t|
-      t.belongs_to :merchants, :null => false
-      t.string :skull_code, :null => false
-      t.string :description
-      t.integer :create_id, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_branches do |t|
-      t.belongs_to :merchants, :null => false
-      t.string :name, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_warehouses do |t|
-      t.belongs_to :merchant_branche, :null => false
-      t.string :name, :null => false
-      t.string :location
-
-      t.timestamps
-    end
-
-    create_table :merchant_import_receipes do |t|
-      t.belongs_to :merchant_warehouse, :null => false
-      t.integer :warehouse_id_xuat, :null => false
-      t.text :description, :null => false
-      t.integer :create_id, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_warehouse_products do |t|
-      t.string :product_code, :null => false
-      t.string :skull_code, :null => false
-      t.integer :merchant_warehouse, :null => false
-      t.string :name, :null => false
-      t.integer :qualtiy_all, :null => false
-      t.decimal :price, :presence => 15
-
-      t.timestamps
-    end
-
-    create_table :warehouse_product_chitiets do |t|
-      t.string :product_code, :null => false
-      t.belongs_to :merchant_skull, :null => false
-      t.belongs_to :merchant_provider, :null => false
-      t.belongs_to :merchant_import_receipe, :null => false
-      t.belongs_to :merchant_warehouses, :null => false
-      t.string :name, :null => false
-      t.integer :qualtity, :null => false
-      t.integer :qualtity_khadi, :null => false
-      t.integer :qualtity_ton, :null => false
-      t.decimal :price, :presence => 15
-      t.datetime :hansudung
-
-      t.timestamps
-    end
-
-    create_table :merchant_xuat_receipes do |t|
-      t.belongs_to :merchant_warehouse, :null => false
-      t.integer :warehouse_id_nhan, :null => false
-      t.integer :create_id, :null => false
-      t.text :description, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_xuat_histories do |t|
-      t.belongs_to :merchant_xuat_receipe, :null => false
-      t.belongs_to :warehouse_product_chitiets, :null => false
-      t.integer :qualtity, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_dondathangs do |t|
-      t.belongs_to :merchant_warehouse, :null => false
-      t.datetime :date_dat, :null => false
-      t.datetime :date_giao, :null => false
-      t.integer :create_id, :null => false
-      t.integer :nguoimua_id, :null => false
-      t.string :diachigiao, :null => false
-      t.string :tennguoinhan, :null => false
-      t.string :sdt, :null => false
-      t.decimal :all_money, :null => false
-      t.decimal :giamgia, :null => false, :default => 0
-      t.decimal :khuyenmaitienmat, :null => false, :default => 0
-      t.integer :pttt, :null => false
-      t.decimal :money_tratruoc, :null => false, :default => 0
-      t.integer :tinhtrangdonhang, :null => false, :default => 0
-      t.integer :trahang, :null => false, :default => 0
-
-      t.timestamps
-    end
-
-    create_table :merchant_phieugiaohangs do |t|
-      t.belongs_to :merchant_dondathang, :null => false
-      t.datetime :date_giao, :null => false
-      t.integer :nguoigiao_id, :null => false
-      t.string :tennguoinhan, :null => false
-      t.text :diachi, :null => false
-      t.decimal :all_money, :null => false
-      t.decimal :tratruoc, :null => false
-      t.decimal :phivanchuyen, :null => false
-      t.text :ghichu, :null => false
-      t.integer :trangthai, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_chitiet_donhangs do |t|
-      t.belongs_to :merchant_dondathang, :null => false
-      t.integer :product_code, :null => false
-      t.integer :skull_code, :null => false
-      t.integer :qualtity, :null => false
-      t.integer :qualtity_soluongtra, :null => false, :default => 0
-      t.decimal :price, :null => false
-      t.decimal :giamgia, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_trahangs do |t|
-      t.belongs_to :merchant_dondathang, :null => false
-      t.datetime :date_trahang, :null => false
-      t.text :lydo
-
-      t.timestamps
-    end
-
-    create_table :merchant_chitiet_trahangs do |t|
-      t.belongs_to :merchant_chitiet_trahang, :null => false
-      t.belongs_to :warehouse_product_chitiets, :null => false
-      t.integer :qualtity, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_kiemton_receipes do |t|
-      t.belongs_to :merchant_warehouse, :null => false
-      t.text :decription, :null => false
-      t.integer :create_id, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_chitiet_kiemtons do |t|
-      t.belongs_to :warehouse_product_chitiets, :null => false
-      t.belongs_to :merchant_kiemton_receipe, :null => false
-      t.integer :qualtity, :null => false
-      t.integer :qualtity_thucte, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_chitiet_dondathangs do |t|
-      t.belongs_to :warehouse_product_chitiets, :null => false
-      t.belongs_to :merchant_dondathang, :null => false
-      t.integer :qualtity, :null => false
-      t.decimal :price, :null => false
-      t.decimal :giamgia, :null => false
-      t.string :tinhtrang, :null => false
-
-      t.timestamps
-    end
-
-    create_table :merchant_customers do |t|
-      t.belongs_to :merchants
       t.string :account_name
       t.string :password
       t.string :email
@@ -200,7 +56,8 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :merchant_customer_mackay_profiles do |t|
+    #Ho so mackay
+    create_table :mackay_profiles do |t|
       t.belongs_to :merchant_customer
       t.string :m1_1
       t.string :m1_2
@@ -210,28 +67,207 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :gera_accounts do |t|
-      t.belongs_to :accounts
-      t.integer :role_id
+    #Nha cung cap-------------------------------------------->
+    create_table :providers do |t|
+      t.belongs_to :merchant, :null => false
+      t.string :name, :null => false
 
       t.timestamps
     end
 
-    create_table :agencies do |t|
-      t.string :name
-      t.integer :headquater_id
+    #Skull--------------------------------------------------->
+    create_table :skulls do |t|
+      t.belongs_to :merchant, :null => false
+      t.belongs_to :merchant_account, :null => false
+
+      t.string :skull_code, :null => false
+      t.string :description
 
       t.timestamps
     end
 
-    create_table :agency_accounts do |t|
-      t.belongs_to :accounts
-      t.belongs_to :agencies
-      t.integer :role_id
+    #Chi nhanh----------------------------------------------->
+    create_table :branches do |t|
+      t.belongs_to :merchant, :null => false
+      t.string :name, :null => false
+
       t.timestamps
     end
 
+    #Kho----------------------------------------------------->
+    create_table :warehouses do |t|
+      t.belongs_to :branch, :null => false
+      t.string :name, :null => false
+      t.string :location
 
+      t.timestamps
+    end
+
+    #Phieu nhap kho------------------------------------------>
+    create_table :imports do |t|
+      t.belongs_to :warehouse, :null => false
+      t.text :description, :null => false
+      t.integer :create_id, :null => false
+
+      t.timestamps
+    end
+
+    #San pham------------------------------------------------>
+    create_table :product_summaries do |t|
+      t.string :product_code, :null => false
+      t.string :skull_code, :null => false
+      t.integer :warehouse, :null => false
+      t.string :name, :null => false
+      t.integer :qualtiy, :null => false
+      t.decimal :price, :presence => 15
+
+      t.timestamps
+    end
+
+    #Bang CHI TIET san pham!--------------------------------->
+    create_table :products do |t|
+      t.string :product_code, :null => false
+      t.belongs_to :skull, :null => false
+      t.belongs_to :provider, :null => false
+      t.belongs_to :warehouse, :null => false
+      t.belongs_to :import, :null => false
+
+      t.string :name, :null => false
+      t.integer :import_quality, :null => false #so luong nhap
+      t.integer :available_quality, :null => false #so luong kha di~
+      t.integer :instock_quality, :null => false #so luong thuc te con trong kho
+      t.decimal :import_price, :presence => 15
+      t.datetime :expire
+
+      t.timestamps
+    end
+
+    #Phieu xuat kho------------------------------------------>
+    create_table :exports do |t|
+      t.belongs_to :merchant_account, :null => false
+      t.belongs_to :warehouse, :null => false
+      t.integer :target_warehouse_id
+
+      t.text :description, :null => false
+
+      t.timestamps
+    end
+
+    #Chi tiet xuat kho--------------------------------------->
+    create_table :export_details do |t|
+      t.belongs_to :export, :null => false
+      t.belongs_to :product, :null => false
+
+      t.integer :quality, :null => false
+
+      t.timestamps
+    end
+
+    #Phieu kiem ton------------------------------------------>
+    create_table :inventories do |t|
+      t.belongs_to :warehouse, :null => false
+      t.belongs_to :merchant_account, :null => false
+
+      t.text :decription, :null => false
+      t.boolean :success, :null => false
+
+      t.timestamps
+    end
+
+    #Chi tiet kiem ton--------------------------------------->
+    create_table :inventory_details do |t|
+      t.belongs_to :product, :null => false
+      t.belongs_to :inventory, :null => false
+      t.integer :original_quality, :null => false
+      t.integer :real_quality, :null => false
+
+      t.timestamps
+    end
+
+    #Don dat hang-------------------------------------------->
+    create_table :orders do |t|
+      t.belongs_to :branch, :null => false
+      t.belongs_to :warehouse, :null => false
+      t.belongs_to :merchant_account, :null => false
+      t.belongs_to :customer, :null => false
+      t.integer :return_id, :null => false, :default => 0 #Id don tra hang (neu co)
+
+      t.datetime :creation_date, :null => false
+      t.datetime :delivery_date, :null => false
+      t.string :delivery_address, :null => false
+      t.string :contact_name, :null => false
+      t.string :contact_phone, :null => false
+
+      t.decimal :total_price, :null => false #tong gia tri hoa don
+      t.decimal :deposit, :null => false #tra truoc
+      t.decimal :discount_cash, :null => false, :default => 0 #giam gia tinh bang tien mat
+      t.decimal :final_price, :null => false #so tien phai thu
+
+      t.integer :payment_method, :null => false #chuyen thanh kieu Enumerable
+      t.integer :status, :null => false, :default => 0 #tinh trang don hang
+
+      t.timestamps
+    end
+
+    #Chi tiet don hang---------------------------------------->
+    create_table :order_details do |t|
+      t.belongs_to :order, :null => false
+      t.belongs_to :product, :null => false
+
+      t.integer :quality, :null => false
+      t.integer :return_quality, :null => false, :default => 0
+      t.decimal :price, :null => false
+      t.decimal :discount_cash, :null => false
+
+      t.timestamps
+    end
+
+    #Phieu giao hang------------------------------------------>
+    create_table :deliveries do |t|
+      t.belongs_to :order, :null => false
+      t.belongs_to :merchant_account, :null => false
+
+      t.datetime :delivery_date, :null => false
+      t.decimal :transportation_fee, :null => false
+      t.string :comment, :null => false
+      t.integer :status, :null => false
+
+      t.timestamps
+    end
+
+    #???????????????????????????????????????????? XOA!
+    #create_table :merchant_chitiet_dondathangs do |t|
+    #  t.belongs_to :warehouse_product_chitiets, :null => false
+    #  t.belongs_to :merchant_dondathang, :null => false
+    #  t.integer :quality, :null => false
+    #  t.decimal :price, :null => false
+    #  t.decimal :giamgia, :null => false
+    #  t.string :tinhtrang, :null => false
+    #
+    #  t.timestamps
+    #end
+
+    #Phieu tra hang------------------------------------------->
+    create_table :returns do |t|
+      t.belongs_to :order, :null => false
+      t.belongs_to :merchant_account, :null => false
+
+      t.datetime :creation_date, :null => false
+      t.string :comment, :null => false
+
+      t.timestamps
+    end
+
+    #Chi tiet tra hang---------------------------------------->
+    create_table :return_details do |t|
+      t.belongs_to :return, :null => false
+      t.belongs_to :product, :null => false
+
+      t.integer :current_quality, :null => false
+      t.integer :return_quality, :null => false
+
+      t.timestamps
+    end
 
   end
 end

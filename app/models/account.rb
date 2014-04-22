@@ -9,43 +9,32 @@ class Account < ActiveRecord::Base
     end while Account.exists?(column => self[column])
   end
 
-  after_create :add_to_merchant
+  after_create :initialize_merchant
 
 
   private
 
-  def add_to_merchant
-   #
-   mer= Merchant.create! ({name:"abcd", headquater:12})
+  #Khởi tạo merchant
+  def initialize_merchant
+    #1. Tạo mới Merchant
+    current_merchant= Merchant.create! ({name: self.email + '\'s merchant', owner_id: self.id})
 
-   #bat loi khi merchant_id ko ton tai
-   bran= MerchantBranche.create! ({merchant_id:mer.id, name:"asdadas"})
+    #2. Tạo mới Branch *chi nhánh*, gán headquater_id của merchant thành id chi nhánh mới (mặc định)
+    current_branch= Branch.create! ({merchant_id: current_merchant.id, name: self.email + '\'s headquater'})
+    current_merchant.headquater_id = current_branch.id
 
-   #bat loi khi account_id ko ton tai, merchant_id ko ton tai
-   meracc=MerchantAccount.create!({account_id:self.id,merchant_id:mer.id,name:"aaaaaaaa"})
+    #3. Tạo mới MerchantAccount,
+    current_account=MerchantAccount.create!({account_id: self.id, merchant_id: current_merchant.id,
+                                             branch_id: current_branch.id})
 
-   #bat loi khi merchant_branche_id ko ton tai
-   ware=MerchantWarehouse.create! ({merchant_branche_id:bran.id, name:"asdasdas"})
-
-   #bat loi khi merchant_id ko ton tai, create_id ko ton tai
-   skull=MerchantSkull.create!({merchant_id:mer.id, skull_code:"abcdefg", create_id:self.id})
-
-   #bat loi khi merchant_id ko ton tai
-   pro=MerchantProvider.create!({merchant_id:mer.id, name:"SamSung"})
-
-   #bat loi khi cac ID ko ton tai
-   merimport=MerchantImportReceipe.create!({create_id: meracc.id,merchant_warehouse_id: ware.id, warehouse_id_xuat:ware.id, description:"123456789"})
-
-
-   wareproduct=WarehouseProductChitiet.create!({product_code:"abcd111111", merchant_skull_id:skull.id, merchant_provider_id:pro.id, merchant_import_receipe_id:merimport.id,
-                                                 merchant_warehouses_id:ware.id,name:"sang kung", qualtity:200, qualtity_khadi:100, qualtity_ton:50, price:500})
-
+    #4. Tạo mới Warehouse (kho),
+    current_warehouse=Warehouse.create! ({branch_id: current_branch.id, name: self.email + '\'s default warehouse'})
   end
 
   def destroy_account
     #bat loi khi xoa acount co du lieu
-    if(MerchantAccount.find_by_account_id(self.id)!=nil)
-      MerchantBranche.create!
+    if(MerchantAccount.find_by_account_id(self.id)==nil)
+      #MerchantBranche.create!
     end
   end
 

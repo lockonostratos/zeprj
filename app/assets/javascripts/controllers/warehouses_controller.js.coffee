@@ -1,3 +1,2 @@
-#App.WarehousesController = Ember.Controller.extend
-#  currentUser: ->
-#    null
+#Zeprj.WarehousesHomeController = Ember.ArrayController.extend
+
