@@ -1,5 +1,5 @@
 class MerchantsController < ApplicationController
-  skip_before_filter :check_user_permission, :only => [:new, :create]
+  skip_before_filter :check_account_permission, :only => [:new, :create]
   before_action :set_gera_account, only: [:show, :edit, :update, :destroy]
 
   # GET /accounts

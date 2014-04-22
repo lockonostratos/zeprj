@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(version: 20140418070744) do
 
   create_table "accounts", force: true do |t|
-    t.string   "auth_token"
+    t.string   "auth_token",      null: false
     t.string   "display_name"
-    t.string   "email"
+    t.string   "email",           null: false
     t.string   "phone"
-    t.string   "password_digest"
-    t.integer  "status"
+    t.string   "password_digest", null: false
+    t.integer  "account_type",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "creator_id"
@@ -132,10 +132,11 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "merchant_accounts", force: true do |t|
-    t.integer  "account_id",              null: false
-    t.integer  "merchant_id",             null: false
-    t.integer  "branch_id",   default: 0, null: false
-    t.integer  "role_id",     default: 0, null: false
+    t.integer  "account_id",                       null: false
+    t.integer  "merchant_id",                      null: false
+    t.integer  "branch_id",            default: 0, null: false
+    t.integer  "current_warehouse_id"
+    t.integer  "role_id",              default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

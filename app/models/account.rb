@@ -23,21 +23,20 @@ class Account < ActiveRecord::Base
     current_branch= Branch.create! ({merchant_id: current_merchant.id, name: self.email + '\'s headquater'})
     current_merchant.headquater_id = current_branch.id
 
-    #3. Tạo mới MerchantAccount,
-    current_account=MerchantAccount.create!({account_id: self.id, merchant_id: current_merchant.id,
-                                             branch_id: current_branch.id})
-
-    #4. Tạo mới Warehouse (kho),
+    #3. Tạo mới Warehouse (kho),
     current_warehouse=Warehouse.create! ({branch_id: current_branch.id, name: self.email + '\'s default warehouse'})
+
+    #4. Tạo mới MerchantAccount,
+     MerchantAccount.create!({account_id: self.id, merchant_id: current_merchant.id,
+                              branch_id: current_branch.id, current_warehouse_id: current_warehouse.id})
   end
 
   def destroy_account
     #bat loi khi xoa acount co du lieu
-    if(MerchantAccount.find_by_account_id(self.id)==nil)
+    if MerchantAccount.find_by_account_id(self.id) == nil
       #MerchantBranche.create!
     end
   end
-
 end
 
 

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_filter :check_user_permission, :only => [:new, :create]
+  skip_before_filter :check_account_permission, :only => [:new, :create]
 
   def new
   end

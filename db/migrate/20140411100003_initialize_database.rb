@@ -38,6 +38,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :account, :null => false #xem lai phan ke thua
       t.belongs_to :merchant, :null => false
       t.belongs_to :branch, :null => false , :default => 0
+      t.integer :current_warehouse_id
 
       t.integer :role_id, :null => false , :default => 0 #bang role o dau?
 

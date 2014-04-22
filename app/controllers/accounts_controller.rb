@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
-  skip_before_filter :check_user_permission, :only => [:new, :create]
-  before_action :set_account, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :check_account_permission, :only => [:new, :create]
+  before_action :set_account, only: [:edit, :update, :destroy]
 
   # GET /accounts
   # GET /accounts.json
@@ -16,7 +16,8 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
-    @account = current_user
+    @account = params[:id] == '0' ? @current_account :  Account.find(params[:id])
+
     unless @account.nil?
       respond_to do |format|
         format.html
@@ -43,6 +44,7 @@ class AccountsController < ApplicationController
   # POST /accounts.json
   def create
     @account = Account.new(account_params)
+    @account.account_type = 1 #1 tức là Merchant, sẽ chuyển thành enum sau
     @account.password_confirmation = @account.password
 
     respond_to do |format|
