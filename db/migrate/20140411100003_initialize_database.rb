@@ -36,7 +36,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #Tai khoan cua dai ly------------------------------------>
     create_table :merchant_accounts do |t|
       t.belongs_to :account, :null => false #xem lai phan ke thua
-      t.belongs_to :merchant, :null => false
+      t.belongs_to :home, :null => false
       t.belongs_to :branch, :null => false , :default => 0
       t.integer :current_warehouse_id
 
@@ -47,7 +47,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     #Khach hang---------------------------------------------->
     create_table :customers do |t|
-      t.belongs_to :merchant
+      t.belongs_to :home
       t.belongs_to :merchant_account
 
       t.string :account_name
@@ -70,7 +70,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     #Nha cung cap-------------------------------------------->
     create_table :providers do |t|
-      t.belongs_to :merchant, :null => false
+      t.belongs_to :home, :null => false
       t.string :name, :null => false
 
       t.timestamps
@@ -78,7 +78,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     #Skull--------------------------------------------------->
     create_table :skulls do |t|
-      t.belongs_to :merchant, :null => false
+      t.belongs_to :home, :null => false
       t.belongs_to :merchant_account, :null => false
 
       t.string :skull_code, :null => false
@@ -89,7 +89,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     #Chi nhanh----------------------------------------------->
     create_table :branches do |t|
-      t.belongs_to :merchant, :null => false
+      t.belongs_to :home, :null => false
       t.string :name, :null => false
 
       t.timestamps
@@ -116,8 +116,9 @@ class InitializeDatabase < ActiveRecord::Migration
     #San pham------------------------------------------------>
     create_table :product_summaries do |t|
       t.string :product_code, :null => false
-      t.string :skull_code, :null => false, :default => 0
-      t.integer :warehouse, :null => false
+      t.belongs_to :skull, :null => false, :default => 0
+      t.belongs_to :warehouse, :null => false
+
       t.string :name, :null => false
       t.integer :qualtiy, :null => false
       t.decimal :price, :presence => 15
@@ -128,7 +129,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #Bang CHI TIET san pham!--------------------------------->
     create_table :products do |t|
       t.string :product_code, :null => false
-      t.string :skull_code, :null => false, :default => 0
+      t.belongs_to :skull, :null => false, :default => 0
       t.belongs_to :provider, :null => false
       t.belongs_to :warehouse, :null => false
       t.belongs_to :import, :null => false

@@ -1,15 +1,21 @@
 Zeprj::Application.routes.draw do
-  root :to => 'home#welcome', as: 'welcome'
-
+  root :to => 'home#welcomes', as: 'welcomes'
+  get 'welcome', :to => 'home#welcome', as: 'welcome'
   get 'signin', :to => 'sessions#new', as: 'signin'
   get 'signout', :to => 'sessions#destroy', as: 'signout'
   get 'signup', :to => 'accounts#new', as: 'signup'
 
+  get 'warehouse/home', :to => 'warehouse#home'
+
   resources :accounts
   resources :sessions
-  resources :merchants
-  resources :products
-  resources :warehouses
+
+  scope module: merchant do
+    resources :merchants
+    resources :products
+    resources :warehouse
+  end
+
   resources "merchantAccounts", :controller => :merchant_accounts, :as => :merchant_accounts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
