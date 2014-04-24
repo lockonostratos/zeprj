@@ -1,4 +1,4 @@
-class Merchant::HomeController < MerchantApplicationController
+class HomeController < MerchantApplicationController
   def welcome
   end
 
