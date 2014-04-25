@@ -288,7 +288,6 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :merchant_account, :null => false
       t.text :description, :null => false
 
-
       t.timestamps
     end
 

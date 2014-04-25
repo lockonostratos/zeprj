@@ -1,9 +1,11 @@
 Zeprj::Application.routes.draw do
   root :to => 'home#welcome', as: 'welcome'
-
+  #get 'welcome', :to => 'home#welcome', as: 'welcome'
   get 'signin', :to => 'sessions#new', as: 'signin'
   get 'signout', :to => 'sessions#destroy', as: 'signout'
   get 'signup', :to => 'accounts#new', as: 'signup'
+
+  get 'warehouse/home', :to => 'warehouse#home'
 
   resources :accounts
   resources :sessions

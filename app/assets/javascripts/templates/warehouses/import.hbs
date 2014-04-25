@@ -1,1 +1,11 @@
-I am imports.hbs
+<div class="row">
+
+  <div class="medium-4 columns">
+    {{render 'warehouses/productSummaries' this.productSummaries}}
+  </div>
+
+  <div class="medium-8 columns">
+    {{partial 'warehouses/importDetails'}}
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+  </main>
+
+  <%# Modernizr is required for Zurb Foundation %>
+  <%= javascript_include_tag 'vendor/modernizr' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :scripts %>
+</body>
+</html>
