@@ -10,6 +10,25 @@ Zeprj::Application.routes.draw do
   resources :merchants
   resources :products
   resources :warehouses
+  resources :skulls
+  resources :merchant_accounts
+  resources :providers
+  resources :branches
+  resources :areas
+  resources :agencies
+  resources :customers
+  resources :deliveries
+  resources :exports
+  resources :export_details
+  resources :imports
+  resources :inventories
+  resources :inventory_details
+  resources :orders
+  resources :order_details
+  resources :product_summaries
+  resources :returns
+  resources :return_details
+
   resources "merchantAccounts", :controller => :merchant_accounts, :as => :merchant_accounts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

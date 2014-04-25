@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @return.order_id %>
+</p>
+
+<p>
+  <strong>Merchant account:</strong>
+  <%= @return.merchant_account_id %>
+</p>
+
+<p>
+  <strong>Creation date:</strong>
+  <%= @return.creation_date %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @return.comment %>
+</p>
+
+<%= link_to 'Edit', edit_return_path(@return) %> |
+<%= link_to 'Back', returns_path %>

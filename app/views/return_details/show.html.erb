@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Return:</strong>
+  <%= @return_detail.return_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @return_detail.product_id %>
+</p>
+
+<p>
+  <strong>Current quality:</strong>
+  <%= @return_detail.current_quality %>
+</p>
+
+<p>
+  <strong>Return quality:</strong>
+  <%= @return_detail.return_quality %>
+</p>
+
+<%= link_to 'Edit', edit_return_detail_path(@return_detail) %> |
+<%= link_to 'Back', return_details_path %>

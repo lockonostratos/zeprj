@@ -1,0 +1,19 @@
+<%= simple_form_for(@inventory_detail) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :product_id %>
+
+    <%= f.input :inventory_id %>
+
+    <%= f.input :original_quality %>
+
+    <%= f.input :real_quality %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

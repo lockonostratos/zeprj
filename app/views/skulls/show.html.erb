@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Merchant:</strong>
+  <%= @skull.merchant_id %>
+</p>
+
+<p>
+  <strong>Merchant account:</strong>
+  <%= @skull.merchant_account_id %>
+</p>
+
+<p>
+  <strong>Skull code:</strong>
+  <%= @skull.skull_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @skull.description %>
+</p>
+
+<%= link_to 'Edit', edit_skull_path(@skull) %> |
+<%= link_to 'Back', skulls_path %>

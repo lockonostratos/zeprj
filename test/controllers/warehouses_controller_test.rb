@@ -18,7 +18,7 @@ class WarehousesControllerTest < ActionController::TestCase
 
   test "should create warehouse" do
     assert_difference('Warehouse.count') do
-      post :create, warehouse: { merchant_warehouse: @warehouse.merchant_warehouse, name: @warehouse.name, price: @warehouse.price, product_code: @warehouse.product_code, skull_code: @warehouse.skull_code }
+      post :create, warehouse: { branch_id: @warehouse.branch_id, name: @warehouse.name }
     end
 
     assert_redirected_to warehouse_path(assigns(:warehouse))
@@ -35,7 +35,7 @@ class WarehousesControllerTest < ActionController::TestCase
   end
 
   test "should update warehouse" do
-    patch :update, id: @warehouse, warehouse: { merchant_warehouse: @warehouse.merchant_warehouse, name: @warehouse.name, price: @warehouse.price, product_code: @warehouse.product_code, skull_code: @warehouse.skull_code }
+    patch :update, id: @warehouse, warehouse: { branch_id: @warehouse.branch_id, name: @warehouse.name }
     assert_redirected_to warehouse_path(assigns(:warehouse))
   end
 

@@ -1,0 +1,31 @@
+<h1>Listing imports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Warehouse</th>
+      <th>Merchant account</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imports.each do |import| %>
+      <tr>
+        <td><%= import.warehouse_id %></td>
+        <td><%= import.merchant_account_id %></td>
+        <td><%= import.description %></td>
+        <td><%= link_to 'Show', import %></td>
+        <td><%= link_to 'Edit', edit_import_path(import) %></td>
+        <td><%= link_to 'Destroy', import, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Import', new_import_path %>

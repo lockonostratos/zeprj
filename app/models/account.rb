@@ -29,6 +29,21 @@ class Account < ActiveRecord::Base
     #4. Tạo mới MerchantAccount,
      MerchantAccount.create!({account_id: self.id, merchant_id: current_merchant.id,
                               branch_id: current_branch.id, current_warehouse_id: current_warehouse.id})
+
+    #5. Tạo mới Skull
+    current_skull=Skull.create!({merchant_id:current_merchant.id, merchant_account_id:self.id,
+                                 skull_code:"aasdas", description: 'one default skull'})
+
+    #6. Tao mới Provider
+    current_provider=Provider.create!({merchant_id:current_merchant.id, name:'one default provider'})
+
+    #7. Tạo import
+    current_import=Import.create!({warehouse_id:current_warehouse.id, description:"Nhap lan dau", merchant_account_id:self.id})
+
+    #8. Tao product
+    current_product=Product.create! ({product_code:'abcdefg', skull_id:current_skull.id, provider_id:current_provider.id,
+                                      warehouse_id:current_warehouse.id, import_id:current_import.id, name:'sang kung',
+                                      import_quality:100, available_quality:70, instock_quality:50, import_price:2000})
   end
 
   def destroy_account

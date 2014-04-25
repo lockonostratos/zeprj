@@ -1,0 +1,33 @@
+<h1>Listing return_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Return</th>
+      <th>Product</th>
+      <th>Current quality</th>
+      <th>Return quality</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @return_details.each do |return_detail| %>
+      <tr>
+        <td><%= return_detail.return_id %></td>
+        <td><%= return_detail.product_id %></td>
+        <td><%= return_detail.current_quality %></td>
+        <td><%= return_detail.return_quality %></td>
+        <td><%= link_to 'Show', return_detail %></td>
+        <td><%= link_to 'Edit', edit_return_detail_path(return_detail) %></td>
+        <td><%= link_to 'Destroy', return_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Return detail', new_return_detail_path %>

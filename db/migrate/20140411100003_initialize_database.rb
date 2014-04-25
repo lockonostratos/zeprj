@@ -23,6 +23,35 @@ class InitializeDatabase < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    create_table :modules do |t|
+      t.string :name
+      t.integer :type
+      t.boolean :show
+      t.boolean :create
+      t.boolean :edit
+      t.boolean :delete
+
+      t.timestamps
+    end
+
+    create_table :roles do |t|
+      t.string :name
+      t.integer :merchant
+      t.integer :brach
+      t.integer :warehouse
+
+      t.timestamps
+    end
+
+    create_table :module_roles do |t|
+      t.belongs_to :module
+      t.belongs_to :role
+
+      t.timestamps
+    end
+
+
     #MERCHANTS SECTION------------------------------------------------------------------------------------------->
 
     #Dai ly ban le------------------------------------------->
@@ -40,15 +69,26 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :branch, :null => false , :default => 0
       t.integer :current_warehouse_id
 
-      t.integer :role_id, :null => false , :default => 0 #bang role o dau?
+      t.belongs_to :module_role, :null => false , :default => 0 #bang role o dau?
+
+      t.timestamps
+    end
+
+    #Khu Vuc---------------------------------------------->
+    create_table :areas do |t|
+      t.belongs_to :merchant, :null => false
+      t.belongs_to :merchant_account, :null => false
+      t.string :name, :null => false
+      t.string :description
 
       t.timestamps
     end
 
     #Khach hang---------------------------------------------->
     create_table :customers do |t|
-      t.belongs_to :merchant
-      t.belongs_to :merchant_account
+      t.belongs_to :merchant, :null => false
+      t.belongs_to :merchant_account, :null => false
+      t.belongs_to :area
 
       t.string :account_name
       t.string :password
@@ -59,13 +99,151 @@ class InitializeDatabase < ActiveRecord::Migration
 
     #Ho so mackay
     create_table :mackay_profiles do |t|
-      t.belongs_to :merchant_customer
-      t.string :m1_1
-      t.string :m1_2
-      t.string :m1_3
-      t.string :m2_1
+      t.belongs_to :customer
+      t.integer :last_updator_id, :null => false #merchant_account's id
+      t.text :notes
 
       t.timestamps
+    end
+
+    #Hồ sơ Mackay - cá nhân ---------------------------------------------->
+    create_table :mackay_personals do |t|
+      t.belongs_to :mackay_profile
+      t.string :first_name
+      t.string :last_name
+      t.string :position
+
+      t.string :company_name
+      t.string :company_address
+      t.string :company_phone
+
+      t.string :home_address
+      t.string :home_phone
+
+      t.string :date_of_birth
+      t.string :place_of_birth
+      t.string :home_town
+      t.integer :gender
+      t.integer :height
+      t.integer :weight
+      t.text :comment #ghi chú về những thứ quan trọng như là: bị hói, rất nhạy cảm, độc thân và mê gái...
+    end
+
+    #Ho so mackay hoc van ---------------------------------------------->
+    create_table :mackay_educations do |t|
+      t.belongs_to :mackay_profile
+      t.string :high_school_name
+      t.date :high_school_year
+
+      t.string :university_name
+      t.date :university_start_year
+      t.date :university_graduate_year
+      t.string :graduation_grade #loại bằng cấp, khá, giỏi, trung bình?
+
+      t.string :university_award #giải thưởng trong khi học đh?
+      t.string :university_club
+      t.string :sports
+      t.string :activities
+
+      t.text :feeling_university #cảm nhận không học đại học?
+      t.string :alternative #thay vì học đại học, họ đã làm gì?
+      t.string :army_name
+      t.string :army_grade
+      t.string :army_atitude #thái độ trong quân ngũ
+    end
+
+    #Ho so mackay gia dinh ---------------------------------------------->
+    create_table :mackay_families do |t|
+      t.belongs_to :mackay_profile
+      t.integer :mariage_status #đã kết hôn, độc thân, đang hẹn hò, góa..
+      t.string :spouse_name
+      t.string :spouse_education
+      t.string :spouse_hobbies
+      t.date :mariage_at
+    end
+    #Ho so mackay gia dinh con cái ---------------------------------------------->
+    create_table :mackay_childrens do |t|
+      t.belongs_to :mackay_profile
+      t.string :first_name
+      t.string :last_name
+      t.integer :gender
+      t.string :education
+      t.integer :age
+      t.string :hobbies
+      t.text :comment
+    end
+
+    #Ho so mackay cong viec (sự nghiệp) ---------------------------------------------->
+    create_table :mackay_careers do |t|
+      t.belongs_to :mackay_profile
+      t.string :last_company_name
+      t.string :last_company_address
+      t.string :last_position
+      t.date :last_start_working_date
+
+      t.string :current_position
+      t.string :comany_award
+      t.string :company_atitude #thái độ với c.ty hiện tại
+      t.string :short_term_career_plan
+      t.string :long_term_career_plan
+      t.string :current_concerns #mối lo ngại
+
+      t.string :relation_with_our_staffs #mối quan hệ với nhân viên nào trong c.ty mình
+      t.string :relation_status #tình trạng, mối quan hệ có tốt không?
+      t.string :relation_description #lý do của tình trạng đó, tại sao tốt, tại sao không
+      t.string :relation_essense #bản chất của mối quan hệ
+    end
+
+
+    #Ho so mackay so thich ---------------------------------------------->
+    create_table :mackay_hobbies do |t|
+      t.belongs_to :mackay_profile
+      t.string :club_name
+      t.string :community_activity
+      t.string :religious
+      t.string :conversation_avoids #những thứ tuyệt đối phải tránh khi trò chuyện với họ!
+      t.string :conversation_enjoy #những thứ họ rất thích nói về (ngoài kinh doanh)
+    end
+
+
+    #Ho so mackay phong cach song ---------------------------------------------->
+    create_table :mackay_life_styles do |t|
+      t.belongs_to :mackay_profile
+      t.string :sickness_history
+      t.string :current_heath_status
+      t.boolean :enjoy_drink
+      t.string :famous_drink
+      t.string :drink_tolarence #tửu lượng
+      t.boolean :dislike_drink
+      t.boolean :smoke
+      t.string :dislike_smoke
+      t.string :famous_lunch_restaurant
+      t.string :famous_diner_restaurant
+      t.string :famous_dishes #món ăn ưa thích
+      t.boolean :hate_feed #không thích ăn đồ người khác mua?
+      t.string :hoobies
+      t.string :entertainment_hobbies
+      t.string :reading_hoobies
+      t.string :holiday_hobbies
+      t.string :famous_sports
+      t.string :targeted_object #người mà khách hàng muốn gây ấn tượng
+      t.string :expected_from_object #khách hàng mong muốn gì từ đối tượng
+      t.string :adjectives_about_customer #những tính từ miêu tả khách hàng
+      t.string :best_prounds #những thứ mà khách hàng tự hào nhất
+      t.string :long_term_target #cảm nhận của bạn về mục tiêu dài hạn của khách hàng
+      t.string :short_term_target # cảm nhận của bạn về mục tiêu TRUNG hạn của khách hàng
+    end
+
+
+    #Ho so mackay khach hang va ban---------------------------------------------->
+    create_table :mackay_and_companies do |t|
+      t.belongs_to :mackay_profile
+      t.string :ethic_cautious #những thứ cần để ý thuộc về quy trù đạo đức
+      t.boolean :customer_feel_obligation #khách hàng có cảm thấy có nghĩa vụ với bạn hay không
+      t.string :obligation_descriptions
+      t.boolean :very_focus
+      t.boolean :very_ethic
+      t.string :customer_key_aspect #vấn đề mấu chốt của khách hàng
     end
 
     #Nha cung cap-------------------------------------------->
@@ -107,8 +285,9 @@ class InitializeDatabase < ActiveRecord::Migration
     #Phieu nhap kho------------------------------------------>
     create_table :imports do |t|
       t.belongs_to :warehouse, :null => false
+      t.belongs_to :merchant_account, :null => false
       t.text :description, :null => false
-      t.integer :create_id, :null => false
+
 
       t.timestamps
     end
@@ -116,10 +295,10 @@ class InitializeDatabase < ActiveRecord::Migration
     #San pham------------------------------------------------>
     create_table :product_summaries do |t|
       t.string :product_code, :null => false
-      t.string :skull_code, :null => false, :default => 0
-      t.integer :warehouse, :null => false
+      t.belongs_to :skull
+      t.belongs_to :warehouse, :null => false
       t.string :name, :null => false
-      t.integer :qualtiy, :null => false
+      t.integer :quality, :null => false
       t.decimal :price, :presence => 15
 
       t.timestamps
@@ -128,15 +307,15 @@ class InitializeDatabase < ActiveRecord::Migration
     #Bang CHI TIET san pham!--------------------------------->
     create_table :products do |t|
       t.string :product_code, :null => false
-      t.string :skull_code, :null => false, :default => 0
+      t.belongs_to :skull
       t.belongs_to :provider, :null => false
       t.belongs_to :warehouse, :null => false
       t.belongs_to :import, :null => false
 
       t.string :name, :null => false
       t.integer :import_quality, :null => false #so luong nhap
-      t.integer :available_quality, :null => false #so luong kha di~
-      t.integer :instock_quality, :null => false #so luong thuc te con trong kho
+      t.integer :available_quality, :null => false, :default => 0 #so luong kha di~
+      t.integer :instock_quality, :null => false, :default => 0 #so luong thuc te con trong kho
       t.decimal :import_price, :presence => 15
       t.datetime :expire
 

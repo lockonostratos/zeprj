@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Merchant account:</strong>
+  <%= @export.merchant_account_id %>
+</p>
+
+<p>
+  <strong>Warehouse:</strong>
+  <%= @export.warehouse_id %>
+</p>
+
+<p>
+  <strong>Target warehouse:</strong>
+  <%= @export.target_warehouse_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @export.description %>
+</p>
+
+<%= link_to 'Edit', edit_export_path(@export) %> |
+<%= link_to 'Back', exports_path %>

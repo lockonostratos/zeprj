@@ -1,0 +1,33 @@
+<h1>Listing returns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Merchant account</th>
+      <th>Creation date</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @returns.each do |return| %>
+      <tr>
+        <td><%= return.order_id %></td>
+        <td><%= return.merchant_account_id %></td>
+        <td><%= return.creation_date %></td>
+        <td><%= return.comment %></td>
+        <td><%= link_to 'Show', return %></td>
+        <td><%= link_to 'Edit', edit_return_path(return) %></td>
+        <td><%= link_to 'Destroy', return, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Return', new_return_path %>

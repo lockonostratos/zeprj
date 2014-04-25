@@ -5,13 +5,13 @@
     <tr>
       <th>Product code</th>
       <th>Skull code</th>
-      <th>Merchant warehouse</th>
+      <th>Warehouse</th>
+      <th>Provider</th>
+      <th>Import</th>
       <th>Name</th>
-      <th>Quality all</th>
-      <th>Price</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Import Quality</th>
+      <th>Import Price</th>
+      <th>Expire</th>
     </tr>
   </thead>
 
@@ -19,11 +19,14 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.product_code %></td>
-        <td><%= product.skull_code %></td>
-        <td><%= product.merchant_warehouse %></td>
+        <td><%= product.skull.id %></td>
+        <td><%= product.warehouse.id %></td>
+        <td><%= product.provider.id %></td>
+        <td><%= product.import.id%></td>
         <td><%= product.name %></td>
-        <td><%= product.qualtiy_all %></td>
-        <td><%= product.price %></td>
+        <td><%= product.import_quality %></td>
+        <td><%= product.import_price %></td>
+        <td><%= product.expire %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

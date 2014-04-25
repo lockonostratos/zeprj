@@ -1,0 +1,33 @@
+<h1>Listing exports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merchant account</th>
+      <th>Warehouse</th>
+      <th>Target warehouse</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exports.each do |export| %>
+      <tr>
+        <td><%= export.merchant_account_id %></td>
+        <td><%= export.warehouse_id %></td>
+        <td><%= export.target_warehouse_id %></td>
+        <td><%= export.description %></td>
+        <td><%= link_to 'Show', export %></td>
+        <td><%= link_to 'Edit', edit_export_path(export) %></td>
+        <td><%= link_to 'Destroy', export, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Export', new_export_path %>

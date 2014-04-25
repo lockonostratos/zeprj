@@ -1,0 +1,31 @@
+<h1>Listing export_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Export</th>
+      <th>Product</th>
+      <th>Quality</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @export_details.each do |export_detail| %>
+      <tr>
+        <td><%= export_detail.export_id %></td>
+        <td><%= export_detail.product_id %></td>
+        <td><%= export_detail.quality %></td>
+        <td><%= link_to 'Show', export_detail %></td>
+        <td><%= link_to 'Edit', edit_export_detail_path(export_detail) %></td>
+        <td><%= link_to 'Destroy', export_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Export detail', new_export_detail_path %>

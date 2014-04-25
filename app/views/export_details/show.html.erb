@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Export:</strong>
+  <%= @export_detail.export_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @export_detail.product_id %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @export_detail.quality %>
+</p>
+
+<%= link_to 'Edit', edit_export_detail_path(@export_detail) %> |
+<%= link_to 'Back', export_details_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Warehouse:</strong>
+  <%= @inventory.warehouse_id %>
+</p>
+
+<p>
+  <strong>Merchant account:</strong>
+  <%= @inventory.merchant_account_id %>
+</p>
+
+<p>
+  <strong>Decription:</strong>
+  <%= @inventory.decription %>
+</p>
+
+<p>
+  <strong>Success:</strong>
+  <%= @inventory.success %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

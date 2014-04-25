@@ -1,0 +1,33 @@
+<h1>Listing inventory_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Inventory</th>
+      <th>Original quality</th>
+      <th>Real quality</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventory_details.each do |inventory_detail| %>
+      <tr>
+        <td><%= inventory_detail.product_id %></td>
+        <td><%= inventory_detail.inventory_id %></td>
+        <td><%= inventory_detail.original_quality %></td>
+        <td><%= inventory_detail.real_quality %></td>
+        <td><%= link_to 'Show', inventory_detail %></td>
+        <td><%= link_to 'Edit', edit_inventory_detail_path(inventory_detail) %></td>
+        <td><%= link_to 'Destroy', inventory_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inventory detail', new_inventory_detail_path %>

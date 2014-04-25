@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418070744) do
+ActiveRecord::Schema.define(version: 20140411100003) do
 
   create_table "accounts", force: true do |t|
-    t.string   "auth_token",      null: false
+    t.string   "auth_token",                  null: false
+    t.integer  "account_type",                null: false
+    t.integer  "parent_id",       default: 0
+    t.integer  "status",          default: 0
     t.string   "display_name"
-    t.string   "email",           null: false
-    t.string   "phone"
-    t.string   "password_digest", null: false
-    t.integer  "account_type",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "creator_id"
     t.string   "last_name"
     t.string   "first_name"
-    t.integer  "parent_id"
+    t.string   "email",                       null: false
+    t.string   "phone"
+    t.string   "password_digest",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "agencies", force: true do |t|
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20140418070744) do
     t.datetime "updated_at"
   end
 
+  create_table "areas", force: true do |t|
+    t.integer  "merchant_id",         null: false
+    t.integer  "merchant_account_id", null: false
+    t.string   "name",                null: false
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "branches", force: true do |t|
     t.integer  "merchant_id", null: false
     t.string   "name",        null: false
@@ -51,8 +60,9 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "customers", force: true do |t|
-    t.integer  "merchant_id"
-    t.integer  "merchant_account_id"
+    t.integer  "merchant_id",         null: false
+    t.integer  "merchant_account_id", null: false
+    t.integer  "area_id"
     t.string   "account_name"
     t.string   "password"
     t.string   "email"
@@ -96,9 +106,9 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "imports", force: true do |t|
-    t.integer  "warehouse_id", null: false
-    t.text     "description",  null: false
-    t.integer  "create_id",    null: false
+    t.integer  "warehouse_id",        null: false
+    t.integer  "merchant_account_id", null: false
+    t.text     "description",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -121,12 +131,132 @@ ActiveRecord::Schema.define(version: 20140418070744) do
     t.datetime "updated_at"
   end
 
+  create_table "mackay_and_companies", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "ethic_cautious"
+    t.boolean "customer_feel_obligation"
+    t.string  "obligation_descriptions"
+    t.boolean "very_focus"
+    t.boolean "very_ethic"
+    t.string  "customer_key_aspect"
+  end
+
+  create_table "mackay_careers", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "last_company_name"
+    t.string  "last_company_address"
+    t.string  "last_position"
+    t.date    "last_start_working_date"
+    t.string  "current_position"
+    t.string  "comany_award"
+    t.string  "company_atitude"
+    t.string  "short_term_career_plan"
+    t.string  "long_term_career_plan"
+    t.string  "current_concerns"
+    t.string  "relation_with_our_staffs"
+    t.string  "relation_status"
+    t.string  "relation_description"
+    t.string  "relation_essense"
+  end
+
+  create_table "mackay_childrens", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.integer "gender"
+    t.string  "education"
+    t.integer "age"
+    t.string  "hobbies"
+    t.text    "comment"
+  end
+
+  create_table "mackay_educations", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "high_school_name"
+    t.date    "high_school_year"
+    t.string  "university_name"
+    t.date    "university_start_year"
+    t.date    "university_graduate_year"
+    t.string  "graduation_grade"
+    t.string  "university_award"
+    t.string  "university_club"
+    t.string  "sports"
+    t.string  "activities"
+    t.text    "feeling_university"
+    t.string  "alternative"
+    t.string  "army_name"
+    t.string  "army_grade"
+    t.string  "army_atitude"
+  end
+
+  create_table "mackay_families", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.integer "mariage_status"
+    t.string  "spouse_name"
+    t.string  "spouse_education"
+    t.string  "spouse_hobbies"
+    t.date    "mariage_at"
+  end
+
+  create_table "mackay_hobbies", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "club_name"
+    t.string  "community_activity"
+    t.string  "religious"
+    t.string  "conversation_avoids"
+    t.string  "conversation_enjoy"
+  end
+
+  create_table "mackay_life_styles", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "sickness_history"
+    t.string  "current_heath_status"
+    t.boolean "enjoy_drink"
+    t.string  "famous_drink"
+    t.string  "drink_tolarence"
+    t.boolean "dislike_drink"
+    t.boolean "smoke"
+    t.string  "dislike_smoke"
+    t.string  "famous_lunch_restaurant"
+    t.string  "famous_diner_restaurant"
+    t.string  "famous_dishes"
+    t.boolean "hate_feed"
+    t.string  "hoobies"
+    t.string  "entertainment_hobbies"
+    t.string  "reading_hoobies"
+    t.string  "holiday_hobbies"
+    t.string  "famous_sports"
+    t.string  "targeted_object"
+    t.string  "expected_from_object"
+    t.string  "adjectives_about_customer"
+    t.string  "best_prounds"
+    t.string  "long_term_target"
+    t.string  "short_term_target"
+  end
+
+  create_table "mackay_personals", force: true do |t|
+    t.integer "mackay_profile_id"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "position"
+    t.string  "company_name"
+    t.string  "company_address"
+    t.string  "company_phone"
+    t.string  "home_address"
+    t.string  "home_phone"
+    t.string  "date_of_birth"
+    t.string  "place_of_birth"
+    t.string  "home_town"
+    t.integer "gender"
+    t.integer "height"
+    t.integer "weight"
+    t.text    "comment"
+  end
+
   create_table "mackay_profiles", force: true do |t|
-    t.integer  "merchant_customer_id"
-    t.string   "m1_1"
-    t.string   "m1_2"
-    t.string   "m1_3"
-    t.string   "m2_1"
+    t.integer  "customer_id"
+    t.integer  "last_updator_id", null: false
+    t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -136,7 +266,7 @@ ActiveRecord::Schema.define(version: 20140418070744) do
     t.integer  "merchant_id",                      null: false
     t.integer  "branch_id",            default: 0, null: false
     t.integer  "current_warehouse_id"
-    t.integer  "role_id",              default: 0, null: false
+    t.integer  "module_role_id",       default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -145,6 +275,24 @@ ActiveRecord::Schema.define(version: 20140418070744) do
     t.integer  "headquater_id", default: 0, null: false
     t.integer  "owner_id",                  null: false
     t.string   "name",                      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "module_roles", force: true do |t|
+    t.integer  "module_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "modules", force: true do |t|
+    t.string   "name"
+    t.integer  "type"
+    t.boolean  "show"
+    t.boolean  "create"
+    t.boolean  "edit"
+    t.boolean  "delete"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -182,26 +330,26 @@ ActiveRecord::Schema.define(version: 20140418070744) do
   end
 
   create_table "product_summaries", force: true do |t|
-    t.string   "product_code",                                        null: false
-    t.string   "skull_code",                            default: "0", null: false
-    t.integer  "warehouse",                                           null: false
-    t.string   "name",                                                null: false
-    t.integer  "qualtiy",                                             null: false
+    t.string   "product_code",                          null: false
+    t.integer  "skull_id"
+    t.integer  "warehouse_id",                          null: false
+    t.string   "name",                                  null: false
+    t.integer  "quality",                               null: false
     t.decimal  "price",        precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
-    t.string   "product_code",                                             null: false
-    t.string   "skull_code",                                 default: "0", null: false
-    t.integer  "provider_id",                                              null: false
-    t.integer  "warehouse_id",                                             null: false
-    t.integer  "import_id",                                                null: false
-    t.string   "name",                                                     null: false
-    t.integer  "import_quality",                                           null: false
-    t.integer  "available_quality",                                        null: false
-    t.integer  "instock_quality",                                          null: false
+    t.string   "product_code",                                           null: false
+    t.integer  "skull_id"
+    t.integer  "provider_id",                                            null: false
+    t.integer  "warehouse_id",                                           null: false
+    t.integer  "import_id",                                              null: false
+    t.string   "name",                                                   null: false
+    t.integer  "import_quality",                                         null: false
+    t.integer  "available_quality",                          default: 0, null: false
+    t.integer  "instock_quality",                            default: 0, null: false
     t.decimal  "import_price",      precision: 10, scale: 0
     t.datetime "expire"
     t.datetime "created_at"
@@ -229,6 +377,15 @@ ActiveRecord::Schema.define(version: 20140418070744) do
     t.integer  "merchant_account_id", null: false
     t.datetime "creation_date",       null: false
     t.string   "comment",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "merchant"
+    t.integer  "brach"
+    t.integer  "warehouse"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,23 @@
+<%= simple_form_for(@customer) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :merchant_id %>
+
+    <%= f.input :merchant_account_id %>
+
+    <%= f.input :area_id %>
+
+    <%= f.input :account_name %>
+
+    <%= f.input :password %>
+
+    <%= f.input :email %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

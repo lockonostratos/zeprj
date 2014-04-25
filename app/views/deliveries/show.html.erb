@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @delivery.order_id %>
+</p>
+
+<p>
+  <strong>Merchant account:</strong>
+  <%= @delivery.merchant_account_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @delivery.status %>
+</p>
+
+<p>
+  <strong>Delivery date:</strong>
+  <%= @delivery.delivery_date %>
+</p>
+
+<p>
+  <strong>Transportation fee:</strong>
+  <%= @delivery.transportation_fee %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @delivery.comment %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_path(@delivery) %> |
+<%= link_to 'Back', deliveries_path %>
