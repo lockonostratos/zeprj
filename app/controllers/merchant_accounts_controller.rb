@@ -1,5 +1,5 @@
 class MerchantAccountsController < ApplicationController
-  before_action :set_merchant_account, only: [:show, :edit, :update, :destroy]
+  before_action :set_merchant_account, only: [:edit, :update, :destroy]
 
   # GET /merchant_accounts
   # GET /merchant_accounts.json
@@ -10,23 +10,23 @@ class MerchantAccountsController < ApplicationController
   # GET /merchant_accounts/1
   # GET /merchant_accounts/1.json
   def show
-    #if params[:id] == '0'
-    #  @merchant_account = MerchantAccount.find(@current_account.id)
-    #else
-    #  @merchant_account = MerchantAccount.find(params[:id])
-    #end
-    #
-    #if @merchant_account.nil?
-    #  respond_to do |format|
-    #    format.html
-    #    format.json { render json: {}, status: :accepted }
-    #  end
-    #else
-    #  respond_to do |format|
-    #    format.html
-    #    format.json { render json: @merchant_account }
-    #  end
-    #end
+    if params[:id] == '0'
+      @merchant_account = MerchantAccount.find(@current_account.id)
+    else
+      @merchant_account = MerchantAccount.find(params[:id])
+    end
+
+    if @merchant_account.nil?
+      respond_to do |format|
+        format.html
+        format.json { render json: {}, status: :accepted }
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.json { render json: @merchant_account }
+      end
+    end
   end
 
   # GET /merchant_accounts/new

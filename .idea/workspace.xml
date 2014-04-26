@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/essentials/_ending.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/essentials/_opening.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/branch.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/warehouse/home.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/home_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/import.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/importDetails.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/merchant.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/merchant_account.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/merchant_application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/product_summaries.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/skull.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/warehouse_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/welcomes.html.erb" />
-      <change type="DELETED" beforePath="D:\softwareProjects\zeprj\app\assets\javascripts\controllers\warehouses_controller.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="D:\softwareProjects\zeprj\app\helpers\merchant_helper.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" afterPath="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zeprj.iml" afterPath="$PROJECT_DIR$/.idea/zeprj.iml" />
     </list>
@@ -48,10 +17,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1398392082273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
+    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1398503787388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="D:\softwareProjects\zeprj" />
+    <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -61,452 +30,119 @@
     <favorites_list name="zeprj" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="schema.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="32" selection-start="6102" selection-end="6102" vertical-scroll-proportion="-0.59574467" vertical-offset="3424" max-vertical-offset="7072">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20140411100003_initialize_database.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="283" column="0" selection-start="8696" selection-end="8696" vertical-scroll-proportion="0.0" vertical-offset="4687" max-vertical-offset="7786">
-              <folding>
-                <marker date="1398429395896" expanded="true" signature="220:317" placeholder="do ... end" />
-                <marker date="1398429395896" expanded="true" signature="8484:8650" placeholder="do ... end" />
-                <marker date="1398429395896" expanded="true" signature="8714:8934" placeholder="do ... end" />
-                <marker date="1398429395896" expanded="true" signature="9360:10015" placeholder="do ... end" />
-                <marker date="1398429395896" expanded="true" signature="13093:13586" placeholder="#..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="merchant_accounts_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="5" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1632">
-              <folding>
-                <marker date="1398429217543" expanded="true" signature="2005:2018" placeholder="{ ... }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RailsDependency/#zeprj" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://RailsDependency/#zeprj">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>RailsDependency</ID>
-              <OriginalElement>#zeprj</OriginalElement>
-              <nodes>
-                <node x="605.0" y="1021.9672036210313">Branch</node>
-                <node x="969.0" y="1238.9672036210313">Warehouse</node>
-                <node x="2160.0" y="1161.7172036210313">InventoryDetail</node>
-                <node x="1335.0" y="1293.201171875">Import</node>
-                <node x="276.0" y="963.451171875">Merchant</node>
-                <node x="1384.0" y="439.451171875">Area</node>
-                <node x="612.0" y="1702.201171875">Account</node>
-                <node x="2517.5" y="585.701171875">MackayHobby</node>
-                <node x="2124.0" y="935.2172036210313">Order</node>
-                <node x="2549.5" y="1369.0204575892858">OrderDetail</node>
-                <node x="571.0" y="319.451171875">ModuleRole</node>
-                <node x="1342.5" y="1050.5168861607144">Inventory</node>
-                <node x="927.0" y="661.520457589286">MerchantAccount</node>
-                <node x="315.8489640130862" y="187.64464697496362">Module</node>
-                <node x="2831.0" y="222.53648933531724">MackayChildren</node>
-                <node x="1366.5" y="1511.951171875">Skull</node>
-                <node x="2517.5" y="409.701171875">MackayCareer</node>
-                <node x="1687.5" y="311.701171875">Customer</node>
-                <node x="2490.0" y="761.701171875">Delivery</node>
-                <node x="1686.0" y="1344.951171875">Product</node>
-                <node x="2517.5" y="673.701171875">MackayLifeStyle</node>
-                <node x="2517.5" y="204.701171875">MackayPersonal</node>
-                <node x="471.0" y="1702.201171875">GeraAccount</node>
-                <node x="2852.0" y="1174.7864893353171">ReturnDetail</node>
-                <node x="1789.5" y="1589.201171875">ProductSummary</node>
-                <node x="2517.5" y="497.701171875">MackayAndCompany</node>
-                <node x="2497.0" y="96.701171875">MackayFamily</node>
-                <node x="2092.0" y="227.201171875">MackayProfile</node>
-                <node x="1360.0" y="1178.5168861607144">Export</node>
-                <node x="297.0" y="1702.201171875">AgencyAccount</node>
-                <node x="2517.5" y="8.701171875">MackayEducation</node>
-                <node x="2480.0" y="902.7172036210313">Return</node>
-                <node x="4.598327880770654" y="379.11311298732284">Role</node>
-                <node x="2175.0" y="1289.7172036210313">ExportDetail</node>
-                <node x="1386.5" y="1403.951171875">Provider</node>
-                <node x="0.0" y="1702.201171875">Agency</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="Branch" target="MerchantAccount">
-                  <point x="104.0" y="-36.0" />
-                  <point x="847.0" y="1039.9672036210313" />
-                  <point x="-164.0" y="89.33333333333337" />
-                </edge>
-                <edge source="Role" target="ModuleRole">
-                  <point x="98.0" y="17.0" />
-                  <point x="390.0385314431116" y="485.9447196757997" />
-                  <point x="-138.0" y="22.0" />
-                </edge>
-                <edge source="Role" target="Module">
-                  <point x="98.0" y="-17.0" />
-                  <point x="-98.0" y="-0.0" />
-                </edge>
-                <edge source="MackayFamily" target="MackayChildren">
-                  <point x="118.5" y="-0.0" />
-                  <point x="2751.0" y="130.701171875" />
-                  <point x="-97.0" y="-12.0" />
-                </edge>
-                <edge source="Customer" target="MackayProfile">
-                  <point x="161.5" y="-29.77777777777777" />
-                  <point x="-154.0" y="-0.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Delivery">
-                  <point x="164.0" y="-59.55555555555554" />
-                  <point x="1335.0" y="778.701171875" />
-                  <point x="-125.5" y="-17.0" />
-                </edge>
-                <edge source="Customer" target="MackayEducation">
-                  <point x="161.5" y="-119.11111111111109" />
-                  <point x="2092.0" y="20.701171875" />
-                  <point x="-98.0" y="-12.0" />
-                </edge>
-                <edge source="MackayProfile" target="MackayEducation">
-                  <point x="154.0" y="-91.0" />
-                  <point x="2480.0" y="44.701171875" />
-                  <point x="-98.0" y="12.0" />
-                </edge>
-                <edge source="Warehouse" target="Order">
-                  <point x="122.0" y="-14.0" />
-                  <point x="1255.0" y="1308.9672036210313" />
-                  <point x="1335.0" y="1277.0168861607144" />
-                  <point x="2012.0" y="1277.0168861607144" />
-                  <point x="2092.0" y="1082.2172036210313" />
-                  <point x="-122.0" y="63.0" />
-                </edge>
-                <edge source="Merchant" target="Provider">
-                  <point x="107.5" y="25.600000000000023" />
-                  <point x="571.0" y="1514.7172036210313" />
-                  <point x="1255.0" y="1514.7172036210313" />
-                  <point x="1335.0" y="1437.951171875" />
-                  <point x="-84.0" y="-0.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Customer">
-                  <point x="164.0" y="-119.11111111111109" />
-                  <point x="1335.0" y="428.951171875" />
-                  <point x="1606.0" y="428.951171875" />
-                  <point x="-161.5" y="-0.0" />
-                </edge>
-                <edge source="Merchant" target="Customer">
-                  <point x="107.5" y="-51.19999999999999" />
-                  <point x="571.0" y="417.951171875" />
-                  <point x="1606.0" y="417.951171875" />
-                  <point x="-161.5" y="-89.33333333333337" />
-                </edge>
-                <edge source="MackayProfile" target="MackayAndCompany">
-                  <point x="154.0" y="39.0" />
-                  <point x="2480.0" y="509.701171875" />
-                  <point x="-98.0" y="-12.0" />
-                </edge>
-                <edge source="Provider" target="Product">
-                  <point x="84.0" y="-0.0" />
-                  <point x="1606.0" y="1437.951171875" />
-                  <point x="-163.0" y="23.5" />
-                </edge>
-                <edge source="Customer" target="MackayCareer">
-                  <point x="161.5" y="-0.0" />
-                  <point x="-98.0" y="12.0" />
-                </edge>
-                <edge source="Warehouse" target="Import">
-                  <point x="122.0" y="14.0" />
-                  <point x="1255.0" y="1336.9672036210313" />
-                  <point x="-135.5" y="22.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Inventory">
-                  <point x="164.0" y="29.77777777777783" />
-                  <point x="-128.0" y="-22.0" />
-                </edge>
-                <edge source="Customer" target="MackayLifeStyle">
-                  <point x="161.5" y="89.33333333333331" />
-                  <point x="2092.0" y="709.701171875" />
-                  <point x="-98.0" y="12.0" />
-                </edge>
-                <edge source="Warehouse" target="ProductSummary">
-                  <point x="122.0" y="70.0" />
-                  <point x="1255.0" y="1392.9672036210313" />
-                  <point x="1335.0" y="1641.951171875" />
-                  <point x="1606.0" y="1641.951171875" />
-                  <point x="-59.5" y="17.0" />
-                </edge>
-                <edge source="Product" target="ReturnDetail">
-                  <point x="163.0" y="70.5" />
-                  <point x="2092.0" y="1489.951171875" />
-                  <point x="2751.0" y="1489.951171875" />
-                  <point x="2831.0" y="1225.7864893353171" />
-                  <point x="-76.0" y="17.0" />
-                </edge>
-                <edge source="Customer" target="MackayPersonal">
-                  <point x="161.5" y="-59.55555555555554" />
-                  <point x="2092.0" y="216.701171875" />
-                  <point x="-98.0" y="-12.0" />
-                </edge>
-                <edge source="Branch" target="Warehouse">
-                  <point x="104.0" y="36.0" />
-                  <point x="847.0" y="1111.9672036210313" />
-                  <point x="927.0" y="1322.9672036210313" />
-                  <point x="-122.0" y="-0.0" />
-                </edge>
-                <edge source="Agency" target="AgencyAccount">
-                  <point x="108.5" y="-0.0" />
-                  <point x="-64.5" y="-0.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Return">
-                  <point x="164.0" y="-29.77777777777777" />
-                  <point x="1335.0" y="840.701171875" />
-                  <point x="2400.0" y="840.701171875" />
-                  <point x="-135.5" y="-22.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Area">
-                  <point x="164.0" y="-89.33333333333331" />
-                  <point x="1335.0" y="473.451171875" />
-                  <point x="-86.5" y="-0.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Order">
-                  <point x="164.0" y="-0.0" />
-                  <point x="1335.0" y="882.951171875" />
-                  <point x="2012.0" y="882.951171875" />
-                  <point x="2092.0" y="998.2172036210313" />
-                  <point x="-122.0" y="-21.0" />
-                </edge>
-                <edge source="Area" target="Customer">
-                  <point x="86.5" y="-0.0" />
-                  <point x="1606.0" y="473.451171875" />
-                  <point x="-161.5" y="89.33333333333331" />
-                </edge>
-                <edge source="MackayProfile" target="MackayLifeStyle">
-                  <point x="154.0" y="91.0" />
-                  <point x="2480.0" y="685.701171875" />
-                  <point x="-98.0" y="-12.0" />
-                </edge>
-                <edge source="Order" target="OrderDetail">
-                  <point x="122.0" y="56.0" />
-                  <point x="2400.0" y="1075.2172036210313" />
-                  <point x="2480.0" y="1386.0204575892858" />
-                  <point x="-66.0" y="-17.0" />
-                </edge>
-                <edge source="Merchant" target="MerchantAccount">
-                  <point x="107.5" y="-25.600000000000023" />
-                  <point x="571.0" y="795.520457589286" />
-                  <point x="-164.0" y="-0.0" />
-                </edge>
-                <edge source="Merchant" target="Skull">
-                  <point x="107.5" y="51.200000000000045" />
-                  <point x="571.0" y="1622.0168861607144" />
-                  <point x="1255.0" y="1622.0168861607144" />
-                  <point x="1335.0" y="1592.951171875" />
-                  <point x="-104.0" y="27.0" />
-                </edge>
-                <edge source="Customer" target="MackayFamily">
-                  <point x="161.5" y="-89.33333333333337" />
-                  <point x="2092.0" y="113.701171875" />
-                  <point x="-118.5" y="-17.0" />
-                </edge>
-                <edge source="Module" target="ModuleRole">
-                  <point x="98.0" y="-0.0" />
-                  <point x="-138.0" y="-22.0" />
-                </edge>
-                <edge source="Product" target="OrderDetail">
-                  <point x="163.0" y="23.5" />
-                  <point x="2400.0" y="1462.451171875" />
-                  <point x="2480.0" y="1420.0204575892858" />
-                  <point x="-66.0" y="17.0" />
-                </edge>
-                <edge source="Customer" target="Order">
-                  <point x="161.5" y="119.11111111111109" />
-                  <point x="2092.0" y="956.2172036210313" />
-                  <point x="-122.0" y="-63.0" />
-                </edge>
-                <edge source="Warehouse" target="Product">
-                  <point x="122.0" y="42.0" />
-                  <point x="1255.0" y="1364.9672036210313" />
-                  <point x="1335.0" y="1393.451171875" />
-                  <point x="1606.0" y="1393.451171875" />
-                  <point x="-163.0" y="-23.5" />
-                </edge>
-                <edge source="MerchantAccount" target="Export">
-                  <point x="164.0" y="59.55555555555554" />
-                  <point x="1335.0" y="1200.5168861607144" />
-                  <point x="-110.5" y="-22.0" />
-                </edge>
-                <edge source="Warehouse" target="Inventory">
-                  <point x="122.0" y="-70.0" />
-                  <point x="1255.0" y="1252.9672036210313" />
-                  <point x="-128.0" y="22.0" />
-                </edge>
-                <edge source="MackayProfile" target="MackayCareer">
-                  <point x="154.0" y="13.0" />
-                  <point x="2480.0" y="421.701171875" />
-                  <point x="-98.0" y="-12.0" />
-                </edge>
-                <edge source="Warehouse" target="Export">
-                  <point x="122.0" y="-42.0" />
-                  <point x="1255.0" y="1280.9672036210313" />
-                  <point x="1335.0" y="1244.5168861607144" />
-                  <point x="-110.5" y="22.0" />
-                </edge>
-                <edge source="Customer" target="MackayAndCompany">
-                  <point x="161.5" y="29.77777777777777" />
-                  <point x="2092.0" y="533.701171875" />
-                  <point x="-98.0" y="12.0" />
-                </edge>
-                <edge source="Merchant" target="Branch">
-                  <point x="107.5" y="-0.0" />
-                  <point x="571.0" y="1075.9672036210313" />
-                  <point x="-104.0" y="-0.0" />
-                </edge>
-                <edge source="MackayProfile" target="MackayFamily">
-                  <point x="154.0" y="-65.0" />
-                  <point x="2480.0" y="147.701171875" />
-                  <point x="-118.5" y="17.0" />
-                </edge>
-                <edge source="Customer" target="MackayHobby">
-                  <point x="161.5" y="59.55555555555554" />
-                  <point x="2092.0" y="621.701171875" />
-                  <point x="-98.0" y="12.0" />
-                </edge>
-                <edge source="Return" target="ReturnDetail">
-                  <point x="135.5" y="-0.0" />
-                  <point x="2831.0" y="1191.7864893353171" />
-                  <point x="-76.0" y="-17.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Import">
-                  <point x="164.0" y="89.33333333333326" />
-                  <point x="-135.5" y="-22.0" />
-                </edge>
-                <edge source="Export" target="ExportDetail">
-                  <point x="110.5" y="-0.0" />
-                  <point x="2012.0" y="1222.5168861607144" />
-                  <point x="2092.0" y="1306.7172036210313" />
-                  <point x="-71.0" y="-17.0" />
-                </edge>
-                <edge source="Branch" target="Order">
-                  <point x="104.0" y="-0.0" />
-                  <point x="847.0" y="1075.9672036210313" />
-                  <point x="927.0" y="1008.7207750496027" />
-                  <point x="2012.0" y="1008.7207750496027" />
-                  <point x="2092.0" y="1040.2172036210313" />
-                  <point x="-122.0" y="21.0" />
-                </edge>
-                <edge source="Order" target="Return">
-                  <point x="122.0" y="-0.0" />
-                  <point x="2400.0" y="1019.2172036210313" />
-                  <point x="-135.5" y="22.0" />
-                </edge>
-                <edge source="Order" target="Delivery">
-                  <point x="122.0" y="-56.0" />
-                  <point x="2400.0" y="963.2172036210313" />
-                  <point x="-125.5" y="17.0" />
-                </edge>
-                <edge source="Import" target="Product">
-                  <point x="135.5" y="-0.0" />
-                  <point x="-163.0" y="-70.5" />
-                </edge>
-                <edge source="Skull" target="ProductSummary">
-                  <point x="104.0" y="27.0" />
-                  <point x="1606.0" y="1592.951171875" />
-                  <point x="1686.0" y="1606.201171875" />
-                  <point x="-59.5" y="-17.0" />
-                </edge>
-                <edge source="MackayProfile" target="MackayPersonal">
-                  <point x="154.0" y="-39.0" />
-                  <point x="2480.0" y="240.701171875" />
-                  <point x="-98.0" y="12.0" />
-                </edge>
-                <edge source="MerchantAccount" target="Skull">
-                  <point x="164.0" y="119.11111111111109" />
-                  <point x="1335.0" y="1538.951171875" />
-                  <point x="-104.0" y="-27.0" />
-                </edge>
-                <edge source="Product" target="InventoryDetail">
-                  <point x="163.0" y="-70.5" />
-                  <point x="2092.0" y="1212.7172036210313" />
-                  <point x="-86.0" y="17.0" />
-                </edge>
-                <edge source="MackayProfile" target="MackayHobby">
-                  <point x="154.0" y="65.0" />
-                  <point x="2480.0" y="597.701171875" />
-                  <point x="-98.0" y="-12.0" />
-                </edge>
-                <edge source="Inventory" target="InventoryDetail">
-                  <point x="128.0" y="-0.0" />
-                  <point x="2012.0" y="1094.5168861607144" />
-                  <point x="2092.0" y="1178.7172036210313" />
-                  <point x="-86.0" y="-17.0" />
-                </edge>
-                <edge source="ModuleRole" target="MerchantAccount">
-                  <point x="138.0" y="-0.0" />
-                  <point x="-164.0" y="-89.33333333333331" />
-                </edge>
-                <edge source="MackayProfile" target="MackayChildren">
-                  <point x="154.0" y="-13.0" />
-                  <point x="2751.0" y="318.201171875" />
-                  <point x="-97.0" y="12.0" />
-                </edge>
-                <edge source="Skull" target="Product">
-                  <point x="104.0" y="-27.0" />
-                  <point x="1606.0" y="1538.951171875" />
-                  <point x="-163.0" y="70.5" />
-                </edge>
-                <edge source="Product" target="ExportDetail">
-                  <point x="163.0" y="-23.5" />
-                  <point x="2092.0" y="1340.7172036210313" />
-                  <point x="-71.0" y="17.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0873517786561262" x="213.0" y="437.0" />
-              <SelectedNodes>
-                <node>InventoryDetail</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Association fields</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="role.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/role.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module_role.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/module_role.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="29" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20140331090530_create_accounts.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20140331090530_create_accounts.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="408">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.6748927">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="warehouses_route.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="35" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/routes.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="39" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1805">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="merchant_accounts_controller.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="18" column="29" selection-start="528" selection-end="528" vertical-scroll-proportion="0.55700326" vertical-offset="0" max-vertical-offset="1824">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="productSummaries.hbs" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="9" selection-start="14" selection-end="19" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="171">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="warehouses_controllers.js.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="171">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="warehouses_view.js.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="17" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="warehouse_view.js.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse_view.js.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="import.hbs" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="6" selection-start="221" selection-end="221" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="323">
+                  <folding>
+                    <marker date="1398426457617" expanded="true" signature="16:220" placeholder="..." />
+                    <marker date="1398426457617" expanded="true" signature="50:126" placeholder="..." />
+                    <marker date="1398426457617" expanded="true" signature="160:212" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="application.js.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="21" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="589">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="importDetails.hbs" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/importDetails.hbs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="20140411100003_initialize_database.rb" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="11" column="33" selection-start="256" selection-end="256" vertical-scroll-proportion="0.3442029" vertical-offset="114" max-vertical-offset="8702">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -523,57 +159,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/zeprj.js.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/accounts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/product_summary.rb" />
-        <option value="$PROJECT_DIR$/app/models/account.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/providers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/provider.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/banches_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/warehouse.rb" />
-        <option value="$PROJECT_DIR$/app/models/branch.rb" />
-        <option value="$PROJECT_DIR$/app/models/area.rb" />
-        <option value="$PROJECT_DIR$/app/models/skull.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/product_summaries/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/product_summaries/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/product_summaries/index.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/product_summaries/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/product_summaries/show.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/models/import.rb" />
-        <option value="$PROJECT_DIR$/app/models/product.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/skulls_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/products/index.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/products/show.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/products/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/current_account_controller.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/initializers/current_account.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/warehouse.coffee" />
+        <option value="$PROJECT_DIR$/app/serializers/account_serializer.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140331090530_create_accounts.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_careers.rb" />
-        <option value="$PROJECT_DIR$/app/models/customer.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_profile.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_personal.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_and_company.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_career.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_life_style.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_hobby.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_education.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_children.rb" />
-        <option value="$PROJECT_DIR$/app/models/mackay_family.rb" />
-        <option value="$PROJECT_DIR$/app/models/employee.rb" />
-        <option value="$PROJECT_DIR$/app/models/manager.rb" />
-        <option value="$PROJECT_DIR$/app/views/merchant_accounts/_form.html.erb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/models/module_role.rb" />
-        <option value="$PROJECT_DIR$/app/models/merchant_account.rb" />
-        <option value="$PROJECT_DIR$/app/models/role.rb" />
-        <option value="$PROJECT_DIR$/app/models/module.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/accounts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/account.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/routes/application_route.js.coffee" />
+        <option value="$PROJECT_DIR$/app/serializers/merchant_account_serializer.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/application.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/home/metro.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/merchant_home.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/merchant_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/warehouse_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/warehouse/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_merchant_app.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/merchant_application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/merchant_home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/essentials/_ending.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/essentials/_opening.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/merchant_application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_metro.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/welcomes.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/merchant/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/Merchant/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/importDetails.hbs" />
+        <option value="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/merchant.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/merchant_account.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/skull.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/product_summaries.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/branch.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/import.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" />
+        <option value="$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb" />
       </list>
     </option>
   </component>
@@ -583,11 +219,6 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="MergeToolSettings">
-    <option name="WHITESPACES" value="true" />
-    <option name="INDENT_LINES" value="true" />
-    <option name="SOFT_WRAPS" value="true" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -681,12 +312,18 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="zeprj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -773,7 +410,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -791,14 +428,150 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="warehouses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -810,19 +583,21 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistory" value="ac&#10;merchant_appl&#10;application&#10;i&#10;routes.rb&#10;routes.r&#10;routes&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
+    <property name="SearchEverywhereHistory" value="merchant_account&#10;routes&#10;gemfile&#10;init&#10;routes.rb&#10;routs&#10;routes.r&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;application&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/tickets-together-just_authentication" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\softwareProjects\zeprj\app\models" />
-      <recent name="D:\softwareProjects\zeprj\app\serializers" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\models" />
+      <recent name="D:\softwareProjects\zeprj\app\views\layouts" />
       <recent name="D:\softwareProjects\zeprj\app\controllers" />
-      <recent name="D:\softwareProjects\zeprj\db\migrate" />
-      <recent name="D:\softwareProjects\zeprj\app\views" />
+      <recent name="D:\softwareProjects\zeprj\app\views\layouts\essentials" />
+      <recent name="D:\softwareProjects\zeprj\app\serializers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\softwareProjects\zeprj\app\controllers" />
+      <recent name="D:\softwareProjects\zeprj\app\controllers\merchant" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\warehouses" />
       <recent name="C:\Users\WIN 8 64BIT\Desktop\zeprj\app\assets\stylesheets" />
       <recent name="C:\Users\WIN 8 64BIT\Desktop\zeprj\app\assets\javascripts" />
@@ -1018,25 +793,24 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947367" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2031579" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22210526" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32081544" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23482428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18956336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33437827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32210526" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31263158" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31473684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6817227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68210524" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1054,9 +828,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18104367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40021008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1071,791 +845,297 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Account-Role Database&#10;&#10;" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/lockonostratos/zeprj&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/controllers/merchant_accounts_controller.rb&#10;&#9;app/controllers/warehouses_controller.rb&#10;&#9;config/routes.rb&#10;&#9;db/migrate/20140411100003_initialize_database.rb&#10;&#9;db/schema.rb&#10;" />
-    <MESSAGE value="Resolve conflit with RubyMine." />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve conflit with RubyMine." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="7" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140331090530_create_accounts.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="39" selection-start="587" selection-end="587" vertical-scroll-proportion="-5.8076925" vertical-offset="257" max-vertical-offset="731" />
+        <state line="10" column="18" selection-start="339" selection-end="339" vertical-scroll-proportion="0.20562771" vertical-offset="0" max-vertical-offset="924" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/zeprj.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="492" />
+        <state line="9" column="19" selection-start="256" selection-end="256" vertical-scroll-proportion="0.38169643" vertical-offset="0" max-vertical-offset="448" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/show.json.jbuilder">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sessions.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="93" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="458" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/accounts.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="30" selection-start="394" selection-end="394" vertical-scroll-proportion="0.416309" vertical-offset="214" max-vertical-offset="680" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="545" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/index.json.jbuilder">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="94" selection-start="147" selection-end="147" vertical-scroll-proportion="0.032629557" vertical-offset="0" max-vertical-offset="521" />
+        <state line="22" column="6" selection-start="0" selection-end="846" vertical-scroll-proportion="-14.928572" vertical-offset="0" max-vertical-offset="532" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/product_summaries_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_messages.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="102" selection-start="2194" selection-end="2194" vertical-scroll-proportion="2.2269373" vertical-offset="0" max-vertical-offset="1360" />
+        <state line="9" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.19042316" vertical-offset="0" max-vertical-offset="898" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/branch.rb">
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.4/lib/action_dispatch/routing/route_set.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="6" selection-start="482" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
+        <state line="11" column="10" selection-start="379" selection-end="379" vertical-scroll-proportion="0.22891566" vertical-offset="0" max-vertical-offset="13965" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/skull.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/warehouse/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="7" selection-start="298" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="926" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/account.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/essentials/_opening.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1275">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="667" selection-end="667" vertical-scroll-proportion="0.4500846" vertical-offset="0" max-vertical-offset="591" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product_summary.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/essentials/_ending.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="86" selection-end="89" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
+        <state line="5" column="23" selection-start="215" selection-end="215" vertical-scroll-proportion="0.15728477" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/skulls_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="47" selection-end="1813" vertical-scroll-proportion="1.6644518" vertical-offset="222" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="33" selection-start="568" selection-end="568" vertical-scroll-proportion="0.7246892" vertical-offset="0" max-vertical-offset="782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="3" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/show.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="113" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="568" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="114" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="345" selection-end="345" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="29" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/import.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="680" selection-end="680" vertical-scroll-proportion="0.5271318" vertical-offset="0" max-vertical-offset="903">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/area.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="3" selection-start="440" selection-end="440" vertical-scroll-proportion="0.38202247" vertical-offset="0" max-vertical-offset="890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/agency.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs193/module.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="6" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.3383199" vertical-offset="165" max-vertical-offset="18088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="107" selection-end="111" vertical-scroll-proportion="0.11630559" vertical-offset="0" max-vertical-offset="877" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/customers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="5" selection-start="212" selection-end="212" vertical-scroll-proportion="0.13062568" vertical-offset="0" max-vertical-offset="1360" />
+        <state line="1" column="2" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="152" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="516" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="449" max-vertical-offset="1360">
+        <state line="9" column="19" selection-start="227" selection-end="227" vertical-scroll-proportion="0.18466523" vertical-offset="0" max-vertical-offset="1520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcomes.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="6" selection-start="701" selection-end="701" vertical-scroll-proportion="0.46547884" vertical-offset="0" max-vertical-offset="898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/serializers/merchant_warehouse_product_serializer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/merchant_application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.14362851" vertical-offset="0" max-vertical-offset="926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="3" selection-start="694" selection-end="694" vertical-scroll-proportion="0.5334773" vertical-offset="0" max-vertical-offset="926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/warehouse_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="71" selection-end="71" vertical-scroll-proportion="0.082073435" vertical-offset="0" max-vertical-offset="926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/accounts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="5" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.9589633" vertical-offset="214" max-vertical-offset="1957" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/application.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="6" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.655902" vertical-offset="0" max-vertical-offset="898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="81" selection-end="81" vertical-scroll-proportion="0.042316258" vertical-offset="0" max-vertical-offset="898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/store.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.29359823" vertical-offset="0" max-vertical-offset="906" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.37254903" vertical-offset="0" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/merchants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="40" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="1691" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/warehouse.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="44" selection-end="44" vertical-scroll-proportion="0.041394334" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/accounts.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="477" selection-end="477" vertical-scroll-proportion="-9.5" vertical-offset="0" max-vertical-offset="475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="431" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/branch.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="93" selection-end="93" vertical-scroll-proportion="0.08278867" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/merchant_account.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="28" selection-start="215" selection-end="215" vertical-scroll-proportion="0.20697168" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="79" selection-end="79" vertical-scroll-proportion="0.08278867" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/merchant.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="25" selection-start="124" selection-end="124" vertical-scroll-proportion="0.12418301" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/skull.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="24" selection-start="176" selection-end="176" vertical-scroll-proportion="0.20697168" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="24" selection-start="148" selection-end="148" vertical-scroll-proportion="0.16557734" vertical-offset="0" max-vertical-offset="459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/import.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="102" selection-end="102" vertical-scroll-proportion="0.08656036" vertical-offset="0" max-vertical-offset="439" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/accounts_route.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="29" selection-start="202" selection-end="202" vertical-scroll-proportion="0.2596811" vertical-offset="0" max-vertical-offset="439" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product_summaries.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="226" selection-end="226" vertical-scroll-proportion="0.3029613" vertical-offset="0" max-vertical-offset="439" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="21" selection-start="606" selection-end="606" vertical-scroll-proportion="0.8656331" vertical-offset="83" max-vertical-offset="1349">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_and_company.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="72" selection-end="72" vertical-scroll-proportion="0.019274376" vertical-offset="0" max-vertical-offset="882">
+        <state line="6" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="3762" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_career.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="68" selection-end="68" vertical-scroll-proportion="0.018826135" vertical-offset="0" max-vertical-offset="903">
+        <state line="21" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_personal.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/importDetails.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="41" selection-end="69" vertical-scroll-proportion="0.018826135" vertical-offset="0" max-vertical-offset="903">
+        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="878">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_life_style.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse_view.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="71" selection-end="71" vertical-scroll-proportion="0.018398268" vertical-offset="0" max-vertical-offset="924">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="412">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_hobby.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="67" selection-end="67" vertical-scroll-proportion="0.018398268" vertical-offset="0" max-vertical-offset="924">
+        <state line="3" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="171">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_education.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="70" selection-end="70" vertical-scroll-proportion="0.018398268" vertical-offset="0" max-vertical-offset="924">
+        <state line="1" column="9" selection-start="14" selection-end="19" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="171">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_family.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_children.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Accounts/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/merchant_accounts/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="15" selection-start="262" selection-end="262" vertical-scroll-proportion="0.38908452" vertical-offset="0" max-vertical-offset="568" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/mackay_profile.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="332" selection-end="332" vertical-scroll-proportion="0.32185885" vertical-offset="0" max-vertical-offset="581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Accounts/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/areas/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="60" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://GemDependency/#zeprj">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>GemDependency</ID>
-          <OriginalElement>#zeprj</OriginalElement>
-          <nodes>
-            <node x="" y="">rails</node>
-            <node x="" y="">treetop</node>
-            <node x="" y="">rake</node>
-            <node x="" y="">polyglot</node>
-            <node x="" y="">coffee-script</node>
-            <node x="" y="">rack</node>
-            <node x="" y="">sass-rails</node>
-            <node x="" y="">actionmailer</node>
-            <node x="" y="">bcrypt</node>
-            <node x="" y="">activerecord</node>
-            <node x="" y="">activerecord-deprecated_finders</node>
-            <node x="" y="">handlebars-source</node>
-            <node x="" y="">multi_json</node>
-            <node x="" y="">active_model_serializers</node>
-            <node x="" y="">mime-types</node>
-            <node x="" y="">sdoc</node>
-            <node x="" y="">foundation-rails</node>
-            <node x="" y="">railties</node>
-            <node x="" y="">builder</node>
-            <node x="" y="">coffee-script-source</node>
-            <node x="" y="">mysql2</node>
-            <node x="" y="">sprockets-rails</node>
-            <node x="" y="">bundler</node>
-            <node x="" y="">rdoc</node>
-            <node x="" y="">ember-source</node>
-            <node x="" y="">barber</node>
-            <node x="" y="">font-awesome-sass</node>
-            <node x="" y="">turbolinks</node>
-            <node x="" y="">tzinfo</node>
-            <node x="" y="">#zeprj</node>
-            <node x="" y="">arel</node>
-            <node x="" y="">minitest</node>
-            <node x="" y="">ember-data-source</node>
-            <node x="" y="">actionpack</node>
-            <node x="" y="">compass</node>
-            <node x="" y="">chunky_png</node>
-            <node x="" y="">sass</node>
-            <node x="" y="">thread_safe</node>
-            <node x="" y="">json</node>
-            <node x="" y="">erubis</node>
-            <node x="" y="">rack-test</node>
-            <node x="" y="">fssm</node>
-            <node x="" y="">simple_form</node>
-            <node x="" y="">mail</node>
-            <node x="" y="">jbuilder</node>
-            <node x="" y="">tilt</node>
-            <node x="" y="">rails_layout</node>
-            <node x="" y="">execjs</node>
-            <node x="" y="">jquery-rails</node>
-            <node x="" y="">compass-rails</node>
-            <node x="" y="">thor</node>
-            <node x="" y="">activemodel</node>
-            <node x="" y="">sprockets</node>
-            <node x="" y="">activesupport</node>
-            <node x="" y="">coffee-rails</node>
-            <node x="" y="">uglifier</node>
-            <node x="" y="">ember-rails</node>
-            <node x="" y="">bcrypt-ruby</node>
-            <node x="" y="">i18n</node>
-            <node x="" y="">hike</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.5084112149532714" x="1652.0" y="1806.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/customer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merchant_account.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.14166667" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/module_role.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="29" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/module.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="91" selection-end="91" vertical-scroll-proportion="0.047685836" vertical-offset="0" max-vertical-offset="713">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/role.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140331090530_create_accounts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://RailsDependency/#zeprj">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>RailsDependency</ID>
-          <OriginalElement>#zeprj</OriginalElement>
-          <nodes>
-            <node x="605.0" y="1021.9672036210313">Branch</node>
-            <node x="969.0" y="1238.9672036210313">Warehouse</node>
-            <node x="2160.0" y="1161.7172036210313">InventoryDetail</node>
-            <node x="1335.0" y="1293.201171875">Import</node>
-            <node x="276.0" y="963.451171875">Merchant</node>
-            <node x="1384.0" y="439.451171875">Area</node>
-            <node x="612.0" y="1702.201171875">Account</node>
-            <node x="2517.5" y="585.701171875">MackayHobby</node>
-            <node x="2124.0" y="935.2172036210313">Order</node>
-            <node x="2549.5" y="1369.0204575892858">OrderDetail</node>
-            <node x="571.0" y="319.451171875">ModuleRole</node>
-            <node x="1342.5" y="1050.5168861607144">Inventory</node>
-            <node x="927.0" y="661.520457589286">MerchantAccount</node>
-            <node x="315.8489640130862" y="187.64464697496362">Module</node>
-            <node x="2831.0" y="222.53648933531724">MackayChildren</node>
-            <node x="1366.5" y="1511.951171875">Skull</node>
-            <node x="2517.5" y="409.701171875">MackayCareer</node>
-            <node x="1687.5" y="311.701171875">Customer</node>
-            <node x="2490.0" y="761.701171875">Delivery</node>
-            <node x="1686.0" y="1344.951171875">Product</node>
-            <node x="2517.5" y="673.701171875">MackayLifeStyle</node>
-            <node x="2517.5" y="204.701171875">MackayPersonal</node>
-            <node x="471.0" y="1702.201171875">GeraAccount</node>
-            <node x="2852.0" y="1174.7864893353171">ReturnDetail</node>
-            <node x="1789.5" y="1589.201171875">ProductSummary</node>
-            <node x="2517.5" y="497.701171875">MackayAndCompany</node>
-            <node x="2497.0" y="96.701171875">MackayFamily</node>
-            <node x="2092.0" y="227.201171875">MackayProfile</node>
-            <node x="1360.0" y="1178.5168861607144">Export</node>
-            <node x="297.0" y="1702.201171875">AgencyAccount</node>
-            <node x="2517.5" y="8.701171875">MackayEducation</node>
-            <node x="2480.0" y="902.7172036210313">Return</node>
-            <node x="4.598327880770654" y="379.11311298732284">Role</node>
-            <node x="2175.0" y="1289.7172036210313">ExportDetail</node>
-            <node x="1386.5" y="1403.951171875">Provider</node>
-            <node x="0.0" y="1702.201171875">Agency</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Branch" target="MerchantAccount">
-              <point x="104.0" y="-36.0" />
-              <point x="847.0" y="1039.9672036210313" />
-              <point x="-164.0" y="89.33333333333337" />
-            </edge>
-            <edge source="Role" target="ModuleRole">
-              <point x="98.0" y="17.0" />
-              <point x="390.0385314431116" y="485.9447196757997" />
-              <point x="-138.0" y="22.0" />
-            </edge>
-            <edge source="Role" target="Module">
-              <point x="98.0" y="-17.0" />
-              <point x="-98.0" y="-0.0" />
-            </edge>
-            <edge source="MackayFamily" target="MackayChildren">
-              <point x="118.5" y="-0.0" />
-              <point x="2751.0" y="130.701171875" />
-              <point x="-97.0" y="-12.0" />
-            </edge>
-            <edge source="Customer" target="MackayProfile">
-              <point x="161.5" y="-29.77777777777777" />
-              <point x="-154.0" y="-0.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Delivery">
-              <point x="164.0" y="-59.55555555555554" />
-              <point x="1335.0" y="778.701171875" />
-              <point x="-125.5" y="-17.0" />
-            </edge>
-            <edge source="Customer" target="MackayEducation">
-              <point x="161.5" y="-119.11111111111109" />
-              <point x="2092.0" y="20.701171875" />
-              <point x="-98.0" y="-12.0" />
-            </edge>
-            <edge source="MackayProfile" target="MackayEducation">
-              <point x="154.0" y="-91.0" />
-              <point x="2480.0" y="44.701171875" />
-              <point x="-98.0" y="12.0" />
-            </edge>
-            <edge source="Warehouse" target="Order">
-              <point x="122.0" y="-14.0" />
-              <point x="1255.0" y="1308.9672036210313" />
-              <point x="1335.0" y="1277.0168861607144" />
-              <point x="2012.0" y="1277.0168861607144" />
-              <point x="2092.0" y="1082.2172036210313" />
-              <point x="-122.0" y="63.0" />
-            </edge>
-            <edge source="Merchant" target="Provider">
-              <point x="107.5" y="25.600000000000023" />
-              <point x="571.0" y="1514.7172036210313" />
-              <point x="1255.0" y="1514.7172036210313" />
-              <point x="1335.0" y="1437.951171875" />
-              <point x="-84.0" y="-0.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Customer">
-              <point x="164.0" y="-119.11111111111109" />
-              <point x="1335.0" y="428.951171875" />
-              <point x="1606.0" y="428.951171875" />
-              <point x="-161.5" y="-0.0" />
-            </edge>
-            <edge source="Merchant" target="Customer">
-              <point x="107.5" y="-51.19999999999999" />
-              <point x="571.0" y="417.951171875" />
-              <point x="1606.0" y="417.951171875" />
-              <point x="-161.5" y="-89.33333333333337" />
-            </edge>
-            <edge source="MackayProfile" target="MackayAndCompany">
-              <point x="154.0" y="39.0" />
-              <point x="2480.0" y="509.701171875" />
-              <point x="-98.0" y="-12.0" />
-            </edge>
-            <edge source="Provider" target="Product">
-              <point x="84.0" y="-0.0" />
-              <point x="1606.0" y="1437.951171875" />
-              <point x="-163.0" y="23.5" />
-            </edge>
-            <edge source="Customer" target="MackayCareer">
-              <point x="161.5" y="-0.0" />
-              <point x="-98.0" y="12.0" />
-            </edge>
-            <edge source="Warehouse" target="Import">
-              <point x="122.0" y="14.0" />
-              <point x="1255.0" y="1336.9672036210313" />
-              <point x="-135.5" y="22.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Inventory">
-              <point x="164.0" y="29.77777777777783" />
-              <point x="-128.0" y="-22.0" />
-            </edge>
-            <edge source="Customer" target="MackayLifeStyle">
-              <point x="161.5" y="89.33333333333331" />
-              <point x="2092.0" y="709.701171875" />
-              <point x="-98.0" y="12.0" />
-            </edge>
-            <edge source="Warehouse" target="ProductSummary">
-              <point x="122.0" y="70.0" />
-              <point x="1255.0" y="1392.9672036210313" />
-              <point x="1335.0" y="1641.951171875" />
-              <point x="1606.0" y="1641.951171875" />
-              <point x="-59.5" y="17.0" />
-            </edge>
-            <edge source="Product" target="ReturnDetail">
-              <point x="163.0" y="70.5" />
-              <point x="2092.0" y="1489.951171875" />
-              <point x="2751.0" y="1489.951171875" />
-              <point x="2831.0" y="1225.7864893353171" />
-              <point x="-76.0" y="17.0" />
-            </edge>
-            <edge source="Customer" target="MackayPersonal">
-              <point x="161.5" y="-59.55555555555554" />
-              <point x="2092.0" y="216.701171875" />
-              <point x="-98.0" y="-12.0" />
-            </edge>
-            <edge source="Branch" target="Warehouse">
-              <point x="104.0" y="36.0" />
-              <point x="847.0" y="1111.9672036210313" />
-              <point x="927.0" y="1322.9672036210313" />
-              <point x="-122.0" y="-0.0" />
-            </edge>
-            <edge source="Agency" target="AgencyAccount">
-              <point x="108.5" y="-0.0" />
-              <point x="-64.5" y="-0.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Return">
-              <point x="164.0" y="-29.77777777777777" />
-              <point x="1335.0" y="840.701171875" />
-              <point x="2400.0" y="840.701171875" />
-              <point x="-135.5" y="-22.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Area">
-              <point x="164.0" y="-89.33333333333331" />
-              <point x="1335.0" y="473.451171875" />
-              <point x="-86.5" y="-0.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Order">
-              <point x="164.0" y="-0.0" />
-              <point x="1335.0" y="882.951171875" />
-              <point x="2012.0" y="882.951171875" />
-              <point x="2092.0" y="998.2172036210313" />
-              <point x="-122.0" y="-21.0" />
-            </edge>
-            <edge source="Area" target="Customer">
-              <point x="86.5" y="-0.0" />
-              <point x="1606.0" y="473.451171875" />
-              <point x="-161.5" y="89.33333333333331" />
-            </edge>
-            <edge source="MackayProfile" target="MackayLifeStyle">
-              <point x="154.0" y="91.0" />
-              <point x="2480.0" y="685.701171875" />
-              <point x="-98.0" y="-12.0" />
-            </edge>
-            <edge source="Order" target="OrderDetail">
-              <point x="122.0" y="56.0" />
-              <point x="2400.0" y="1075.2172036210313" />
-              <point x="2480.0" y="1386.0204575892858" />
-              <point x="-66.0" y="-17.0" />
-            </edge>
-            <edge source="Merchant" target="MerchantAccount">
-              <point x="107.5" y="-25.600000000000023" />
-              <point x="571.0" y="795.520457589286" />
-              <point x="-164.0" y="-0.0" />
-            </edge>
-            <edge source="Merchant" target="Skull">
-              <point x="107.5" y="51.200000000000045" />
-              <point x="571.0" y="1622.0168861607144" />
-              <point x="1255.0" y="1622.0168861607144" />
-              <point x="1335.0" y="1592.951171875" />
-              <point x="-104.0" y="27.0" />
-            </edge>
-            <edge source="Customer" target="MackayFamily">
-              <point x="161.5" y="-89.33333333333337" />
-              <point x="2092.0" y="113.701171875" />
-              <point x="-118.5" y="-17.0" />
-            </edge>
-            <edge source="Module" target="ModuleRole">
-              <point x="98.0" y="-0.0" />
-              <point x="-138.0" y="-22.0" />
-            </edge>
-            <edge source="Product" target="OrderDetail">
-              <point x="163.0" y="23.5" />
-              <point x="2400.0" y="1462.451171875" />
-              <point x="2480.0" y="1420.0204575892858" />
-              <point x="-66.0" y="17.0" />
-            </edge>
-            <edge source="Customer" target="Order">
-              <point x="161.5" y="119.11111111111109" />
-              <point x="2092.0" y="956.2172036210313" />
-              <point x="-122.0" y="-63.0" />
-            </edge>
-            <edge source="Warehouse" target="Product">
-              <point x="122.0" y="42.0" />
-              <point x="1255.0" y="1364.9672036210313" />
-              <point x="1335.0" y="1393.451171875" />
-              <point x="1606.0" y="1393.451171875" />
-              <point x="-163.0" y="-23.5" />
-            </edge>
-            <edge source="MerchantAccount" target="Export">
-              <point x="164.0" y="59.55555555555554" />
-              <point x="1335.0" y="1200.5168861607144" />
-              <point x="-110.5" y="-22.0" />
-            </edge>
-            <edge source="Warehouse" target="Inventory">
-              <point x="122.0" y="-70.0" />
-              <point x="1255.0" y="1252.9672036210313" />
-              <point x="-128.0" y="22.0" />
-            </edge>
-            <edge source="MackayProfile" target="MackayCareer">
-              <point x="154.0" y="13.0" />
-              <point x="2480.0" y="421.701171875" />
-              <point x="-98.0" y="-12.0" />
-            </edge>
-            <edge source="Warehouse" target="Export">
-              <point x="122.0" y="-42.0" />
-              <point x="1255.0" y="1280.9672036210313" />
-              <point x="1335.0" y="1244.5168861607144" />
-              <point x="-110.5" y="22.0" />
-            </edge>
-            <edge source="Customer" target="MackayAndCompany">
-              <point x="161.5" y="29.77777777777777" />
-              <point x="2092.0" y="533.701171875" />
-              <point x="-98.0" y="12.0" />
-            </edge>
-            <edge source="Merchant" target="Branch">
-              <point x="107.5" y="-0.0" />
-              <point x="571.0" y="1075.9672036210313" />
-              <point x="-104.0" y="-0.0" />
-            </edge>
-            <edge source="MackayProfile" target="MackayFamily">
-              <point x="154.0" y="-65.0" />
-              <point x="2480.0" y="147.701171875" />
-              <point x="-118.5" y="17.0" />
-            </edge>
-            <edge source="Customer" target="MackayHobby">
-              <point x="161.5" y="59.55555555555554" />
-              <point x="2092.0" y="621.701171875" />
-              <point x="-98.0" y="12.0" />
-            </edge>
-            <edge source="Return" target="ReturnDetail">
-              <point x="135.5" y="-0.0" />
-              <point x="2831.0" y="1191.7864893353171" />
-              <point x="-76.0" y="-17.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Import">
-              <point x="164.0" y="89.33333333333326" />
-              <point x="-135.5" y="-22.0" />
-            </edge>
-            <edge source="Export" target="ExportDetail">
-              <point x="110.5" y="-0.0" />
-              <point x="2012.0" y="1222.5168861607144" />
-              <point x="2092.0" y="1306.7172036210313" />
-              <point x="-71.0" y="-17.0" />
-            </edge>
-            <edge source="Branch" target="Order">
-              <point x="104.0" y="-0.0" />
-              <point x="847.0" y="1075.9672036210313" />
-              <point x="927.0" y="1008.7207750496027" />
-              <point x="2012.0" y="1008.7207750496027" />
-              <point x="2092.0" y="1040.2172036210313" />
-              <point x="-122.0" y="21.0" />
-            </edge>
-            <edge source="Order" target="Return">
-              <point x="122.0" y="-0.0" />
-              <point x="2400.0" y="1019.2172036210313" />
-              <point x="-135.5" y="22.0" />
-            </edge>
-            <edge source="Order" target="Delivery">
-              <point x="122.0" y="-56.0" />
-              <point x="2400.0" y="963.2172036210313" />
-              <point x="-125.5" y="17.0" />
-            </edge>
-            <edge source="Import" target="Product">
-              <point x="135.5" y="-0.0" />
-              <point x="-163.0" y="-70.5" />
-            </edge>
-            <edge source="Skull" target="ProductSummary">
-              <point x="104.0" y="27.0" />
-              <point x="1606.0" y="1592.951171875" />
-              <point x="1686.0" y="1606.201171875" />
-              <point x="-59.5" y="-17.0" />
-            </edge>
-            <edge source="MackayProfile" target="MackayPersonal">
-              <point x="154.0" y="-39.0" />
-              <point x="2480.0" y="240.701171875" />
-              <point x="-98.0" y="12.0" />
-            </edge>
-            <edge source="MerchantAccount" target="Skull">
-              <point x="164.0" y="119.11111111111109" />
-              <point x="1335.0" y="1538.951171875" />
-              <point x="-104.0" y="-27.0" />
-            </edge>
-            <edge source="Product" target="InventoryDetail">
-              <point x="163.0" y="-70.5" />
-              <point x="2092.0" y="1212.7172036210313" />
-              <point x="-86.0" y="17.0" />
-            </edge>
-            <edge source="MackayProfile" target="MackayHobby">
-              <point x="154.0" y="65.0" />
-              <point x="2480.0" y="597.701171875" />
-              <point x="-98.0" y="-12.0" />
-            </edge>
-            <edge source="Inventory" target="InventoryDetail">
-              <point x="128.0" y="-0.0" />
-              <point x="2012.0" y="1094.5168861607144" />
-              <point x="2092.0" y="1178.7172036210313" />
-              <point x="-86.0" y="-17.0" />
-            </edge>
-            <edge source="ModuleRole" target="MerchantAccount">
-              <point x="138.0" y="-0.0" />
-              <point x="-164.0" y="-89.33333333333331" />
-            </edge>
-            <edge source="MackayProfile" target="MackayChildren">
-              <point x="154.0" y="-13.0" />
-              <point x="2751.0" y="318.201171875" />
-              <point x="-97.0" y="12.0" />
-            </edge>
-            <edge source="Skull" target="Product">
-              <point x="104.0" y="-27.0" />
-              <point x="1606.0" y="1538.951171875" />
-              <point x="-163.0" y="70.5" />
-            </edge>
-            <edge source="Product" target="ExportDetail">
-              <point x="163.0" y="-23.5" />
-              <point x="2092.0" y="1340.7172036210313" />
-              <point x="-71.0" y="17.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0873517786561262" x="213.0" y="437.0" />
-          <SelectedNodes>
-            <node>InventoryDetail</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Association fields</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="5" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1632">
-          <folding>
-            <marker date="1398429217543" expanded="true" signature="2005:2018" placeholder="{ ... }" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="0" selection-start="8696" selection-end="8696" vertical-scroll-proportion="0.0" vertical-offset="4687" max-vertical-offset="7786">
+        <state line="11" column="33" selection-start="256" selection-end="256" vertical-scroll-proportion="0.3442029" vertical-offset="114" max-vertical-offset="8702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="6" selection-start="221" selection-end="221" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="323">
           <folding>
-            <marker date="1398429395896" expanded="true" signature="220:317" placeholder="do ... end" />
-            <marker date="1398429395896" expanded="true" signature="8484:8650" placeholder="do ... end" />
-            <marker date="1398429395896" expanded="true" signature="8714:8934" placeholder="do ... end" />
-            <marker date="1398429395896" expanded="true" signature="9360:10015" placeholder="do ... end" />
-            <marker date="1398429395896" expanded="true" signature="13093:13586" placeholder="#..." />
+            <marker date="1398426457617" expanded="true" signature="16:220" placeholder="..." />
+            <marker date="1398426457617" expanded="true" signature="50:126" placeholder="..." />
+            <marker date="1398426457617" expanded="true" signature="160:212" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="35" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="374" selection-end="374" vertical-scroll-proportion="0.27906978" vertical-offset="0" max-vertical-offset="1581">
+        <state line="39" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1805">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="32" selection-start="6102" selection-end="6102" vertical-scroll-proportion="-0.59574467" vertical-offset="3424" max-vertical-offset="7072">
+        <state line="18" column="29" selection-start="528" selection-end="528" vertical-scroll-proportion="0.55700326" vertical-offset="0" max-vertical-offset="1824">
           <folding />
         </state>
       </provider>

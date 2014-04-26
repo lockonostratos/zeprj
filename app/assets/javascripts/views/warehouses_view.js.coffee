@@ -2,3 +2,8 @@
 
 Zeprj.WarehousesView = Ember.View.extend
   templateName: 'warehouses'
+
+
+Zeprj.WarehousesProductSummaries = Ember.View.extend
+  didInsertElement: ->
+    alert("Hello!")
