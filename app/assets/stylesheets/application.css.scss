@@ -4,6 +4,7 @@
 @import "scaffolds";
 @import "font-awesome";
 @import "jquery.ui.all";
+@import "libraries/*";
 
 //@mixin tile-wrapper-maker($size) {
 //  width: ($tile-size * $size) + ($tile-space * $size);
@@ -134,10 +135,20 @@ body {
     .content {
       background-color: $navigator-background;
       min-height: $content-min-height;
+      height: $content-min-height;
+
+      .imports-wrapper {
+        min-height: 100%;
+        height: 100%;
+      }
+
+      .vsplitbar {
+        width: 5px;
+        background: #aaa;
+      }
     }
   }
 }
-
 //Overrides for difference screens
 
 //asdsalkdsaldj

@@ -3,7 +3,15 @@
 Zeprj.WarehousesView = Ember.View.extend
   templateName: 'warehouses'
 
-
-Zeprj.WarehousesProductSummaries = Ember.View.extend
+Zeprj.WarehousesImportView = Ember.View.extend
+  classNames: ['imports-wrapper']
   didInsertElement: ->
-    alert("Hello!")
+    console.log $(@get('element')).split
+      orientation: 'vertical',
+      limit: 200,
+      position: '30%'
+
+Zeprj.WarehousesProductSummariesView = Ember.View.extend
+  didInsertElement: ->
+    console.log($(@get('element')))
+#    console.log(window.jQuery)

@@ -12,6 +12,7 @@
 
 #= require jquery
 #= require jquery_ujs
+#= require_tree ./libraries
 #= require turbolinks
 #= require foundation
 #= require jquery.ui.all

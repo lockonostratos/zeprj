@@ -1,11 +1,7 @@
-<div class="row">
+<div class="products-list">
+  {{render 'warehouses/productSummaries' this.productSummaries}}
+</div>
 
-  <div class="medium-4 columns">
-    {{render 'warehouses/productSummaries' this.productSummaries}}
-  </div>
-
-  <div class="medium-8 columns">
-    {{partial 'warehouses/importDetails'}}
-  </div>
-
+<div>
+  {{partial 'warehouses/importDetails'}}
 </div>
