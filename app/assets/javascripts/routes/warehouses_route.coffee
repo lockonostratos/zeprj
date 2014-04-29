@@ -1,10 +1,9 @@
 Zeprj.WarehousesHomeRoute = Ember.Route.extend
-  products: -> @store.find('product')
+  model: -> @store.find('account')
 
-Zeprj.WarehousesImportRoute = Ember.Route.extend
-  model: ->
-    productSummaries: @store.find('account')
-
+#Zeprj.WarehousesImportRoute = Ember.Route.extend
+#  model: ->
+#    productSummaries: -> @store.find('productSummaries')
 
 #Zeprj.WarehousesProductSummariesRoute = Ember.Route.extend
-#  model: -> @store.find('account')
+#  model: -> @modelFor("WarehousesHome")
