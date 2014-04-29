@@ -1,4 +1,4 @@
-<%= simple_form_for(@product_summary) do |f| %>
+<%= simple_form_for(@temp_product) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -7,15 +7,19 @@
 
     <%= f.input :skull_id %>
 
-    <%= f.input :warehouse_id %>
+    <%= f.input :provider_id %>
 
-    <%= f.input :name %>
+    <%= f.input :warehouse_id %>
 
     <%= f.input :merchant_account_id %>
 
-    <%= f.input :quality %>
+    <%= f.input :name %>
 
-    <%= f.input :price %>
+    <%= f.input :import_quality %>
+
+    <%= f.input :import_price %>
+
+    <%= f.input :expire %>
 
   </div>
 

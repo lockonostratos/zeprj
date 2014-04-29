@@ -8,6 +8,7 @@ class MerchantAccount < ActiveRecord::Base
   has_many :returns
   has_many :imports
   has_many :areas
+  has_many :product_summaries
 
   belongs_to :module_role
   belongs_to :account

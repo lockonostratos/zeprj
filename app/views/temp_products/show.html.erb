@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product code:</strong>
+  <%= @temp_product.product_code %>
+</p>
+
+<p>
+  <strong>Skull:</strong>
+  <%= @temp_product.skull_id %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @temp_product.provider_id %>
+</p>
+
+<p>
+  <strong>Warehouse:</strong>
+  <%= @temp_product.warehouse_id %>
+</p>
+
+<p>
+  <strong>Merchant account:</strong>
+  <%= @temp_product.merchant_account_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @temp_product.name %>
+</p>
+
+<p>
+  <strong>Import quality:</strong>
+  <%= @temp_product.import_quality %>
+</p>
+
+<p>
+  <strong>Import price:</strong>
+  <%= @temp_product.import_price %>
+</p>
+
+<p>
+  <strong>Expire:</strong>
+  <%= @temp_product.expire %>
+</p>
+
+<%= link_to 'Edit', edit_temp_product_path(@temp_product) %> |
+<%= link_to 'Back', temp_products_path %>

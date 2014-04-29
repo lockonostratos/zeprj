@@ -1,4 +1,4 @@
-class ImportsController < ApplicationController
+class ImportsController < MerchantApplicationController
   before_action :set_import, only: [:show, :edit, :update, :destroy]
 
   # GET /imports
@@ -25,17 +25,36 @@ class ImportsController < ApplicationController
   # POST /imports.json
   def create
     @import = Import.new(import_params)
-
-    respond_to do |format|
-      if @import.save
-        format.html { redirect_to @import, notice: 'Import was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @import }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @import.errors, status: :unprocessable_entity }
+    if TempProduct.where(:warehouse_id => @import.warehouse_id).where(:merchant_account_id => current_merchant_account.id)
+      respond_to do |format|
+        if @import.save
+          format.html { redirect_to @import, notice: 'Import was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @import }
+          #add product tu bang tam
+          Product.transaction do
+            TempProduct.where(:warehouse_id => @import.warehouse_id).where(:merchant_account_id => current_merchant_account.id).each do |temp_product|
+              new_products=[:product_code =>temp_product.product_code, :skull_id=>temp_product.skull_id, :provider_id=>temp_product.provider_id,
+                            :warehouse_id=>temp_product.warehouse_id, :import_id=>Import.last.id, :name=>temp_product.name,
+                            :import_quality=>temp_product.import_quality, :import_price=>temp_product.import_price, :expire=>temp_product.expire]
+              #add moi product
+              Product.create(new_products)
+              #cong quality vao bang ProductSummary
+             @new=ProductSummary.find_by_product_code(temp_product.product_code)
+             @new.update!(:quality=>(@new.quality + temp_product.import_quality))
+              #xoa product trong bang tam TempProduct
+              temp_product.destroy
+              end
+          end
+        end
       end
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @import.errors, status: :unprocessable_entity }
     end
   end
+
+
+
 
   # PATCH/PUT /imports/1
   # PATCH/PUT /imports/1.json
@@ -59,6 +78,10 @@ class ImportsController < ApplicationController
       format.html { redirect_to imports_url }
       format.json { head :no_content }
     end
+  end
+
+  def save_temporary_of
+
   end
 
   private

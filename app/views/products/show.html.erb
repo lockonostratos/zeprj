@@ -7,12 +7,12 @@
 
 <p>
   <strong>Skull code:</strong>
-  <%= @product.skull.id %>
+  <%= @product.skull_id %>
 </p>
 
 <p>
   <strong>Merchant warehouse:</strong>
-  <%= @product.warehouse %>
+  <%= @product.warehouse_id %>
 </p>
 
 <p>
@@ -22,12 +22,12 @@
 
 <p>
   <strong>Quality all:</strong>
-  <%= @product.qualtiy_all %>
+  <%= @product.import_quality %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= @product.import_price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

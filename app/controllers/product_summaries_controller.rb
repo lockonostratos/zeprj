@@ -15,6 +15,7 @@ class ProductSummariesController < ApplicationController
   # GET /product_summaries/new
   def new
     @product_summary = ProductSummary.new
+
   end
 
   # GET /product_summaries/1/edit
@@ -69,6 +70,6 @@ class ProductSummariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_summary_params
-      params.require(:product_summary).permit(:product_code, :skull_id, :warehouse_id, :name, :qualtily, :price)
+      params.require(:product_summary).permit(:product_code, :skull_id, :warehouse_id, :name, :merchant_account_id, :quality, :price)
     end
 end

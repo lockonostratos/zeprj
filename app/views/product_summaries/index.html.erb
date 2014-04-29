@@ -7,9 +7,9 @@
       <th>Skull</th>
       <th>Warehouse</th>
       <th>Name</th>
+      <th>merchant_account_id</th>
       <th>Qualtily</th>
       <th>Price</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -22,7 +22,8 @@
         <td><%= product_summary.skull_id %></td>
         <td><%= product_summary.warehouse_id %></td>
         <td><%= product_summary.name %></td>
-        <td><%= product_summary.qualtily %></td>
+        <td><%= product_summary.merchant_account_id %></td>
+        <td><%= product_summary.quality %></td>
         <td><%= product_summary.price %></td>
         <td><%= link_to 'Show', product_summary %></td>
         <td><%= link_to 'Edit', edit_product_summary_path(product_summary) %></td>

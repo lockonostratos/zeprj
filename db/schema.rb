@@ -279,16 +279,8 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "updated_at"
   end
 
-  create_table "module_roles", force: true do |t|
-    t.integer  "module_id"
-    t.integer  "role_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "modules", force: true do |t|
     t.string   "name"
-    t.integer  "type"
     t.boolean  "show"
     t.boolean  "create"
     t.boolean  "edit"
@@ -296,6 +288,16 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "modules_roles", id: false, force: true do |t|
+    t.integer  "module_id",  null: false
+    t.integer  "role_id",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "modules_roles", ["module_id"], name: "index_modules_roles_on_module_id", using: :btree
+  add_index "modules_roles", ["role_id"], name: "index_modules_roles_on_role_id", using: :btree
 
   create_table "order_details", force: true do |t|
     t.integer  "order_id",                                            null: false
@@ -330,12 +332,13 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "product_summaries", force: true do |t|
-    t.string   "product_code",                          null: false
+    t.string   "product_code",                                             null: false
     t.integer  "skull_id"
-    t.integer  "warehouse_id",                          null: false
-    t.string   "name",                                  null: false
-    t.integer  "quality",                               null: false
-    t.decimal  "price",        precision: 10, scale: 0
+    t.integer  "warehouse_id",                                             null: false
+    t.integer  "merchant_account_id",                                      null: false
+    t.string   "name",                                                     null: false
+    t.integer  "quality",                                      default: 0
+    t.decimal  "price",               precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -395,6 +398,20 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer  "merchant_account_id", null: false
     t.string   "skull_code",          null: false
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "temp_products", force: true do |t|
+    t.string   "product_code",                                             null: false
+    t.integer  "skull_id"
+    t.integer  "provider_id"
+    t.integer  "warehouse_id",                                             null: false
+    t.integer  "merchant_account_id",                                      null: false
+    t.string   "name",                                                     null: false
+    t.integer  "import_quality",                               default: 0
+    t.decimal  "import_price",        precision: 10, scale: 0
+    t.datetime "expire"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

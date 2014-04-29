@@ -10,9 +10,8 @@ class Product < ActiveRecord::Base
   belongs_to :skull
 
   #Bat loi View
-  validates_presence_of :product_code, :provider, :warehouse, :import, name
-  validates_numericality_of :warehouse_id, :merchant_account_id, message: "nhap so"
-  validates_length_of :description, minimum:10, maximum: 200
+  #validates_presence_of :product_code, :provider, :warehouse, :import, :name, :import_quality, :import_price, :import_id
+  #validates_numericality_of :warehouse_id, message: "nhap so"
 
 
 

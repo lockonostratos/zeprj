@@ -44,9 +44,9 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :module_roles do |t|
-      t.belongs_to :module
-      t.belongs_to :role
+    create_join_table :modules, :roles do |t|
+      t.index :module_id
+      t.index :role_id
 
       t.timestamps
     end
@@ -161,6 +161,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.string :spouse_hobbies
       t.date :mariage_at
     end
+
     #Ho so mackay gia dinh con cái ---------------------------------------------->
     create_table :mackay_childrens do |t|
       t.belongs_to :mackay_profile
@@ -296,9 +297,25 @@ class InitializeDatabase < ActiveRecord::Migration
       t.string :product_code, :null => false
       t.belongs_to :skull
       t.belongs_to :warehouse, :null => false
+      t.belongs_to :merchant_account, :null => false
       t.string :name, :null => false
-      t.integer :quality, :null => false
+      t.integer :quality, :default => 0
       t.decimal :price, :presence => 15
+
+      t.timestamps
+    end
+    #Bang CHI TIET san pham Bảng tãm!--------------------------------->
+    create_table :temp_products do |t|
+      t.string :product_code, :null => false
+      t.belongs_to :skull
+      t.belongs_to :provider
+      t.belongs_to :warehouse, :null => false
+      t.belongs_to :merchant_account, :null => false
+
+      t.string :name, :null => false
+      t.integer :import_quality, :default => 0 #so luong nhap
+      t.decimal :import_price, :presence => 15 #gia
+      t.datetime :expire
 
       t.timestamps
     end

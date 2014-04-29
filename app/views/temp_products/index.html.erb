@@ -1,0 +1,43 @@
+<h1>Listing temp_products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product code</th>
+      <th>Skull</th>
+      <th>Provider</th>
+      <th>Warehouse</th>
+      <th>Merchant account</th>
+      <th>Name</th>
+      <th>Import quality</th>
+      <th>Import price</th>
+      <th>Expire</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @temp_products.each do |temp_product| %>
+      <tr>
+        <td><%= temp_product.product_code %></td>
+        <td><%= temp_product.skull_id %></td>
+        <td><%= temp_product.provider_id %></td>
+        <td><%= temp_product.warehouse_id %></td>
+        <td><%= temp_product.merchant_account_id %></td>
+        <td><%= temp_product.name %></td>
+        <td><%= temp_product.import_quality %></td>
+        <td><%= temp_product.import_price %></td>
+        <td><%= temp_product.expire %></td>
+        <td><%= link_to 'Show', temp_product %></td>
+        <td><%= link_to 'Edit', edit_temp_product_path(temp_product) %></td>
+        <td><%= link_to 'Destroy', temp_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Temp product', new_temp_product_path %>
