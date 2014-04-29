@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="Fix current get current_merchant_account (which id = 0)&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/account.rb" afterPath="$PROJECT_DIR$/app/models/account.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zeprj.iws" />
@@ -40,10 +32,19 @@
     <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
         <leaf>
+          <file leaf-file-name="productSummaries.hbs" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="9" selection-start="14" selection-end="19" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="266">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="warehouses_controllers.js.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="25" selection-start="233" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
+                <state line="6" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
                   <folding />
                 </state>
               </provider>
@@ -52,25 +53,25 @@
           <file leaf-file-name="warehouses_route.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+                <state line="1" column="32" selection-start="72" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="import.hbs" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="import.hbs" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="247">
+                <state line="7" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.31666666" vertical-offset="0" max-vertical-offset="420">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="warehouses_view.js.coffee" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="warehouses_view.js.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.72098213" vertical-offset="0" max-vertical-offset="448">
+                <state line="17" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
                   <folding />
                 </state>
               </provider>
@@ -83,7 +84,7 @@
           <file leaf-file-name="20140411100003_initialize_database.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="8702">
+                <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="9025">
                   <folding />
                 </state>
               </provider>
@@ -163,11 +164,11 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/router.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" />
       </list>
     </option>
   </component>
@@ -1114,13 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="521">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="14" selection-start="699" selection-end="699" vertical-scroll-proportion="0.80230325" vertical-offset="0" max-vertical-offset="551">
@@ -1142,27 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="233" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="247">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="8702">
@@ -1177,9 +1150,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="14" selection-end="19" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.72098213" vertical-offset="0" max-vertical-offset="448">
+        <state line="17" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="32" selection-start="72" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.31666666" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
