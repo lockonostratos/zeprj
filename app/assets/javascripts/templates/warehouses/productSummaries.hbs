@@ -4,6 +4,8 @@
 {{/each}}
 
 <div>
-  {{input type="text" valueBinding='barCode'}}
-  {{barCode}}
+  {{input type="text" valueBinding='product.product_code'}}
+  {{product.product_code}}
+  {{input type="checkbox" checkedBinding='skullSingle'}}
+  <input type="button" {{action "debug"}} value="Debug" />
 </div>

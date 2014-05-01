@@ -298,6 +298,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :skull
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
+
       t.string :name, :null => false
       t.integer :quality, :default => 0
       t.decimal :price, :presence => 15

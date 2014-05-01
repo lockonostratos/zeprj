@@ -1,7 +1,8 @@
-Zeprj.ProductSummaries = DS.Model.extend
+Zeprj.ProductSummary = DS.Model.extend
   product_code: DS.attr('string')
   skull_id: DS.attr('number')
-  warehouse: DS.belongsTo('warehouse')
+  warehouse_id: DS.attr('number')
+  account_id: DS.attr('number')
 
   name: DS.attr('string')
   quality: DS.attr('number')

@@ -14,4 +14,4 @@ Zeprj.WarehousesImportView = Ember.View.extend
 #Zeprj.WarehousesProductSummariesView = Ember.View.extend
 #  didInsertElement: ->
 #    console.log($(@get('element')).first()[0])
-##    console.log(window.jQuery)
+#    console.log()

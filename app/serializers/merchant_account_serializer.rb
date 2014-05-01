@@ -1,3 +1,3 @@
 class MerchantAccountSerializer < ActiveModel::Serializer
-  attributes :id, :merchant_id, :branch_id, :current_warehouse_id
+  attributes :id, :current_warehouse_id, :branch_id, :merchant_id
 end
