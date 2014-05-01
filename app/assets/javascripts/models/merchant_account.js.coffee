@@ -1,6 +1,4 @@
 Zeprj.MerchantAccount = DS.Model.extend
-  account: DS.belongsTo('account')
-  merchant: DS.belongsTo('merchant')
-  branch: DS.belongsTo('branch')
+  merchant_id: DS.attr('number')
+  branch_id: DS.attr('number')
   current_warehouse_id: DS.attr('number')
-  role_id: DS.attr('number')
