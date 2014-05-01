@@ -2,30 +2,31 @@
 
 <table>
   <thead>
-  <tr>
-    <th>ID</th>
-    <th>Headquater</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <tr>
+      <th>ID</th>
+      <th>Headquater</th>
+      <th>Owner</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+    </tr>
   </thead>
 
   <tbody>
-  <% @merchants.each do |merchant| %>
+    <% @merchants.each do |merchant| %>
       <tr>
         <td><%= merchant.id %></td>
-        <td><%= merchant.headquater %></td>
+        <td><%= merchant.headquater_id %></td>
+        <td><%= merchant.owner_id %></td>
         <td><%= merchant.name %></td>
         <td><%= link_to 'Show', merchant %></td>
         <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
         <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Gera account', new_merchant_path %>
+<%= link_to 'New Merchant', new_merchant_path %>

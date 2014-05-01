@@ -1,4 +1,4 @@
-class ProductSummariesController < ApplicationController
+class ProductSummariesController < MerchantApplicationController
   before_action :set_product_summary, only: [:show, :edit, :update, :destroy]
 
   # GET /product_summaries
@@ -10,6 +10,7 @@ class ProductSummariesController < ApplicationController
   # GET /product_summaries/1
   # GET /product_summaries/1.json
   def show
+
   end
 
   # GET /product_summaries/new

@@ -1,4 +1,4 @@
-class BranchesController < ApplicationController
+class BranchesController < MerchantApplicationController
   before_action :set_branch, only: [:show, :edit, :update, :destroy]
 
   # GET /branches

@@ -1,41 +1,34 @@
 class MerchantsController < ApplicationController
-  skip_before_filter :check_account_permission, :only => [:new, :create]
-  before_action :set_gera_account, only: [:show, :edit, :update, :destroy]
+  before_action :set_merchant, only: [:show, :edit, :update, :destroy]
 
-  # GET /accounts
-  # GET /accounts.json
+  # GET /merchants
+  # GET /merchants.json
   def index
     @merchants = Merchant.all
-
-    respond_to do |format|
-      format.html
-      format.json {render json: @merchants}
-    end
   end
 
-  # GET /accounts/1
-  # GET /accounts/1.json
-  def show  
+  # GET /merchants/1
+  # GET /merchants/1.json
+  def show
   end
 
-  # GET /accounts/new
+  # GET /merchants/new
   def new
     @merchant = Merchant.new
   end
 
-  # GET /accounts/1/edit
+  # GET /merchants/1/edit
   def edit
   end
 
-  # POST /accounts
-  # POST /accounts.json
+  # POST /merchants
+  # POST /merchants.json
   def create
-    @merchant = Merchant.new(account_params)
-    @merchant.password_confirmation = @merchant.password
+    @merchant = Merchant.new(merchant_params)
 
     respond_to do |format|
       if @merchant.save
-        format.html { redirect_to @merchant, notice: 'Gera account was successfully created.' }
+        format.html { redirect_to @merchant, notice: 'Merchant was successfully created.' }
         format.json { render action: 'show', status: :created, location: @merchant }
       else
         format.html { render action: 'new' }
@@ -44,12 +37,12 @@ class MerchantsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /accounts/1
-  # PATCH/PUT /accounts/1.json
+  # PATCH/PUT /merchants/1
+  # PATCH/PUT /merchants/1.json
   def update
     respond_to do |format|
-      if @account.update(account_params)
-        format.html { redirect_to @merchant, notice: 'Gera account was successfully updated.' }
+      if @merchant.update(merchant_params)
+        format.html { redirect_to @merchant, notice: 'Merchant was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -58,8 +51,8 @@ class MerchantsController < ApplicationController
     end
   end
 
-  # DELETE /accounts/1
-  # DELETE /accounts/1.json
+  # DELETE /merchants/1
+  # DELETE /merchants/1.json
   def destroy
     @merchant.destroy
     respond_to do |format|
@@ -68,16 +61,14 @@ class MerchantsController < ApplicationController
     end
   end
 
-
-
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_gera_account
-   # @account = Account.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_merchant
+      @merchant = Merchant.find(params[:id])
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def account_params
-    params.require(:account).permit(:display_name, :login_name, :email, :phone, :status, :password)
-  end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def merchant_params
+      params.require(:merchant).permit(:headquater_id, :owner_id, :name)
+    end
 end
