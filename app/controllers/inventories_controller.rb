@@ -30,6 +30,13 @@ class InventoriesController < ApplicationController
       if @inventory.save
         format.html { redirect_to @inventory, notice: 'Inventory was successfully created.' }
         format.json { render action: 'show', status: :created, location: @inventory }
+        #add tat ca product vao bang tam
+        Product.transaction do
+          Product.where(:warehouse_id => @inventory.warehouse_id).each do |product|
+            @temp_inventory = TempInventoryDetail.new(:product_id=>product.id, :inventory_id=>Inventory.last.id, :original_quality=>product.instock_quality, :real_quality=>0)
+            @temp_inventory.save
+          end
+        end
       else
         format.html { render action: 'new' }
         format.json { render json: @inventory.errors, status: :unprocessable_entity }

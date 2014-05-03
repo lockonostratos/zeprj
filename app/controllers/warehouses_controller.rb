@@ -1,4 +1,4 @@
-class WarehousesController < ApplicationController
+class WarehousesController < MerchantApplicationController
   before_action :set_warehouse, only: [:show, :edit, :update, :destroy]
 
   # GET /warehouses
@@ -59,6 +59,11 @@ class WarehousesController < ApplicationController
       format.html { redirect_to warehouses_url }
       format.json { head :no_content }
     end
+  end
+  #ham show tat ca warehouse trong cung 1 merchant theo "current_merchant_account"
+  def shows
+    branch = Branch.where(:merchant_id => current_merchant_account.merchant_id)
+    @warehouses = Warehouse.where(:branch_id =>(branch.pluck(:id)))
   end
 
   private

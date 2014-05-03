@@ -365,8 +365,24 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
 
-      t.text :decription, :null => false
-      t.boolean :success, :null => false
+      t.boolean :submited, :default => false #mac dinh false
+      t.text :decription, :null => false, :default => ''
+      t.boolean :success, :null => false #bang false
+
+      t.boolean :resolved, :null => false, :default => false
+      t.text :resolve_description, :null => false, :default => ''
+
+      t.timestamps
+    end
+
+    #Chi tiet kiem ton--------------------------------------->
+    create_table :temp_inventory_details do |t|
+      t.belongs_to :product, :null => false
+      t.belongs_to :inventory, :null => false
+
+      t.integer :original_quality, :null => false #số lượng trong kho
+      t.integer :real_quality, :null => false , :default=>0#số kiem tra
+      t.integer :quality #SO LUONG MAT
 
       t.timestamps
     end
@@ -375,8 +391,13 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :inventory_details do |t|
       t.belongs_to :product, :null => false
       t.belongs_to :inventory, :null => false
-      t.integer :original_quality, :null => false
-      t.integer :real_quality, :null => false
+
+      t.integer :original_quality, :null => false #số lượng trong kho
+      t.integer :real_quality, :null => false #số kiem tra
+
+      t.integer :lost_quality, :default => 0 #không được lớn hơn số lượng mất trước đó
+      t.string  :resolve_description, :null => false, :default => ''
+      t.boolean :resolved, :null => false, :default => false
 
       t.timestamps
     end

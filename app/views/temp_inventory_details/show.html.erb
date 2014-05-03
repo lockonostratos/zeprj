@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @temp_inventory_detail.product_id %>
+</p>
+
+<p>
+  <strong>Inventory:</strong>
+  <%= @temp_inventory_detail.inventory %>
+</p>
+
+<p>
+  <strong>Original quality:</strong>
+  <%= @temp_inventory_detail.original_quality %>
+</p>
+
+<p>
+  <strong>Real quality:</strong>
+  <%= @temp_inventory_detail.real_quality %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @temp_inventory_detail.quality %>
+</p>
+
+<%= link_to 'Edit', edit_temp_inventory_detail_path(@temp_inventory_detail) %> |
+<%= link_to 'Back', temp_inventory_details_path %>

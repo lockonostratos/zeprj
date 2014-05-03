@@ -11,6 +11,8 @@ Zeprj::Application.routes.draw do
   resources :sessions
   resources :merchants
   resources :products
+
+  get 'warehouses/shows', :to => 'warehouses#shows'
   resources :warehouses
   resources :skulls
   resources :merchant_accounts

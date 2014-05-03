@@ -30,6 +30,11 @@ class ExportsController < ApplicationController
       if @export.save
         format.html { redirect_to @export, notice: 'Export was successfully created.' }
         format.json { render action: 'show', status: :created, location: @export }
+      # Tìm tất cả ID product cần chuyển kho
+        @products=Product.find().each do |product|
+
+        end
+
       else
         format.html { render action: 'new' }
         format.json { render json: @export.errors, status: :unprocessable_entity }
