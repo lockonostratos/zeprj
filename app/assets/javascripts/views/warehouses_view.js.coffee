@@ -8,10 +8,14 @@ Zeprj.WarehousesImportView = Ember.View.extend
   didInsertElement: ->
     $(@get('element')).split
       orientation: 'vertical',
-      limit: 200,
-      position: '30%'
+      limit: 250,
+      position: '40%'
 
-#Zeprj.WarehousesProductSummariesView = Ember.View.extend
-#  didInsertElement: ->
-#    console.log($(@get('element')).first()[0])
-#    console.log()
+Zeprj.WarehousesProductSummariesView = Ember.View.extend
+  didInsertElement: ->
+    input = $(@get('element')).find('#imgInp')
+    image =  $(@get('element')).find('#image')
+
+    input.hide()
+    image.parent().click -> input.click()
+    input.change -> systemjs.renderImage(@, image)

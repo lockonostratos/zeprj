@@ -3,6 +3,7 @@ Zeprj.Product = DS.Model.extend
   skull_id: DS.attr('number')
   provider_id: DS.attr('number')
   warehouse_id: DS.attr('number')
+  image: DS.attr('string')
 
   name: DS.attr('string')
   price: DS.attr('number')

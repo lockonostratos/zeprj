@@ -3,9 +3,26 @@
   <br/>
 {{/each}}
 
-<div>
-  {{input type="text" valueBinding='product.product_code'}}
-  {{product.product_code}}
-  {{input type="checkbox" checkedBinding='skullSingle'}}
-  <input type="button" {{action "debug"}} value="Debug" />
+<div id="warehouseNewProductSummaryPane">
+  <input type='file' id="imgInp" accept="image/png"/>
+
+  <div class="image-wrapper">
+    <img id="image"/>
+  </div>
+  <div class="info-wrapper">
+    {{#if editProductCode}}
+      {{input type="text" valueBinding='product.product_code' placeholderBinding='productCodePlaceholder'}}
+    {{else}}
+      {{#if product.product_code}}
+        <span {{action 'toggleEdit' on='click'}}>{{product.product_code}}</span>
+      {{else}}
+        <span {{action 'toggleEdit' on='click'}}>{{productCodePlaceholder}}</span>
+      {{/if}}
+    {{/if}}
+
+    {{input type="text" valueBinding='product.name' placeholderBinding='productNamePlaceholder'}}
+    <br/>
+    {{input type="checkbox" checkedBinding='skullSingle'}}
+    <input type="button" {{action "debug"}} value="Debug" />
+  </div>
 </div>
