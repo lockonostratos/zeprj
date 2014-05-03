@@ -46,6 +46,7 @@ gem 'compass-rails'
 gem 'font-awesome-sass'
 
 gem 'active_model_serializers'
+gem 'chunky_png'
 
 group :development do
   gem 'rails_layout'

@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6, button, .button {
   color: white;
   padding: 0 15px; }
 
+input[type="text"] {
+  margin: 0 0 0.5rem 0;;
+}
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes
 .application-wrapper {
@@ -62,7 +66,6 @@ section {
   @extend .row;
   margin-top: 20px;
 }
-
 
 button, .button, .submit {
   padding: 0.5rem;

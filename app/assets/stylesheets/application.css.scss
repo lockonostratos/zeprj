@@ -146,6 +146,33 @@ body {
         width: 5px;
         background: #aaa;
       }
+
+      #warehouseNewProductSummaryPane {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+
+        $product-image-size: 100px;
+        .image-wrapper {
+          float: left;
+          width: $product-image-size;
+          height: $product-image-size;
+          text-align: center; /* ensures the image is always in the h-middle */
+          overflow: hidden; /* hide the cropped portion */
+          border: solid 1px $navigator-background-reserve;
+
+          #image {
+            position: relative; /* allows repositioning */
+            left: 100%; /* move the whole width of the image to the right */
+            margin-left: -200%; /* magic! */
+          }
+        }
+
+        .info-wrapper {
+            margin-left: $product-image-size;
+        }
+      }
     }
   }
 }
