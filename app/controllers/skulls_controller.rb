@@ -68,6 +68,6 @@ class SkullsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def skull_params
-      params.require(:skull).permit(:merchant_id, :merchant_account_id, :skull, :description)
+      params.require(:skull).permit(:merchant_id, :merchant_account_id, :skull_code, :description)
     end
 end

@@ -31,6 +31,8 @@ class ImportsController < MerchantApplicationController
           format.html { redirect_to @import, notice: 'Import was successfully created.' }
           format.json { render action: 'show', status: :created, location: @import }
           #add product tu bang tam
+          if @import.export.nil?
+          else
           Product.transaction do
             TempProduct.where(:warehouse_id => @import.warehouse_id).where(:merchant_account_id => current_merchant_account.id).each do |temp_product|
               new_products=[:product_code =>temp_product.product_code, :skull_id=>temp_product.skull_id, :provider_id=>temp_product.provider_id,
@@ -41,9 +43,11 @@ class ImportsController < MerchantApplicationController
               #cong quality vao bang ProductSummary
              @new=ProductSummary.find_by_product_code(temp_product.product_code)
              @new.update!(:quality=>(@new.quality + temp_product.import_quality))
+
               #xoa product trong bang tam TempProduct
               temp_product.destroy
               end
+          end
           end
         end
       end
@@ -92,6 +96,6 @@ class ImportsController < MerchantApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def import_params
-      params.require(:import).permit(:warehouse_id, :merchant_account_id, :description)
+      params.require(:import).permit(:warehouse_id, :merchant_account_id, :export, :description)
     end
 end

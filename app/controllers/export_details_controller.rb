@@ -25,11 +25,11 @@ class ExportDetailsController < ApplicationController
   # POST /export_details.json
   def create
     @export_detail = ExportDetail.new(export_detail_params)
-
     respond_to do |format|
       if @export_detail.save
         format.html { redirect_to @export_detail, notice: 'Export detail was successfully created.' }
         format.json { render action: 'show', status: :created, location: @export_detail }
+
       else
         format.html { render action: 'new' }
         format.json { render json: @export_detail.errors, status: :unprocessable_entity }

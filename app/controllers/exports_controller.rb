@@ -25,21 +25,65 @@ class ExportsController < ApplicationController
   # POST /exports.json
   def create
     @export = Export.new(export_params)
+     ExportDetail.transaction do
+        respond_to do |format|
+          if @export.save
+            format.html { redirect_to @export, notice: 'Export was successfully created.' }
+            format.json { render action: 'show', status: :created, location: @export }
+          # Add Import khi chuyen
+           Import.create!(:warehouse_id=>@export.target_warehouse_id, :merchant_account_id=>@export.merchant_account_id, :export=>Export.last.id, :description=>'asdasdasdasdasd')
+          #Tao ExportDetail
+          ExportDetail.create(:export_id=>Export.last.id, :product_id=>1, :quality=>30)
+          ExportDetail.create(:export_id=>Export.last.id, :product_id=>2, :quality=>30)
 
-    respond_to do |format|
-      if @export.save
-        format.html { redirect_to @export, notice: 'Export was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @export }
-      # Tìm tất cả ID product cần chuyển kho
-        @products=Product.find().each do |product|
+          # Tao san pham moi
+          @pro=Product.find(1)
+          Product.create!(
+              :product_code=>@pro.product_code,
+              :skull_id=>@pro.skull_id,
+              :warehouse_id=>Import.last.warehouse_id,
+              :provider_id=>@pro.provider_id,
+              :import_id=>Import.last.id,
+              :name=>@pro.name,
+              :import_quality=>30,
+              :available_quality=>30,
+              :instock_quality=>30,
+              :import_price=>2000,
+              :expire=>@pro.expire)
 
+          @current_product = ProductSummary.where(:product_code => @pro.product_code, :skull_id => @pro.skull_id)
+
+          #  Add san pham vao ProductSummary
+          if @current_product.first==nil
+            #cap nhat productsummary
+            ProductSummary.create!(
+                :product_code=>@pro.product_code,
+                :skull_id=>@pro.skull_id,
+                :warehouse_id=>Import.last.warehouse_id,
+                :merchant_account_id=>current_account.id,
+                :name=>@pro.skull_id,
+                :quality=>3000, :price=>2000)
+          else
+            #Add moi neu chua co
+            ProductSummary.where(
+                :product_code => @pro.product_code,
+                :skull_id => @pro.skull_id)
+              .each do |ex|
+                new=[:id=>ex.id]
+                ProductSummary.update(ex.id,quality:300)
+            end
+          end
+           # trừ sản phẩm của warehouse chuyen
+            @pro.update!(:available_quality=>(@pro.available_quality + 30), :instock_quality=>(@pro.instock_quality + 30))
+
+
+
+          else
+            format.html { render action: 'new' }
+            format.json { render json: @export.errors, status: :unprocessable_entity }
+          end
         end
-
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @export.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /exports/1

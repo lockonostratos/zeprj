@@ -4,7 +4,9 @@ class ProductSummariesController < MerchantApplicationController
   # GET /product_summaries
   # GET /product_summaries.json
   def index
-    @product_summaries = ProductSummary.all
+    @pro=Product.find(1)
+    @product_summaries=ProductSummary.where(:product_code => @pro.product_code, :skull_id => @pro.skull_id)
+    #@product_summaries = ProductSummary.all
   end
 
   # GET /product_summaries/1
@@ -32,6 +34,10 @@ class ProductSummariesController < MerchantApplicationController
       if @product_summary.save
         format.html { redirect_to @product_summary, notice: 'Product summary was successfully created.' }
         format.json { render action: 'show', status: :created, location: @product_summary }
+        if @product_summary.quality==0
+          TempProduct.create! ({product_code:@product_summary.product_code, skull_id:@product_summary.skull_id, warehouse_id:@product_summary.warehouse_id, merchant_account_id:@product_summary.merchant_account_id, name:@product_summary.name, import_price:@product_summary.price})
+        else
+        end
       else
         format.html { render action: 'new' }
         format.json { render json: @product_summary.errors, status: :unprocessable_entity }

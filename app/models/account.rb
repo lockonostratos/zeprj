@@ -24,9 +24,9 @@ class Account < ActiveRecord::Base
     current_merchant.headquater_id = current_branch.id
 
     #3. Tạo mới Warehouse (kho),
-    current_warehouse=Warehouse.create! ({branch_id: current_branch.id, name: self.email + '\'s default warehouse'})
+    current_warehouse=Warehouse.find_by_branch_id(current_branch.id)
 
-    #4. Tạo mới MerchantAccount,
+    #4. Tạo mới MerchantAccount, ..............................................................................................................................................................................................................................cv
      MerchantAccount.create!({account_id: self.id, merchant_id: current_merchant.id,
                               branch_id: current_branch.id, current_warehouse_id: current_warehouse.id})
 

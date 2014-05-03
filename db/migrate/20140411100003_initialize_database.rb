@@ -287,6 +287,7 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :imports do |t|
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.integer :export
       t.text :description, :null => false
 
       t.timestamps
@@ -366,11 +367,11 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :merchant_account, :null => false
 
       t.boolean :submited, :default => false #mac dinh false
-      t.text :decription, :null => false, :default => ''
-      t.boolean :success, :null => false #bang false
+      t.text :decription
+      t.boolean :success, :null => false, :default => false
 
       t.boolean :resolved, :null => false, :default => false
-      t.text :resolve_description, :null => false, :default => ''
+      t.text :resolve_description
 
       t.timestamps
     end
@@ -396,7 +397,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :real_quality, :null => false #số kiem tra
 
       t.integer :lost_quality, :default => 0 #không được lớn hơn số lượng mất trước đó
-      t.string  :resolve_description, :null => false, :default => ''
+      t.string  :resolve_description
       t.boolean :resolved, :null => false, :default => false
 
       t.timestamps
