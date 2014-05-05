@@ -6,23 +6,34 @@
 <div id="warehouseNewProductSummaryPane">
   <input type='file' id="imgInp" accept="image/png"/>
 
+  <div class="no-margin row">
+    <div class="small-10 columns">
+      {{#if editProductCode}}
+        {{input type="text" valueBinding='product.product_code' placeholderBinding='productCodePlaceholder'}}
+      {{/if}}
+      {{#if editName}}
+        {{input type="text" valueBinding='product.name' placeholderBinding='productNamePlaceholder'}}
+      {{/if}}
+    </div>
+    <div class="small-2 columns">
+      <a class="button postfix">Next</a>
+    </div>
+  </div>
+
+  {{model-editors model=product}}
   <div class="image-wrapper">
     <img id="image"/>
   </div>
   <div class="info-wrapper">
-    {{#if editProductCode}}
-      {{input type="text" valueBinding='product.product_code' placeholderBinding='productCodePlaceholder'}}
+    {{#if product.product_code}}
+      <span>{{product.product_code}}</span>
     {{else}}
-      {{#if product.product_code}}
-        <span {{action 'toggleEdit' on='click'}}>{{product.product_code}}</span>
-      {{else}}
-        <span {{action 'toggleEdit' on='click'}}>{{productCodePlaceholder}}</span>
-      {{/if}}
+      <span>dang nhap...</span>
     {{/if}}
 
     {{input type="text" valueBinding='product.name' placeholderBinding='productNamePlaceholder'}}
     <br/>
     {{input type="checkbox" checkedBinding='skullSingle'}}
-    <input type="button" {{action "debug"}} value="Debug" />
+    <input type="button" {{action "debuger"}} value="Debug" />
   </div>
 </div>

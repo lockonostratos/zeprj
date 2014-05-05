@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/components/model-editors.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/model-editors.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/helpers/renderer.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zeprj.iws" />
@@ -24,7 +21,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1399096629624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
+    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1399259967278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -37,15 +34,33 @@
     <favorites_list name="zeprj" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7021555">
+    <splitter split-orientation="horizontal" split-proportion="0.8020086">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.69473684">
+        <splitter split-orientation="vertical" split-proportion="0.6442105">
           <split-first>
             <leaf>
               <file leaf-file-name="productSummaries.hbs" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="16" column="35" selection-start="447" selection-end="447" vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="627">
+                    <state line="22" column="33" selection-start="636" selection-end="636" vertical-scroll-proportion="-8.821428" vertical-offset="171" max-vertical-offset="836">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="model-editors.hbs" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/components/model-editors.hbs">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="2" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="0.06822262" vertical-offset="0" max-vertical-offset="557">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="model-editors.js.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/model-editors.js.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="7" column="14" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
                       <folding />
                     </state>
                   </provider>
@@ -60,19 +75,19 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="warehouses_controllers.js.coffee" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="warehouses_controllers.js.coffee" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="16" column="63" selection-start="572" selection-end="587" vertical-scroll-proportion="0.48025277" vertical-offset="0" max-vertical-offset="633">
+                    <state line="10" column="45" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="router.js.coffee" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/router.js.coffee">
+              <file leaf-file-name="systemjs.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="9" column="39" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+                    <state line="11" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
                       <folding />
                     </state>
                   </provider>
@@ -81,17 +96,11 @@
               <file leaf-file-name="import.hbs" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="4" column="5" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="247">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/config/routes.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="18" column="18" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1824">
-                      <folding />
+                    <state line="7" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="247">
+                      <folding>
+                        <marker date="1398927755415" expanded="true" signature="26:93" placeholder="..." />
+                        <marker date="1398927755415" expanded="true" signature="100:148" placeholder="..." />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -103,16 +112,34 @@
               <file leaf-file-name="20140411100003_initialize_database.rb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="297" column="25" selection-start="9144" selection-end="9144" vertical-scroll-proportion="0.0" vertical-offset="5545" max-vertical-offset="9044">
+                    <state line="297" column="25" selection-start="9144" selection-end="9144" vertical-scroll-proportion="0.0" vertical-offset="5643" max-vertical-offset="9443">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="162" column="58" selection-start="5032" selection-end="5032" vertical-scroll-proportion="0.30131003" vertical-offset="3009" max-vertical-offset="4484">
+                    <state line="10" column="27" selection-start="294" selection-end="294" vertical-scroll-proportion="11.107142" vertical-offset="501" max-vertical-offset="4484">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="framework_and_overrides.css.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="69" column="26" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-1.5357143" vertical-offset="1268" max-vertical-offset="1539">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="router.js.coffee" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/router.js.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="6" column="40" selection-start="238" selection-end="238" vertical-scroll-proportion="0.23934427" vertical-offset="41" max-vertical-offset="399">
                       <folding />
                     </state>
                   </provider>
@@ -129,7 +156,7 @@
               <file leaf-file-name="product_summary.js.coffee" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product_summary.js.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="8" column="23" selection-start="248" selection-end="248" vertical-scroll-proportion="0.3907455" vertical-offset="0" max-vertical-offset="389">
+                    <state line="1" column="14" selection-start="41" selection-end="53" vertical-scroll-proportion="0.050531916" vertical-offset="0" max-vertical-offset="376">
                       <folding />
                     </state>
                   </provider>
@@ -138,7 +165,7 @@
               <file leaf-file-name="product.js.coffee" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="5" column="0" selection-start="163" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+                    <state line="5" column="0" selection-start="163" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="266">
                       <folding />
                     </state>
                   </provider>
@@ -160,7 +187,7 @@
               <file leaf-file-name="product.js.coffee" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="3" column="13" selection-start="109" selection-end="109" vertical-scroll-proportion="0.11377245" vertical-offset="0" max-vertical-offset="501">
+                    <state line="8" column="7" selection-start="224" selection-end="224" vertical-scroll-proportion="0.3114754" vertical-offset="0" max-vertical-offset="488">
                       <folding />
                     </state>
                   </provider>
@@ -187,12 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/warehouse/home.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_merchant_app.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/merchant_application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/merchant_home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/merchant_application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_metro.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/welcomes.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/merchant/home_controller.rb" />
@@ -231,13 +252,19 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/libraries/edsjs.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/models/product_summary.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/helpers/render_editor.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/field-editors.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummary.hbs" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/model-editors.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/helpers/renderer.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/components/model-editors.hbs" />
       </list>
     </option>
   </component>
@@ -341,6 +368,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -629,6 +657,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -707,7 +765,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -731,7 +841,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -743,16 +852,16 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistory" value="applicss&#10;gem&#10;productSum&#10;routes&#10;account&#10;merchant_account&#10;gemfile&#10;init&#10;routes.rb&#10;routs&#10;routes.r&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;application&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
+    <property name="SearchEverywhereHistory" value="system&#10;applicss&#10;gem&#10;productSum&#10;routes&#10;account&#10;merchant_account&#10;gemfile&#10;init&#10;routes.rb&#10;routs&#10;routes.r&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;application&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ember_rest_example-master" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\warehouses" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\controllers" />
       <recent name="D:\softwareProjects\zeprj\app\serializers" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\models" />
-      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\warehouses" />
       <recent name="D:\softwareProjects\zeprj\app\assets\stylesheets\libraries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -967,7 +1076,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18477103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25772098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33437827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52105266" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -975,12 +1084,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6817227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1029,31 +1138,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/warehouse.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="44" selection-end="44" vertical-scroll-proportion="0.041394334" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/accounts.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="79" selection-end="79" vertical-scroll-proportion="0.08278867" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/import.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="102" selection-end="102" vertical-scroll-proportion="0.08656036" vertical-offset="0" max-vertical-offset="439" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routes/accounts_route.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="29" selection-start="202" selection-end="202" vertical-scroll-proportion="0.2596811" vertical-offset="0" max-vertical-offset="439" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="33" selection-start="315" selection-end="315" vertical-scroll-proportion="0.30944625" vertical-offset="0" max-vertical-offset="1824" />
@@ -1143,9 +1227,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.40582526" vertical-offset="0" max-vertical-offset="515">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.40582526" vertical-offset="0" max-vertical-offset="515" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/zeprj.js.coffee">
@@ -1212,21 +1294,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1824">
+        <state line="18" column="18" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1862">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/application.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="102" selection-start="919" selection-end="919" vertical-scroll-proportion="0.43035108" vertical-offset="0" max-vertical-offset="883">
+        <state line="20" column="102" selection-start="919" selection-end="919" vertical-scroll-proportion="0.43035108" vertical-offset="0" max-vertical-offset="883" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="3" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.5178876" vertical-offset="684" max-vertical-offset="1368">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="5" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="247">
+        <state line="22" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.6603476" vertical-offset="0" max-vertical-offset="633" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="297" column="25" selection-start="9144" selection-end="9144" vertical-scroll-proportion="0.0" vertical-offset="5545" max-vertical-offset="9044">
           <folding />
         </state>
       </provider>
@@ -1238,65 +1330,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="3" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.5178876" vertical-offset="684" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="163" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="25" selection-start="9144" selection-end="9144" vertical-scroll-proportion="0.0" vertical-offset="5545" max-vertical-offset="9044">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product_summary.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="248" selection-end="248" vertical-scroll-proportion="0.3907455" vertical-offset="0" max-vertical-offset="389">
+        <state line="5" column="0" selection-start="163" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="266">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="58" selection-start="5032" selection-end="5032" vertical-scroll-proportion="0.30131003" vertical-offset="3009" max-vertical-offset="4484">
+        <state line="10" column="27" selection-start="294" selection-end="294" vertical-scroll-proportion="11.107142" vertical-offset="501" max-vertical-offset="4484">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="26" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.74876034" vertical-offset="858" max-vertical-offset="1463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="230" selection-end="230" vertical-scroll-proportion="0.1800948" vertical-offset="0" max-vertical-offset="633">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.6603476" vertical-offset="0" max-vertical-offset="633">
+        <state line="69" column="26" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-1.5357143" vertical-offset="1268" max-vertical-offset="1539">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/router.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+        <state line="6" column="40" selection-start="238" selection-end="238" vertical-scroll-proportion="0.23934427" vertical-offset="41" max-vertical-offset="399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/ember-source-1.4.0/dist/ember-data-deps.prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12343" column="9" selection-start="345488" selection-end="345488" vertical-scroll-proportion="-2.756993" vertical-offset="235942" max-vertical-offset="394535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/ember-data-source-0.14/dist/ember-data.prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3829" column="21" selection-start="107078" selection-end="107078" vertical-scroll-proportion="0.21853147" vertical-offset="72626" max-vertical-offset="193667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="247">
+          <folding>
+            <marker date="1398927755415" expanded="true" signature="26:93" placeholder="..." />
+            <marker date="1398927755415" expanded="true" signature="100:148" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="45" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/product_summary.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="14" selection-start="41" selection-end="53" vertical-scroll-proportion="0.050531916" vertical-offset="0" max-vertical-offset="376">
           <folding />
         </state>
       </provider>
@@ -1308,16 +1410,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/helpers/renderer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="447" selection-end="447" vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="627">
+        <state line="4" column="58" selection-start="147" selection-end="167" vertical-scroll-proportion="0.12991454" vertical-offset="0" max-vertical-offset="585">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="63" selection-start="572" selection-end="587" vertical-scroll-proportion="0.48025277" vertical-offset="0" max-vertical-offset="633">
+        <state line="22" column="33" selection-start="636" selection-end="636" vertical-scroll-proportion="-8.821428" vertical-offset="171" max-vertical-offset="836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/model-editors.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="14" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/components/model-editors.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="0.06822262" vertical-offset="0" max-vertical-offset="557">
           <folding />
         </state>
       </provider>
