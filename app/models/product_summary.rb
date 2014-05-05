@@ -8,6 +8,6 @@ class ProductSummary < ActiveRecord::Base
   private
 
   def create_temp_product
-    TempProduct.create! ({product_code:self.product_code, skull_id:self.skull_id, warehouse_id:self.warehouse_id, merchant_account_id:self.merchant_account_id, name:self.name, import_price:self.price})
+
   end
 end

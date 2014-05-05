@@ -7,7 +7,7 @@ class Import < ActiveRecord::Base
   #Bat loi nhap
   validates_presence_of :warehouse, :merchant_account
   validates_numericality_of :warehouse_id, :merchant_account_id, message: "nhap so"
-  validates_length_of :description, minimum:10, maximum: 200
+
 
   #Bat loi tao, xoa
   before_destroy :destroy_import

@@ -108,25 +108,32 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   create_table "imports", force: true do |t|
     t.integer  "warehouse_id",        null: false
     t.integer  "merchant_account_id", null: false
+    t.integer  "export"
     t.text     "description",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "inventories", force: true do |t|
-    t.integer  "warehouse_id",        null: false
-    t.integer  "merchant_account_id", null: false
-    t.text     "decription",          null: false
-    t.boolean  "success",             null: false
+    t.integer  "warehouse_id",                        null: false
+    t.integer  "merchant_account_id",                 null: false
+    t.boolean  "submited",            default: false
+    t.text     "decription"
+    t.boolean  "success",             default: false, null: false
+    t.boolean  "resolved",            default: false, null: false
+    t.text     "resolve_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "inventory_details", force: true do |t|
-    t.integer  "product_id",       null: false
-    t.integer  "inventory_id",     null: false
-    t.integer  "original_quality", null: false
-    t.integer  "real_quality",     null: false
+    t.integer  "product_id",                          null: false
+    t.integer  "inventory_id",                        null: false
+    t.integer  "original_quality",                    null: false
+    t.integer  "real_quality",                        null: false
+    t.integer  "lost_quality",        default: 0
+    t.string   "resolve_description"
+    t.boolean  "resolved",            default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -281,6 +288,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
 
   create_table "modules", force: true do |t|
     t.string   "name"
+    t.integer  "type"
     t.boolean  "show"
     t.boolean  "create"
     t.boolean  "edit"
@@ -398,6 +406,16 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer  "merchant_account_id", null: false
     t.string   "skull_code",          null: false
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "temp_inventory_details", force: true do |t|
+    t.integer  "product_id",                   null: false
+    t.integer  "inventory_id",                 null: false
+    t.integer  "original_quality",             null: false
+    t.integer  "real_quality",     default: 0, null: false
+    t.integer  "quality"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

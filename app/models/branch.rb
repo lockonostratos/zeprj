@@ -12,7 +12,7 @@ class Branch < ActiveRecord::Base
   def create_branch
     if(Merchant.find(self.merchant_id))
     end
-    Warehouse.create!({branch_id:self.id, name:self.name + '\'s warehouse'})
+    Warehouse.create!({branch_id:self.id, name:self.name + '\'s default warehouse'})
   end
 
   def destroy_branch
