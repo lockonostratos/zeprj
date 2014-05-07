@@ -34,6 +34,9 @@ group :doc do
 end
 
 # Custom gems
+gem 'haml'
+gem 'haml-rails'
+gem 'eco'
 gem 'rake', '10.3.0'
 gem 'simple_form'
 gem 'foundation-rails'

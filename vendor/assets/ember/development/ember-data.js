@@ -1,11 +1,11 @@
 // Fetched from channel: canary, with url http://builds.emberjs.com/canary/ember-data.js
-// Fetched on: 2014-04-17T08:34:15Z
+// Fetched on: 2014-05-06T03:56:37Z
 /*!
  * @overview  Ember Data
  * @copyright Copyright 2011-2014 Tilde Inc. and contributors.
  *            Portions Copyright 2011 LivingSocial Inc.
  * @license   Licensed under MIT license (see license.js)
- * @version   1.0.0-beta.7+canary.75ab8043
+ * @version   1.0.0-beta.7+canary.ab589b32
  */
 (function(global) {
 var define, requireModule, require, requirejs;
@@ -1599,11 +1599,11 @@ define("ember-data/lib/core",
       /**
         @property VERSION
         @type String
-        @default '1.0.0-beta.7+canary.75ab8043'
+        @default '1.0.0-beta.7+canary.ab589b32'
         @static
       */
       DS = Ember.Namespace.create({
-        VERSION: '1.0.0-beta.7+canary.75ab8043'
+        VERSION: '1.0.0-beta.7+canary.ab589b32'
       });
 
       if (Ember.libraries) {
@@ -1619,20 +1619,51 @@ define("ember-data/lib/ember-initializer",
     "use strict";
     var setupContainer = __dependency1__["default"];
 
+    var K = Ember.K;
+
     /**
       @module ember-data
-    */
 
-    var set = Ember.set;
-
-    /*
       This code initializes Ember-Data onto an Ember application.
     */
 
     Ember.onLoad('Ember.Application', function(Application) {
+
       Application.initializer({
         name:       "ember-data",
         initialize: setupContainer
+      });
+
+      // Deprecated initializers to satisfy old code that depended on them
+
+      Application.initializer({
+        name:       "store",
+        after:      "ember-data",
+        initialize: K
+      });
+
+      Application.initializer({
+        name:       "activeModelAdapter",
+        before:     "store",
+        initialize: K
+      });
+
+      Application.initializer({
+        name:       "transforms",
+        before:     "store",
+        initialize: K
+      });
+
+      Application.initializer({
+        name:       "data-adapter",
+        before:     "store",
+        initialize: K
+      });
+
+      Application.initializer({
+        name:       "injectStore",
+        before:     "store",
+        initialize: K
       });
     });
   });
@@ -3490,11 +3521,7 @@ define("ember-data/lib/setup-container",
 
     /**
       @module ember-data
-    */
 
-    var set = Ember.set;
-
-    /*
       This code registers an injection for Ember.Application.
 
       If an Ember.js developer defines a subclass of DS.Store on their application,
@@ -8859,7 +8886,8 @@ define("ember-data/lib/system/store",
       @module ember-data
     */
 
-    var Adapter = __dependency1__["default"];
+    var InvalidError = __dependency1__.InvalidError;
+    var Adapter = __dependency1__.Adapter;
     var get = Ember.get, set = Ember.set;
     var once = Ember.run.once;
     var isNone = Ember.isNone;
@@ -10632,7 +10660,7 @@ define("ember-data/lib/system/store",
         store.didSaveRecord(record, payload);
         return record;
       }, function(reason) {
-        if (reason instanceof DS.InvalidError) {
+        if (reason instanceof InvalidError) {
           store.recordWasInvalid(record, reason.errors);
         } else {
           store.recordWasError(record, reason);

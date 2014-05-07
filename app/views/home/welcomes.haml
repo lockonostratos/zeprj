@@ -1,0 +1,24 @@
+= content_for :scripts do
+  = javascript_include_tag 'welcomes'
+
+.off-canvas-wrap.application-wrapper.row{data: {'offcanvas' => true}}
+  .inner-wrap
+    %a.left-off-canvas-toggle.show-for-small-only{href: '#'} Menu
+    %span.show-for-medium-only medium
+    %span.show-for-large-only large
+    %span.show-for-xlarge-up x-large
+    %aside.left-off-canvas-menu
+      %ul
+        %li
+          %a{href: "#"} Item 1
+
+    .navigation.row
+      .large-2.columns
+        %h1.light
+          %i.fa.fa-chevron-left
+      .large-10.columns
+        %span.right Welcome back <br/>
+    .option.row Options
+
+    #main-region
+    #after-main-region

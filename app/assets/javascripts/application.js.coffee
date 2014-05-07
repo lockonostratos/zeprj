@@ -12,10 +12,10 @@
 
 #= require jquery
 #= require jquery_ujs
-#= require_tree ./libraries
+#= require libraries/systemjs
 #= require turbolinks
 #= require foundation
-#= require jquery.ui.all
+# require jquery.ui.all
 # require_tree .
 
 # initialize foundation.
