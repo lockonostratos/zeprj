@@ -36,11 +36,15 @@ FormView = Backbone.Marionette.ItemView.extend
     @ui.name.val('')
     @ui.age.val('')
 
+MetroView = Backbone.Marionette.ItemView.extend
+  template: JST['backbone/templates/metroView']
+
 Zeprj = new Backbone.Marionette.Application
 
 Zeprj.addRegions
   mainRegion: '#main-region'
   afterMainRegion: '#after-main-region'
+  endingRegion: '#ending-region'
 
 Zeprj.on 'initialize:after', (options) ->
   if Backbone.history
@@ -49,7 +53,8 @@ Zeprj.on 'initialize:after', (options) ->
 Zeprj.addInitializer ->
   Zeprj.accounts = new Accounts()
 
-  Zeprj.mainRegion.show(new FormView { collection: Zeprj.accounts })
-  Zeprj.afterMainRegion.show(new AccountsView { collection: Zeprj.accounts })
+  Zeprj.mainRegion.show(new MetroView())
+  Zeprj.afterMainRegion.show(new FormView { collection: Zeprj.accounts })
+  Zeprj.endingRegion.show(new AccountsView { collection: Zeprj.accounts })
 
 Zeprj.start()
