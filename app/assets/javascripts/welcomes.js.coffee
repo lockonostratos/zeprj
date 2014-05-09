@@ -3,22 +3,23 @@
 #= require libraries/backbone.marionette
 #= require_tree ./backbone/templates
 
+Zeprj = new Backbone.Marionette.Application
 
-Account = Backbone.Model.extend()
-Accounts = Backbone.Collection.extend
-  model: Account
+Zeprj.Account = Backbone.Model.extend()
+Zeprj.Accounts = Backbone.Collection.extend
+  model: Zeprj.Account
 
-AccountView = Backbone.Marionette.ItemView.extend
+Zeprj.AccountView = Backbone.Marionette.ItemView.extend
   template: JST['backbone/templates/accountView']
 
-NoAccountsView = Backbone.Marionette.ItemView.extend
+Zeprj.NoAccountsView = Backbone.Marionette.ItemView.extend
   template: JST['backbone/templates/noAccountsView']
 
-AccountsView = Backbone.Marionette.CollectionView.extend
-  itemView: AccountView
-  emptyView: NoAccountsView
+Zeprj.AccountsView = Backbone.Marionette.CollectionView.extend
+  itemView: Zeprj.AccountView
+  emptyView: Zeprj.NoAccountsView
 
-FormView = Backbone.Marionette.ItemView.extend
+Zeprj.FormView = Backbone.Marionette.ItemView.extend
   template: JST['backbone/templates/formView']
   events: {
     'click button': 'createNewAccount'
@@ -36,10 +37,8 @@ FormView = Backbone.Marionette.ItemView.extend
     @ui.name.val('')
     @ui.age.val('')
 
-MetroView = Backbone.Marionette.ItemView.extend
+Zeprj.MetroView = Backbone.Marionette.ItemView.extend
   template: JST['backbone/templates/metroView']
-
-Zeprj = new Backbone.Marionette.Application
 
 Zeprj.addRegions
   mainRegion: '#main-region'
@@ -51,10 +50,10 @@ Zeprj.on 'initialize:after', (options) ->
     Backbone.history.start()
 
 Zeprj.addInitializer ->
-  Zeprj.accounts = new Accounts()
+  Zeprj.accounts = new Zeprj.Accounts()
 
-  Zeprj.mainRegion.show(new MetroView())
-  Zeprj.afterMainRegion.show(new FormView { collection: Zeprj.accounts })
-  Zeprj.endingRegion.show(new AccountsView { collection: Zeprj.accounts })
+  Zeprj.mainRegion.show(new Zeprj.MetroView())
+  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts })
+  Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
 
 Zeprj.start()
