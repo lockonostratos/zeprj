@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    # @products = Product.all
+    @products = Product.where(:product_code => 12345, :skull_id => nil, :warehouse_id => 2)
   end
 
   # GET /products/1

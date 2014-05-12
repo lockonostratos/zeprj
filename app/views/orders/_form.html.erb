@@ -1,6 +1,6 @@
 <%= simple_form_for(@order) do |f| %>
   <%= f.error_notification %>
-
+  <%= f.hidden_field :id %>
   <div class="form-inputs">
 
     <%= f.input :branch_id %>
@@ -11,17 +11,9 @@
 
     <%= f.input :customer_id %>
 
-    <%= f.input :return_id %>
+    <%= f.input :return %>
 
-    <%= f.input :creation_date %>
-
-    <%= f.input :delivery_date %>
-
-    <%= f.input :delivery_address %>
-
-    <%= f.input :contact_name %>
-
-    <%= f.input :contact_phone %>
+    <%= f.input :delivery %>
 
     <%= f.input :total_price %>
 

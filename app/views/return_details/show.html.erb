@@ -6,18 +6,28 @@
 </p>
 
 <p>
-  <strong>Product:</strong>
-  <%= @return_detail.product_id %>
-</p>
-
-<p>
-  <strong>Current quality:</strong>
-  <%= @return_detail.current_quality %>
+  <strong>Return product:</strong>
+  <%= @return_detail.return_product_id %>
 </p>
 
 <p>
   <strong>Return quality:</strong>
   <%= @return_detail.return_quality %>
+</p>
+
+<p>
+  <strong>Type return:</strong>
+  <%= @return_detail.type_return %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @return_detail.product_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @return_detail.price %>
 </p>
 
 <%= link_to 'Edit', edit_return_detail_path(@return_detail) %> |

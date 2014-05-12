@@ -5,8 +5,11 @@
     <tr>
       <th>Warehouse</th>
       <th>Merchant account</th>
+      <th>Submited</th>
       <th>Decription</th>
       <th>Success</th>
+      <th>Resolved</th>
+      <th>Resolve description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,8 +21,11 @@
       <tr>
         <td><%= inventory.warehouse_id %></td>
         <td><%= inventory.merchant_account_id %></td>
+        <td><%= inventory.submited %></td>
         <td><%= inventory.decription %></td>
         <td><%= inventory.success %></td>
+        <td><%= inventory.resolved %></td>
+        <td><%= inventory.resolve_description %></td>
         <td><%= link_to 'Show', inventory %></td>
         <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
         <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>

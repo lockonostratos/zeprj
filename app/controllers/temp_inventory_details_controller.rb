@@ -36,17 +36,28 @@ class TempInventoryDetailsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /temp_inventory_details/1
   # PATCH/PUT /temp_inventory_details/1.json
   def update
     respond_to do |format|
-      if @temp_inventory_detail.update(temp_inventory_detail_params)
+      # lấy thông tin sản phẩm
+      @temp_inventory_detail1 = TempInventoryDetail.new(temp_inventory_detail_params)
+      #kiểm tra số lượng nhập
+      if @temp_inventory_detail1.original_quality >= @temp_inventory_detail1.real_quality
+        #Nếu ok thi update sản phẩm
+        @temp_inventory_detail.update(temp_inventory_detail_params)
+
+        # @temp_inventory_detail.updated_at
+        #Cập nhật sản phẩm đã bán trong kiểm kho
+        @temp_inventory_detail.update(:quality=>0)
+
         format.html { redirect_to @temp_inventory_detail, notice: 'Temp inventory detail was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @temp_inventory_detail.errors, status: :unprocessable_entity }
+        format.html { redirect_to temp_inventory_details_path, notice: 'loi mloi3123.' }
+        format.json { head :no_content }
+        # format.html { render action: 'edit' }
+        # format.json { render json: @temp_inventory_detail.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -69,6 +80,6 @@ class TempInventoryDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def temp_inventory_detail_params
-      params.require(:temp_inventory_detail).permit(:product_id, :inventory, :original_quality, :real_quality, :quality)
+      params.require(:temp_inventory_detail).permit(:product_id, :inventory_id, :original_quality, :real_quality, :quality)
     end
 end

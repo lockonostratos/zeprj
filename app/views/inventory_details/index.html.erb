@@ -7,6 +7,10 @@
       <th>Inventory</th>
       <th>Original quality</th>
       <th>Real quality</th>
+      <th>Sale quality</th>
+      <th>Lost quality</th>
+      <th>Resolve description</th>
+      <th>Resolved</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,6 +24,10 @@
         <td><%= inventory_detail.inventory_id %></td>
         <td><%= inventory_detail.original_quality %></td>
         <td><%= inventory_detail.real_quality %></td>
+        <td><%= inventory_detail.sale_quality %></td>
+        <td><%= inventory_detail.lost_quality %></td>
+        <td><%= inventory_detail.resolve_description %></td>
+        <td><%= inventory_detail.resolved %></td>
         <td><%= link_to 'Show', inventory_detail %></td>
         <td><%= link_to 'Edit', edit_inventory_detail_path(inventory_detail) %></td>
         <td><%= link_to 'Destroy', inventory_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>

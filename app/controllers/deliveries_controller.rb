@@ -44,6 +44,17 @@ class DeliveriesController < ApplicationController
       if @delivery.update(delivery_params)
         format.html { redirect_to @delivery, notice: 'Delivery was successfully updated.' }
         format.json { head :no_content }
+        #TODO cap nhat neu Delivery ok
+        if @delivery.success==true
+          @order = OrderDetail.find_by_order_id(@delivery.order_id)
+          @order.each do |order|
+           @product = Product.find(order.product_id)
+           @product.save(:instock_quality=>(@product.instock_quality - order.quality))
+          end
+          Order.find(@delivery.order_id).save(:status=>2)
+        else# TODO Xử lý hủy đơn đặt hàng
+
+        end
       else
         format.html { render action: 'edit' }
         format.json { render json: @delivery.errors, status: :unprocessable_entity }
@@ -69,6 +80,6 @@ class DeliveriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def delivery_params
-      params.require(:delivery).permit(:order_id, :merchant_account_id, :status, :delivery_date, :transportation_fee, :comment)
+      params.require(:delivery).permit(:order_id, :merchant_account_id, :creation_date, :delivery_date, :delivery_address, :contact_name, :contact_phone, :transportation_fee, :comment, :status)
     end
 end

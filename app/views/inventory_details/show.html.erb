@@ -20,5 +20,25 @@
   <%= @inventory_detail.real_quality %>
 </p>
 
+<p>
+  <strong>Sale quality:</strong>
+  <%= @inventory_detail.sale_quality %>
+</p>
+
+<p>
+  <strong>Lost quality:</strong>
+  <%= @inventory_detail.lost_quality %>
+</p>
+
+<p>
+  <strong>Resolve description:</strong>
+  <%= @inventory_detail.resolve_description %>
+</p>
+
+<p>
+  <strong>Resolved:</strong>
+  <%= @inventory_detail.resolved %>
+</p>
+
 <%= link_to 'Edit', edit_inventory_detail_path(@inventory_detail) %> |
 <%= link_to 'Back', inventory_details_path %>

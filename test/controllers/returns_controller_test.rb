@@ -18,7 +18,7 @@ class ReturnsControllerTest < ActionController::TestCase
 
   test "should create return" do
     assert_difference('Return.count') do
-      post :create, return: { comment: @return.comment, creation_date: @return.creation_date, merchant_account_id: @return.merchant_account_id, order_id: @return.order_id }
+      post :create, return: { comment: @return.comment, creation_date: @return.creation_date, merchant_account_id: @return.merchant_account_id, order_id: @return.order_id, submited: @return.submited }
     end
 
     assert_redirected_to return_path(assigns(:return))
@@ -35,7 +35,7 @@ class ReturnsControllerTest < ActionController::TestCase
   end
 
   test "should update return" do
-    patch :update, id: @return, return: { comment: @return.comment, creation_date: @return.creation_date, merchant_account_id: @return.merchant_account_id, order_id: @return.order_id }
+    patch :update, id: @return, return: { comment: @return.comment, creation_date: @return.creation_date, merchant_account_id: @return.merchant_account_id, order_id: @return.order_id, submited: @return.submited }
     assert_redirected_to return_path(assigns(:return))
   end
 

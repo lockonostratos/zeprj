@@ -1,15 +1,21 @@
 <%= simple_form_for(@inventory) do |f| %>
   <%= f.error_notification %>
-
+  <%= f.hidden_field :id %>
   <div class="form-inputs">
 
     <%= f.input :warehouse_id %>
 
     <%= f.input :merchant_account_id %>
 
+    <%= f.input :submited %>
+
     <%= f.input :decription %>
 
     <%= f.input :success %>
+
+    <%= f.input :resolved %>
+
+    <%= f.input :resolve_description %>
 
   </div>
 

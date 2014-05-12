@@ -18,7 +18,7 @@ class DeliveriesControllerTest < ActionController::TestCase
 
   test "should create delivery" do
     assert_difference('Delivery.count') do
-      post :create, delivery: { comment: @delivery.comment, delivery_date: @delivery.delivery_date, merchant_account_id: @delivery.merchant_account_id, order_id: @delivery.order_id, status: @delivery.status, transportation_fee: @delivery.transportation_fee }
+      post :create, delivery: { comment: @delivery.comment, contact_name: @delivery.contact_name, contact_phone: @delivery.contact_phone, creation_date: @delivery.creation_date, delivery_address: @delivery.delivery_address, delivery_date: @delivery.delivery_date, merchant_account_id: @delivery.merchant_account_id, order_id: @delivery.order_id, status: @delivery.status, transportation_fee: @delivery.transportation_fee }
     end
 
     assert_redirected_to delivery_path(assigns(:delivery))
@@ -35,7 +35,7 @@ class DeliveriesControllerTest < ActionController::TestCase
   end
 
   test "should update delivery" do
-    patch :update, id: @delivery, delivery: { comment: @delivery.comment, delivery_date: @delivery.delivery_date, merchant_account_id: @delivery.merchant_account_id, order_id: @delivery.order_id, status: @delivery.status, transportation_fee: @delivery.transportation_fee }
+    patch :update, id: @delivery, delivery: { comment: @delivery.comment, contact_name: @delivery.contact_name, contact_phone: @delivery.contact_phone, creation_date: @delivery.creation_date, delivery_address: @delivery.delivery_address, delivery_date: @delivery.delivery_date, merchant_account_id: @delivery.merchant_account_id, order_id: @delivery.order_id, status: @delivery.status, transportation_fee: @delivery.transportation_fee }
     assert_redirected_to delivery_path(assigns(:delivery))
   end
 

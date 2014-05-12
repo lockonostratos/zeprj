@@ -5,10 +5,14 @@
     <tr>
       <th>Order</th>
       <th>Merchant account</th>
-      <th>Status</th>
+      <th>Creation date</th>
       <th>Delivery date</th>
+      <th>Delivery address</th>
+      <th>Contact name</th>
+      <th>Contact phone</th>
       <th>Transportation fee</th>
       <th>Comment</th>
+      <th>Status</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,10 +24,14 @@
       <tr>
         <td><%= delivery.order_id %></td>
         <td><%= delivery.merchant_account_id %></td>
-        <td><%= delivery.status %></td>
+        <td><%= delivery.creation_date %></td>
         <td><%= delivery.delivery_date %></td>
+        <td><%= delivery.delivery_address %></td>
+        <td><%= delivery.contact_name %></td>
+        <td><%= delivery.contact_phone %></td>
         <td><%= delivery.transportation_fee %></td>
         <td><%= delivery.comment %></td>
+        <td><%= delivery.status %></td>
         <td><%= link_to 'Show', delivery %></td>
         <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
         <td><%= link_to 'Destroy', delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,6 +5,7 @@
     <tr>
       <th>Order</th>
       <th>Merchant account</th>
+      <th>Submited</th>
       <th>Creation date</th>
       <th>Comment</th>
       <th></th>
@@ -14,15 +15,16 @@
   </thead>
 
   <tbody>
-    <% @returns.each do |return| %>
+    <% @returns.each do |retur| %>
       <tr>
-        <td><%= return.order_id %></td>
-        <td><%= return.merchant_account_id %></td>
-        <td><%= return.creation_date %></td>
-        <td><%= return.comment %></td>
-        <td><%= link_to 'Show', return %></td>
-        <td><%= link_to 'Edit', edit_return_path(return) %></td>
-        <td><%= link_to 'Destroy', return, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= retur.order_id %></td>
+        <td><%= retur.merchant_account_id %></td>
+        <td><%= retur.submited %></td>
+        <td><%= retur.creation_date %></td>
+        <td><%= retur.comment %></td>
+        <td><%= link_to 'Show', retur %></td>
+        <td><%= link_to 'Edit', edit_return_path(retur) %></td>
+        <td><%= link_to 'Destroy', retur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

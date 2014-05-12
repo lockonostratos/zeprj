@@ -69,6 +69,6 @@ class InventoryDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inventory_detail_params
-      params.require(:inventory_detail).permit(:product_id, :inventory_id, :original_quality, :real_quality)
+      params.require(:inventory_detail).permit(:product_id, :inventory_id, :original_quality, :real_quality, :sale_quality, :lost_quality, :resolve_description, :resolved)
     end
 end

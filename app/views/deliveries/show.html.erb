@@ -11,13 +11,28 @@
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @delivery.status %>
+  <strong>Creation date:</strong>
+  <%= @delivery.creation_date %>
 </p>
 
 <p>
   <strong>Delivery date:</strong>
   <%= @delivery.delivery_date %>
+</p>
+
+<p>
+  <strong>Delivery address:</strong>
+  <%= @delivery.delivery_address %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @delivery.contact_name %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @delivery.contact_phone %>
 </p>
 
 <p>
@@ -28,6 +43,11 @@
 <p>
   <strong>Comment:</strong>
   <%= @delivery.comment %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @delivery.status %>
 </p>
 
 <%= link_to 'Edit', edit_delivery_path(@delivery) %> |

@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>Submited:</strong>
+  <%= @inventory.submited %>
+</p>
+
+<p>
   <strong>Decription:</strong>
   <%= @inventory.decription %>
 </p>
@@ -18,6 +23,16 @@
 <p>
   <strong>Success:</strong>
   <%= @inventory.success %>
+</p>
+
+<p>
+  <strong>Resolved:</strong>
+  <%= @inventory.resolved %>
+</p>
+
+<p>
+  <strong>Resolve description:</strong>
+  <%= @inventory.resolve_description %>
 </p>
 
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |

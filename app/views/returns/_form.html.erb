@@ -1,11 +1,13 @@
 <%= simple_form_for(@return) do |f| %>
   <%= f.error_notification %>
-
+  <%= f.hidden_field :id %>
   <div class="form-inputs">
 
     <%= f.input :order_id %>
 
     <%= f.input :merchant_account_id %>
+
+    <%= f.input :submited %>
 
     <%= f.input :creation_date %>
 

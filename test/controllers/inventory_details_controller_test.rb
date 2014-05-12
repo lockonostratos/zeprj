@@ -18,7 +18,7 @@ class InventoryDetailsControllerTest < ActionController::TestCase
 
   test "should create inventory_detail" do
     assert_difference('InventoryDetail.count') do
-      post :create, inventory_detail: { inventory_id: @inventory_detail.inventory_id, original_quality: @inventory_detail.original_quality, product_id: @inventory_detail.product_id, real_quality: @inventory_detail.real_quality }
+      post :create, inventory_detail: { inventory_id: @inventory_detail.inventory_id, lost_quality: @inventory_detail.lost_quality, original_quality: @inventory_detail.original_quality, product_id: @inventory_detail.product_id, real_quality: @inventory_detail.real_quality, resolve_description: @inventory_detail.resolve_description, resolved: @inventory_detail.resolved, sale_quality: @inventory_detail.sale_quality }
     end
 
     assert_redirected_to inventory_detail_path(assigns(:inventory_detail))
@@ -35,7 +35,7 @@ class InventoryDetailsControllerTest < ActionController::TestCase
   end
 
   test "should update inventory_detail" do
-    patch :update, id: @inventory_detail, inventory_detail: { inventory_id: @inventory_detail.inventory_id, original_quality: @inventory_detail.original_quality, product_id: @inventory_detail.product_id, real_quality: @inventory_detail.real_quality }
+    patch :update, id: @inventory_detail, inventory_detail: { inventory_id: @inventory_detail.inventory_id, lost_quality: @inventory_detail.lost_quality, original_quality: @inventory_detail.original_quality, product_id: @inventory_detail.product_id, real_quality: @inventory_detail.real_quality, resolve_description: @inventory_detail.resolve_description, resolved: @inventory_detail.resolved, sale_quality: @inventory_detail.sale_quality }
     assert_redirected_to inventory_detail_path(assigns(:inventory_detail))
   end
 

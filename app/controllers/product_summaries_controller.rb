@@ -4,9 +4,9 @@ class ProductSummariesController < MerchantApplicationController
   # GET /product_summaries
   # GET /product_summaries.json
   def index
-    @pro=Product.find(1)
-    @product_summaries=ProductSummary.where(:product_code => @pro.product_code, :skull_id => @pro.skull_id)
-    #@product_summaries = ProductSummary.all
+    #@pro=Product.find(1)
+    #@product_summaries=ProductSummary.where(:product_code => @pro.product_code, :skull_id => @pro.skull_id)
+    @product_summaries = ProductSummary.all
   end
 
   # GET /product_summaries/1
@@ -35,8 +35,17 @@ class ProductSummariesController < MerchantApplicationController
         format.html { redirect_to @product_summary, notice: 'Product summary was successfully created.' }
         format.json { render action: 'show', status: :created, location: @product_summary }
         if @product_summary.quality==0
-          TempProduct.create! ({product_code:@product_summary.product_code, skull_id:@product_summary.skull_id, warehouse_id:@product_summary.warehouse_id, merchant_account_id:@product_summary.merchant_account_id, name:@product_summary.name, import_price:@product_summary.price})
+          #TODO Tạo đỡ trên ProductSummary add sản phẩm vào bảng tạm
+          TempProduct.create! ({
+              :product_code=>@product_summary.product_code,
+              :skull_id=>@product_summary.skull_id,
+              :warehouse_id=>@product_summary.warehouse_id,
+              :merchant_account_id=>@product_summary.merchant_account_id,
+              :name=>@product_summary.name,
+              :import_quality=>300,
+              :import_price=>@product_summary.price})
         else
+          @product_summary.destroy
         end
       else
         format.html { render action: 'new' }
@@ -52,6 +61,30 @@ class ProductSummariesController < MerchantApplicationController
       if @product_summary.update(product_summary_params)
         format.html { redirect_to @product_summary, notice: 'Product summary was successfully updated.' }
         format.json { head :no_content }
+        # Cập nhật tên của sản phẩm trong bảng Product
+          if @product_summary.quality !=0
+            # Cập nhật thông tin khi ProductSummary Câp Nhật
+              @pro = Product.where(
+                  :product_code => @product_summary.product_code,
+                  :skull_id => @product_summary.skull_id,
+                  :warehouse_id => @product_summary.warehouse_id)
+              @pro.each do |pro|
+                Product.update(pro.id,name:@product_summary.name)
+              end
+          end
+          #cập nhật vảo bảng tạm
+          @pro = TempProduct.where(
+              :product_code => @product_summary.product_code,
+              :skull_id => @product_summary.skull_id,
+              :warehouse_id => @product_summary.warehouse_id).first(1)
+          #Cập nhật trong bảng TempProduct
+            @pro.each do |pro|
+              TempProduct.update(
+                  pro.id,
+                  name:@product_summary.name,
+                  import_price:@product_summary.price
+              )
+            end
       else
         format.html { render action: 'edit' }
         format.json { render json: @product_summary.errors, status: :unprocessable_entity }

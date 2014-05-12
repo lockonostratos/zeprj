@@ -366,11 +366,11 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
 
-      t.boolean :submited, :default => false #mac dinh false
+      t.boolean :submited, :default => false #của nhân viên
       t.text :decription
-      t.boolean :success, :null => false, :default => false
+      t.boolean :success, :null => false, :default => false #hoàn thành tất cả thì true
 
-      t.boolean :resolved, :null => false, :default => false
+      t.boolean :resolved, :null => false, :default => false #true khi có vấn đề
       t.text :resolve_description
 
       t.timestamps
@@ -383,7 +383,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
       t.integer :original_quality, :null => false #số lượng trong kho
       t.integer :real_quality, :null => false , :default=>0#số kiem tra
-      t.integer :quality #SO LUONG MAT
+      t.integer :quality #SO LUONG HANG DA BAN TRONG KHI KIEM KHO
 
       t.timestamps
     end
@@ -395,6 +395,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
       t.integer :original_quality, :null => false #số lượng trong kho
       t.integer :real_quality, :null => false #số kiem tra
+      t.integer :sale_quality, :null=>false
 
       t.integer :lost_quality, :default => 0 #không được lớn hơn số lượng mất trước đó
       t.string  :resolve_description
@@ -409,18 +410,13 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
       t.belongs_to :customer, :null => false
-      t.integer :return_id, :null => false, :default => 0 #Id don tra hang (neu co)
-
-      t.datetime :creation_date, :null => false
-      t.datetime :delivery_date, :null => false
-      t.string :delivery_address, :null => false
-      t.string :contact_name, :null => false
-      t.string :contact_phone, :null => false
+      t.boolean :return, :null => false, :default => false #Id don tra hang (neu co)
+      t.boolean :delivery,:null => false, :default =>false #true có giao hàng, false ko co giao hàng
 
       t.decimal :total_price, :null => false #tong gia tri hoa don
-      t.decimal :deposit, :null => false #tra truoc
+      t.decimal :deposit, :null => false, :default=>0 #tra truoc
       t.decimal :discount_cash, :null => false, :default => 0 #giam gia tinh bang tien mat
-      t.decimal :final_price, :null => false #so tien phai thu
+      t.decimal :final_price, :null => false, :default=>0 #so tien phai thu
 
       t.integer :payment_method, :null => false #chuyen thanh kieu Enumerable
       t.integer :status, :null => false, :default => 0 #tinh trang don hang
@@ -436,20 +432,27 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :quality, :null => false
       t.integer :return_quality, :null => false, :default => 0
       t.decimal :price, :null => false
-      t.decimal :discount_cash, :null => false
+      t.decimal :discount_cash, :null => false, :default => 0
 
       t.timestamps
     end
+
 
     #Phieu giao hang------------------------------------------>
     create_table :deliveries do |t|
       t.belongs_to :order, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.boolean :success, :default=>true
 
-      t.datetime :delivery_date, :null => false
+      t.datetime :creation_date,:null => false #ngay dat hang
+      t.datetime :delivery_date, :null => false #ngay giao hang
+      t.string :delivery_address, :null => false #đia chi giao hang
+      t.string :contact_name, :null => false #tên nguoi lien lac
+      t.string :contact_phone, :null => false #so dt nguoi lien lac
       t.decimal :transportation_fee, :null => false
       t.string :comment, :null => false
       t.integer :status, :null => false
+
 
       t.timestamps
     end
@@ -470,7 +473,9 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :returns do |t|
       t.belongs_to :order, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.boolean :submited, :default =>false
 
+      t.decimal :total_return_money
       t.datetime :creation_date, :null => false
       t.string :comment, :null => false
 
@@ -480,10 +485,15 @@ class InitializeDatabase < ActiveRecord::Migration
     #Chi tiet tra hang---------------------------------------->
     create_table :return_details do |t|
       t.belongs_to :return, :null => false
-      t.belongs_to :product, :null => false
+      t.integer :return_product_id, :null => false #id product tra hang
+      t.integer :return_quality, :null => false #so luong tra
+      t.boolean :type_return, :default =>false #loai hinh tra hang =false thi doi, =true tra tien
+      t.integer :product_id #id product hang doi
+      t.integer :quality #so luong hang doi
+      t.decimal :price, :default=>0 #giá tiền sản phẩm
 
-      t.integer :current_quality, :null => false
-      t.integer :return_quality, :null => false
+
+
 
       t.timestamps
     end

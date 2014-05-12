@@ -18,7 +18,7 @@ class ReturnDetailsControllerTest < ActionController::TestCase
 
   test "should create return_detail" do
     assert_difference('ReturnDetail.count') do
-      post :create, return_detail: { current_quality: @return_detail.current_quality, product_id: @return_detail.product_id, return_id: @return_detail.return_id, return_quality: @return_detail.return_quality }
+      post :create, return_detail: { price: @return_detail.price, product_id: @return_detail.product_id, return_id: @return_detail.return_id, return_product_id: @return_detail.return_product_id, return_quality: @return_detail.return_quality, type_return: @return_detail.type_return }
     end
 
     assert_redirected_to return_detail_path(assigns(:return_detail))
@@ -35,7 +35,7 @@ class ReturnDetailsControllerTest < ActionController::TestCase
   end
 
   test "should update return_detail" do
-    patch :update, id: @return_detail, return_detail: { current_quality: @return_detail.current_quality, product_id: @return_detail.product_id, return_id: @return_detail.return_id, return_quality: @return_detail.return_quality }
+    patch :update, id: @return_detail, return_detail: { price: @return_detail.price, product_id: @return_detail.product_id, return_id: @return_detail.return_id, return_product_id: @return_detail.return_product_id, return_quality: @return_detail.return_quality, type_return: @return_detail.type_return }
     assert_redirected_to return_detail_path(assigns(:return_detail))
   end
 

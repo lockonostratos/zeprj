@@ -69,6 +69,6 @@ class ReturnDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def return_detail_params
-      params.require(:return_detail).permit(:return_id, :product_id, :current_quality, :return_quality)
+      params.require(:return_detail).permit(:return_id, :return_product_id, :return_quality, :type_return, :product_id, :price)
     end
 end
