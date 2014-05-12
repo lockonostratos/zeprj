@@ -11,10 +11,12 @@
 # about supported directives.
 
 #= require jquery
-#= require jquery_ujs
+#= require foundation
 #= require libraries/systemjs
 #= require turbolinks
-#= require foundation
+
+
+#= require jquery_ujs
 # require jquery.ui.all
 # require_tree .
 

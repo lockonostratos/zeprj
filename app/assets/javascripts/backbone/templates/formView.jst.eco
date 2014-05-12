@@ -2,3 +2,4 @@
 <p>Name: <input type='text' id='name' /></p>
 <p>Age:  <input type='text' id='age' /></p>
 <p><button>Create</button></p>
+<p><a class='debug button'>Debug</a></p>
