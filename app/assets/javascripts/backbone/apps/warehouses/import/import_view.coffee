@@ -1,9 +1,12 @@
-Zeprj.module "WarehousesApp.Import", (Import, Zeprj, Backbone, Marionette, $, _) ->
-    Import.ItemView = Marionette.ItemView.extend()
-    Import.CollectionView = Marionette.CollectionView.extend
-      itemView: Import.ItemView
+Zeprj.module "WarehouseApp.Import", (Import, Zeprj, Backbone, Marionette, $, _) ->
+  Import.itemView = Marionette.ItemView.extend()
 
-    Import.ProductSummaryItemView = Marionette.ItemView.extend()
-    Import.ProductSummaryCollectionView = Marionette.CollectionView.extend
-      itemView: Import.ProductSummaryItemView
+  Import.collectionView = Marionette.CollectionView.extend
+    itemView: Import.itemView
+
+  Import.productSummaryItemView = Marionette.ItemView.extend
+    template: ''
+
+  Import.productSummaryCollectionView = Marionette.CollectionView.extend
+    itemView: Import.productSummaryItemView
 

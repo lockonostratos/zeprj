@@ -4,10 +4,13 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       '': 'index'
 
   API =
-    showMetro: ->
-      Zeprj.navigate('');
+    index: ->
+      Zeprj.navigate('')
       MetroApp.Controller.showContent()
 
-  Zeprj.on 'metro:show', ->
+  Zeprj.on 'navigate:metro', ->
     Zeprj.log('Showing Metro')
-    API.showMetro()
+    API.index()
+
+  Zeprj.addInitializer ->
+    new MetroApp.Router {controller: API}

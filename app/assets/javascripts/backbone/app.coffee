@@ -33,7 +33,7 @@ Zeprj.addRegions
 Zeprj.on 'initialize:after', (options) ->
   if Backbone.history
     Backbone.history.start()
-    if @getCurrentRoute() == '' then Zeprj.trigger('metro:show')
+    if @getCurrentRoute() == '' then Zeprj.trigger('navigate:metro')
 
 
 

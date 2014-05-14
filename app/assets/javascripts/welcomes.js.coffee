@@ -1,5 +1,4 @@
 #= require backbone/app
-
 Zeprj.Account = Backbone.Model.extend()
 
 Zeprj.Accounts = Backbone.Collection.extend
