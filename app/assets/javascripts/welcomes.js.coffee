@@ -43,7 +43,7 @@ Zeprj.FormView = Backbone.Marionette.ItemView.extend
 Zeprj.addInitializer ->
   Zeprj.accounts = new Zeprj.Accounts()
 
-  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts })
-  Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
+#  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts })
+#  Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
 
 Zeprj.start()

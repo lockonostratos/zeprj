@@ -14,3 +14,5 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
   Zeprj.addInitializer ->
     new MetroApp.Router {controller: API}
+    Zeprj.navigationRegion.show new MetroApp.navigationView()
+    Zeprj.optionRegion.show new MetroApp.optionView()

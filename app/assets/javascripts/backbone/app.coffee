@@ -1,9 +1,13 @@
 #= require libraries/underscore
 #= require libraries/backbone
 #= require libraries/backbone.marionette
+#= require libraries/jquery.splitter
+#= require libraries/hammer
+#= require libraries/jquery.hammer
 #= require_tree ./templates
 #= require_self
 #= require_tree .
+
 
 
 window.Zeprj = new Marionette.Application()
@@ -11,11 +15,6 @@ window.Zeprj = new Marionette.Application()
 Zeprj.debugMode = true
 Zeprj.log = (message) ->
   console.log message if Zeprj.debugMode
-
-#Helpers
-Zeprj.toRailsUrl = (scope, url) ->
-  if scope.isNew then custom = '/' + scope.id else custom = ''
-  url + custom + '.json'
 
 #Route & Navigations
 Zeprj.getCurrentRoute = -> Backbone.history.fragment
@@ -25,6 +24,8 @@ Zeprj.navigate = (route, options = {}) ->
 
 #Regions
 Zeprj.addRegions
+  navigationRegion: '#navigation-region'
+  optionRegion: '#option-region'
   mainRegion: '#main-region'
   afterMainRegion: '#after-main-region'
   endingRegion: '#ending-region'
@@ -33,7 +34,11 @@ Zeprj.addRegions
 Zeprj.on 'initialize:after', (options) ->
   if Backbone.history
     Backbone.history.start()
-    if @getCurrentRoute() == '' then Zeprj.trigger('navigate:metro')
+    if @getCurrentRoute() == ''
+      Zeprj.trigger 'navigate:metro'
+    else
+      Zeprj.trigger 'navigate:' + @getCurrentRoute()
+
 
 
 
