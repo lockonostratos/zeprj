@@ -9,4 +9,3 @@ class @systemjs
 #class renderable
 #  constructor: ->
 #    $.each key in agruments[0]
-

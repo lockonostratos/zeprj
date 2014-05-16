@@ -1,13 +1,9 @@
-#= require libraries/underscore
-#= require libraries/backbone
-#= require libraries/backbone.marionette
-#= require_tree ./backbone/templates
-
-Zeprj = new Backbone.Marionette.Application
-
+#= require backbone/app
 Zeprj.Account = Backbone.Model.extend()
+
 Zeprj.Accounts = Backbone.Collection.extend
   model: Zeprj.Account
+
 
 Zeprj.AccountView = Backbone.Marionette.ItemView.extend
   template: JST['backbone/templates/accountView']
@@ -23,6 +19,7 @@ Zeprj.FormView = Backbone.Marionette.ItemView.extend
   template: JST['backbone/templates/formView']
   events: {
     'click button': 'createNewAccount'
+    'click .debug': 'debugTracer'
   }
   ui: {
     name: '#name'
@@ -30,32 +27,23 @@ Zeprj.FormView = Backbone.Marionette.ItemView.extend
   }
 
   createNewAccount: ->
-    console.log("asdasd")
     @collection.add {
       name: @ui.name.val()
       age: @ui.age.val()
     }
-    console.log("1234")
     @ui.name.val('')
     @ui.age.val('')
+    console.log(@collection)
 
-Zeprj.MetroView = Backbone.Marionette.ItemView.extend
-  template: JST['backbone/templates/metroView']
+  debugTracer: ->
+    console.log(@ui.name.val() + '; ' + @ui.age.val())
 
-Zeprj.addRegions
-  mainRegion: '#main-region'
-  afterMainRegion: '#after-main-region'
-  endingRegion: '#ending-region'
 
-Zeprj.on 'initialize:after', (options) ->
-  if Backbone.history
-    Backbone.history.start()
 
 Zeprj.addInitializer ->
   Zeprj.accounts = new Zeprj.Accounts()
 
-  Zeprj.mainRegion.show(new Zeprj.MetroView())
-  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts})
-  Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
+#  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts })
+#  Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
 
 Zeprj.start()

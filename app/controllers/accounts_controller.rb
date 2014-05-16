@@ -44,6 +44,7 @@ class AccountsController < ApplicationController
   # POST /accounts.json
   def create
     @account = Account.new(account_params)
+    @account.password ||= params[:password]
     @account.account_type = 1 #1 tức là Merchant, sẽ chuyển thành enum sau
     @account.password_confirmation = @account.password
 

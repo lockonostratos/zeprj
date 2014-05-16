@@ -8,7 +8,7 @@ class ImportsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:imports)
+    assert_not_nil assigns(:import)
   end
 
   test "should get new" do
