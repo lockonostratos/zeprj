@@ -1,9 +1,17 @@
 Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
   MetroApp.NavigationLayout = Marionette.Layout.extend
+    template: JST['backbone/templates/metro/navigation']
+    className: 'navigation row'
+
+    events:
+      'click #home-button': -> Zeprj.trigger 'navigate:metro'
+      'click #back-button': -> Backbone.history.history.back()
+      'click #forward-button': -> Backbone.history.history.forward()
+
     regions:
       accountRegion: '#account-region'
 
-    initialize: ->
+    onShow: ->
       @accountRegion.show new MetroApp.OptionView()
 
   MetroApp.NavigationView = Marionette.ItemView.extend
