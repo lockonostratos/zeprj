@@ -31,6 +31,11 @@ body {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
+  min-height: 100%;
+
+  main {
+    height: 100%;
+  }
 }
 
 .pull-right { float: right; }
@@ -38,6 +43,57 @@ body {
 
 .application-wrapper {
   background-color: #fff;
+  height: 100%;
+  max-height: 650px;
+  min-height: 500px;
+  margin-bottom: .25rem;
+
+  //Chỉnh table style cho các elements
+  .inner-wrap {
+    height: 100%;
+    width: 100%;
+    display: table;
+    & > div {
+      display:table-row;
+    }
+
+    //Phần chứa METRO
+    #main-region {
+      height: 100%;
+      width: 100%;
+      & > div { //container
+        height: 100%;
+        width: 100%;
+        display: table;
+        & > div {  //các rows trong container
+          display:table-row;
+        }
+
+        //Phần chưa content của Top Navigation Layout
+        #tnl-content {
+          height: 100%;
+          & > div { //container
+            height: 100%;
+            width: 100%;
+            display: table;
+            & > div { //các rows trong container
+              display:table-row;
+            }
+
+            #dual-top {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Chỉnh sửa margin cho metro home!
+  .inner-wrap {
+    .metro-wrapper { margin-left: $application-padding }
+  }
+
   i { color: #999; }
 
   .left-off-canvas-menu {
@@ -46,6 +102,14 @@ body {
 
   .metro {
     margin-right: -$application-padding;
+
+    //Sửa lỗi tile group cuối cùng, sẽ không có right-margin!
+    //Chỉ đúng với trường hợp Group này chứa 1 hàng tile mà thôi
+    & > div:last-child {
+      & > .tile {
+        margin-right: 0;
+      }
+    }
 
     .tile {
       height: $tile-size;
@@ -93,12 +157,8 @@ body {
     }
   }
 
-  .right-navigation-container {
-    border-top: solid 5px darken($navigator-background-reserve, 5%);
-    @media #{$large-up} {
-      margin-right: -$application-padding;
-      margin-left: -$application-padding;
-    }
+  .top-navigation-container {
+    border-top: solid 3px darken($navigator-background-reserve, 5%);
 
     .navigation-wrapper {
       .navigator {
@@ -133,9 +193,9 @@ body {
     }
 
     .content {
-      background-color: $navigator-background;
-      min-height: $content-min-height;
-      height: $content-min-height;
+//      background-color: $navigator-background;
+//      min-height: $content-min-height;
+//      height: $content-min-height;
 
       ul.tile-container { margin: 0.1rem 0 0 $application-padding; }
       .product-summary-tile {
@@ -228,7 +288,6 @@ h1, h1, h3, h4, h5, h6 {
     margin-top: 1rem;
     @include border-radius(0.25rem);
     @include box-shadow(#aaa 0 0 0.3rem);
-    padding: $application-padding;
 
     .left-off-canvas-menu {
       margin: -$application-padding 0 -$application-padding -$application-padding;

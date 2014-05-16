@@ -10,14 +10,22 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
     regions:
       accountRegion: '#account-region'
+      merchantAccountRegion: '#merchant-account-region'
 
     onShow: ->
       @accountRegion.show new MetroApp.NavigationAccountView()
+      @merchantAccountRegion.show new MetroApp.NavigationMerchantAccountView()
 
   MetroApp.NavigationAccountView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/navigationAccount']
     initialize: ->
       @model = Zeprj.currentAccount
+      @listenTo @model, 'change', -> @render()
+
+  MetroApp.NavigationMerchantAccountView = Marionette.ItemView.extend
+    template: JST['backbone/templates/metro/navigationMerchantAccount']
+    initialize: ->
+      @model = Zeprj.currentMerchantAccount
       @listenTo @model, 'change', -> @render()
 
   MetroApp.NavigationView = Marionette.ItemView.extend
@@ -35,6 +43,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
   MetroApp.HomeView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/home']
+    className: 'metro-wrapper'
     events:
       'click #warehouse-manager': 'navigateWarehouseApp'
 
