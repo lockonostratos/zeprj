@@ -7,18 +7,25 @@ class ProductSummariesController < MerchantApplicationController
     #@pro=Product.find(1)
     #@product_summaries=ProductSummary.where(:product_code => @pro.product_code, :skull_id => @pro.skull_id)
     @product_summaries = ProductSummary.all
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @product_summaries}
+    end
   end
 
   # GET /product_summaries/1
   # GET /product_summaries/1.json
   def show
-
+    respond_to do |format|
+      format.html
+      format.json {render json: @product_summary}
+    end
   end
 
   # GET /product_summaries/new
   def new
     @product_summary = ProductSummary.new
-
   end
 
   # GET /product_summaries/1/edit

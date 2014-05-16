@@ -1,1 +1,4 @@
-<h1>Product summary..</h1>
+<span>Ma san pham: <%= @product_code %></span> <br/>
+<span>Ten san pham: <%= @name %></span> <br/>
+<span>So luong: <%= @quality %></span> <br/>
+<span>Gia ban: <%= @price %></span> <br/>

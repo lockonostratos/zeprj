@@ -137,6 +137,19 @@ body {
       min-height: $content-min-height;
       height: $content-min-height;
 
+      ul.tile-container { margin: 0.1rem 0 0 $application-padding; }
+      .product-summary-tile {
+        display: inline-block;
+        height: $tile-size-small;
+        width: $tile-size-small * 2;
+        @include border-radius($tile-radius);
+        background-color: #aaa;
+
+        margin-right: $tile-space;
+
+        list-style: none;
+      }
+
       .imports-wrapper {
         min-height: 100%;
         height: 100%;

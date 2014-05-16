@@ -1,5 +1,12 @@
 Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
-  MetroApp.navigationView = Marionette.ItemView.extend
+  MetroApp.NavigationLayout = Marionette.Layout.extend
+    regions:
+      accountRegion: '#account-region'
+
+    initialize: ->
+      @accountRegion.show new MetroApp.OptionView()
+
+  MetroApp.NavigationView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/navigation']
     className: 'navigation row'
     events:
@@ -7,20 +14,22 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       'click #back-button': -> Backbone.history.history.back()
       'click #forward-button': -> Backbone.history.history.forward()
 
-  MetroApp.optionView = Marionette.ItemView.extend
+
+  MetroApp.OptionView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/option']
     className: 'option row'
 
-  MetroApp.homeView = Marionette.ItemView.extend
+  MetroApp.HomeView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/home']
     events:
       'click #warehouse-manager': 'navigateWarehouseApp'
 
     navigateWarehouseApp: -> Zeprj.trigger 'navigate:warehouse'
 
-  MetroApp.innerNavigationView = Marionette.ItemView.extend
+  MetroApp.InnerNavigationView = Marionette.ItemView.extend
     template: JST['backbone/templates/layouts/innerNavigation']
 
   MetroApp.addInitializer ->
+    MetroApp.homeView = new MetroApp.HomeView()
     MetroApp.innerLayout = new Zeprj.TopNavigationLayout()
-    MetroApp.innerNavigation = new MetroApp.innerNavigationView()
+    MetroApp.innerNavigation = new MetroApp.InnerNavigationView()

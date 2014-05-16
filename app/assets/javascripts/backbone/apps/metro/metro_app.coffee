@@ -6,13 +6,17 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
   API =
     index: ->
       Zeprj.navigate('')
-      MetroApp.Controller.showContent()
+      MetroApp.Controller.renderSky()
 
   Zeprj.on 'navigate:metro', ->
     Zeprj.log('Showing Metro')
     API.index()
 
   Zeprj.addInitializer ->
+    #Global variables.
+    Zeprj.currentAccount = Zeprj.request 'account:entity', 1
+
+    #Render baseLayout.
     new MetroApp.Router {controller: API}
-    Zeprj.navigationRegion.show new MetroApp.navigationView()
-    Zeprj.optionRegion.show new MetroApp.optionView()
+    Zeprj.navigationRegion.show new MetroApp.NavigationView()
+    Zeprj.optionRegion.show new MetroApp.OptionView()

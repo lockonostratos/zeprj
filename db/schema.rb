@@ -319,7 +319,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer  "quality",                                             null: false
     t.integer  "return_quality",                          default: 0, null: false
     t.decimal  "price",          precision: 10, scale: 0,             null: false
-    t.decimal  "discount_cash",  precision: 10, scale: 0,             null: false
+    t.decimal  "discount_cash",  precision: 10, scale: 0, default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -332,9 +332,9 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.boolean  "return",                                       default: false, null: false
     t.boolean  "delivery",                                     default: false, null: false
     t.decimal  "total_price",         precision: 10, scale: 0,                 null: false
-    t.decimal  "deposit",             precision: 10, scale: 0,                 null: false
+    t.decimal  "deposit",             precision: 10, scale: 0, default: 0,     null: false
     t.decimal  "discount_cash",       precision: 10, scale: 0, default: 0,     null: false
-    t.decimal  "final_price",         precision: 10, scale: 0,                 null: false
+    t.decimal  "final_price",         precision: 10, scale: 0, default: 0,     null: false
     t.integer  "payment_method",                                               null: false
     t.integer  "status",                                       default: 0,     null: false
     t.datetime "created_at"
@@ -389,11 +389,12 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "returns", force: true do |t|
-    t.integer  "order_id",                            null: false
-    t.integer  "merchant_account_id",                 null: false
-    t.boolean  "submited",            default: false
-    t.datetime "creation_date",                       null: false
-    t.string   "comment",                             null: false
+    t.integer  "order_id",                                                     null: false
+    t.integer  "merchant_account_id",                                          null: false
+    t.boolean  "submited",                                     default: false
+    t.decimal  "total_return_money",  precision: 10, scale: 0
+    t.datetime "creation_date",                                                null: false
+    t.string   "comment",                                                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

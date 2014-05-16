@@ -12,8 +12,8 @@ Zeprj.DualHorizontalLayout = Backbone.Marionette.Layout.extend
   className: 'content'
 
   regions: {
-    leftPane: '#dual-left'
-    rightPane: '#dual-right'
+    mainPane: '#dual-left'
+    secondaryPane: '#dual-right'
   }
 
   onShow: ->
@@ -26,5 +26,20 @@ Zeprj.DualHorizontalLayout = Backbone.Marionette.Layout.extend
       switch event.type
         when 'swipeleft' then Zeprj.log 'swipeleft left!'
         when 'swiperight' then Zeprj.log 'swipeleft right!'
+
+Zeprj.DualVerticalLayout = Backbone.Marionette.Layout.extend
+  template: JST['backbone/templates/layouts/dualVertical']
+  className: 'content'
+
+  regions: {
+    mainPane: '#dual-top'
+    secondaryPane: '#dual-bottom'
+  }
+
+  onShow: ->
+    @$el.split
+      orientation: 'horizontal'
+      limit: 100
+      position: '70%'
 
 
