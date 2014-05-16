@@ -197,7 +197,7 @@ body {
 //      min-height: $content-min-height;
 //      height: $content-min-height;
 
-      ul.tile-container { margin: 0.1rem 0 0 $application-padding; }
+      ul.tile-container { margin: 0.1rem $application-padding 5rem $application-padding; }
       .product-summary-tile {
         display: inline-block;
         height: $tile-size-small;
