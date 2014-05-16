@@ -8,8 +8,8 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
 
   API =
     getWarehouseEntities: ->
-      warehouses = new Entities.Warehouses()
-      warehouses.fetch()
+      result = (new Entities.Warehouses()).fetch()
+      result
 
   Zeprj.reqres.setHandler 'warehouse:entities', ->
     API.getWarehouseEntities()

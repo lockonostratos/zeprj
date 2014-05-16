@@ -8,12 +8,14 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
 
   API =
     getAccountEntities: ->
-      results = new Entities.Accounts()
-      results.fetch()
+      result = new Entities.Accounts()
+      result.fetch()
+      result
 
     getAccountEntity: (id) ->
       result = new Entities.Account({id: id})
       result.fetch()
+      result
 
   Zeprj.reqres.setHandler 'account:entities', ->
     API.getAccountEntities()

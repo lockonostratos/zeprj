@@ -1,3 +1,3 @@
 class AccountSerializer < ActiveModel::Serializer
-  attributes :id, :display_name, :email
+  attributes :id, :email
 end

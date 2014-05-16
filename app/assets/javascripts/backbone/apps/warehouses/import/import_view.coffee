@@ -4,14 +4,23 @@ Zeprj.module "WarehouseApp.Import", (Import, Zeprj, Backbone, Marionette, $, _) 
 
   Import.productSummaryView = Marionette.ItemView.extend
     template: JST['backbone/templates/warehouse/import/productSummary']
+    className: 'product-summary-tile'
+    tagName: 'li'
+    events:
+      'click': -> Zeprj.log @model.attributes.product_code
 
-  Import.tempProductsView = Marionette.CollectionView.extend
-    itemView: Import.itemView
+  Import.emptyTemporaryProductsView = Marionette.ItemView.extend
+    template: JST['backbone/templates/warehouse/import/emptyTemporaryProduct']
+
+  Import.emptyProductSummariesView = Marionette.ItemView.extend
+    template: JST['backbone/templates/warehouse/import/emptyProductSummaries']
+
+  Import.temporaryProductsView = Marionette.CollectionView.extend
+    itemView: Import.temporaryProductView
+    emptyView: Import.emptyTemporaryProductsView
 
   Import.productSummariesView = Marionette.CollectionView.extend
-    itemView: Import.productSummaryItemView
-
-  Import.addInitializer ->
-    Import.layout = new Zeprj.DualHorizontalLayout()
-
-
+    itemView: Import.productSummaryView
+    emptyView: Import.emptyProductSummariesView
+    tagName: 'ul'
+    className: 'tile-container'
