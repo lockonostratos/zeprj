@@ -12,7 +12,13 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       accountRegion: '#account-region'
 
     onShow: ->
-      @accountRegion.show new MetroApp.OptionView()
+      @accountRegion.show new MetroApp.NavigationAccountView()
+
+  MetroApp.NavigationAccountView = Marionette.ItemView.extend
+    template: JST['backbone/templates/metro/navigationAccount']
+    initialize: ->
+      @model = Zeprj.currentAccount
+      @listenTo @model, 'change', -> @render()
 
   MetroApp.NavigationView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/navigation']
