@@ -24,6 +24,29 @@ class ImportsController < MerchantApplicationController
   # POST /imports
   # POST /imports.json
   def create
+      # #xem có quyền admin hay ko, access_admin neu co thi true, ko thi fale
+      # # vao bảng kiem tra access_admin co id la gi
+      # per_name ='access_admin'
+      # per_key = Permission.find_by_perm_name(per_name)
+      #
+      # #lấy id của user vào bảng role, kiem user co nhom quyen gi
+      # use_role = UserRole.where(:user_id => 1)
+      # #kiem tra user thuoc quyen nao trong bang role kiem tra tat cả
+      # #Select * from UserRole as UR, RolePermission as RP, Role as R
+      # #   where UR.user_id = @param AND
+      # #         R.user_role_id = @
+      # #         RP.? = ?
+      # use_role.each do |user_role|
+      #   role = Role.find(user_role.id)
+      #     role.each do |role|
+      #       role_perm = RolePermission.find_by_role_id(role.id)
+      #         role_perm.each do |role_perm|
+      #           return true if role_perm.permission_id == per_key.perm_key
+      #         end
+      #     end
+      # end
+
+
     #Tạo phiếu Import
     @import = Import.new(import_params)
     respond_to do |format|

@@ -30,10 +30,12 @@ Zeprj.FormView = Backbone.Marionette.ItemView.extend
   }
 
   createNewAccount: ->
+    console.log("asdasd")
     @collection.add {
       name: @ui.name.val()
       age: @ui.age.val()
     }
+    console.log("1234")
     @ui.name.val('')
     @ui.age.val('')
 
@@ -53,7 +55,7 @@ Zeprj.addInitializer ->
   Zeprj.accounts = new Zeprj.Accounts()
 
   Zeprj.mainRegion.show(new Zeprj.MetroView())
-  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts })
+  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts})
   Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
 
 Zeprj.start()

@@ -37,7 +37,7 @@ end
 gem 'haml'
 gem 'haml-rails'
 gem 'eco'
-gem 'rake', '10.3.0'
+gem 'rake', '10.3.1'
 gem 'simple_form'
 gem 'foundation-rails'
 

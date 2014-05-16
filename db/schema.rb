@@ -274,12 +274,35 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "updated_at"
   end
 
+  create_table "merchant_account_permission_details", force: true do |t|
+    t.integer  "merchant_account_id"
+    t.integer  "role_id"
+    t.string   "permission_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchant_account_permissions", force: true do |t|
+    t.integer  "merchant_account_id"
+    t.integer  "permission_id"
+    t.boolean  "active",              default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchant_account_roles", force: true do |t|
+    t.integer  "merchant_account_id"
+    t.integer  "role_id"
+    t.text     "permission_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "merchant_accounts", force: true do |t|
     t.integer  "account_id",                       null: false
     t.integer  "merchant_id",                      null: false
     t.integer  "branch_id",            default: 0, null: false
     t.integer  "current_warehouse_id"
-    t.integer  "module_role_id",       default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -303,23 +326,13 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "updated_at"
   end
 
-  create_table "modules_roles", id: false, force: true do |t|
-    t.integer  "module_id",  null: false
-    t.integer  "role_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "modules_roles", ["module_id"], name: "index_modules_roles_on_module_id", using: :btree
-  add_index "modules_roles", ["role_id"], name: "index_modules_roles_on_role_id", using: :btree
-
   create_table "order_details", force: true do |t|
     t.integer  "order_id",                                            null: false
     t.integer  "product_id",                                          null: false
     t.integer  "quality",                                             null: false
     t.integer  "return_quality",                          default: 0, null: false
     t.decimal  "price",          precision: 10, scale: 0,             null: false
-    t.decimal  "discount_cash",  precision: 10, scale: 0,             null: false
+    t.decimal  "discount_cash",  precision: 10, scale: 0, default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -332,11 +345,25 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.boolean  "return",                                       default: false, null: false
     t.boolean  "delivery",                                     default: false, null: false
     t.decimal  "total_price",         precision: 10, scale: 0,                 null: false
-    t.decimal  "deposit",             precision: 10, scale: 0,                 null: false
+    t.decimal  "deposit",             precision: 10, scale: 0, default: 0,     null: false
     t.decimal  "discount_cash",       precision: 10, scale: 0, default: 0,     null: false
-    t.decimal  "final_price",         precision: 10, scale: 0,                 null: false
+    t.decimal  "final_price",         precision: 10, scale: 0, default: 0,     null: false
     t.integer  "payment_method",                                               null: false
     t.integer  "status",                                       default: 0,     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "permission_details", force: true do |t|
+    t.integer  "permission_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "permissions", force: true do |t|
+    t.string   "permission_key"
+    t.string   "permission_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -389,20 +416,26 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "returns", force: true do |t|
-    t.integer  "order_id",                            null: false
-    t.integer  "merchant_account_id",                 null: false
-    t.boolean  "submited",            default: false
-    t.datetime "creation_date",                       null: false
-    t.string   "comment",                             null: false
+    t.integer  "order_id",                                                     null: false
+    t.integer  "merchant_account_id",                                          null: false
+    t.boolean  "submited",                                     default: false
+    t.decimal  "total_return_money",  precision: 10, scale: 0
+    t.datetime "creation_date",                                                null: false
+    t.string   "comment",                                                      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "role_permissions", force: true do |t|
+    t.integer  "role_id"
+    t.integer  "permission_id"
+    t.boolean  "active",        default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "roles", force: true do |t|
-    t.string   "name"
-    t.integer  "merchant"
-    t.integer  "brach"
-    t.integer  "warehouse"
+    t.string   "role_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

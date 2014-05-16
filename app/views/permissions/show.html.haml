@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Permission key:
+  = @permission.permission_key
+%p
+  %b Permission name:
+  = @permission.permission_name
+
+= link_to 'Edit', edit_permission_path(@permission)
+\|
+= link_to 'Back', permissions_path

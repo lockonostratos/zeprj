@@ -28,7 +28,7 @@ class WarehousesController < MerchantApplicationController
 
     respond_to do |format|
       if @warehouse.save
-        format.html { redirect_to @warehouse, notice: 'Warehouse was successfully created.' }
+        format.html { redirect_to @warehouse, notice: 'Warehouse was successfully created.'}
         format.json { render action: 'show', status: :created, location: @warehouse }
       else
         format.html { render action: 'new' }

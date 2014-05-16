@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Merchant account:
+  = @merchant_account_permission.merchant_account_id
+%p
+  %b Permission:
+  = @merchant_account_permission.permission_id
+%p
+  %b Active:
+  = @merchant_account_permission.active
+
+= link_to 'Edit', edit_merchant_account_permission_path(@merchant_account_permission)
+\|
+= link_to 'Back', merchant_account_permissions_path

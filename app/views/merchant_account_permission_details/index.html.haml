@@ -1,0 +1,23 @@
+%h1 Listing merchant_account_permission_details
+
+%table
+  %tr
+    %th Merchant account
+    %th Permission
+    %th Permission text
+    %th
+    %th
+    %th
+
+  - @merchant_account_permission_details.each do |merchant_account_permission_detail|
+    %tr
+      %td= merchant_account_permission_detail.merchant_account_id
+      %td= merchant_account_permission_detail.permission_id
+      %td= merchant_account_permission_detail.permission_text
+      %td= link_to 'Show', merchant_account_permission_detail
+      %td= link_to 'Edit', edit_merchant_account_permission_detail_path(merchant_account_permission_detail)
+      %td= link_to 'Destroy', merchant_account_permission_detail, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Merchant account permission detail', new_merchant_account_permission_detail_path

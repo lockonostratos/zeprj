@@ -1,0 +1,19 @@
+= form_for @merchant_account_role do |f|
+  - if @merchant_account_role.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@merchant_account_role.errors.count, "error")} prohibited this merchant_account_role from being saved:"
+      %ul
+        - @merchant_account_role.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :merchant_account_id
+    = f.number_field :merchant_account_id
+  .field
+    = f.label :role_id
+    = f.number_field :role_id
+  .field
+    = f.label :permission_text
+    = f.text_area :permission_text
+  .actions
+    = f.submit 'Save'

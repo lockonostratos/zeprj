@@ -35,21 +35,58 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
+
+
+    #Phân quyền----------------------------------------------------------------------->
+    create_table :permissions do |t|
+      t.string :permission_key
+      t.string :permission_name
+      t.timestamps
+    end
+
     create_table :roles do |t|
+      t.string :role_name
+      t.timestamps
+    end
+
+    create_table :merchant_account_permissions do |t|
+      t.belongs_to :merchant_account
+      t.belongs_to :permission
+      t.boolean :active, :default=>true
+      t.timestamps
+    end
+
+    create_table :merchant_account_roles do |t|
+      t.belongs_to :merchant_account
+      t.belongs_to :role
+      t.text :permission_text
+      t.timestamps
+    end
+
+    create_table :role_permissions do |t|
+      t.belongs_to :role
+      t.belongs_to :permission
+      t.boolean :active, :default=>true
+      t.timestamps
+    end
+
+    create_table :permission_details do |t|
+      t.belongs_to :permission
       t.string :name
-      t.integer :merchant
-      t.integer :brach
-      t.integer :warehouse
-
       t.timestamps
     end
 
-    create_join_table :modules, :roles do |t|
-      t.index :module_id
-      t.index :role_id
-
+    create_table :merchant_account_permission_details  do |t|
+      t.belongs_to :merchant_account
+      t.belongs_to :role
+      t.string :permission_text
       t.timestamps
+
     end
+
+
+
+
 
 
     #MERCHANTS SECTION------------------------------------------------------------------------------------------->
@@ -68,8 +105,6 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :merchant, :null => false
       t.belongs_to :branch, :null => false , :default => 0
       t.integer :current_warehouse_id
-
-      t.belongs_to :module_role, :null => false , :default => 0 #bang role o dau?
 
       t.timestamps
     end
@@ -497,6 +532,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
       t.timestamps
     end
+
 
   end
 end

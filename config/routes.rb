@@ -34,6 +34,14 @@ Zeprj::Application.routes.draw do
   resources :return_details
   resources :temp_products
   resources :temp_inventory_details
+  resources :roles
+  resources :role_permissions
+  resources :merchant_account_roles
+  resources :merchant_account_permissions
+  resources :merchant_account_permission_details
+  resources :permissions
+  resources :permission_details
+
 
   resources "merchantAccounts", :controller => :merchant_accounts, :as => :merchant_accounts
   # The priority is based upon order of creation: first created -> highest priority.
