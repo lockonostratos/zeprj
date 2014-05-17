@@ -197,17 +197,25 @@ body {
 //      min-height: $content-min-height;
 //      height: $content-min-height;
 
-      ul.tile-container { margin: 0.1rem $application-padding 5rem $application-padding; }
-      .product-summary-tile {
-        display: inline-block;
-        height: $tile-size-small;
-        width: $tile-size-small * 2;
-        @include border-radius($tile-radius);
-        background-color: #aaa;
+      ul.tile-container {
+        margin: 0.1rem 0;
 
-        margin-right: $tile-space;
+        .product-summary-tile {
+          display: inline-block;
+          height: $tile-size-small;
+          width: $tile-size-small * 2;
+          @include border-radius($tile-radius);
+          background-color: #aaa;
 
-        list-style: none;
+          margin-right: $tile-space;
+
+          list-style: none;
+
+          &:first-child {
+            @include border-top-left-radius(0);
+            @include border-bottom-left-radius(0);
+          }
+        }
       }
 
       .imports-wrapper {
@@ -288,6 +296,7 @@ h1, h1, h3, h4, h5, h6 {
     margin-top: 1rem;
     @include border-radius(0.25rem);
     @include box-shadow(#aaa 0 0 0.3rem);
+    border: 3px solid #DDD;
 
     .left-off-canvas-menu {
       margin: -$application-padding 0 -$application-padding -$application-padding;

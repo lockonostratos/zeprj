@@ -11,10 +11,12 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     regions:
       accountRegion: '#account-region'
       merchantAccountRegion: '#merchant-account-region'
+      warehouseSelectionRegion: '#warehouse-selection-region'
 
     onShow: ->
       @accountRegion.show new MetroApp.NavigationAccountView()
       @merchantAccountRegion.show new MetroApp.NavigationMerchantAccountView()
+      @warehouseSelectionRegion.show MetroApp.warehouseSelectionView
 
   MetroApp.NavigationAccountView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/navigationAccount']
@@ -28,7 +30,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       @model = Zeprj.currentMerchantAccount
       @listenTo @model, 'change', -> @render()
 
-  MetroApp.NavigationView = Marionette.ItemView.extend
+  MetroApp.NavigationView = Marionette.CompositeView.extend
     template: JST['backbone/templates/metro/navigation']
     className: 'navigation row'
     events:
@@ -56,3 +58,9 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     MetroApp.homeView = new MetroApp.HomeView()
     MetroApp.innerLayout = new Zeprj.TopNavigationLayout()
     MetroApp.innerNavigation = new MetroApp.InnerNavigationView()
+    MetroApp.warehouseSelectionView = new Sky.SelectionControl({
+      collection: Zeprj.availableWarehouses
+      keyElement: 'id'
+      valueElement: 'name'
+    })
+

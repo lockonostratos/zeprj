@@ -38,12 +38,4 @@ Zeprj.FormView = Backbone.Marionette.ItemView.extend
   debugTracer: ->
     console.log(@ui.name.val() + '; ' + @ui.age.val())
 
-
-
-Zeprj.addInitializer ->
-  Zeprj.accounts = new Zeprj.Accounts()
-
-#  Zeprj.afterMainRegion.show(new Zeprj.FormView { collection: Zeprj.accounts })
-#  Zeprj.endingRegion.show(new Zeprj.AccountsView { collection: Zeprj.accounts })
-
 Zeprj.start()
