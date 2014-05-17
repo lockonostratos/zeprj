@@ -6,5 +6,7 @@
 	</h1>
 </div>
 <div class='large-9 columns'>
-	<span id='account-region' class='right'>Welcome back, <%=@id%>-<%=@email%>! <br></span>
+	<div id='account-region' class='right'>Welcome back, <%=@id%>-<%=@email%>!</div>
+	<br>
+	<div id='merchant-account-region' class='right'></div>
 </div>

@@ -1,0 +1,1 @@
+Merchant: <%=@merchant_id%>, Branch: <%=@branch_id%>, Warehouse: <%=@current_warehouse_id%>

@@ -14,9 +14,10 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
   Zeprj.addInitializer ->
     #Global variables.
-    Zeprj.currentAccount = Zeprj.request 'account:entity', 1
+    Zeprj.currentAccount = Zeprj.request 'account:entity', 0
+    Zeprj.currentMerchantAccount = Zeprj.request 'merchantAccount:entity', 0
 
     #Render baseLayout.
     new MetroApp.Router {controller: API}
-    Zeprj.navigationRegion.show new MetroApp.NavigationView()
+    Zeprj.navigationRegion.show new MetroApp.NavigationLayout()
     Zeprj.optionRegion.show new MetroApp.OptionView()

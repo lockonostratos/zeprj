@@ -1,6 +1,6 @@
 Zeprj.TopNavigationLayout = Backbone.Marionette.Layout.extend
   template: JST['backbone/templates/layouts/topNavigation']
-  className: 'right-navigation-container'
+  className: 'top-navigation-container'
 
   regions: {
     navigator: '#tnl-navigator'
@@ -35,11 +35,11 @@ Zeprj.DualVerticalLayout = Backbone.Marionette.Layout.extend
     mainPane: '#dual-top'
     secondaryPane: '#dual-bottom'
   }
-
-  onShow: ->
-    @$el.split
-      orientation: 'horizontal'
-      limit: 100
-      position: '70%'
+#
+#  onShow: ->
+#    @$el.split
+#      orientation: 'horizontal'
+#      limit: 100
+#      position: '70%'
 
 
