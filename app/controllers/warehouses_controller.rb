@@ -12,11 +12,6 @@ class WarehousesController < MerchantApplicationController
   def show
   end
 
-  # def available_warehouse
-  #
-  #   @warehouse = Warehouse.where(:branch_id => (Merchant.Branch))
-  #
-  # end
   # GET /warehouses/new
   def new
     @warehouse = Warehouse.new
@@ -28,11 +23,14 @@ class WarehousesController < MerchantApplicationController
 
   # POST /warehouses
   # POST /warehouses.json
+  #
   def create
     @warehouse = Warehouse.new(warehouse_params)
-
+    current_branch = Branch.find_by_id(@warehouse.branch_id)
     respond_to do |format|
-      if @warehouse.save
+      #Bắt lỗi Brach phải thuộc cùng 1 Merchant với current_merchant_account
+      if current_branch != nil and current_branch.merchant_id == current_merchant_account.merchant_id
+      @warehouse.save
         format.html { redirect_to @warehouse, notice: 'Warehouse was successfully created.'}
         format.json { render action: 'show', status: :created, location: @warehouse }
       else
@@ -45,15 +43,22 @@ class WarehousesController < MerchantApplicationController
   # PATCH/PUT /warehouses/1
   # PATCH/PUT /warehouses/1.json
   def update
-    respond_to do |format|
-      if @warehouse.update(warehouse_params)
-
+  respond_to do |format|
+    #Kiểm tra có quyền Edit warehouse, nếu có = true
+      if  check_warehouse_permission == true
+        #Lấy thông tin old_warehouse
+        warehouse = Warehouse.find(params[:id])
+        #Lấy thông tin new_warehouse
+        @warehouse.attributes = (warehouse_params)
+        #Xét mặc định branch
+        @warehouse.branch_id = warehouse.branch_id
+        @warehouse.save()
 
         format.html { redirect_to @warehouse, notice: 'Warehouse was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @warehouse.errors, status: :unprocessable_entity }
+        format.html { redirect_to @warehouse, notice: 'Loi Edit Warehouse ko cung Merchant' }
+        format.json { head :no_content }
       end
     end
   end
@@ -61,23 +66,23 @@ class WarehousesController < MerchantApplicationController
   # DELETE /warehouses/1
   # DELETE /warehouses/1.json
   def destroy
-    @warehouse.destroy
+    current_branch = Branch.find_by_id(@warehouse.branch_id)
     respond_to do |format|
-      format.html { redirect_to warehouses_url }
-      format.json { head :no_content }
+      if current_branch.merchant_id == current_merchant_account.merchant_id
+      @warehouse.destroy
+        format.html { redirect_to warehouses_url }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to warehouses_url, notice: 'Loi Xoa WareHouse ko cung 1 Merchant' }
+        format.json { head :no_content }
+      end
     end
   end
   #Trả về những Warehouse mà người dùng hiện tại có quyền truy cập
   def available
-    branch = Branch.where(merchant_id:current_merchant_account.merchant_id)
-    @warehouses = Warehouse.where(branch_id:(branch.pluck(:id)))
-    #Lọc Warehouse theo permission
-    #@warehouses = @warehouses.where.not(id:1)
-    respond_to do |format|
-      format.json { render json: @warehouses }
-    end
+    check_warehouse_permission
+    render json: @warehouses
   end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_warehouse
@@ -88,4 +93,20 @@ class WarehousesController < MerchantApplicationController
     def warehouse_params
       params.require(:warehouse).permit(:branch_id, :name)
     end
+    def check_warehouse_permission
+      #@warehouses.where(branch_id:2)
+      #Lọc Warehouse theo permission
+      #@warehouses = @warehouses.where.not(id:1)
+      #params =  {id:3, branch_id:2, name:'1'}
+      #@warehouses = @warehouses - params.to_a
+
+    branch = Branch.where(merchant_id:current_merchant_account.merchant_id)
+      @warehouses = Warehouse.where(branch_id:(branch.pluck(:id)))
+      warehoues=(@warehouses.pluck(:id))
+      warehoues.each do |ex|
+        return true if (ex.to_param == params[:id])
+      end
+    end
+
+
 end

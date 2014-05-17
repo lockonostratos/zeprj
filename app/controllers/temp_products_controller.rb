@@ -99,9 +99,9 @@ class TempProductsController < MerchantApplicationController
     if @temp_product.import_quality < 0
       errors +='So Luong Sai '
     end
-     if @temp_product.import_price < 0
+    if @temp_product.import_price < 0
        errors +='Gia Sai '
-     end
+    end
     @errors = errors
     if @errors == ''
       return true
