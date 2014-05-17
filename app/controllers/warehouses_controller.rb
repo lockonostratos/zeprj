@@ -12,6 +12,11 @@ class WarehousesController < MerchantApplicationController
   def show
   end
 
+  # def available_warehouse
+  #
+  #   @warehouse = Warehouse.where(:branch_id => (Merchant.Branch))
+  #
+  # end
   # GET /warehouses/new
   def new
     @warehouse = Warehouse.new
@@ -40,8 +45,13 @@ class WarehousesController < MerchantApplicationController
   # PATCH/PUT /warehouses/1
   # PATCH/PUT /warehouses/1.json
   def update
+    b= current_merchant_account.merchant_id
+    a = Branch.where(merchant_id: b)
+    a
     respond_to do |format|
       if @warehouse.update(warehouse_params)
+
+
         format.html { redirect_to @warehouse, notice: 'Warehouse was successfully updated.' }
         format.json { head :no_content }
       else
@@ -60,10 +70,11 @@ class WarehousesController < MerchantApplicationController
       format.json { head :no_content }
     end
   end
-  #ham show tat ca warehouse trong cung 1 merchant theo "current_merchant_account"
-  def shows
+  #Trả về những Warehouse mà người dùng hiện tại có quyền truy cập
+  def available
     branch = Branch.where(:merchant_id => current_merchant_account.merchant_id)
     @warehouses = Warehouse.where(:branch_id =>(branch.pluck(:id)))
+
   end
 
   private
