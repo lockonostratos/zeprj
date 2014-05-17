@@ -49,26 +49,33 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :merchant_account_permissions do |t|
-      t.belongs_to :merchant_account
-      t.belongs_to :permission
-      t.boolean :active, :default=>true
-      t.timestamps
-    end
+    # create_table :merchant_account_permissions do |t|
+    #   t.belongs_to :merchant_account
+    #   t.belongs_to :permission
+    #   t.boolean :active, :default=>true
+    #   t.timestamps
+    # end
 
     create_table :merchant_account_roles do |t|
       t.belongs_to :merchant_account
       t.belongs_to :role
       t.text :permission_text
+      t.text :warehouse_text
       t.timestamps
     end
 
     create_table :role_permissions do |t|
       t.belongs_to :role
       t.belongs_to :permission
-      t.boolean :active, :default=>true
       t.timestamps
     end
+
+    create_table :role_warehouse do |t|
+      t.belongs_to :role
+      t.belongs_to :warehouse
+      t.timestamps
+    end
+
 
     create_table :permission_details do |t|
       t.belongs_to :permission

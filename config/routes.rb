@@ -12,7 +12,7 @@ Zeprj::Application.routes.draw do
   resources :merchants
   resources :products
 
-  get 'warehouses/available', :to => 'warehouses#shows'
+  get 'warehouses/available', :to => 'warehouses#available'
   resources :warehouses
   resources :skulls
   resources :merchant_accounts

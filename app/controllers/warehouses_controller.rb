@@ -45,9 +45,6 @@ class WarehousesController < MerchantApplicationController
   # PATCH/PUT /warehouses/1
   # PATCH/PUT /warehouses/1.json
   def update
-    b= current_merchant_account.merchant_id
-    a = Branch.where(merchant_id: b)
-    a
     respond_to do |format|
       if @warehouse.update(warehouse_params)
 
@@ -72,9 +69,13 @@ class WarehousesController < MerchantApplicationController
   end
   #Trả về những Warehouse mà người dùng hiện tại có quyền truy cập
   def available
-    branch = Branch.where(:merchant_id => current_merchant_account.merchant_id)
-    @warehouses = Warehouse.where(:branch_id =>(branch.pluck(:id)))
-
+    branch = Branch.where(merchant_id:current_merchant_account.merchant_id)
+    @warehouses = Warehouse.where(branch_id:(branch.pluck(:id)))
+    #Lọc Warehouse theo permission
+    #@warehouses = @warehouses.where.not(id:1)
+    respond_to do |format|
+      format.json { render json: @warehouses }
+    end
   end
 
   private

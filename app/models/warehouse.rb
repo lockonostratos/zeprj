@@ -5,6 +5,7 @@ class Warehouse < ActiveRecord::Base
   has_many :orders
   has_many :products
   has_many :product_summaries
+  has_many :role_warehouses
 
   belongs_to :branch
 

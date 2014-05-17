@@ -3,5 +3,6 @@ class Role < ActiveRecord::Base
   has_many :merchant_account_roles
   has_many :role_permissions
   has_many :merchant_account_permission_details
+  has_many :role_warehouses
 
 end
