@@ -5,6 +5,10 @@ class WarehousesController < MerchantApplicationController
   # GET /warehouses.json
   def index
     @warehouses = Warehouse.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @warehouses }
+    end
   end
 
   # GET /warehouses/1

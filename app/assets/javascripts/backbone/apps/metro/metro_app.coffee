@@ -8,16 +8,11 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       Zeprj.navigate('')
       MetroApp.Controller.renderSky()
 
-  Zeprj.on 'navigate:metro', ->
-    Zeprj.log('Showing Metro')
-    API.index()
+  Zeprj.on 'navigate:metro', -> API.index()
 
   Zeprj.addInitializer ->
+    new MetroApp.Router {controller: API}
     #Global variables.
     Zeprj.currentAccount = Zeprj.request 'account:entity', 0
     Zeprj.currentMerchantAccount = Zeprj.request 'merchantAccount:entity', 0
-
-    #Render baseLayout.
-    new MetroApp.Router {controller: API}
-    Zeprj.navigationRegion.show new MetroApp.NavigationLayout()
-    Zeprj.optionRegion.show new MetroApp.OptionView()
+    Zeprj.availableWarehouses = Zeprj.request 'warehouse:entities', {action: 'available'}

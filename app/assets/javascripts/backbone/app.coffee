@@ -33,6 +33,7 @@ Zeprj.addRegions
 
 #Default Initializer!
 Zeprj.on 'initialize:after', (options) ->
+  Zeprj.MetroApp.Controller.renderGlobalUi()
   if Backbone.history
     Backbone.history.start()
     if @getCurrentRoute() == ''

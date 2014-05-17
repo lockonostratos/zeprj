@@ -2,7 +2,7 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
   Entities.Account = Backbone.Model.extend
     urlRoot: 'accounts'
 
-  Entities.Accounts = Backbone.Collection.extend
+  Entities.Accounts = Sky.Collection.extend
     url: 'accounts'
     model: Entities.Account
 

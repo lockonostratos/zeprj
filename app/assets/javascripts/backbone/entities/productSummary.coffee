@@ -7,9 +7,9 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
     model: Entities.ProductSummary
 
   API =
-    getProductSummaryEntities: ->
+    getProductSummaryEntities: (options)->
       result = new Entities.ProductSummaries()
-      #result.fetch()
+      result.fetch(options)
       result
 
     getProductSummaryEntity: (id) ->
@@ -17,8 +17,8 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
       result.fetch()
       result
 
-  Zeprj.reqres.setHandler 'productSummary:entities', ->
-    API.getProductSummaryEntities()
+  Zeprj.reqres.setHandler 'productSummary:entities', (options)->
+    API.getProductSummaryEntities(options)
 
   Zeprj.reqres.setHandler 'productSummary:entity', (id)->
     API.getProductSummaryEntity(id)
