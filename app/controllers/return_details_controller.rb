@@ -5,11 +5,19 @@ class ReturnDetailsController < ApplicationController
   # GET /return_details.json
   def index
     @return_details = ReturnDetail.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @return_details }
+    end
   end
 
   # GET /return_details/1
   # GET /return_details/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @return_detail }
+    end
   end
 
   # GET /return_details/new

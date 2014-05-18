@@ -5,11 +5,19 @@ class InventoriesController < AccountsController
   # GET /inventories.json
   def index
     @inventories = Inventory.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @inventories }
+    end
   end
 
   # GET /inventories/1
   # GET /inventories/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @inventory }
+    end
   end
 
   # GET /inventories/new

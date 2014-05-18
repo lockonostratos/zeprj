@@ -4,13 +4,20 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # @products = Product.all
-    @products = Product.where(:product_code => 12345, :skull_id => nil, :warehouse_id => 2)
+     @products = Product.all
+     respond_to do |format|
+       format.html { redirect_to imports_url }
+       format.json { render :json => @product }
+     end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @product }
+    end
   end
 
   # GET /products/new

@@ -5,11 +5,19 @@ class PermissionsController < ApplicationController
   # GET /permissions.json
   def index
     @permissions = Permission.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @permissions }
+    end
   end
 
   # GET /permissions/1
   # GET /permissions/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @permission }
+    end
   end
 
   # GET /permissions/new

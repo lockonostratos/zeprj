@@ -1,5 +1,5 @@
 class WarehousesController < MerchantApplicationController
-  before_action :set_warehouse, only: [:show, :edit, :update, :destroy]
+  before_action :set_warehouse, only: [:edit, :update, :destroy]
 
   # GET /warehouses
   # GET /warehouses.json
@@ -54,7 +54,7 @@ class WarehousesController < MerchantApplicationController
   def update
   respond_to do |format|
     #Kiểm tra có quyền Edit warehouse, nếu có = true
-      if  (params[:id]) == true
+      if  check_warehouse_permission(params[:id]) == true
         #Lấy thông tin old_warehouse
         warehouse = Warehouse.find(params[:id])
         #Lấy thông tin new_warehouse

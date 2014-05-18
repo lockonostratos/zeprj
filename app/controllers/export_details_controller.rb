@@ -5,11 +5,19 @@ class ExportDetailsController < ApplicationController
   # GET /export_details.json
   def index
     @export_details = ExportDetail.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @export_details }
+    end
   end
 
   # GET /export_details/1
   # GET /export_details/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @export_detail }
+    end
   end
 
   # GET /export_details/new

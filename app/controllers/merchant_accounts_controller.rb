@@ -5,6 +5,10 @@ class MerchantAccountsController < ApplicationController
   # GET /merchant_accounts.json
   def index
     @merchant_accounts = MerchantAccount.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @merchant_accounts }
+    end
   end
 
   # GET /merchant_accounts/1

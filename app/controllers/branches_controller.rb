@@ -5,11 +5,19 @@ class BranchesController < MerchantApplicationController
   # GET /branches.json
   def index
     @branches = Branch.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @branches }
+    end
   end
 
   # GET /branches/1
   # GET /branches/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @branch }
+    end
   end
 
   # GET /branches/new

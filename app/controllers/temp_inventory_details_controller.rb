@@ -5,11 +5,19 @@ class TempInventoryDetailsController < ApplicationController
   # GET /temp_inventory_details.json
   def index
     @temp_inventory_details = TempInventoryDetail.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @temp_inventory_details }
+    end
   end
 
   # GET /temp_inventory_details/1
   # GET /temp_inventory_details/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @temp_inventory_detail }
+    end
   end
 
   # GET /temp_inventory_details/new
@@ -41,9 +49,9 @@ class TempInventoryDetailsController < ApplicationController
   def update
     respond_to do |format|
       # lấy thông tin sản phẩm
-      @temp_inventory_detail1 = TempInventoryDetail.new(temp_inventory_detail_params)
+      temp_inventory_detail = TempInventoryDetail.new(temp_inventory_detail_params)
       #kiểm tra số lượng nhập
-      if @temp_inventory_detail1.original_quality >= @temp_inventory_detail1.real_quality
+      if temp_inventory_detail.original_quality >= temp_inventory_detail.real_quality
         #Nếu ok thi update sản phẩm
         @temp_inventory_detail.update(temp_inventory_detail_params)
 

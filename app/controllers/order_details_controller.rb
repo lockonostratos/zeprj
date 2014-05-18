@@ -5,11 +5,19 @@ class OrderDetailsController < ApplicationController
   # GET /order_details.json
   def index
     @order_details = OrderDetail.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @order_details }
+    end
   end
 
   # GET /order_details/1
   # GET /order_details/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @order_detail }
+    end
   end
 
   # GET /order_details/new

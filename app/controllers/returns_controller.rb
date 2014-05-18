@@ -5,11 +5,19 @@ class ReturnsController < ApplicationController
   # GET /returns.json
   def index
     @returns = Return.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @returns }
+    end
   end
 
   # GET /returns/1
   # GET /returns/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @return }
+    end
   end
 
   # GET /returns/new

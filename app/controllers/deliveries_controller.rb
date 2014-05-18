@@ -5,11 +5,19 @@ class DeliveriesController < ApplicationController
   # GET /deliveries.json
   def index
     @deliveries = Delivery.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @deliveries }
+    end
   end
 
   # GET /deliveries/1
   # GET /deliveries/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @delivery }
+    end
   end
 
   # GET /deliveries/new

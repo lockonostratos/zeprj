@@ -5,11 +5,19 @@ class ImportsController < MerchantApplicationController
   # GET /imports.json
   def index
     @imports = Import.all
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @imports }
+    end
   end
 
   # GET /imports/1
   # GET /imports/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to imports_url }
+      format.json { render :json => @import }
+    end
   end
 
   # GET /imports/new
