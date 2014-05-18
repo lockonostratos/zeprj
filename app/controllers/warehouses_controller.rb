@@ -1,5 +1,5 @@
 class WarehousesController < MerchantApplicationController
-  before_action :set_warehouse, only: [:edit, :update, :destroy]
+  before_action :set_warehouse, only: [:show, :edit, :update, :destroy]
 
   # GET /warehouses
   # GET /warehouses.json
@@ -33,7 +33,6 @@ class WarehousesController < MerchantApplicationController
 
   # POST /warehouses
   # POST /warehouses.json
-  #
   def create
     @warehouse = Warehouse.new(warehouse_params)
     current_branch = Branch.find_by_id(@warehouse.branch_id)
@@ -93,6 +92,7 @@ class WarehousesController < MerchantApplicationController
     check_warehouse_permission(params[:id])
     render json: @warehouses
   end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_warehouse
@@ -103,5 +103,4 @@ class WarehousesController < MerchantApplicationController
     def warehouse_params
       params.require(:warehouse).permit(:branch_id, :name)
     end
-
 end
