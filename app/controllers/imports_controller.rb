@@ -26,45 +26,44 @@ class ImportsController < MerchantApplicationController
   def create
     #Tạo phiếu Import
     @import = Import.new(import_params)
-    respond_to do |format|
-      if @import.save
-        format.html { redirect_to @import, notice: 'Import was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @import }
-            if @import.export==nil #TODO chưa bắt dc import rỗng
-                #Product.transaction do
-                  TempProduct.where(:warehouse_id => @import.warehouse_id,
-                                    :merchant_account_id => current_merchant_account.id).each do |temp_product|
-                    new_products=[
-                        :product_code =>temp_product.product_code,
-                        :skull_id=>temp_product.skull_id,
-                        :provider_id=>temp_product.provider_id,
-                        :warehouse_id=>temp_product.warehouse_id,
-                        :import_id=>Import.last.id, :name=>temp_product.name,
-                        :import_quality=>temp_product.import_quality,
-                        :available_quality=>temp_product.import_quality,
-                        :instock_quality=>temp_product.import_quality,
-                        :import_price=>temp_product.import_price,
-                        :expire=>temp_product.expire]
-                    #add moi product
-                    Product.create(new_products)
-                    #cong quality vao bang ProductSummary
-                    @new=ProductSummary.find_by_product_code(temp_product.product_code)
-                    @new.update!(:quality=>(@new.quality + temp_product.import_quality))
+    # Mặc định merchant_account_id
+    @import.merchant_account_id = current_merchant_account.id
+    #kiểm tra xem có quyền truy cập với warehouse_id hay ko, nếu có thì = true
+     if check_warehouse_permission(@import.warehouse_id) == true
+        # Nếu Export == nill, tức là nhập hàng mới, khác nil là chuyển kho
+        if @import.export==nil
+        @import.save
+          Product.transaction do
+            TempProduct.where(:warehouse_id => @import.warehouse_id,
+                              :merchant_account_id => current_merchant_account.id).each do |temp_product|
+              new_products=[
+                  :product_code =>temp_product.product_code,
+                  :skull_id=>temp_product.skull_id,
+                  :provider_id=>temp_product.provider_id,
+                  :warehouse_id=>temp_product.warehouse_id,
+                  :import_id=>Import.last.id, :name=>temp_product.name,
+                  :import_quality=>temp_product.import_quality,
+                  :available_quality=>temp_product.import_quality,
+                  :instock_quality=>temp_product.import_quality,
+                  :import_price=>temp_product.import_price,
+                  :expire=>temp_product.expire]
+              #add moi product
+              Product.create(new_products)
+              #cong quality vao bang ProductSummary
+              @new=ProductSummary.find_by_product_code(temp_product.product_code)
+              @new.update!(:quality=>(@new.quality + temp_product.import_quality))
 
-                    #xoa product trong bang tam TempProduct
-                    temp_product.destroy
-                  end
-                #end
-            else
-              @import.destroy
+              #xoa product trong bang tam TempProduct
+              temp_product.destroy
             end
-
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @import.errors, status: :unprocessable_entity }
-      end
-    end
-
+          end
+          # save Import với chuyển hàng từ kho qua kho với Export_id có hay ko
+        elsif Export.find_by_id(@import.export) != nil
+          @import.save
+        else #TODO Xử lý thông báo lỗi dữ liệu khi Export_id không tồn tại
+        end
+     else #TODO Xử lý thông báo khi warehouse_id sai
+     end
   end
 
 
@@ -74,29 +73,20 @@ class ImportsController < MerchantApplicationController
   # PATCH/PUT /imports/1
   # PATCH/PUT /imports/1.json
   def update
-    respond_to do |format|
-      if @import.update(import_params)
-        format.html { redirect_to @import, notice: 'Import was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @import.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /imports/1
   # DELETE /imports/1.json
   def destroy
-    @import.destroy
-    respond_to do |format|
-      format.html { redirect_to imports_url }
-      format.json { head :no_content }
+    #Chỉ xóa được khi Import rỗng
+    if Product.find_by_import_id(@import.id) != nil
+      @import.destroy
+      respond_to do |format|
+        format.html { redirect_to imports_url }
+        format.json { head :no_content }
+      end
+    else #TODO Xử lý thông báo khi không xóa đươc
     end
-  end
-
-  def save_temporary_of
-
   end
 
   private

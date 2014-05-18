@@ -70,7 +70,7 @@ class ProductSummariesController < MerchantApplicationController
         format.json { head :no_content }
         # Cập nhật tên của sản phẩm trong bảng Product
           if @product_summary.quality !=0
-            # Cập nhật thông tin khi ProductSummary Câp Nhật
+            # Cập nhật thông tin khi ProductSummary Câp nhật Name vào bảng Product
               @pro = Product.where(
                   :product_code => @product_summary.product_code,
                   :skull_id => @product_summary.skull_id,

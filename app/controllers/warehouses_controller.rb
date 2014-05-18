@@ -49,7 +49,7 @@ class WarehousesController < MerchantApplicationController
   def update
   respond_to do |format|
     #Kiểm tra có quyền Edit warehouse, nếu có = true
-      if  check_warehouse_permission == true
+      if  (params[:id]) == true
         #Lấy thông tin old_warehouse
         warehouse = Warehouse.find(params[:id])
         #Lấy thông tin new_warehouse
@@ -84,7 +84,7 @@ class WarehousesController < MerchantApplicationController
   end
   #Trả về những Warehouse mà người dùng hiện tại có quyền truy cập
   def available
-    check_warehouse_permission
+    check_warehouse_permission(params[:id])
     render json: @warehouses
   end
   private
@@ -97,20 +97,5 @@ class WarehousesController < MerchantApplicationController
     def warehouse_params
       params.require(:warehouse).permit(:branch_id, :name)
     end
-    def check_warehouse_permission
-      #@warehouses.where(branch_id:2)
-      #Lọc Warehouse theo permission
-      #@warehouses = @warehouses.where.not(id:1)
-      #params =  {id:3, branch_id:2, name:'1'}
-      #@warehouses = @warehouses - params.to_a
-
-    branch = Branch.where(merchant_id:current_merchant_account.merchant_id)
-      @warehouses = Warehouse.where(branch_id:(branch.pluck(:id)))
-      warehoues=(@warehouses.pluck(:id))
-      warehoues.each do |ex|
-        return true if (ex.to_param == params[:id])
-      end
-    end
-
 
 end
