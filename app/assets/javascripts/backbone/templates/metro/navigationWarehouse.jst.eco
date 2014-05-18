@@ -1,1 +1,5 @@
-<selection class='warehouses-selection'></selection>
+<span data-bind="text: current"></span>
+<select class='warehouse-option' data-bind="options: options,
+  value: 'current',
+  optionsText: 'name',
+  optionsValue: 'id'"></select>

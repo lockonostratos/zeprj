@@ -7,7 +7,6 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       'click #home-button': -> Zeprj.trigger 'navigate:metro'
       'click #back-button': -> Backbone.history.history.back()
       'click #forward-button': -> Backbone.history.history.forward()
-
     regions:
       accountRegion: '#account-region'
       merchantAccountRegion: '#merchant-account-region'
@@ -16,7 +15,8 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     onShow: ->
       @accountRegion.show new MetroApp.NavigationAccountView()
       @merchantAccountRegion.show new MetroApp.NavigationMerchantAccountView()
-      @warehouseSelectionRegion.show MetroApp.warehouseSelectionView
+      @warehouseSelectionRegion.show new MetroApp.NavigationWarehouseOptionView()
+      ko.applyBindings Zeprj.warehouseOptionVm, $(@warehouseSelectionRegion.el)[0]
 
   MetroApp.NavigationAccountView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/navigationAccount']
@@ -29,6 +29,9 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     initialize: ->
       @model = Zeprj.currentMerchantAccount
       @listenTo @model, 'change', -> @render()
+
+  MetroApp.NavigationWarehouseOptionView = Marionette.ItemView.extend
+    template: JST['backbone/templates/metro/navigationWarehouse']
 
   MetroApp.NavigationView = Marionette.CompositeView.extend
     template: JST['backbone/templates/metro/navigation']

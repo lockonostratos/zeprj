@@ -11,12 +11,12 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
       result = new Entities.Warehouses()
       result.fetch options
       result
-    getWarehouseEntity: (id) ->
+    getWarehouseEntity: (id, options) ->
       result = new Entities.Warehouse {id: id}
-      result.fetch()
+      result.fetch(options)
       result
 
   Zeprj.reqres.setHandler 'warehouse:entities', (options)->
     API.getWarehouseEntities options
-  Zeprj.reqres.setHandler 'warehouse:entity', (id)->
-    API.getWarehouseEntity id
+  Zeprj.reqres.setHandler 'warehouse:entity', (id, options)->
+    API.getWarehouseEntity id, options
