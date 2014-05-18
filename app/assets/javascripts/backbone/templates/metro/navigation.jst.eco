@@ -8,6 +8,9 @@
 <div class='large-9 columns'>
 	<div id='account-region' class='right'>Welcome back, <%=@id%>-<%=@email%>!</div><br>
 	<div id='merchant-account-region' class='right'></div><br>
-	<div id='warehouse-selection-region' class='right'></div>
-
+	<div id='warehouse-selection-region' class='right'></div><br>
+    <div id='knockback-tester' class='right'>
+      <select class='warehouse-option' data-bind="options: availableWarehouses, selectedOption: choosenWarehouse, optionsText: 'name', optionsValue: 'id'"></select>
+      <span data-bind="text: availableWarehouses.length()>???</span>
+    </div>
 </div>

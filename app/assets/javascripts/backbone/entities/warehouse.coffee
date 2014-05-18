@@ -9,8 +9,14 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
   API =
     getWarehouseEntities: (options)->
       result = new Entities.Warehouses()
-      result.fetch(options)
+      result.fetch options
+      result
+    getWarehouseEntity: (id) ->
+      result = new Entities.Warehouse {id: id}
+      result.fetch()
       result
 
   Zeprj.reqres.setHandler 'warehouse:entities', (options)->
-    API.getWarehouseEntities(options)
+    API.getWarehouseEntities options
+  Zeprj.reqres.setHandler 'warehouse:entity', (id)->
+    API.getWarehouseEntity id

@@ -1,5 +1,5 @@
 class WarehousesController < MerchantApplicationController
-  before_action :set_warehouse, only: [:show, :edit, :update, :destroy]
+  before_action :set_warehouse, only: [:edit, :update, :destroy]
 
   # GET /warehouses
   # GET /warehouses.json
@@ -14,6 +14,12 @@ class WarehousesController < MerchantApplicationController
   # GET /warehouses/1
   # GET /warehouses/1.json
   def show
+    @warehouse = params[:id] == '0' ? Warehouse.find(current_merchant_account.current_warehouse_id) : Warehouse.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @warehouse}
+    end
   end
 
   # GET /warehouses/new

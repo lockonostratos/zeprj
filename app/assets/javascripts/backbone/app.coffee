@@ -1,6 +1,8 @@
 #= require libraries/underscore
 #= require libraries/backbone
 #= require libraries/backbone.marionette
+#= require libraries/knockout
+#= require libraries/knockback
 #= require libraries/sky
 #= require libraries/jquery.splitter
 #= require libraries/hammer

@@ -5,7 +5,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
   API =
     index: ->
-      Zeprj.navigate('')
+      Zeprj.navigate ''
       MetroApp.Controller.renderSky()
 
   Zeprj.on 'navigate:metro', -> API.index()
@@ -16,3 +16,5 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     Zeprj.currentAccount = Zeprj.request 'account:entity', 0
     Zeprj.currentMerchantAccount = Zeprj.request 'merchantAccount:entity', 0
     Zeprj.availableWarehouses = Zeprj.request 'warehouse:entities', {action: 'available'}
+    Zeprj.availableWarehousesVm = Zeprj.request 'warehouse:entities', {action: 'available'}
+    Zeprj.currentWarehouseVm = kb.viewModel(Zeprj.request 'warehouse:entity', 0)
