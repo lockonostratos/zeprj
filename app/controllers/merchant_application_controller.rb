@@ -23,4 +23,20 @@ class MerchantApplicationController < ApplicationController
     end
     return current_permission
   end
+
+  #Kiểm tra warehouse_id có cùng merchant với account hay ko , có thì return true
+  def check_warehouse_permission(warehouse_id)
+    #@warehouses.where(branch_id:2)
+    #Lọc Warehouse theo permission
+    #@warehouses = @warehouses.where.not(id:1)
+    #params =  {id:3, branch_id:2, name:'1'}
+    #@warehouses = @warehouses - params.to_a
+
+    branch = Branch.where(merchant_id:current_merchant_account.merchant_id)
+    @warehouses = Warehouse.where(branch_id:(branch.pluck(:id)))
+    warehoues=(@warehouses.pluck(:id))
+    warehoues.each do |ex|
+      return true if (ex.to_param == warehouse_id )
+    end
+  end
 end

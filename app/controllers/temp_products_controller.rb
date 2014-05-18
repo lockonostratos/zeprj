@@ -77,7 +77,8 @@ class TempProductsController < MerchantApplicationController
     def temp_product_params
       params.require(:temp_product).permit(:product_code, :skull_id, :provider_id, :warehouse_id, :merchant_account_id, :name, :import_quality, :import_price, :expire)
     end
-    #kiểm tra dữ liệu nhận thông báo khi loi
+
+    #kiểm tra dữ liệu nhận thông báo khi loi, trong @errors
   def check_validate_temp_product
     warehouse = Warehouse.find_by_id(@temp_product.warehouse_id)
     product_code = ProductSummary.find_by_product_code_and_warehouse_id(@temp_product.product_code, @temp_product.warehouse_id)
