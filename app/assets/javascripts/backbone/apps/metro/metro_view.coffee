@@ -7,7 +7,6 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       'click #home-button': -> Zeprj.trigger 'navigate:metro'
       'click #back-button': -> Backbone.history.history.back()
       'click #forward-button': -> Backbone.history.history.forward()
-
     regions:
       accountRegion: '#account-region'
       merchantAccountRegion: '#merchant-account-region'
@@ -16,7 +15,16 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     onShow: ->
       @accountRegion.show new MetroApp.NavigationAccountView()
       @merchantAccountRegion.show new MetroApp.NavigationMerchantAccountView()
-      @warehouseSelectionRegion.show MetroApp.warehouseSelectionView
+      @warehouseSelectionRegion.show new MetroApp.NavigationWarehouseOptionView()
+      ko.applyBindings Zeprj.warehouseOptionVm, $(@warehouseSelectionRegion.el)[0]
+
+  MetroApp.NavigationView = Marionette.CompositeView.extend
+    template: JST['backbone/templates/metro/navigation']
+    className: 'navigation row'
+    events:
+      'click #home-button': -> Zeprj.trigger 'navigate:metro'
+      'click #back-button': -> Backbone.history.history.back()
+      'click #forward-button': -> Backbone.history.history.forward()
 
   MetroApp.NavigationAccountView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/navigationAccount']
@@ -30,14 +38,8 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       @model = Zeprj.currentMerchantAccount
       @listenTo @model, 'change', -> @render()
 
-  MetroApp.NavigationView = Marionette.CompositeView.extend
-    template: JST['backbone/templates/metro/navigation']
-    className: 'navigation row'
-    events:
-      'click #home-button': -> Zeprj.trigger 'navigate:metro'
-      'click #back-button': -> Backbone.history.history.back()
-      'click #forward-button': -> Backbone.history.history.forward()
-
+  MetroApp.NavigationWarehouseOptionView = Marionette.ItemView.extend
+    template: JST['backbone/templates/metro/navigationWarehouse']
 
   MetroApp.OptionView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/option']
@@ -53,14 +55,3 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
   MetroApp.InnerNavigationView = Marionette.ItemView.extend
     template: JST['backbone/templates/layouts/innerNavigation']
-
-  MetroApp.addInitializer ->
-    MetroApp.homeView = new MetroApp.HomeView()
-    MetroApp.innerLayout = new Zeprj.TopNavigationLayout()
-    MetroApp.innerNavigation = new MetroApp.InnerNavigationView()
-    MetroApp.warehouseSelectionView = new Sky.SelectionControl({
-      collection: Zeprj.availableWarehouses
-      keyElement: 'id'
-      valueElement: 'name'
-    })
-

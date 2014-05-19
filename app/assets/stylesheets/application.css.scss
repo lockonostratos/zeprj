@@ -91,7 +91,7 @@ body {
 
   //Chỉnh sửa margin cho metro home!
   .inner-wrap {
-    .metro-wrapper { margin-left: $application-padding }
+    .metro-wrapper { margin-left: 0.15rem; }
   }
 
   i { color: #999; }
@@ -394,6 +394,9 @@ h1, h1, h3, h4, h5, h6 {
       margin: -$application-padding 0 -$application-padding -$application-padding;
     }
 
+    .navigation.row {
+      margin: 1rem 0.2rem 0 0.2rem;
+    }
     .right-navigation-container {
       margin-bottom: -$application-padding;
 

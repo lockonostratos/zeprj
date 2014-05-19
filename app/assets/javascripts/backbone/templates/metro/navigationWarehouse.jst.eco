@@ -1,1 +1,5 @@
-<selection class='warehouses-selection'></selection>
+<select class='warehouse-option' data-bind="options: options,
+  value: 'current',
+  optionsText: 'name',
+  optionsValue: 'id',
+  event: { change: onChange }"></select>
