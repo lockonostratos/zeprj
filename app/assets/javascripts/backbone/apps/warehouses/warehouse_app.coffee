@@ -6,7 +6,7 @@ Zeprj.module "WarehouseApp", (WarehouseApp, Zeprj, Backbone, Marionette, $, _) -
   API =
     warehouseHome: ->
       Zeprj.navigate('warehouseHome')
-      WarehouseApp.Controller.showHome()
+      WarehouseApp.Controller.renderInto(Zeprj.mainRegion)
 
   Zeprj.on 'navigate:warehouse', -> API.warehouseHome()
   Zeprj.on 'navigate:warehouseHome', -> API.warehouseHome()

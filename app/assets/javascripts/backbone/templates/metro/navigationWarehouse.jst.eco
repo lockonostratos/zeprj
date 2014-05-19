@@ -1,5 +1,5 @@
-<span data-bind="text: current"></span>
 <select class='warehouse-option' data-bind="options: options,
   value: 'current',
   optionsText: 'name',
-  optionsValue: 'id'"></select>
+  optionsValue: 'id',
+  event: { change: onChange }"></select>

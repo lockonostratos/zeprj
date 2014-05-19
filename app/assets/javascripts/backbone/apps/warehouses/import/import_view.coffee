@@ -24,3 +24,5 @@ Zeprj.module "WarehouseApp.Import", (Import, Zeprj, Backbone, Marionette, $, _) 
     emptyView: Import.emptyProductSummariesView
     tagName: 'ul'
     className: 'tile-container'
+
+  Import.View = Marionette.ItemView.extend

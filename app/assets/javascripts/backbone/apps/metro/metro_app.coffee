@@ -6,19 +6,21 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
   API =
     index: ->
       Zeprj.navigate ''
-      MetroApp.Controller.renderSky()
+      MetroApp.Controller.renderInto(Zeprj.mainRegion)
 
   Zeprj.on 'navigate:metro', -> API.index()
 
   Zeprj.addInitializer ->
     new MetroApp.Router {controller: API}
     #Global variables.
-    Zeprj.dumper = new Backbone.Model {val: 'cloud!'}
     Zeprj.currentAccount = Zeprj.request 'account:entity', 0
     Zeprj.currentMerchantAccount = Zeprj.request 'merchantAccount:entity', 0
     Zeprj.availableWarehouses = Zeprj.request 'warehouse:entities', {action: 'available', async: false}
     Zeprj.currentWarehouse = Zeprj.request 'warehouse:entity', 0, {async: false}
-    warehouseSelectionModel = new Backbone.Model
-      options: Zeprj.availableWarehouses
-      current: Zeprj.currentWarehouse
-    Zeprj.warehouseOptionVm = new Zeprj.ViewModels.MetroWarehouseOption(warehouseSelectionModel)
+    Zeprj.warehouseOptionVm = new Zeprj.ViewModels.MetroWarehouseOption()
+    Zeprj.currentWarehouseId = -> $('.warehouse-option option:selected')[0].value
+
+  MetroApp.addInitializer ->
+    MetroApp.homeView = new MetroApp.HomeView()
+    MetroApp.innerLayout = new Zeprj.TopNavigationLayout()
+    MetroApp.innerNavigation = new MetroApp.InnerNavigationView()

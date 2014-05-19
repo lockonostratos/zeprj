@@ -6,6 +6,5 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
       Zeprj.navigationRegion.show new MetroApp.NavigationLayout()
       Zeprj.optionRegion.show new MetroApp.OptionView()
 
-
-    renderSky: ->
-      Zeprj.mainRegion.show new MetroApp.HomeView()
+    renderInto: (region) ->
+      region.show new MetroApp.HomeView()
