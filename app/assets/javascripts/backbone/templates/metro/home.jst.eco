@@ -1,7 +1,47 @@
 <div class='metro'>
   <div class='tile-wrapper-3 tile-wrapper-small-2'>
-    <div class='orange tile huge'>1</div>
-    <div class='lime tile'>2</div>
+    <div class='orange tile huge'>
+    <span class='top left caption'>NOTIFICATIONS
+    <h3>12</h3>
+    </span>
+    <span class='top middle caption'>NOTIFICATIONS
+    <h3>12</h3>
+    </span>
+    <span class='top right caption'>NOTIFICATIONS
+    <h3>12</h3>
+    </span>
+
+    <span class='center left caption'>
+    <h3>12</h3>NOTIFICATIONS
+    </span>
+    <span class='center middle caption'>
+    <h3>20</h3>@WWWWWW
+    </span>
+    <span class='center right caption'>
+    <h3>12</h3>NOTIFICATIONS
+    </span>
+
+    <span class='bottom left caption'>
+    <h3>12</h3>NOTIFICATIONS
+    </span>
+    <span class='bottom middle caption'>
+    <h3>12</h3>NOTIFICATIONS
+    </span>
+    <span class='bottom right caption'>
+    <h3>12</h3>NOTIFICATIONS
+    </span>
+    </div>
+    <div class='lime tile'>
+    <span class='top left caption'>1</span>
+    <span class='top middle caption'>2</span>
+    <span class='top right caption'>3</span>
+    <span class='center left caption'>4</span>
+    <span class='center middle caption'>5</span>
+    <span class='center right caption'>6</span>
+    <span class='bottom left caption'>7</span>
+    <span class='bottom middle caption'>8</span>
+    <span class='bottom right caption'>9</span>
+    </div>
     <div class='pink tile'>3</div>
     <div class='gray tile'>4</div>
     <div class='blue tile double'>5</div>

@@ -99,7 +99,7 @@ body {
   .left-off-canvas-menu {
 //    margin: -$application-padding-phone 0 -$application-padding-phone -$application-padding-phone;
   }
-
+  //Size, color, layout of metro UI.
   .metro {
     margin-right: -$application-padding;
 
@@ -154,6 +154,98 @@ body {
 //      &.pink { @include background(linear-gradient(top left, #D845A0, darken(#D845A0, $darken-amount))); }
 //      &.gray { @include background(linear-gradient(top left, #97A5A6, darken(#97A5A6, $darken-amount))); }
 //      &.light-gray { @include background(linear-gradient(top left, #BFC2C7, darken(#BFC2C7, $darken-amount))); }
+    }
+  }
+
+//  .metro .tile {
+//   position: relative;
+//
+//
+//    .caption {
+//      position: absolute;
+//      width:100%;
+//      height:100%;
+//    }
+//
+//    .thumbnails{
+//      position: absolute;
+//      width:100%;
+//      height:100%;
+//    }
+//
+//    .top {
+//      margin-top: $tile-caption-padding;
+//    }
+//    .center {
+//       position: absolute;
+//       bottom: 0;
+//       top: 0;
+//       height: 15px;
+//       margin:auto;
+//       vertical-align: middle;
+//     }
+//    .bottom {
+//      bottom: 0;
+//      height: auto;
+//      margin-bottom: $tile-caption-padding !important;
+//    }
+//
+//    .left {
+//      text-align: left;
+//      margin-left: $tile-caption-padding;
+//    }
+//    .middle {
+//      text-align: center;
+//    }
+//    .right {
+//      text-align: right;
+//      right:$tile-caption-padding !important;
+//    }
+//  }
+
+
+  .metro .tile {
+    position: relative;
+    color: #fff;
+    h1, h2, h3, h4, h5 {
+      color: #fff;
+    }
+
+    .caption {
+      margin: auto;
+      position: absolute;
+    }
+
+    .top {
+      top: 0;
+      margin-top: $tile-caption-padding;
+    }
+    .center {
+     bottom: 0;
+     top: 0;
+     height: 50%;
+     vertical-align: middle;
+    }
+    .bottom {
+      bottom: 0;
+      height: auto;
+      margin-bottom: $tile-caption-padding !important;
+    }
+
+    .left {
+      text-align: left;
+      margin-left: $tile-caption-padding;
+    }
+    .middle {
+      left: 0;
+      right: 0;
+      text-align: center;
+
+    }
+    .right {
+      left: auto;
+      right:$tile-caption-padding !important;
+      text-align: right;
     }
   }
 

@@ -20,5 +20,5 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
   Zeprj.reqres.setHandler 'return:entities', (options)->
     API.getReturnEntities(options)
 
-  Zeprj.reqres.setHandler 'return:entity', (id)->
+  Zeprj.reqres.setHandler ' return:entity', (id)->
     API.getReturnEntity(id)
