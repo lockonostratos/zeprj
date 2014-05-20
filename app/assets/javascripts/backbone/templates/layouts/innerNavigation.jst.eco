@@ -1,1 +1,3 @@
-<h1>Warehouse Navigations!</h1>
+<ul class='inner-navigation' data-bind="foreach: items">
+  <li data-bind="text: $data, selected: $data == current"></li>
+</ul>

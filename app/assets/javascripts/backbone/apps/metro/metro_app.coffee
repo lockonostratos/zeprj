@@ -19,8 +19,3 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     Zeprj.currentWarehouse = Zeprj.request 'warehouse:entity', 0, {async: false}
     Zeprj.warehouseOptionVm = new Zeprj.ViewModels.MetroWarehouseOption()
     Zeprj.currentWarehouseId = -> $('.warehouse-option option:selected')[0].value
-
-  MetroApp.addInitializer ->
-    MetroApp.homeView = new MetroApp.HomeView()
-    MetroApp.innerLayout = new Zeprj.TopNavigationLayout()
-    MetroApp.innerNavigation = new MetroApp.InnerNavigationView()

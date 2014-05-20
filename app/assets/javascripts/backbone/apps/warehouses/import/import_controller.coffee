@@ -1,11 +1,12 @@
-Zeprj.module "WarehouseApp.Import", (Import, Zeprj, Backbone, Marionette, $, _) ->
-  Import.Controller =
-    renderInto: (region)->
-      Import.layout = new Zeprj.DualVerticalLayout()
-
-      region.show Import.layout
-      Import.layout.mainPane.show new Import.temporaryProductsView()
-
-      Import.layout.secondaryPane.show new Import.productSummariesView({
+Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
+  ThisApp.Controller =
+    renderInto: (region) ->
+      region.show ThisApp.layout
+      ThisApp.layout.mainPane.show new ThisApp.temporaryProductsView()
+      ThisApp.layout.secondaryPane.show new ThisApp.productSummariesView({
         collection: Zeprj.request 'productSummary:entities'
       })
+
+  ThisApp.addInitializer ->
+    ThisApp.Caption = 'NHẬP KHO'
+    ThisApp.layout = new Zeprj.DualVerticalLayout()
