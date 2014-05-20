@@ -213,24 +213,26 @@ body {
     .caption {
       margin: auto;
       position: absolute;
-      width: 30%;
+      width: 100%;
     }
     .top {
       top: 0;
-      width: 30%;
+//      width: 30%;
       margin-top: $tile-caption-padding;
     }
     .center {
      bottom: 0;
-     top: 0;
-     height: 30%;
-     margin: 35% 0 0 35%;
+//     top: 0;
+     height: 100%;
+     margin: 35% 0 0 0%;
      display: table;
+
     }
     //Thuộc tính kèm theo của center
     .table{
      display: table-cell;
      vertical-align: middle;
+
     }
 
     .bottom {
