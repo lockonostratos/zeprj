@@ -6,6 +6,7 @@ class @systemjs
         img.attr('src', e.target.result)
       reader.readAsDataURL(input.files[0]);
 
+
 #class renderable
 #  constructor: ->
 #    $.each key in agruments[0]

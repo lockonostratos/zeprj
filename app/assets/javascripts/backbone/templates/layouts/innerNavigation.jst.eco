@@ -1,1 +1,3 @@
-<h1>Warehouse Navigations!</h1>
+<ul class='inner-navigation' data-bind="foreach: childApps">
+  <li data-bind="text: $data, css: {current: $data == $parent.currentApp()}"></li>
+</ul>

@@ -7,6 +7,15 @@ Zeprj.TopNavigationLayout = Backbone.Marionette.Layout.extend
     content: '#tnl-content'
   }
 
+
+  onShow: ->
+    #behavior: { userSelect: true },
+    $(@content.el).hammer({dragLockToAxis: true})
+    .on 'swipeleft swiperight', (event) =>
+      switch event.type
+        when 'swipeleft' then @trigger 'swipe:left'
+        when 'swiperight' then @trigger 'swipe:right'
+
 Zeprj.DualHorizontalLayout = Backbone.Marionette.Layout.extend
   template: JST['backbone/templates/layouts/dualHorizontal']
   className: 'content'
@@ -21,11 +30,7 @@ Zeprj.DualHorizontalLayout = Backbone.Marionette.Layout.extend
       orientation: 'vertical'
       limit: 250
       position: '70%'
-    @$el.hammer({behavior: { userSelect: true }, dragLockToAxis: true})
-    .on 'swipeleft swiperight', (event)->
-      switch event.type
-        when 'swipeleft' then Zeprj.log 'swipeleft left!'
-        when 'swiperight' then Zeprj.log 'swipeleft right!'
+
 
 Zeprj.DualVerticalLayout = Backbone.Marionette.Layout.extend
   template: JST['backbone/templates/layouts/dualVertical']
@@ -35,11 +40,6 @@ Zeprj.DualVerticalLayout = Backbone.Marionette.Layout.extend
     mainPane: '#dual-top'
     secondaryPane: '#dual-bottom'
   }
-#
-#  onShow: ->
-#    @$el.split
-#      orientation: 'horizontal'
-#      limit: 100
-#      position: '70%'
 
-
+Zeprj.DummerLayout = Backbone.Marionette.Layout.extend
+  template: JST['backbone/templates/layouts/dummer']
