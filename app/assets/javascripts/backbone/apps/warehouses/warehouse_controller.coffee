@@ -1,9 +1,8 @@
 Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
   ThisApp.Controller =
     renderInto: (region, appName = 'Import') ->
+      ThisApp.navigationVm = new Zeprj.ViewModels.InnerNavigationVm ThisApp.childApps, appName
       ThisApp.region = region
-      ThisApp.childIndex = ko.observable ThisApp.childApps.indexOf appName
-
       ThisApp.region.show ThisApp.layout
       @renderNavigatorInto(ThisApp.layout.navigator)
       @navigateTo appName
@@ -17,27 +16,17 @@ Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
     renderNavigatorInto: (region)->
       ThisApp.navigationView = new Zeprj.MetroApp.InnerNavigationView()
       region.show ThisApp.navigationView
-#      ko.applyBindings {items: ThisApp.childApps}, ThisApp.navigationView.$el
+      ko.applyBindings ThisApp.navigationVm, ThisApp.navigationView.$el[0]
 
     navigateTo: (appName)->
       ThisApp[appName].Controller.renderInto ThisApp.layout.content
 
     navigateNext: ->
-      nextPosition = ThisApp.childIndex() + 1
-      Zeprj.log 'next: ' + nextPosition
-      if nextPosition < ThisApp.childApps().length
-        ThisApp.childIndex nextPosition
-        @navigateTo ThisApp.childApps()[nextPosition]
-      return
+      @navigateTo ThisApp.navigationVm.navigateNext() if ThisApp.navigationVm.canNavigateNext()
 
     navigatePrevious: ->
-      nextPosition = ThisApp.childIndex() - 1
-      Zeprj.log 'prev: ' + nextPosition
-      if nextPosition >= 0
-        ThisApp.childIndex nextPosition
-        @navigateTo ThisApp.childApps()[nextPosition]
-      return
+      @navigateTo ThisApp.navigationVm.navigatePrevious() if ThisApp.navigationVm.canNavigatePrevious()
 
   ThisApp.addInitializer ->
-    ThisApp.childApps = ko.observableArray ['Import', 'Inventory']
+    ThisApp.childApps = ['Import', 'Inventory']
     ThisApp.layout = new Zeprj.TopNavigationLayout()

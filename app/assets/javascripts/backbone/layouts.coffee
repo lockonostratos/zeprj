@@ -7,8 +7,10 @@ Zeprj.TopNavigationLayout = Backbone.Marionette.Layout.extend
     content: '#tnl-content'
   }
 
+
   onShow: ->
-    $(@content.el).hammer({behavior: { userSelect: true }, dragLockToAxis: true})
+    #behavior: { userSelect: true },
+    $(@content.el).hammer({dragLockToAxis: true})
     .on 'swipeleft swiperight', (event) =>
       switch event.type
         when 'swipeleft' then @trigger 'swipe:left'

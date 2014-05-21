@@ -10,8 +10,28 @@ Zeprj.module "ViewModels", (Vm, ContactManager, Backbone, Marionette, $, _) ->
 
   Vm.metroWarehouseOption = new Vm.MetroWarehouseOption()
 
-  Vm.InnerNavigation = (model)->
-    @items = ko.observableArray(model.childApps)
-    @current = ko.observable(model.current)
+  class Vm.InnerNavigationVm
+    constructor: (childApps, currentApp) ->
+      @childApps = ko.observableArray childApps
+      @currentApp = ko.observable currentApp
 
 
+    navigateNext: ->
+      nextApp = (@childApps.indexOf @currentApp()) + 1
+      if nextApp < @childApps().length
+        @currentApp @childApps()[nextApp]
+      @currentApp()
+
+    navigatePrevious: ->
+      nextApp = (@childApps.indexOf @currentApp()) - 1
+      if nextApp >= 0
+        @currentApp @childApps()[nextApp]
+      @currentApp()
+
+    canNavigateNext: ->
+      (@childApps.indexOf @currentApp()) + 1 < @childApps().length
+    canNavigatePrevious: ->
+      (@childApps.indexOf @currentApp()) - 1 >= 0
+
+    write: (data) ->
+      Zeprj.log data

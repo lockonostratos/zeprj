@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="Done editing currentWarehouse (App's Navigator).&#10;Restructure Backbone.Marionette, draw mindMap.&#10;Design graphical interface for itemTileView, use photoshop!">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dummer.jst.eco" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee" />
-      <change type="DELETED" beforePath="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\apps\warehouses\warehouse_navigator.coffee" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" />
+    <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="Working on innerNavigation, restructure code!">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\viewmodels\metro\warehouseOption.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee" />
     </list>
     <ignored path="zeprj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +21,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1400576536538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
+    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1400656816221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -41,36 +34,36 @@
     <favorites_list name="zeprj" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.8189474">
+    <splitter split-orientation="vertical" split-proportion="0.78105265">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.42073977">
+        <splitter split-orientation="horizontal" split-proportion="0.47044024">
           <split-first>
             <leaf>
               <file leaf-file-name="metro_controller.coffee" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee">
                   <provider selected="true" editor-type-id="text-editor">
                     <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-                      <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+                      <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="layouts.coffee" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee">
+              <file leaf-file-name="application.css.scss" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
-                      <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="23" />
+                    <state vertical-scroll-proportion="0.58456975" vertical-offset="1582" max-vertical-offset="8455">
+                      <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="metro_view.coffee" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee">
+              <file leaf-file-name="productSummary.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/entities/productSummary.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="1.4417344" vertical-offset="0" max-vertical-offset="1273">
-                      <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+                      <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
                       <folding />
                     </state>
                   </provider>
@@ -80,11 +73,11 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="warehouse_controller.coffee" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="warehouse_controller.coffee" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.24104683" vertical-offset="205" max-vertical-offset="931">
-                      <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="38" />
+                    <state vertical-scroll-proportion="-3.8" vertical-offset="19" max-vertical-offset="703">
+                      <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
                       <folding />
                     </state>
                   </provider>
@@ -93,8 +86,28 @@
               <file leaf-file-name="commons.coffee" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
-                      <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="817">
+                      <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="metro_view.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1254">
+                      <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="innerNavigation.jst.eco" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.026573427" vertical-offset="0" max-vertical-offset="715">
+                      <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
                       <folding />
                     </state>
                   </provider>
@@ -105,14 +118,14 @@
         </splitter>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.485623">
+        <splitter split-orientation="horizontal" split-proportion="0.5163522">
           <split-first>
             <leaf>
               <file leaf-file-name="import_controller.coffee" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="323">
-                      <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                    <state vertical-scroll-proportion="0.6514286" vertical-offset="0" max-vertical-offset="323">
+                      <caret line="6" column="18" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="18" />
                       <folding />
                     </state>
                   </provider>
@@ -121,8 +134,8 @@
               <file leaf-file-name="import_view.coffee" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="646">
-                      <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+                    <state vertical-scroll-proportion="-5.32" vertical-offset="342" max-vertical-offset="646">
+                      <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
                       <folding />
                     </state>
                   </provider>
@@ -135,8 +148,8 @@
               <file leaf-file-name="inventory_controller.coffee" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="266">
-                      <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+                    <state vertical-scroll-proportion="0.9382716" vertical-offset="0" max-vertical-offset="266">
+                      <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
                       <folding />
                     </state>
                   </provider>
@@ -173,8 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/topNavigation.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/navigation.jst.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/tempProduct.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualHorizontal.jst.eco" />
@@ -188,7 +199,6 @@
         <option value="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/initializers/active_model_serializer.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.jst.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/account.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/libs/skyer.coffee" />
@@ -206,7 +216,6 @@
         <option value="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationWarehouse.jst.eco" />
         <option value="$PROJECT_DIR$/app/views/home/welcomes.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/sale/sale_controller.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee" />
@@ -216,14 +225,18 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dummer.jst.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/warehouseOption.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/innerNavigation.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/innerNavigation.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigations.jst.eco" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       </list>
     </option>
   </component>
@@ -326,6 +339,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -360,28 +374,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -563,7 +555,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="metro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -693,7 +749,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -708,7 +763,7 @@
     <property name="SearchEverywhereHistory" value="system&#10;applicss&#10;gem&#10;productSum&#10;routes&#10;account&#10;merchant_account&#10;gemfile&#10;init&#10;routes.rb&#10;routs&#10;routes.r&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;application&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="system&#9;null&#9;null&#10;gemfile&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;application&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;warehousecontroller&#9;null&#9;null&#10;environ&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;routes&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;applicationrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/application.rb&#10;environmentrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;ge&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;warehouse&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/controllers/warehouses_controllers.js.coffee&#10;index.html.erb&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/views/accounts/index.html.erb&#10;route&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;gemf&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile" />
+    <property name="SearchEverywhereHistoryKey" value="applicati&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;system&#9;null&#9;null&#10;gemfile&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;application&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;warehousecontroller&#9;null&#9;null&#10;environ&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;routes&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;applicationrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/application.rb&#10;environmentrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;ge&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;warehouse&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/controllers/warehouses_controllers.js.coffee&#10;index.html.erb&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/views/accounts/index.html.erb&#10;route&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;gemf&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -719,8 +774,8 @@
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\libraries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\libraries" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates\layouts" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\libraries" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates\metro" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone" />
@@ -937,7 +992,11 @@
       <created>1400504452154</created>
       <updated>1400504452154</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Working on innerNavigation, restructure code!">
+      <created>1400585736314</created>
+      <updated>1400585736314</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -969,7 +1028,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19382322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15335463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29263157" sideWeight="0.21246007" order="8" side_tool="true" content_ui="tabs" />
@@ -977,12 +1036,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41157895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41157895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1030,14 +1089,15 @@
     <MESSAGE value="Finished basic layout with Backbone!, well structured every thing. Ready to finish EDS." />
     <MESSAGE value="Finalizing EDS, finalizing Backbone's frontend &amp; structure." />
     <MESSAGE value="Done editing currentWarehouse (App's Navigator).&#10;Restructure Backbone.Marionette, draw mindMap.&#10;Design graphical interface for itemTileView, use photoshop!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done editing currentWarehouse (App's Navigator).&#10;Restructure Backbone.Marionette, draw mindMap.&#10;Design graphical interface for itemTileView, use photoshop!" />
+    <MESSAGE value="Working on innerNavigation, restructure code!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on innerNavigation, restructure code!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1153,24 +1213,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39513108" vertical-offset="131" max-vertical-offset="665">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/accountsView.jst.eco">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="307">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/entities/productSummary.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43761995" vertical-offset="0" max-vertical-offset="551">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1213,14 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6400709" vertical-offset="513" max-vertical-offset="1425">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49646643" vertical-offset="5514" max-vertical-offset="6080">
-          <caret line="305" column="31" selection-start-line="305" selection-start-column="30" selection-end-line="305" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1260,30 +1298,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationAccount.jst.eco">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02954899" vertical-offset="0" max-vertical-offset="643">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigation.jst.eco">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3381877" vertical-offset="0" max-vertical-offset="618">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5013889" vertical-offset="342" max-vertical-offset="1083">
           <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,7 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="545">
           <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,26 +1336,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07883818" vertical-offset="0" max-vertical-offset="723">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="646">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64735943" vertical-offset="0" max-vertical-offset="587">
           <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,42 +1350,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="323">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="266">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2108183" vertical-offset="0" max-vertical-offset="721">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigation.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28319782" vertical-offset="0" max-vertical-offset="738">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03125" vertical-offset="0" max-vertical-offset="608">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.39175257" vertical-offset="0" max-vertical-offset="969">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1383,31 +1379,95 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.073453605" vertical-offset="0" max-vertical-offset="776">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.32" vertical-offset="342" max-vertical-offset="646">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6514286" vertical-offset="0" max-vertical-offset="323">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/entities/productSummary.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5567766" vertical-offset="0" max-vertical-offset="684">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9382716" vertical-offset="0" max-vertical-offset="266">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4417344" vertical-offset="0" max-vertical-offset="1273">
-          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1254">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24104683" vertical-offset="205" max-vertical-offset="931">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="38" />
+        <state vertical-scroll-proportion="-3.8" vertical-offset="19" max-vertical-offset="703">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="817">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026573427" vertical-offset="0" max-vertical-offset="715">
+          <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58456975" vertical-offset="1582" max-vertical-offset="8455">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>

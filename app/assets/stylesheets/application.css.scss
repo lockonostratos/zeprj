@@ -89,6 +89,27 @@ body {
     }
   }
 
+  //Navigation con của ChildApps
+  .top-navigation-container {
+    ul.inner-navigation {
+      margin: 0;
+      border-bottom: solid 2px $navigator-background;
+      > li {
+        padding: 0.2rem 0.5rem;
+        line-height: 2rem;
+        display: inline-block;
+        font-size: 150%;
+        background-color: #eee;
+        /*Right side of the selection should have splash*/
+        &:last-child { /*last item disable that splash*/  }
+
+        &.current {
+          border-bottom: solid 4px $navigator-background;
+        }
+      }
+    }
+  }
+
   //Chỉnh sửa margin cho metro home!
   .inner-wrap {
     .metro-wrapper { margin-left: 0.15rem; }
