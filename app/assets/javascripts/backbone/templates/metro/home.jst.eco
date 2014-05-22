@@ -1,199 +1,106 @@
 <div class='metro'>
+
   <div class='tile-wrapper-3 tile-wrapper-small-2'>
     <div class='orange tile huge'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
         <span class='center left caption'>
-            <span class='table'><i class="fa fa-shopping-cart fa-5x"></i>
-        </span></span>
-        <span class='center middle caption'>
-            <span class='table'>
-        </span></span>
+        <span class='table'><i class="fa fa-shopping-cart fa-5x"></i></span></span>
         <span class='center right caption'>
-            <span class='table'><h2>Ban Hang</h2>
-        </span></span>
-        <span class='bottom left caption'></span>
-        <span class='bottom middle caption'></span>
-        <span class='bottom right caption'></span>
+        <span class='table'><h2>Ban Hang</h2></span></span>
     </div>
+
     <div class='lime tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-user fa-4x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
-        <span class='bottom middle caption'>Khach Hang</span>
-        <span class='bottom right caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-user fa-4x"></i></span></span>
+        <span class='bottom middle caption'><h5>Khach Hang</h5></span>
     </div>
+
     <div class='gray tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-credit-card fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
-        <span class='bottom middle caption'><h5>May In</h5></span>
-        <span class='bottom right caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-credit-card fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h5>Nhan Vien</h5></span>
     </div>
-    <div class='pink tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-puzzle-piece fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+
+    <div id='sale-skull' class='pink tile'>
+        <span class='center middle caption'>
+        <span class='table'> <i class="fa fa-barcode fa-4x"></i></span></span>
         <span class='bottom middle caption'><h5>Skull</h5></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='blue tile'>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-tasks fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-tasks fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>Provider</h5></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='dark-blue tile'>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'> <i class="fa fa-exchange fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'> <i class="fa fa-exchange fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>Tra Hang</h5></span>
-        <span class='bottom right caption'></span>
     </div>
   </div>
+
 
   <div class='tile-wrapper-3 tile-wrapper-small-2'>
     <div id='warehouse-manager' class='light-green tile double'>
-        <span class='top left caption'>5/5/2014</span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
         <span class='center left caption'>
-        <span class='table'>
-        <i class="fa fa-barcode fa-4x"></i>
-        </span></span>
+        <span class='table'><i class="fa-home fa fa-4x"></i></span></span>
         <span class='center middle caption'>
-        <span class='table'><h4>Nhap Kho</h4>
-        </span></span>
-        <span class='center right caption'>
-        <span class='table'>
-        </span></span>
-        <span class='bottom left caption'></span>
-        <span class='bottom middle caption'></span>
-        <span class='bottom right caption'></span>
+        <span class='table'><h4>Nhap Kho</h4> </span></span>
     </div>
+
     <div class='dark-blue tile'>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-bullhorn fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-bullhorn fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>Nhac Nho</h5></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='pink tile double'>
-        <span class='top left caption'>5/5/2014</span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
         <span class='center left caption'>
-        <span class='table'>
-        <i class="fa-home fa fa-4x"></i>
-        </span></span>
+        <span class='table'><i class="fa fa-pencil-square-o fa-4x"></i></span></span>
         <span class='center middle caption'>
         <span class='table'><h4>Kiem Kho</h4>
         </span></span>
-        <span class='center right caption'>
-        <span class='table'>
-        </span></span>
-        <span class='bottom left caption'></span>
-        <span class='bottom middle caption'></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='light-gray tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-clock-o fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-clock-o fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>History</h5></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='purple tile double'>
-        <span class='top left caption'>5/5/2014</span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
         <span class='center left caption'>
-        <span class='table'>
-       <i class="fa fa-truck fa-4x"></i>
-        </span></span>
+        <span class='table'><i class="fa fa-truck fa-4x"></i></span></span>
         <span class='center middle caption'>
         <span class='table'><h4>Chuyen Kho</h4>
         </span></span>
-        <span class='center right caption'>
-        <span class='table'>
-        </span></span>
-        <span class='bottom left caption'></span>
-        <span class='bottom middle caption'></span>
-        <span class='bottom right caption'></span>
     </div>
+
      <div class='orange tile'>
-            <span class='top left caption'></span>
-            <span class='top middle caption'></span>
-            <span class='top right caption'></span>
-            <span class='center left caption'><span class='table'></span></span>
-            <span class='center middle caption'><span class='table'><i class="fa fa-bar-chart-o fa-3x"></i></span></span>
-            <span class='center right caption'><span class='table'></span></span>
-            <span class='bottom left caption'></span>
+            <span class='center middle caption'>
+            <span class='table'><i class="fa fa-bar-chart-o fa-3x"></i></span></span>
             <span class='bottom middle caption'><h5>Thong Ke</h5></span>
-            <span class='bottom right caption'></span>
         </div>
   </div>
 
+
   <div class='tile-wrapper-1'>
     <div class='orange tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-cogs fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-cogs fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>Option</h5></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='blue tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-users fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-users fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>Phan Quyen</h5></span>
-        <span class='bottom right caption'></span>
     </div>
+
     <div class='lime tile'>
-        <span class='top left caption'></span>
-        <span class='top middle caption'></span>
-        <span class='top right caption'></span>
-        <span class='center left caption'><span class='table'></span></span>
-        <span class='center middle caption'><span class='table'><i class="fa fa-puzzle-piece fa-3x"></i></span></span>
-        <span class='center right caption'><span class='table'></span></span>
-        <span class='bottom left caption'></span>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-print fa-3x"></i></span></span>
         <span class='bottom middle caption'><h5>May In</h5></span>
-        <span class='bottom right caption'></span>
     </div>
   </div>
 </div>

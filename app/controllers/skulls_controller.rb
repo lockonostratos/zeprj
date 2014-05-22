@@ -6,7 +6,7 @@ class SkullsController < ApplicationController
   def index
     @skulls = Skull.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @skulls }
     end
   end
@@ -15,7 +15,7 @@ class SkullsController < ApplicationController
   # GET /skulls/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @skull }
     end
   end

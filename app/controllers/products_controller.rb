@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
      @products = Product.all
      respond_to do |format|
-       format.html { redirect_to imports_url }
+       format.html
        format.json { render :json => @product }
      end
   end
@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @product }
     end
   end

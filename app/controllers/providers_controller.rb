@@ -8,7 +8,7 @@ class ProvidersController < ApplicationController
   def index
     @providers = Provider.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @providers }
     end
   end
@@ -17,7 +17,7 @@ class ProvidersController < ApplicationController
   # GET /providers/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @provider }
     end
   end

@@ -6,7 +6,7 @@ class InventoryDetailsController < ApplicationController
   def index
     @inventory_details = InventoryDetail.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @inventory_details }
     end
   end
@@ -15,7 +15,7 @@ class InventoryDetailsController < ApplicationController
   # GET /inventory_details/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @inventory_detail }
     end
   end

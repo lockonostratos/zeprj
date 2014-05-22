@@ -6,7 +6,7 @@ class MerchantsController < ApplicationController
   def index
     @merchants = Merchant.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @merchants }
     end
   end
@@ -15,7 +15,7 @@ class MerchantsController < ApplicationController
   # GET /merchants/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @merchant }
     end
   end

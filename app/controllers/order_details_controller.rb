@@ -6,7 +6,7 @@ class OrderDetailsController < ApplicationController
   def index
     @order_details = OrderDetail.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @order_details }
     end
   end
@@ -15,7 +15,7 @@ class OrderDetailsController < ApplicationController
   # GET /order_details/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @order_detail }
     end
   end
