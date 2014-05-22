@@ -8,5 +8,5 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       })
 
   ThisApp.addInitializer ->
-    ThisApp.Caption = 'NHẬP KHO'
+    ThisApp.Caption = 'NHAP KHO'
     ThisApp.layout = new Zeprj.DualVerticalLayout()

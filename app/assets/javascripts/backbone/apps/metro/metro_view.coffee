@@ -5,8 +5,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
     events:
       'click #home-button': -> Zeprj.trigger 'navigate:metro'
-      'click #back-button': -> Backbone.history.history.back()
-      'click #forward-button': -> Backbone.history.history.forward()
+
     regions:
       accountRegion: '#account-region'
       merchantAccountRegion: '#merchant-account-region'

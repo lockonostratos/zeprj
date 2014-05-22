@@ -15,7 +15,6 @@ Zeprj.module "ViewModels", (Vm, ContactManager, Backbone, Marionette, $, _) ->
       @childApps = ko.observableArray childApps
       @currentApp = ko.observable currentApp
 
-
     navigateNext: ->
       nextApp = (@childApps.indexOf @currentApp()) + 1
       if nextApp < @childApps().length
@@ -27,11 +26,10 @@ Zeprj.module "ViewModels", (Vm, ContactManager, Backbone, Marionette, $, _) ->
       if nextApp >= 0
         @currentApp @childApps()[nextApp]
       @currentApp()
+    navigateTo: (appName) ->
+      @currentApp appName
 
     canNavigateNext: ->
       (@childApps.indexOf @currentApp()) + 1 < @childApps().length
     canNavigatePrevious: ->
       (@childApps.indexOf @currentApp()) - 1 >= 0
-
-    write: (data) ->
-      Zeprj.log data

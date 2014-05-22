@@ -6,7 +6,8 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
   API =
     index: ->
       Zeprj.navigate ''
-      MetroApp.Controller.renderInto(Zeprj.mainRegion)
+      Zeprj.MetroApp.currentApp('METRO')
+      MetroApp.Controller.renderInto Zeprj.mainRegion
 
   Zeprj.on 'navigate:metro', -> API.index()
 

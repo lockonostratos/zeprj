@@ -7,6 +7,8 @@ Zeprj.TopNavigationLayout = Backbone.Marionette.Layout.extend
     content: '#tnl-content'
   }
 
+  events:
+    'click #tnl-navigator li': (e)-> @trigger 'click:menu', e.target.innerHTML
 
   onShow: ->
     #behavior: { userSelect: true },

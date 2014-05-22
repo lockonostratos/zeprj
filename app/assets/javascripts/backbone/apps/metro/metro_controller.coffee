@@ -3,7 +3,8 @@
 Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
   MetroApp.Controller =
     renderGlobalUi: ->
-      Zeprj.navigationRegion.show new MetroApp.NavigationLayout()
+      Zeprj.navigationRegion.show new MetroApp.NavigationLayout
+      ko.applyBindings { currentApp: MetroApp.currentApp }, $('#navigation-right-part')[0]
       Zeprj.optionRegion.show new MetroApp.OptionView()
 
     renderInto: (region) ->
@@ -11,3 +12,4 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
   MetroApp.addInitializer ->
     MetroApp.homeView = new MetroApp.HomeView()
+    MetroApp.currentApp = ko.observable('Metro')

@@ -110,6 +110,16 @@ body {
     }
   }
 
+  #navigation-region {
+    span.app-name {
+      margin: 10px;
+      position: absolute;
+    }
+    #navigation-right-part {
+      padding-left: 1rem;
+    }
+  }
+
   //Chỉnh sửa margin cho metro home!
   .inner-wrap {
     .metro-wrapper { margin-left: 0.15rem; }
