@@ -1,0 +1,4 @@
+<span>Merchant_id: <%= @merchant_id %></span> <br/>
+<span>Account_id: <%= @merchant_account_id %></span> <br/>
+<span>Skull_code: <%= @skull_code %></span> <br/>
+<span>Description: <%= @description %></span> <br/>

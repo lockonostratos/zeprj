@@ -6,7 +6,7 @@ class PermissionsController < ApplicationController
   def index
     @permissions = Permission.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @permissions }
     end
   end
@@ -15,7 +15,7 @@ class PermissionsController < ApplicationController
   # GET /permissions/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @permission }
     end
   end

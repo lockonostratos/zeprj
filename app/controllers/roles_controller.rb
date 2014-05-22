@@ -6,7 +6,7 @@ class RolesController < ApplicationController
   def index
     @roles = Role.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @roles }
     end
   end
@@ -15,7 +15,7 @@ class RolesController < ApplicationController
   # GET /roles/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @role }
     end
   end

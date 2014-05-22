@@ -1,19 +1,19 @@
-Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
+Zeprj.module "SaleApp.Skull", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
   ThisApp.temporaryProductView = Marionette.ItemView.extend
-    template: JST['backbone/templates/warehouse/import/temporaryProduct']
+    template: JST['backbone/templates/sale/skull/temporaryProduct']
 
   ThisApp.productSummaryView = Marionette.ItemView.extend
-    template: JST['backbone/templates/warehouse/import/productSummary']
+    template: JST['backbone/templates/sale/skull/productSummary']
     className: 'product-summary-tile'
     tagName: 'li'
     events:
       'click': -> Zeprj.log @model.attributes.product_code
 
   ThisApp.emptyTemporaryProductsView = Marionette.ItemView.extend
-    template: JST['backbone/templates/warehouse/import/emptyTemporaryProduct']
+    template: JST['backbone/templates/sale/skull/emptyTemporaryProduct']
 
   ThisApp.emptyProductSummariesView = Marionette.ItemView.extend
-    template: JST['backbone/templates/warehouse/import/emptyProductSummaries']
+    template: JST['backbone/templates/sale/skull/emptyProductSummaries']
 
   ThisApp.temporaryProductsView = Marionette.CollectionView.extend
     itemView: ThisApp.temporaryProductView

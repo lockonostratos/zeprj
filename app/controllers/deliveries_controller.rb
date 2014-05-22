@@ -6,7 +6,7 @@ class DeliveriesController < ApplicationController
   def index
     @deliveries = Delivery.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @deliveries }
     end
   end
@@ -15,7 +15,7 @@ class DeliveriesController < ApplicationController
   # GET /deliveries/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @delivery }
     end
   end

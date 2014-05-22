@@ -6,7 +6,7 @@ class ExportDetailsController < ApplicationController
   def index
     @export_details = ExportDetail.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @export_details }
     end
   end
@@ -15,7 +15,7 @@ class ExportDetailsController < ApplicationController
   # GET /export_details/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @export_detail }
     end
   end

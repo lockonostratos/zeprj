@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="large-2 columns">
+    <input type='text' value="Thu Ngan">
+    <input type='text' value="Khach Hang">
+     So Phieu : XXXX-XXXX
+    </div>
+    <div class="large-8 columns">
+        <div class="large-5 columns">
+            <div class="row">
+                <div class="large-7 columns">
+                <input type='text' value="MaSanPham">
+                <i class="fa fa-caret-square-o-down fa-5x"></i>
+                </div>
+                <div class="large-5 columns">
+                <input type='text' value="TonKho">
+                <input type='text' value="SoLuongBan">
+                <input type='text' value="GiamGia">
+                </div>
+            </div>
+        </div>
+        <div class="large-7 columns">
+            <div class="row">
+            <input type='text' value="Chi Tiet San Pham">
+            </div>
+            <div class="row">
+                <div class="large-6 columns">
+                <input type='text' value="Gia Ban">
+                <input type='text' value="Giam Gia Tien Mat">
+                </div>
+                <div class="large-6 columns">
+                <input type='text' value="Tam Tinh">
+                <input type='text' value="Thanh Tien">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+
+</div>
+<div class="row">
+    <div class="large-2 columns">
+    <input type='text' value="Phuong Thuc TT">
+    </div>
+    <div class="large-2 columns">
+    ...</div>
+    <div class="large-8 columns">
+        <div class="row">
+             <div class="large-2 columns">.</div>
+             <div class="large-2 columns"><input type='text' value="Vocher"></div>
+             <div class="large-3 columns"><input type='text' value="Tong Tien Thu Vao"></div>
+             <div class="large-2 columns"><input type='text'value="Giam Gia %"></div>
+             <div class="large-3 columns"><input type='text' value="Giam Gia TM"></div>
+        </div>
+        <div class="row">
+            <div class="large-1 columns">.</div>
+            <div class="large-3 columns"><input type='text' value="Tong Bill Tam Tinh"></div>
+            <div class="large-3 columns"><input type='text' value="Thu Truoc"></div>
+            <div class="large-3 columns"><input type='text' value="So Tien Can Thoi"></div>
+            <div class="large-2 columns"><input type='text' value="Hoan Tat"></div>
+        </div>
+        </div>
+    </div>
+</div>
