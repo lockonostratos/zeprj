@@ -1,0 +1,2 @@
+module MerchantAccountPermissionsHelper
+end
