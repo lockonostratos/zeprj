@@ -7,6 +7,18 @@ $tone-dark: #A0B87E;
 $element-main: #1FB5AC;
 $background-default: #e5e5e5;
 $background-login: #32323A;
+$darken-amount: 5;
+
+$green: #00B159;
+$light-green: #1CBB9B;
+$yellow: #FFC708;
+$orange: #F37735;
+$blue: #00AEDB;
+$dark-blue: #374961;
+$lime: #8ACF1A;
+$pink: #D845A0;
+$red: #C11918;
+$purple: #91009B;
 
 //navigator
 $navigator-background: red;
@@ -20,7 +32,8 @@ $application-padding: 0.3rem; //for large screen only!
 $tile-caption-padding: 0.5rem;
 
 $tile-size: 8.5rem;
-$tile-space: 0.3rem;
+$tile-space: 0.2rem;
+$tile-group-space: 0.3rem;
 $content-min-height:25rem;
 
 $tile-size-small: 6rem;
@@ -28,3 +41,5 @@ $tile-size-small: 6rem;
 //Radiuses------------------------------------------------------------>
 $tile-radius: 0.06rem;
 $tile-radius-phone: 0.1rem;
+
+

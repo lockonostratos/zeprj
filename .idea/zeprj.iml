@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
   <component name="CompassSettings">
-    <option name="compassExecutableFilePath" value="C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.5/bin/compass" />
-    <option name="compassSupportEnabled" value="true" />
+    <option name="compassExecutableFilePath" value="C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/bin/compass" />
   </component>
   <component name="FacetManager">
     <facet type="RailsFacetType" name="Ruby on Rails">
@@ -142,7 +141,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.7, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.1.5, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.0, ruby-1.9.3-p484) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="chunky_png (v1.3.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, ruby-1.9.3-p484) [gem]" level="application" />

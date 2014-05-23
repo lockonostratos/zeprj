@@ -44,6 +44,10 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     template: JST['backbone/templates/metro/option']
     className: 'option row'
 
+  MetroApp.Copyright = Marionette.ItemView.extend
+    template: JST['backbone/templates/metro/copyright']
+    className: 'copyright row'
+
   MetroApp.HomeView = Marionette.ItemView.extend
     template: JST['backbone/templates/metro/home']
     className: 'metro-wrapper'

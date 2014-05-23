@@ -2,105 +2,115 @@
 
   <div class='tile-wrapper-3 tile-wrapper-small-2'>
     <div class='orange tile huge'>
-        <span class='center left caption'>
-        <span class='table'><i class="fa fa-shopping-cart fa-5x"></i></span></span>
-        <span class='center right caption'>
-        <span class='table'><h2>Ban Hang</h2></span></span>
+        <span class='top left caption'><i class="fa fa-tags fa-5x"></i></span>
+        <span class='top right caption'><h6>BÁN HÀNG</h6></span>
+        <span class='bottom left caption'><h2>1024 <tiny>SẢN PHẨM ĐÃ BÁN</tiny></h2></span>
     </div>
 
     <div class='lime tile'>
+        <span class='top middle caption'><h4>256 <tiny6>fan cuồng!</tiny6></h4></span>
         <span class='center middle caption'>
-        <span class='table'><i class="fa fa-user fa-4x"></i></span></span>
-        <span class='bottom middle caption'><h5>Khach Hang</h5></span>
+        <span class='table'><i class="fa fa-heart fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>KHÁCH HÀNG</h8></span>
     </div>
 
-    <div class='gray tile'>
+    <div class='red tile'>
+        <span class='top middle caption'><h4>128 <tiny6>chuyên gia!</tiny6></h4></span>
         <span class='center middle caption'>
-        <span class='table'><i class="fa fa-credit-card fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>Nhan Vien</h5></span>
+        <span class='table'><i class="fa fa-user-md fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>NHÂN VIÊN</h8></span>
     </div>
 
     <div id='sale-skull' class='pink tile'>
         <span class='center middle caption'>
-        <span class='table'> <i class="fa fa-barcode fa-4x"></i></span></span>
-        <span class='bottom middle caption'><h5>Skull</h5></span>
+            <span class='table'><i class="fa fa-chain fa-3x"></i></span>
+        </span>
+        <span class='bottom middle caption'><h8>DÒNG SẢN PHẨM</h8></span>
     </div>
 
     <div class='blue tile'>
         <span class='center middle caption'>
-        <span class='table'><i class="fa fa-tasks fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>Provider</h5></span>
+            <span class='table'><i class="fa fa-building-o fa-3x"></i></span>
+        </span>
+        <span class='bottom middle caption'><h8>NHÀ CUNG CẤP</h8></span>
     </div>
 
     <div class='dark-blue tile'>
         <span class='center middle caption'>
-        <span class='table'> <i class="fa fa-exchange fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>Tra Hang</h5></span>
+        <span class='table'> <i class="fa fa-reply-all fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>TRẢ HÀNG</h8></span>
     </div>
   </div>
 
 
   <div class='tile-wrapper-3 tile-wrapper-small-2'>
-    <div id='warehouse-manager' class='light-green tile double'>
-        <span class='center left caption'>
-        <span class='table'><i class="fa-home fa fa-4x"></i></span></span>
-        <span class='center middle caption'>
-        <span class='table'><h4>Nhap Kho</h4> </span></span>
+    <div id='warehouse-manager' class='yellow tile double'>
+        <span class='bottom right caption'><i class="fa-home fa fa-4x"></i></span>
+        <span class='top right caption'><h8>NHẬP KHO</h8></span>
+        <span class='bottom left caption'><h2>2014 <tiny>SẢN PHẨM</tiny></h2></span>
     </div>
 
     <div class='dark-blue tile'>
         <span class='center middle caption'>
-        <span class='table'><i class="fa fa-bullhorn fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>Nhac Nho</h5></span>
+            <span class='table'><i class="fa fa-volume-up fa-3x"></i></span>
+        </span>
+        <span class='bottom middle caption'><h8>THÔNG BÁO</h8></span>
     </div>
 
     <div class='pink tile double'>
-        <span class='center left caption'>
-        <span class='table'><i class="fa fa-pencil-square-o fa-4x"></i></span></span>
-        <span class='center middle caption'>
-        <span class='table'><h4>Kiem Kho</h4>
+        <span class='center left caption'><span class='table'>
+            <h5>ĐIỀU CHỈNH</h5>
+            <h8>Khi số lượng thực tế <br>
+                và lý thuyết có sai sót<br>
+                việc điều chỉnh sẽ được<br>
+                yêu cầu và ghi vào nhật ký.</h8>
         </span></span>
+        <span class='bottom right caption'><i class="fa fa-qrcode fa-4x"></i></span>
+        <span class='top right caption'><h8>KIỂM KHO</h8></span>
     </div>
 
-    <div class='light-gray tile'>
+    <div class='red tile'>
         <span class='center middle caption'>
-        <span class='table'><i class="fa fa-clock-o fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>History</h5></span>
+        <span class='table'><i class="fa fa-archive fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>NHẬT KÝ</h8></span>
     </div>
 
     <div class='purple tile double'>
-        <span class='center left caption'>
-        <span class='table'><i class="fa fa-truck fa-4x"></i></span></span>
-        <span class='center middle caption'>
-        <span class='table'><h4>Chuyen Kho</h4>
+        <span class='center left caption'><span class='table'>
+            <h5>XÁC NHẬN</h5>
+            <h8>Việc chuyển kho chỉ thực <br>
+                sự có hiệu lực khi được lệnh<br>
+                xác nhận từ phía kho nhận.</h8>
         </span></span>
+        <span class='bottom right caption'><i class="fa fa-truck fa-4x"></i></span>
+        <span class='top right caption'><h8>CHUYỂN KHO</h8></span>
     </div>
 
      <div class='orange tile'>
             <span class='center middle caption'>
-            <span class='table'><i class="fa fa-bar-chart-o fa-3x"></i></span></span>
-            <span class='bottom middle caption'><h5>Thong Ke</h5></span>
+            <span class='table'><i class="fa fa-signal fa-3x"></i></span></span>
+            <span class='bottom middle caption'><h8>THỐNG KÊ</h8></span>
         </div>
   </div>
 
 
   <div class='tile-wrapper-1'>
     <div class='orange tile'>
-        <span class='center middle caption'>
+        <span class='center right caption'>
         <span class='table'><i class="fa fa-cogs fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>Option</h5></span>
+        <span class='bottom right caption'><h8>HỆ THỐNG</h8></span>
     </div>
 
     <div class='blue tile'>
-        <span class='center middle caption'>
+        <span class='center right caption'>
         <span class='table'><i class="fa fa-users fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>Phan Quyen</h5></span>
+        <span class='bottom right caption'><h8>PHÂN QUYỀN</h8></span>
     </div>
 
     <div class='lime tile'>
-        <span class='center middle caption'>
+        <span class='center right caption'>
         <span class='table'><i class="fa fa-print fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h5>May In</h5></span>
+        <span class='bottom right caption'><h8>THIẾT BỊ</h8></span>
     </div>
   </div>
 </div>

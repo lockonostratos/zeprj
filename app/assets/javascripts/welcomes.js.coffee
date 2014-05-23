@@ -1,4 +1,4 @@
-#= require backbone/app
+#= require backbone/app.coffee.erb
 Zeprj.Account = Backbone.Model.extend()
 
 Zeprj.Accounts = Backbone.Collection.extend
