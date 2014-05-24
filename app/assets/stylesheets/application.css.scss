@@ -25,7 +25,8 @@
 }
 
 @mixin tile-gradient-background($color) {
-  @include background(linear-gradient(top left, $color, darken($color, $darken-amount)));
+//  @include background(linear-gradient(top left, $color, darken($color, $darken-amount)));
+  background-color: $color;
 }
 
 
@@ -84,6 +85,7 @@ body {
 
             #dual-top {
               height: 100%;
+              min-height: 400px;
             }
           }
         }

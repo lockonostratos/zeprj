@@ -58,13 +58,6 @@
     </div>
 
     <div class='pink tile double'>
-        <span class='center left caption'><span class='table'>
-            <h5>ĐIỀU CHỈNH</h5>
-            <h8>Khi số lượng thực tế <br>
-                và lý thuyết có sai sót<br>
-                việc điều chỉnh sẽ được<br>
-                yêu cầu và ghi vào nhật ký.</h8>
-        </span></span>
         <span class='bottom right caption'><i class="fa fa-qrcode fa-4x"></i></span>
         <span class='top right caption'><h8>KIỂM KHO</h8></span>
     </div>
@@ -76,12 +69,6 @@
     </div>
 
     <div class='purple tile double'>
-        <span class='center left caption'><span class='table'>
-            <h5>XÁC NHẬN</h5>
-            <h8>Việc chuyển kho chỉ thực <br>
-                sự có hiệu lực khi được lệnh<br>
-                xác nhận từ phía kho nhận.</h8>
-        </span></span>
         <span class='bottom right caption'><i class="fa fa-truck fa-4x"></i></span>
         <span class='top right caption'><h8>CHUYỂN KHO</h8></span>
     </div>
