@@ -540,6 +540,23 @@ class InitializeDatabase < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :metro_summaries do |t|
+      t.belongs_to :warehouse
+      t.integer :product_count, :default=>0 #Done
+      t.integer :stock_count, :default=>0 #Done
+      t.integer :customer_count, :default=>0
+      t.integer :staff_count, :default=>0
+      t.integer :sale_count, :default=>0
+      t.integer :sale_count_day, :default=>0
+      t.integer :sale_count_month, :default=>0
+      t.integer :return_count, :default=>0
+      t.integer :return_count_day, :default=>0
+      t.integer :return_count_month, :default=>0
+      t.integer :revenue ,:limit => 8, :default=>0
+      t.integer :revenue_day ,:limit => 8, :default=>0
+      t.integer :revenue_month ,:limit => 8, :default=>0
+    end
+
 
   end
 end

@@ -2,527 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/copyright.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140331090530_create_accounts.rb" afterPath="$PROJECT_DIR$/db/migrate/20140331090530_create_accounts.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/metro_summary.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" afterPath="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__zeprj.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__zeprj.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Production__zeprj.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__zeprj.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/WIN_8_64BIT.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/WIN_8_64BIT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/Accounts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/agencies/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/areas/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/branches/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/deliveries/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/export_details/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/exports/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/imports/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/inventories/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/inventory_details/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/merchants/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/order_details/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/product_summaries/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/providers/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/return_details/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/returns/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/skulls/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_products/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/temp_products/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/templates/erb/scaffold/_form.html.erb" afterPath="$PROJECT_DIR$/lib/templates/erb/scaffold/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/account.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/account.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/account.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/account.rb" afterPath="$PROJECT_DIR$/app/models/account.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/accountView.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/accountView.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/account_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/account_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/partial/accounts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/partial/accounts.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/accounts.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/accounts.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/accounts.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/accounts.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/accounts.yml" afterPath="$PROJECT_DIR$/test/fixtures/accounts.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/accounts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/accounts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/accounts_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/accounts_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/accounts_route.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/accounts_route.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/active_model_serializer.rb" afterPath="$PROJECT_DIR$/config/initializers/active_model_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/agencies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/agencies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/agencies_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/agencies_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/agencies_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/agencies_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/agencies_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/agencies_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/agency.rb" afterPath="$PROJECT_DIR$/app/models/agency.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/agency_account.rb" afterPath="$PROJECT_DIR$/app/models/agency_account.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/application.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/application.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/application_route.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/application_route.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/area.rb" afterPath="$PROJECT_DIR$/app/models/area.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/areas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/areas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/areas_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/areas_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/areas_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/areas_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/areas_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/areas_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/available.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/available.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/available.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/warehouses/available.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.babysitter.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.babysitter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.marionette.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.marionette.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.wreqr.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.wreqr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/branch.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/branch.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/branch.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/branch.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/branch.rb" afterPath="$PROJECT_DIR$/app/models/branch.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/branch_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/branch_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/branche_test.rb" afterPath="$PROJECT_DIR$/test/models/branche_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/branche_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/branche_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/branches.yml" afterPath="$PROJECT_DIR$/test/fixtures/branches.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/branches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/branches_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/branches_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/branches_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/branches_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/branches_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/branches_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/branches_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/branches_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/branches_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/bundle" afterPath="$PROJECT_DIR$/bin/bundle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/customer.rb" afterPath="$PROJECT_DIR$/app/models/customer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/customers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/customers_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/customers_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/customers_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/customers_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/customers_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/customers_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/deliveries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/deliveries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/deliveries_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/deliveries_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/deliveries_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/deliveries_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/deliveries_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/deliveries_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/delivery.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/delivery.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/delivery.rb" afterPath="$PROJECT_DIR$/app/models/delivery.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualHorizontal.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualHorizontal.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualVertical.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualVertical.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/Accounts/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/agencies/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/areas/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/branches/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/deliveries/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/export_details/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/exports/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/imports/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/inventories/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/inventory_details/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/merchants/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/order_details/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/product_summaries/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/products/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/providers/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/return_details/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/returns/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/skulls/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/ember/development/ember-data.js" afterPath="$PROJECT_DIR$/vendor/assets/ember/development/ember-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/ember/production/ember-data.js" afterPath="$PROJECT_DIR$/vendor/assets/ember/production/ember-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/ember/development/ember.js" afterPath="$PROJECT_DIR$/vendor/assets/ember/development/ember.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/ember/production/ember.js" afterPath="$PROJECT_DIR$/vendor/assets/ember/production/ember.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/export.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/export.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/export.rb" afterPath="$PROJECT_DIR$/app/models/export.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/exportDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/exportDetail.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/export_detail.rb" afterPath="$PROJECT_DIR$/app/models/export_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/export_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/export_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/export_details_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/export_details_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/export_details_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/export_details_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/export_details_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/export_details_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/exports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/exports_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/exports_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/exports_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/exports_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/exports_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/exports_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/exports_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/formView.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/formView.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/gera_account.rb" afterPath="$PROJECT_DIR$/app/models/gera_account.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/gera_account_test.rb" afterPath="$PROJECT_DIR$/test/models/gera_account_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/gera_accounts_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/gera_accounts_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/gera_accounts_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/gera_accounts_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/hammer.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/hammer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/home.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/home.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/home.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/home_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/home_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/home_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/home_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/home_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/home_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/import.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/import.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/import.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/import.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/import.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/import.rb" afterPath="$PROJECT_DIR$/app/models/import.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/imports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/imports_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/imports_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/imports_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/imports_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/imports_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/imports_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/imports_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/index.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/index.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/Accounts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/index.html.erb" afterPath="$PROJECT_DIR$/app/views/agencies/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/areas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/index.html.erb" afterPath="$PROJECT_DIR$/app/views/branches/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/index.html.erb" afterPath="$PROJECT_DIR$/app/views/deliveries/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/export_details/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/index.html.erb" afterPath="$PROJECT_DIR$/app/views/exports/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/index.html.erb" afterPath="$PROJECT_DIR$/app/views/imports/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/index.html.erb" afterPath="$PROJECT_DIR$/app/views/inventories/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/inventory_details/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/index.html.erb" afterPath="$PROJECT_DIR$/app/views/merchants/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/order_details/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/index.html.erb" afterPath="$PROJECT_DIR$/app/views/product_summaries/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/providers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/return_details/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/index.html.erb" afterPath="$PROJECT_DIR$/app/views/returns/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/index.html.erb" afterPath="$PROJECT_DIR$/app/views/skulls/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/index.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/Accounts/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/agencies/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/areas/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/branches/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/customers/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/deliveries/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/export_details/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/exports/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/imports/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/inventories/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/inventory_details/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/merchants/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/order_details/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/orders/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/product_summaries/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/products/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/providers/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/return_details/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/returns/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/skulls/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/warehouses/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/sale/home/index.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/sale/home/index.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/inventories_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/inventories_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/inventories_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/inventories_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/inventories_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/inventories_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/inventories_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/inventories_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/inventory.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/inventory.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/inventory.rb" afterPath="$PROJECT_DIR$/app/models/inventory.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/inventoryDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/inventoryDetail.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/inventory_detail.rb" afterPath="$PROJECT_DIR$/app/models/inventory_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/inventory_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/inventory_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/inventory_details_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/inventory_details_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/inventory_details_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/inventory_details_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/inventory_details_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/inventory_details_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/jquery.hammer.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/jquery.hammer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/libraries/jquery.splitter.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/libraries/jquery.splitter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/jquery.splitter.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/jquery.splitter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/knockback.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/knockback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/knockout.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/knockout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_and_company.rb" afterPath="$PROJECT_DIR$/app/models/mackay_and_company.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_career.rb" afterPath="$PROJECT_DIR$/app/models/mackay_career.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_children.rb" afterPath="$PROJECT_DIR$/app/models/mackay_children.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_education.rb" afterPath="$PROJECT_DIR$/app/models/mackay_education.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_family.rb" afterPath="$PROJECT_DIR$/app/models/mackay_family.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_hobby.rb" afterPath="$PROJECT_DIR$/app/models/mackay_hobby.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_life_style.rb" afterPath="$PROJECT_DIR$/app/models/mackay_life_style.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_personal.rb" afterPath="$PROJECT_DIR$/app/models/mackay_personal.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mackay_profile.rb" afterPath="$PROJECT_DIR$/app/models/mackay_profile.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/mer_skull_test.rb" afterPath="$PROJECT_DIR$/test/models/mer_skull_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/mer_skull_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/mer_skull_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/mer_skulls.yml" afterPath="$PROJECT_DIR$/test/fixtures/mer_skulls.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/mer_skulls_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/mer_skulls_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/mer_skulls_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/mer_skulls_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/mer_skulls_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/mer_skulls_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/mer_test.rb" afterPath="$PROJECT_DIR$/test/models/mer_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/mer_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/mer_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/mer_warehouse_test.rb" afterPath="$PROJECT_DIR$/test/models/mer_warehouse_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/mer_warehouse_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/mer_warehouse_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/mer_warehouses.yml" afterPath="$PROJECT_DIR$/test/fixtures/mer_warehouses.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/mer_warehouses_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/mer_warehouses_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/mer_warehouses_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/mer_warehouses_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/mer_warehouses_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/mer_warehouses_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/merchant.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/merchant.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/merchant.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/merchant.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant.rb" afterPath="$PROJECT_DIR$/app/models/merchant.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/merchantAccount.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/merchantAccount.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/merchant_account.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/merchant_account.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant_account.rb" afterPath="$PROJECT_DIR$/app/models/merchant_account.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant_account_permission.rb" afterPath="$PROJECT_DIR$/app/models/merchant_account_permission.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchant_account_role.rb" afterPath="$PROJECT_DIR$/app/models/merchant_account_role.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/merchant_account_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/merchant_account_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/merchant_accounts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/merchant_accounts_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/merchant_accounts_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/merchant_accounts_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/merchant_accounts_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/merchant_accounts_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/merchant_accounts_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/merchant_application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/merchant_application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/merchant_branches_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/merchant_branches_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/merchant_branches_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/merchant_branches_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/merchant_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/merchant_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/merchant_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/merchant_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/merchant_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/merchant_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/merchant_warehouse_product_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/merchant_warehouse_product_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/merchant_warehouse_products_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/merchant_warehouse_products_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/merchant_warehouse_products_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/merchant_warehouse_products_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/merchants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/merchants_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/merchants_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/merchants_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/merchants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/merchants_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/mers.yml" afterPath="$PROJECT_DIR$/test/fixtures/mers.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/mers_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/mers_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/mers_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/mers_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/mers_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/mers_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/components/model-editors.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/components/model-editors.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/model-editors.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/model-editors.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/module.rb" afterPath="$PROJECT_DIR$/app/models/module.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigation.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationAccount.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationAccount.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationMerchantAccount.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationMerchantAccount.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationWarehouse.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationWarehouse.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/navigator.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/Accounts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/new.html.erb" afterPath="$PROJECT_DIR$/app/views/agencies/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/new.html.erb" afterPath="$PROJECT_DIR$/app/views/areas/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/new.html.erb" afterPath="$PROJECT_DIR$/app/views/branches/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/new.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/new.html.erb" afterPath="$PROJECT_DIR$/app/views/deliveries/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/export_details/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/new.html.erb" afterPath="$PROJECT_DIR$/app/views/exports/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/new.html.erb" afterPath="$PROJECT_DIR$/app/views/imports/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/new.html.erb" afterPath="$PROJECT_DIR$/app/views/inventories/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/inventory_details/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/new.html.erb" afterPath="$PROJECT_DIR$/app/views/merchants/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/order_details/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/new.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/new.html.erb" afterPath="$PROJECT_DIR$/app/views/product_summaries/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/new.html.erb" afterPath="$PROJECT_DIR$/app/views/products/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/new.html.erb" afterPath="$PROJECT_DIR$/app/views/providers/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/return_details/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/new.html.erb" afterPath="$PROJECT_DIR$/app/views/returns/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/new.html.erb" afterPath="$PROJECT_DIR$/app/views/skulls/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/new.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/order.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/order.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/orderDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/orderDetail.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order_detail.rb" afterPath="$PROJECT_DIR$/app/models/order_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/order_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/order_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/order_details_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/order_details_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/order_details_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/order_details_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/order_details_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/order_details_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/orders_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/orders_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/orders_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/orders_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/orders_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/orders_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/permission.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/permission.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/permission.rb" afterPath="$PROJECT_DIR$/app/models/permission.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/product.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/product.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/product.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses/productSummaries.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/productSummary.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/productSummary.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/sale/skull/productSummary.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/sale/skull/productSummary.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/product_summaries_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/product_summaries_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/product_summaries_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/product_summaries_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/product_summaries_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/product_summaries_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/product_summary.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/product_summary.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product_summary.rb" afterPath="$PROJECT_DIR$/app/models/product_summary.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/products_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/products_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/provider.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/provider.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/provider.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/provider.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/provider.rb" afterPath="$PROJECT_DIR$/app/models/provider.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/providers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/providers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/providers_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/providers_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/providers_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/providers_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/providers_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/providers_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rails" afterPath="$PROJECT_DIR$/bin/rails" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rake" afterPath="$PROJECT_DIR$/bin/rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/helpers/renderer.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/helpers/renderer.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/return.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/return.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/return.rb" afterPath="$PROJECT_DIR$/app/models/return.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/returnDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/returnDetail.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/return_detail.rb" afterPath="$PROJECT_DIR$/app/models/return_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/return_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/return_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/return_details_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/return_details_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/return_details_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/return_details_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/return_details_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/return_details_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/returns_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/returns_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/returns_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/returns_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/returns_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/returns_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/returns_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/returns_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/role.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/role.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/role.rb" afterPath="$PROJECT_DIR$/app/models/role.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/rolePermission.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/rolePermission.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/role_permission.rb" afterPath="$PROJECT_DIR$/app/models/role_permission.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/role_warehouse.rb" afterPath="$PROJECT_DIR$/app/models/role_warehouse.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/router.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/router.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/sale_app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/sale_app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/sale_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/sale_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/sale_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/sale_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/secret_token.rb" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/partial/sessions.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/partial/sessions.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/sessions.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/sessions.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/sessions_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/sessions_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/Accounts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/show.html.erb" afterPath="$PROJECT_DIR$/app/views/agencies/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/show.html.erb" afterPath="$PROJECT_DIR$/app/views/areas/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/show.html.erb" afterPath="$PROJECT_DIR$/app/views/branches/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/show.html.erb" afterPath="$PROJECT_DIR$/app/views/deliveries/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/export_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/show.html.erb" afterPath="$PROJECT_DIR$/app/views/exports/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/show.html.erb" afterPath="$PROJECT_DIR$/app/views/imports/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/show.html.erb" afterPath="$PROJECT_DIR$/app/views/inventories/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/inventory_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/show.html.erb" afterPath="$PROJECT_DIR$/app/views/merchants/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/order_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/show.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/show.html.erb" afterPath="$PROJECT_DIR$/app/views/product_summaries/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/providers/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/return_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/show.html.erb" afterPath="$PROJECT_DIR$/app/views/returns/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/show.html.erb" afterPath="$PROJECT_DIR$/app/views/skulls/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/show.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Accounts/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/Accounts/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/agencies/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/agencies/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/areas/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/areas/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/branches/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/branches/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/customers/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/deliveries/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/deliveries/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/export_details/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/export_details/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exports/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/exports/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imports/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/imports/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventories/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/inventories/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inventory_details/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/inventory_details/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchant_accounts/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/merchant_accounts/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchants/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/merchants/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/order_details/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/order_details/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/orders/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_summaries/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/product_summaries/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/products/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/providers/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/providers/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/return_details/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/return_details/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/returns/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/returns/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skulls/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/skulls/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/temp_inventory_details/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/temp_inventory_details/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/warehouses/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/show_ware.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/show_ware.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/show_ware.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/warehouses/show_ware.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/simple_form.en.yml" afterPath="$PROJECT_DIR$/config/locales/simple_form.en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/simple_form.rb" afterPath="$PROJECT_DIR$/config/initializers/simple_form.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/simple_form_foundation.rb" afterPath="$PROJECT_DIR$/config/initializers/simple_form_foundation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/skull.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/skull.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/skull.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/skull.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/sale/skull.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/sale/skull.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/skull.rb" afterPath="$PROJECT_DIR$/app/models/skull.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/skulls_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/skulls_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/skulls_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/skulls_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/skulls_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/skulls_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/skulls_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/skulls_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/sky.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/sky.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/spec__zeprj.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/spec__zeprj.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/store.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/store.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/tempInventoryDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/tempInventoryDetail.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/temp_inventory_detail.rb" afterPath="$PROJECT_DIR$/app/models/temp_inventory_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/temp_inventory_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/temp_inventory_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/temp_inventory_details_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/temp_inventory_details_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/temp_inventory_details_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/temp_inventory_details_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/temp_inventory_details_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/temp_inventory_details_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/temp_product.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/temp_product.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/temp_product.rb" afterPath="$PROJECT_DIR$/app/models/temp_product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/temp_products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/temp_products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/test__zeprj.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test__zeprj.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/topNavigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/topNavigation.jst.eco" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/underscore.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/underscore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/warehouse.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/warehouse.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/models/warehouse.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/warehouse.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/warehouse.rb" afterPath="$PROJECT_DIR$/app/models/warehouse.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/warehouse_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/warehouse_serializer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/warehouse_test.rb" afterPath="$PROJECT_DIR$/test/models/warehouse_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/warehouse_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouse_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses.hbs" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouses.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/warehouses.yml" afterPath="$PROJECT_DIR$/test/fixtures/warehouses.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/warehouses_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/warehouses_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouses_controllers.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/warehouses_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/warehouses_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/warehouses_helper_test.rb" afterPath="$PROJECT_DIR$/test/helpers/warehouses_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routes/warehouses_route.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouses_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/welcome.html.erb" afterPath="$PROJECT_DIR$/app/views/home/welcome.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/welcomes.haml" afterPath="$PROJECT_DIR$/app/views/home/welcomes.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zeprj.iml" afterPath="$PROJECT_DIR$/.idea/zeprj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/zeprj.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/zeprj.js.coffee" />
-      <change type="MOVED" beforePath="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee.erb" />
+      <change type="MOVED" beforePath="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\app.coffee.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" />
     </list>
     <ignored path="zeprj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -534,7 +28,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1400814693693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
+    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1400918433160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -547,34 +41,24 @@
     <favorites_list name="zeprj" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.9">
+    <splitter split-orientation="horizontal" split-proportion="0.5820413">
       <split-first>
         <leaf>
-          <file leaf-file-name="metro_controller.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee">
+          <file leaf-file-name="imports_controller.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/imports_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-                  <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
+                  <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="theme_default.css.scss" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
+          <file leaf-file-name="orders_controller.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.43890274" vertical-offset="39" max-vertical-offset="867">
-                  <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="metro_view.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1207">
-                  <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
+                <state vertical-scroll-proportion="0.8490128" vertical-offset="2652" max-vertical-offset="3536">
+                  <caret line="199" column="48" selection-start-line="199" selection-start-column="48" selection-end-line="199" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -584,31 +68,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="inventory_controller.coffee" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
+          <file leaf-file-name="20140411100003_initialize_database.rb" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
-                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="inventory_view.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
-                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="commons.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="680">
-                  <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.62020904" vertical-offset="8782" max-vertical-offset="9656">
+                  <caret line="548" column="40" selection-start-line="548" selection-start-column="40" selection-end-line="548" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -633,16 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/emptyTemporaryProduct.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/emptyProductSummaries.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualVertical.jst.eco" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/active_model_serializer.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/entities/account.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/libs/skyer.coffee" />
         <option value="$PROJECT_DIR$/app/serializers/account_serializer.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/libs/sky.coffee" />
@@ -670,20 +124,30 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.erb.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/app.js.erb.coffee" />
-        <option value="$PROJECT_DIR$/app/views/home/welcomes.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/copyright.jst.eco" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/copyright.jst.eco" />
+        <option value="C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/runtimes.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/home/welcomes.haml" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee" />
+        <option value="$PROJECT_DIR$/config/boot.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/home.jst.eco" />
+        <option value="$PROJECT_DIR$/app/models/metro_summary.rb" />
+        <option value="$PROJECT_DIR$/app/models/account.rb" />
+        <option value="$PROJECT_DIR$/app/models/branch.rb" />
+        <option value="$PROJECT_DIR$/app/models/warehouse.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/imports_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" />
       </list>
     </option>
   </component>
@@ -786,7 +250,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -815,11 +278,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -837,25 +328,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -873,211 +346,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1085,22 +361,22 @@
     <property name="recentsLimit" value="5" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.4369748" />
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistory" value="system&#10;applicss&#10;gem&#10;productSum&#10;routes&#10;account&#10;merchant_account&#10;gemfile&#10;init&#10;routes.rb&#10;routs&#10;routes.r&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;application&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="applica&#9;FILE&#9;file://E:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;gem&#9;FILE&#9;file://E:/softwareProjects/zeprj/Gemfile&#10;application&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;app&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;applicati&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;system&#9;null&#9;null&#10;gemfile&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;warehousecontroller&#9;null&#9;null&#10;environ&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;routes&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;applicationrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/application.rb&#10;environmentrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;ge&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;warehouse&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/controllers/warehouses_controllers.js.coffee&#10;index.html.erb&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/views/accounts/index.html.erb&#10;route&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;gemf&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile" />
+    <property name="SearchEverywhereHistoryKey" value="applica&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;gem&#9;FILE&#9;file://E:/softwareProjects/zeprj/Gemfile&#10;application&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;app&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;applicati&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;system&#9;null&#9;null&#10;gemfile&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;warehousecontroller&#9;null&#9;null&#10;environ&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;routes&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;applicationrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/application.rb&#10;environmentrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;ge&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;warehouse&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/controllers/warehouses_controllers.js.coffee&#10;index.html.erb&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/views/accounts/index.html.erb&#10;route&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;gemf&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\softwareProjects\zeprj\app\models" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\libraries" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates\layouts" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\apps\warehouses\sale" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates\metro" />
-      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates\layouts" />
@@ -1361,46 +637,25 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270349" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85755813" sideWeight="0.78753996" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.094736844" sideWeight="0.78753996" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23482428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17571884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.690407" sideWeight="0.2980614" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47473684" sideWeight="0.70113087" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28105262" sideWeight="0.29818955" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05263158" sideWeight="0.701278" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4113372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994187" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5821053" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6810526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18210863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1438,205 +693,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dualHorizontal.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09947644" vertical-offset="0" max-vertical-offset="191">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/backtrace_silencers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/inflections.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/mime_types.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/session_store.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/active_model_serializer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16450216" vertical-offset="0" max-vertical-offset="462">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/product_summaries_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037698414" vertical-offset="38" max-vertical-offset="2432">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25725338" vertical-offset="0" max-vertical-offset="517">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/accounts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08096591" vertical-offset="114" max-vertical-offset="1976">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.babysitter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5616438" vertical-offset="912" max-vertical-offset="3135">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3243243" vertical-offset="18808" max-vertical-offset="30666">
-          <caret line="1000" column="19" selection-start-line="1000" selection-start-column="9" selection-end-line="1000" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/serializers/account_serializer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10815939" vertical-offset="0" max-vertical-offset="527">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/serializers/merchant_warehouse_product_serializer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10142349" vertical-offset="0" max-vertical-offset="562">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/accountsView.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="307">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22983871" vertical-offset="722" max-vertical-offset="2071">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/entities/account.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3495671" vertical-offset="0" max-vertical-offset="924">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/sky.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.791438" vertical-offset="153" max-vertical-offset="1064">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/entities/warehouse.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16450216" vertical-offset="0" max-vertical-offset="924">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/warehouses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15692641" vertical-offset="1204" max-vertical-offset="2128">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/option.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="173">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationWarehouse.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11819596" vertical-offset="0" max-vertical-offset="643">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationMerchantAccount.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="643">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigationAccount.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02954899" vertical-offset="0" max-vertical-offset="643">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/dummer.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="545">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15405406" vertical-offset="0" max-vertical-offset="370">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/systemjs.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2108183" vertical-offset="0" max-vertical-offset="721">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="580">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/topNavigation.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030520646" vertical-offset="0" max-vertical-offset="557">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/layouts/innerNavigation.jst.eco">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05862069" vertical-offset="0" max-vertical-offset="580">
@@ -1651,14 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3628049" vertical-offset="0" max-vertical-offset="656">
@@ -1667,20 +715,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/navigation.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21621622" vertical-offset="0" max-vertical-offset="629">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="680">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.21621622" vertical-offset="0" max-vertical-offset="629">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1705,32 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4338747" vertical-offset="0" max-vertical-offset="935">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="901">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5254545" vertical-offset="0" max-vertical-offset="782">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1741,38 +759,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27419356" vertical-offset="0" max-vertical-offset="558">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/welcomes.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03119266" vertical-offset="0" max-vertical-offset="545">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/viewmodels/metro/commons.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6343874" vertical-offset="3997" max-vertical-offset="7973">
-          <caret line="254" column="31" selection-start-line="254" selection-start-column="31" selection-end-line="254" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/copyright.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/home.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.522604" vertical-offset="0" max-vertical-offset="2057">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="680">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1780,15 +784,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
           <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-7.6538463" vertical-offset="39" max-vertical-offset="867">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1796,14 +798,275 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/accountsView.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="772">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/external_runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3587">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/disabled_runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/module.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/johnson_runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/ruby_racer_runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/ruby_rhino_runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/encoding.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcome.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="772">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.2696757" vertical-offset="510" max-vertical-offset="7956">
+          <caret line="247" column="18" selection-start-line="247" selection-start-column="18" selection-end-line="247" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/runtimes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62554115" vertical-offset="51" max-vertical-offset="1700">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/execjs-2.0.2/lib/execjs/runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24567099" vertical-offset="113" max-vertical-offset="1037">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/copyright.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <caret line="0" column="54" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="1275">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcomes.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43890274" vertical-offset="39" max-vertical-offset="867">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="374">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/store.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="642">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055194806" vertical-offset="0" max-vertical-offset="924">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/templates/metro/home.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/metro_summary.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.056478404" vertical-offset="0" max-vertical-offset="903">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/metro_summaries_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/branches_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6566999" vertical-offset="593" max-vertical-offset="1496">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/warehouses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/account.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/branch.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/import.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="853">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/warehouse.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/imports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/accounts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.23340961" vertical-offset="459" max-vertical-offset="1768">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62020904" vertical-offset="8782" max-vertical-offset="9656">
+          <caret line="548" column="40" selection-start-line="548" selection-start-column="40" selection-end-line="548" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8490128" vertical-offset="2652" max-vertical-offset="3536">
+          <caret line="199" column="48" selection-start-line="199" selection-start-column="48" selection-end-line="199" selection-end-column="48" />
           <folding />
         </state>
       </provider>

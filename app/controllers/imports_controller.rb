@@ -42,6 +42,7 @@ class ImportsController < MerchantApplicationController
         if @import.export==nil
         @import.save
           Product.transaction do
+            current_metro_summary = MetroSummary.find_by_warehouse_id(@import.warehouse_id)
             TempProduct.where(:warehouse_id => @import.warehouse_id,
                               :merchant_account_id => current_merchant_account.id).each do |temp_product|
               new_products=[
@@ -61,9 +62,14 @@ class ImportsController < MerchantApplicationController
               @new=ProductSummary.find_by_product_code(temp_product.product_code)
               @new.update!(:quality=>(@new.quality + temp_product.import_quality))
 
+              #Cộng số lượng cho metro_summary theo mỗi sản phẩm nhập vào kho
+              current_metro_summary.product_count += temp_product.import_quality
+              current_metro_summary.stock_count += temp_product.import_quality
               #xoa product trong bang tam TempProduct
               temp_product.destroy
+
             end
+            current_metro_summary.save()
           end
           # save Import với chuyển hàng từ kho qua kho với Export_id có hay ko
         elsif Export.find_by_id(@import.export) != nil

@@ -282,18 +282,11 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "updated_at"
   end
 
-  create_table "merchant_account_permissions", force: true do |t|
-    t.integer  "merchant_account_id"
-    t.integer  "permission_id"
-    t.boolean  "active",              default: true
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "merchant_account_roles", force: true do |t|
     t.integer  "merchant_account_id"
     t.integer  "role_id"
     t.text     "permission_text"
+    t.text     "warehouse_text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -313,6 +306,23 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.string   "name",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "metro_summaries", force: true do |t|
+    t.integer "warehouse_id"
+    t.integer "product_count",                default: 0
+    t.integer "stock_count",                  default: 0
+    t.integer "customer_count",               default: 0
+    t.integer "staff_count",                  default: 0
+    t.integer "sale_count",                   default: 0
+    t.integer "sale_count_day",               default: 0
+    t.integer "sale_count_month",             default: 0
+    t.integer "return_count",                 default: 0
+    t.integer "return_count_day",             default: 0
+    t.integer "return_count_month",           default: 0
+    t.integer "revenue",            limit: 8, default: 0
+    t.integer "revenue_day",        limit: 8, default: 0
+    t.integer "revenue_month",      limit: 8, default: 0
   end
 
   create_table "modules", force: true do |t|
@@ -429,7 +439,13 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   create_table "role_permissions", force: true do |t|
     t.integer  "role_id"
     t.integer  "permission_id"
-    t.boolean  "active",        default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "role_warehouse", force: true do |t|
+    t.integer  "role_id"
+    t.integer  "warehouse_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
