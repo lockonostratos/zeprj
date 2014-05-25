@@ -26,6 +26,7 @@ Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
     navigateTo: (appName)->
       Zeprj.navigate 'warehouse/' + appName
       ThisApp[appName].Controller.renderInto ThisApp.layout.content
+      Zeprj.currentApp = ThisApp[appName]
       Zeprj.MetroApp.currentApp ThisApp[appName].Caption
 
     navigateNext: ->

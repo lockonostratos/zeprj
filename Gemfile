@@ -41,10 +41,6 @@ gem 'rake', '10.3.1'
 gem 'simple_form'
 gem 'foundation-rails'
 
-gem 'ember-rails'
-gem 'ember-source', '1.4.0'
-gem 'handlebars-source'
-
 gem 'compass-rails'
 gem 'font-awesome-sass'
 

@@ -1,0 +1,6 @@
+<div id='entity-editor' class='row'>
+  <input id='sky-editor' type='text'></input>
+</div>
+<div class='row'>
+  <ul class='tile-container'></ul>
+</div>
