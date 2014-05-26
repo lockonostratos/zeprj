@@ -33,7 +33,6 @@ class BranchesController < MerchantApplicationController
   # POST /branches.json
   def create
     @branch = Branch.new(branch_params)
-
     respond_to do |format|
       if @branch.save
         format.html { redirect_to @branch, notice: 'Branch was successfully created.' }

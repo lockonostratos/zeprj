@@ -47,6 +47,7 @@ class AccountsController < ApplicationController
     @account.password ||= params[:password]
     @account.account_type = 1 #1 tức là Merchant, sẽ chuyển thành enum sau
     @account.password_confirmation = @account.password
+    @account.parent_id = current_account.id
 
     respond_to do |format|
       if @account.save

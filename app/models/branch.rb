@@ -5,14 +5,15 @@ class Branch < ActiveRecord::Base
 
   belongs_to :merchant
 
-  after_create :create_branch
+  after_create :create_warehouse
   before_destroy :destroy_branch
 
   private
-  def create_branch
+  def create_warehouse
     if(Merchant.find(self.merchant_id))
     end
-    current_warehouse = Warehouse.create!({branch_id:self.id, name:self.name})
+    #Tao Warehouse sau khi tao Branch
+    Warehouse.create!({branch_id:self.id, name:self.name})
   end
 
   def destroy_branch

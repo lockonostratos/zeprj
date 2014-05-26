@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Merchant</th>
+      <th>Merchant_account</th>
       <th>Name</th>
       <th>Description</th>
       <th></th>
@@ -16,10 +17,12 @@
     <% @areas.each do |area| %>
       <tr>
         <td><%= area.merchant_id %></td>
+        <td><%= area.merchant_account_id %></td>
         <td><%= area.name %></td>
         <td><%= area.description %></td>
         <td><%= link_to 'Show', area %></td>
         <td><%= link_to 'Edit', edit_area_path(area) %></td>
+        <td><%= link_to 'Custommer', areas_showAllCustomers_path(area) %></td>
         <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

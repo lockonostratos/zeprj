@@ -28,6 +28,7 @@ class CustomersController < MerchantApplicationController
 
     respond_to do |format|
       if @customer.save
+
         format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
         format.json { render action: 'show', status: :created, location: @customer }
       else

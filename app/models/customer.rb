@@ -1,4 +1,5 @@
 class Customer < ActiveRecord::Base
+
   has_many :orders
   has_many :mackay_profiles
   has_many :mackay_personals, :through => :mackay_profiles
