@@ -1,8 +1,8 @@
 Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
-  class ThisApp.temporaryProductView extends Marionette.ItemView
+  class ThisApp.TemporaryProductView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/temporaryProduct']
 
-  class ThisApp.productSummaryView extends Marionette.ItemView
+  class ThisApp.ProductSummaryView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/productSummary']
     className: 'product-summary-tile'
     tagName: 'li'
@@ -11,32 +11,37 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
-  class ThisApp.emptyTemporaryProductsView extends Marionette.ItemView
+  class ThisApp.EmptyTemporaryProductsView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/emptyTemporaryProduct']
 
-  class ThisApp.emptyProductSummariesView extends Marionette.ItemView
+  class ThisApp.EmptyProductSummariesView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/emptyProductSummaries']
 
-  class ThisApp.temporaryProductsView extends Marionette.CollectionView
-    itemView: ThisApp.temporaryProductView
-    emptyView: ThisApp.emptyTemporaryProductsView
+  class ThisApp.TemporaryProductsView extends Marionette.CollectionView
+    itemView: ThisApp.TemporaryProductView
+    emptyView: ThisApp.EmptyTemporaryProductsView
 
-  class ThisApp.productSummariesView extends Marionette.CompositeView
+  class ThisApp.ProductSummariesView extends Marionette.CompositeView
     template: JST['backbone/templates/warehouse/import/productSummaries']
-    itemView: ThisApp.productSummaryView
+    itemView: ThisApp.ProductSummaryView
     itemViewContainer: ".tile-container",
-    emptyView: ThisApp.emptyProductSummariesView
-    ui:
-      skyEditor: '#sky-editor'
+    emptyView: ThisApp.EmptyProductSummariesView
 
     initialize: ->
-      @bindUIElements()
       @on 'itemview:clicked', (e, model, attribute) ->
-        @trigger 'item:click', model, attribute
-        $('#sky-editor').val(model.get attribute)
-        $('#sky-editor').attr('attr', attribute)
-        Zeprj.log @skyEditor
+        @trigger 'item:click', e, model, attribute
     events:
-      'keydown #sky-editor': 'editAction'
+      'keyup #sky-editor': 'editAction'
+      'keydown #sky-editor': 'keydownAction'
+      'click #sky-new': 'createAction'
     editAction: (e) ->
       ThisApp.currentModel.set($(e.currentTarget).attr('attr'), $(e.currentTarget).val())
+    keydownAction: (e)->
+      if e.keyCode == 9
+        e.preventDefault()
+        @trigger 'editor:tab', e
+      if $(e.currentTarget).attr('editor') is 'number'
+        Zeprj.log 'should be number men!'
+    createAction: ->
+      @collection.add(new Zeprj.Entities.ProductSummary)
+

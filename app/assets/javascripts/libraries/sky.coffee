@@ -45,7 +45,7 @@ class Sky.SelectionControl extends Marionette.ItemView
       option = "<option value='" + model.attributes[key] + "'>" + model.attributes[val] + "<\/option>"
       el.append option
 
-#Structural classes!
+#Structural classes! -------------------------------------------------------------->
 Sky.moduleKeywords = ['included', 'extended']
 
 class Sky.MultiExtensible
@@ -80,5 +80,37 @@ class Sky.b extends Sky.MultiExtensible
     Sky.a::logger.call @
     Sky.c::printer.call @
 
+#Static helpers! -------------------------------------------------------------->
+class Sky.Helpers
+  @getAttributesArray: (obj)->
+    result = []
+    for key of obj
+      result.push key
+    result
 
 
+#Sky editor! -------------------------------------------------------------->
+class Sky.Editor
+  @getAttributesArray: (obj)->
+    result = []
+    for key of obj
+      result.push key
+    result
+
+class Sky.Editor.RenderOption
+  constructor: (@editable = true, @type='text' ) ->
+
+class Sky.Editor.EditOptions
+  attributes: []
+  constructor: (@options) ->
+    for key of options
+      @attributes.push key if options[key]['editable']
+  nextKeyOf: (attribute) ->
+    current = @attributes.indexOf attribute
+    if current >= 0 and current < @attributes.length
+      @currentKey = @attributes[if current == @attributes.length - 1 then 0 else current + 1]
+  previousKeyOf: (attribute) ->
+    current = @attributes.indexOf attribute
+    if current >= 0 and current < @attributes.length
+      @currentKey = @attributes[if current == 0 then @attributes.length - 1 else current - 1]
+  optionOf: (key) -> @options[key]
