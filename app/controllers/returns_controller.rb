@@ -1,4 +1,4 @@
-class ReturnsController < ApplicationController
+class ReturnsController < MerchantApplicationController
   before_action :set_return, only: [:show, :edit, :update, :destroy]
 
   # GET /returns
@@ -61,63 +61,21 @@ class ReturnsController < ApplicationController
     @return.submited = false
     @return.save()
     #4 Tạo phiếu chi tiết trả hàng, cập nhật số lượng trả hàng trong bảng OrderDetail --------------------------------->
-    # Tạo phiếu trả hàng chi tiết sản phẩm trả hàng
-    #TODO xác nhận trả hàng, kiểm tra ID hàng đổi, số lượng phù hay ko
-    old_products.each do |product|
-      # if product.type_return == true
-      #   ReturnDetail.create(
-      #       :return_id=>@return.id,
-      #       :return_product_id=>product.product_id,
-      #       :return_quality=>return_quality,
-      #       :type_return=>false, # Giá trị true hay false là nhận từ return_details
-      #       :product_id=>nil,
-      #       :quality=>nil,
-      #       :price=>nil
-      #   )
-      # elsif data_validation_update_return (product) == true
-      ##TODO cần xử lý các biến co chính xác
-      #   ReturnDetail.create(
-      #       :return_id=>@return.id,
-      #       :return_product_id=>product.product_id,
-      #       :return_quality=>return_quality,
-      #       :type_return=>false, # Giá trị true hay false là nhận từ return_details
-      #       :product_id=>nil,
-      #       :quality=>nil,
-      #       :price=>nil
-      #   )
-      # else
-      #   flash[:notice] = 'Có lổi trong quá trình trả sản phẩm'
-      #   redirect_to :action => :new
-      # end
-      #
+    ReturnDetail.create(
+        :return_id=>@return.id,
+        :return_product_id=>product.product_id,
+        :return_quality=>return_quality,
+        :type_return=>false, # Giá trị true hay false là nhận từ return_details
+        :product_id=>nil,
+        :quality=>nil,
+        :price=>nil
+    )
+    #TODO coi lại cập nhật này trong Phần Quản lý
+    # Cập nhật số lượng trả hàng trong vào phếu OrderDetail
+    order = old_order.find_by (product_id:product.product_id)
+    order.return_quality += return_quality
+    order.save()
 
-      ReturnDetail.create(
-          :return_id=>@return.id,
-          :return_product_id=>product.product_id,
-          :return_quality=>return_quality,
-          :type_return=>false, # Giá trị true hay false là nhận từ return_details
-          :product_id=>nil,
-          :quality=>nil,
-          :price=>nil
-      )
-      #TODO coi lại cập nhật này trong Phần Quản lý
-      # Cập nhật số lượng trả hàng trong vào phếu OrderDetail
-      order = old_order.find_by product_id:product.product_id
-      order.return_quality += return_quality
-      order.save()
-    end
-
-
-
-    # respond_to do |format|
-    #   if @return.save
-    #      format.html { redirect_to @return, notice: 'Return was successfully created.' }
-    #      format.json { render action: 'show', status: :created, location: @return }
-    #   else
-    #      format.html { render action: 'new' }
-    #      format.json { render json: @return.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
 
@@ -125,15 +83,6 @@ class ReturnsController < ApplicationController
   # PATCH/PUT /returns/1
   # PATCH/PUT /returns/1.json
   def update
-    #respond_to do |format|
-    #  if @return.update(return_params)
-    #    format.html { redirect_to @return, notice: 'Return was successfully updated.' }
-    #    format.json { head :no_content }
-    #  else
-    #    format.html { render action: 'edit' }
-    #    format.json { render json: @return.errors, status: :unprocessable_entity }
-    #  end
-    #end
 
     #Nhận thông tin
     # # @return = Return.new(params[:order])
@@ -142,71 +91,28 @@ class ReturnsController < ApplicationController
     #TODO Cập nhật phiếu trả hàng từ quản lý
     #1 Kiểm tra thông tin nhận--------------------------------->
       update_return = Return.new(return_params)
-      old_return_detail = ReturnDetail.find_by_return_id(return_id:update_return.id)#giả lập dữ liệu
-    #2 Kiểm tra ID của phiếu trả hàng
+      old_return_detail = ReturnDetail.where(return_id:update_return.id)#giả lập dữ liệu
+    #2 Kiểm tra permission
+    if check_warehouse_permission(Order.find_by_id(update_return.order_id).warehouse_id) == true
+    #3 Kiểm tra ID của phiếu trả hàng
       if old_return_detail == nil then end
-    #3 Nếu chưa có xác nhận của Quản Lý (submited==false), báo lổi
+    #4 Nếu chưa có xác nhận của Quản Lý (submited==false), báo lổi
       if update_return.submited == false
         flash[:notice] = 'Loi sai ID'
         redirect_to :action => :edit , :location => @return
       end
+    #5 Kiểm tra dữ liệu ReturnDetail.ID có hợp lệ hay ko, nếu ko đưa ra thông báo
+     if old_return_detail.pluck(:id).sort {|a,b| a <=> b} == old_return_detail.pluck(:id).sort {|a,b| a <=> b}
 
-    #4 Xử lý
+     end
 
-    #4 Kiểm tra
-      # if @return.update(return_params)
-      #       if(@return.submited==true)
-      #         #load thông tin chi tiet tra hang và cap nhat lại
-      #         ReturnDetail.where(:return_id => @return.id).each do |returns|
-      #           #doi hang
-      #           if returns.type_return==false
-      #             #tim hang tra
-      #             pro1= Product.find(returns.return_product_id)
-      #             #tim hang doi
-      #             pro2= Product.find(returns.product_id)
-      #             #kiem tra so luong tien tra
-      #             if (returns.return_product_id != returns.product_id) and
-      #                 ((pro1.import_price * returns.return_product_id) >= (pro2.import_price * returns.return_quality))
-      #               #cap nhat hang tra
-      #               pro1.update(
-      #                   :available_quality=>(pro1.available_quality + returns.return_quality),
-      #                   :instock_quality=>(pro1.instock_quality + returns.return_quality)
-      #               )
-      #               # cập nhật ProductSummary
-      #               @pro_sum1 = ProductSummary.where(:product_code => pro1.product_code, :skull_id => pro1.skull_id).first(1)
-      #               @pro_sum1.update(:quality=>(@pro_sum1.quality + returns.quality))
-      #
-      #               #cap nhat hang doi
-      #               pro2.update(
-      #                   :available_quality=>(pro2.available_quality - returns.quality),
-      #                   :instock_quality=>(pro2.instock_quality - returns.quality)
-      #               )
-      #               # cập nhật ProductSummary
-      #               @pro_sum2 = ProductSummary.where(:product_code => pro2.product_code, :skull_id => pro2.skull_id).first(1)
-      #               @pro_sum2.update(:quality=>(@pro_sum2.quality - returns.quality))
-      #
-      #               #cap nhat chi tiet tra hang
-      #               returns.price = ((pro1.import_price * returns.return_product_id) - (pro2.import_price * returns.return_quality))
-      #               ReturnDetail.update(returns)
-      #             end
-      #
-      #             #tra tien
-      #           else
-      #             #tim hang tra
-      #             pro1= Product.find(returns.return_product_id)
-      #             #cap nhat hang tra
-      #             pro1.update(
-      #                 :available_quality => (pro1.available_quality + returns.return_quality),
-      #                 :instock_quality => (pro1.instock_quality + returns.return_quality)
-      #             )
-      #       #cap nhat chi tiet tra hang
-      #       returns.price = (pro1.import_price * returns.return_product_id)
-      #       ReturnDetail.update(returns)
-      #     end
-      #   end
-      # end
-      # end
 
+
+
+    else
+      flash[:notice] = 'Ko Co Quyen Truy Cap'
+      redirect_to :action => :new
+    end
   end
 
   # DELETE /returns/1

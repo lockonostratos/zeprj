@@ -32,16 +32,6 @@ class OrdersController < MerchantApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    # @order = Order.new(product_params)
-    # respond_to do |format|
-    #   if @order.save
-    #     format.html { redirect_to @current_order, notice: 'Order was successfully created.' }
-    #     format.json { render action: 'show', status: :created, location: @current_order }
-    #   else
-    #     format.html { render action: 'new' }
-    #     format.json { render json: @current_order.errors, status: :unprocessable_entity }
-    #   end
-    # end
 
     #TODO: Giả lập dữ liệu nhận. Xóa mấy cái này khi viết xong
     selling_stocks = ProductSummary.find(8,9) #id, soluong....
@@ -165,6 +155,9 @@ class OrdersController < MerchantApplicationController
     def subtract_quality_on_sale (stocking_items, selling_item, current_order, dump_quality, is_direct_sale = true)
     transactioned_quality = 0
 
+    #Tìm Bang Metro_Summary
+    metro_summary = MetroSummary.find_by_warehouse_id(@current_order.warehouse_id)
+
     stocking_items.each do |stock|
       #số lượng còn phải lấy = là số lượng tổng - số lượng đã lấy
       required_quality = dump_quality - transactioned_quality
@@ -186,6 +179,11 @@ class OrdersController < MerchantApplicationController
       stock.instock_quality -= takken_quality if is_direct_sale
       stock.save()
 
+      #Cong Revenue vào bảng MetroSummary
+      metro_summary.revenue += (takken_quality * stock.import_price)
+      metro_summary.revenue_day += (takken_quality * stock.import_price)
+      metro_summary.revenue_month += (takken_quality * stock.import_price)
+
       #Cộng dồn số lượng của đợt trước (nếu có) với số lượng vừa lấy khỏi kho!
       transactioned_quality += takken_quality
 
@@ -196,6 +194,14 @@ class OrdersController < MerchantApplicationController
     #Cập nhật trừ sản phẩm vào bảng ProductSummary
     selling_item.quality -= dump_quality
     selling_item.save
+
+    #Chỉ tru so luong khi is_direct_sale = true
+    metro_summary.stock_count -= dump_quality if is_direct_sale
+    metro_summary.sale_count += dump_quality if is_direct_sale
+    metro_summary.sale_count_day += dump_quality if is_direct_sale
+    metro_summary.sale_count_month += dump_quality if is_direct_sale
+    #Cập nhật vào Bảng MetroSummary
+    metro_summary.save()
 
     return transactioned_quality == dump_quality
   end
