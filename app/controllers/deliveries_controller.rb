@@ -54,11 +54,26 @@ class DeliveriesController < ApplicationController
         format.json { head :no_content }
         #TODO cap nhat neu Delivery ok
         if @delivery.success==true
-          @order = OrderDetail.find_by_order_id(@delivery.order_id)
-          @order.each do |order|
+          order = Order.find_by_delivery(@delivery.order_id)
+          #Cap nhat stock_count, sale_count, sale_count_day, sale_count_month vao MetroSummary
+          metro_summary = MetroSummary.find_by_warehouse_id(order.warehouse_id)
+
+          @order_detail = OrderDetail.where(order_id:@delivery.order_id)
+          @order_detail.each do |order|
            @product = Product.find(order.product_id)
            @product.save(:instock_quality=>(@product.instock_quality - order.quality))
+           #Cong san pham vao bang MetroSummary
+           metro_summary.stock_count -= order.quality
+           metro_summary.sale_count += order.quality
+           metro_summary.sale_count_day += order.quality
+           metro_summary.sale_count_month += order.quality
+           metro_summary.revenue +=(order.quality * order.price)
+           metro_summary.revenue_day +=(order.quality * order.price)
+           metro_summary.revenue_month +=(order.quality * order.price)
           end
+          # Cap Nhat Bang MetroSummary
+          metro_summary.save()
+          #Cap nhat order
           Order.find(@delivery.order_id).save(:status=>2)
         else# TODO Xử lý hủy đơn đặt hàng
 

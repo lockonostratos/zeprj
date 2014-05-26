@@ -12,4 +12,18 @@ class Customer < ActiveRecord::Base
   belongs_to :merchant
   belongs_to :merchant_account
   belongs_to :area
+
+  after_create :created_mertro_summary_add_customer
+
+  private
+  def created_mertro_summary_add_customer
+    brach = Branch.where(merchant_id: self.merchant_id)
+    warehouse = Warehouse.where(branch_id:brach.pluck(:id))
+    metro_summary = MetroSummary.where(warehouse_id: warehouse.pluck(:id))
+    metro_summary.each do |metro_summary|
+      metro_summary.customer_count += 1
+      metro_summary.save()
+    end
+  end
+
 end

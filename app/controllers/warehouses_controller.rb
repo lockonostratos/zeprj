@@ -91,6 +91,7 @@ class WarehousesController < MerchantApplicationController
   def available
     check_warehouse_permission(params[:id])
     render json: @warehouses
+
   end
   
   private

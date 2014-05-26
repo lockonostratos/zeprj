@@ -13,17 +13,22 @@ class Warehouse < ActiveRecord::Base
 
   before_create :on_create_warehouse
   before_destroy :destroy_warehouse
+  after_create :created_mertro_summary
 
   private
   def on_create_warehouse
   #  Bat loi khi Brach ko co
     if (Branch.find(self.branch_id)==nil)
     end
-
-    metro_summary = MetroSummary.new(warehouses_id:self.id)
-    metro_summary.save()
-
   end
+
+  #Tạo MetroSummary sao khi tạo Waregouse
+  def created_mertro_summary
+    metro_summary = MetroSummary.new
+    metro_summary.warehouse_id=self.id
+    metro_summary.save()
+  end
+
 
   def destroy_warehouse
     #Bat loi co skull Product va ProductSummary

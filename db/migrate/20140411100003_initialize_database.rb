@@ -533,6 +533,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :product_id #id product hang doi
       t.integer :quality #so luong hang doi
       t.decimal :price, :default=>0 #giá tiền sản phẩm
+      t.boolean :submited, :default =>false #xác nhận
 
 
 
@@ -544,17 +545,17 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :warehouse
       t.integer :product_count, :default=>0 #Done
       t.integer :stock_count, :default=>0 #Done
-      t.integer :customer_count, :default=>0
-      t.integer :staff_count, :default=>0
-      t.integer :sale_count, :default=>0
-      t.integer :sale_count_day, :default=>0
-      t.integer :sale_count_month, :default=>0
-      t.integer :return_count, :default=>0
-      t.integer :return_count_day, :default=>0
-      t.integer :return_count_month, :default=>0
-      t.integer :revenue ,:limit => 8, :default=>0
-      t.integer :revenue_day ,:limit => 8, :default=>0
-      t.integer :revenue_month ,:limit => 8, :default=>0
+      t.integer :customer_count, :default=>0 #Done
+      t.integer :staff_count, :default=>0 #Wating
+      t.integer :sale_count, :default=>0 #Done
+      t.integer :sale_count_day, :default=>0 #Done
+      t.integer :sale_count_month, :default=>0 #Done
+      t.integer :return_count, :default=>0 #Wating
+      t.integer :return_count_day, :default=>0 #Wating
+      t.integer :return_count_month, :default=>0 #Wating
+      t.integer :revenue ,:limit => 8, :default=>0 #Done
+      t.integer :revenue_day ,:limit => 8, :default=>0 #Done
+      t.integer :revenue_month ,:limit => 8, :default=>0 #Done
     end
 
 
