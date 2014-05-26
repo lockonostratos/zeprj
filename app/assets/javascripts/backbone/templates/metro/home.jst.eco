@@ -8,14 +8,14 @@
     </div>
 
     <div class='lime tile'>
-        <span class='top middle caption'><h4>256 <tiny6>fan cuồng!</tiny6></h4></span>
+        <span class='top middle caption'><h4>256</h4></span>
         <span class='center middle caption'>
         <span class='table'><i class="fa fa-heart fa-3x"></i></span></span>
         <span class='bottom middle caption'><h8>KHÁCH HÀNG</h8></span>
     </div>
 
     <div class='red tile'>
-        <span class='top middle caption'><h4>128 <tiny6>chuyên gia!</tiny6></h4></span>
+        <span class='top middle caption'><h4>128</h4></span>
         <span class='center middle caption'>
         <span class='table'><i class="fa fa-user-md fa-3x"></i></span></span>
         <span class='bottom middle caption'><h8>NHÂN VIÊN</h8></span>

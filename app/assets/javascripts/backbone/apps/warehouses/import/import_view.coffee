@@ -1,8 +1,8 @@
 Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
-  ThisApp.temporaryProductView = Marionette.ItemView.extend
+  class ThisApp.temporaryProductView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/temporaryProduct']
 
-  ThisApp.productSummaryView = Marionette.ItemView.extend
+  class ThisApp.productSummaryView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/productSummary']
     className: 'product-summary-tile'
     tagName: 'li'
@@ -11,17 +11,17 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
-  ThisApp.emptyTemporaryProductsView = Marionette.ItemView.extend
+  class ThisApp.emptyTemporaryProductsView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/emptyTemporaryProduct']
 
-  ThisApp.emptyProductSummariesView = Marionette.ItemView.extend
+  class ThisApp.emptyProductSummariesView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/emptyProductSummaries']
 
-  ThisApp.temporaryProductsView = Marionette.CollectionView.extend
+  class ThisApp.temporaryProductsView extends Marionette.CollectionView
     itemView: ThisApp.temporaryProductView
     emptyView: ThisApp.emptyTemporaryProductsView
 
-  ThisApp.productSummariesView = Marionette.CompositeView.extend
+  class ThisApp.productSummariesView extends Marionette.CompositeView
     template: JST['backbone/templates/warehouse/import/productSummaries']
     itemView: ThisApp.productSummaryView
     itemViewContainer: ".tile-container",
