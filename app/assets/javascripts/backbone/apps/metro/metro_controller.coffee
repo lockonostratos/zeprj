@@ -10,6 +10,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
     renderInto: (region) ->
       region.show new MetroApp.HomeView()
+      Zeprj.currentApp = MetroApp
 
   MetroApp.addInitializer ->
     MetroApp.homeView = new MetroApp.HomeView()

@@ -138,7 +138,6 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord-deprecated_finders (v1.0.3, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.0.4, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v4.0.2, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="barber (v0.4.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.7, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.1.5, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, ruby-1.9.3-p484) [gem]" level="application" />
@@ -151,9 +150,6 @@
     <orderEntry type="library" scope="PROVIDED" name="compass-rails (v1.1.7, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eco (v1.0.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eco-source (v1.1.0.rc.1, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ember-data-source (v0.14, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ember-rails (v0.14.1, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ember-source (v1.4.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="font-awesome-sass (v4.0.3.1, ruby-1.9.3-p484) [gem]" level="application" />
@@ -161,7 +157,6 @@
     <orderEntry type="library" scope="PROVIDED" name="fssm (v0.2.10, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.5, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml-rails (v0.5.3, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="handlebars-source (v1.3.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.9, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.3, ruby-1.9.3-p484) [gem]" level="application" />

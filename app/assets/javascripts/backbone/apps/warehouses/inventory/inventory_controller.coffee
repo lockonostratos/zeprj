@@ -5,5 +5,5 @@ Zeprj.module "WarehouseApp.Inventory", (ThisApp, Zeprj, Backbone, Marionette, $,
 
 
   ThisApp.addInitializer ->
-    ThisApp.Caption = 'KIEM KHO'
+    ThisApp.Caption = 'KIỂM KHO'
     ThisApp.layout = new Zeprj.DummerLayout()

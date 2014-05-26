@@ -1,1 +1,0 @@
-#Zeprj.ApplicationController = Ember.ObjectController.extend
