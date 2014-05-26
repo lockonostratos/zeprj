@@ -1,6 +1,7 @@
 #= require libraries/underscore
 #= require libraries/backbone
 #= require libraries/backbone.marionette
+#= require libraries/backbone-ui
 #= require libraries/knockout
 #= require libraries/knockback
 #= require libraries/sky

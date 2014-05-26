@@ -12,7 +12,6 @@
 
 #= require jquery
 #= require foundation
-#= require libraries/systemjs
 #= require turbolinks
 
 
