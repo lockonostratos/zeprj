@@ -97,10 +97,35 @@ class Sky.Editor
       result.push key
     result
 
+  @onStartEditHandler: (editor, model, editOptions, attribute) ->
+    editOptions.currentModel = model
+
+    currentOption = editOptions.optionOf attribute
+    if currentOption.mask isnt null
+      editor.inputmask currentOption.mask, currentOption.maskOptions
+    else editor.inputmask 'remove'
+    editor.val (model.get attribute)
+    editor.attr 'attr', attribute
+
+  @onTabNavigationHandler: (e, editOptions) ->
+    currentAttr = $(e.currentTarget).attr('attr')
+    if e.shiftKey
+      nextAttr = editOptions.previousKeyOf currentAttr
+      $(e.currentTarget).attr('attr', nextAttr)
+      $(e.currentTarget).val(editOptions.currentModel.get(nextAttr))
+    else
+      nextAttr = editOptions.nextKeyOf currentAttr
+      $(e.currentTarget).val(editOptions.currentModel.get(nextAttr))
+      $(e.currentTarget).attr('attr', nextAttr)
+
+  @onEditingHandler: (editor, editOptions) ->
+    editOptions.currentModel.set (editor.attr 'attr'), (editor.inputmask 'unmaskedvalue')
+
 class Sky.Editor.RenderOption
-  constructor: (@editable = true, @type='text' ) ->
+  constructor: (@editable = true, @mask=null, @maskOptions={} ) ->
 
 class Sky.Editor.EditOptions
+  currentModel: null
   attributes: []
   constructor: (@options) ->
     for key of options
