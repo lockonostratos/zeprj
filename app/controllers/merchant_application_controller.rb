@@ -42,5 +42,6 @@ class MerchantApplicationController < ApplicationController
 
   def get_all_customers(area_id)
     @customers = Customer.where(area_id:area_id)
+    @customers
   end
 end

@@ -314,6 +314,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer "stock_count",                  default: 0
     t.integer "customer_count",               default: 0
     t.integer "staff_count",                  default: 0
+    t.integer "staff_count_branch",           default: 0
     t.integer "sale_count",                   default: 0
     t.integer "sale_count_day",               default: 0
     t.integer "sale_count_month",             default: 0
@@ -421,6 +422,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer  "product_id"
     t.integer  "quality"
     t.decimal  "price",             precision: 10, scale: 0, default: 0
+    t.boolean  "submited",                                   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

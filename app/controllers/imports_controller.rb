@@ -37,7 +37,7 @@ class ImportsController < MerchantApplicationController
     # Mặc định merchant_account_id
     @import.merchant_account_id = current_merchant_account.id
     #kiểm tra xem có quyền truy cập với warehouse_id hay ko, nếu có thì = true
-     if check_warehouse_permission(@import.warehouse_id) == true
+     # if check_warehouse_permission(@import.warehouse_id) == true
         # Nếu Export == nill, tức là nhập hàng mới, khác nil là chuyển kho
         if @import.export==nil
         @import.save
@@ -76,8 +76,18 @@ class ImportsController < MerchantApplicationController
           @import.save
         else #TODO Xử lý thông báo lỗi dữ liệu khi Export_id không tồn tại
         end
-     else #TODO Xử lý thông báo khi warehouse_id sai
-     end
+     # else #TODO Xử lý thông báo khi warehouse_id sai
+     # end
+
+    respond_to do |format|
+      if @import.save
+        format.html { redirect_to @import, notice: 'Gera account was successfully updated.'}
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @import.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
 
@@ -93,7 +103,7 @@ class ImportsController < MerchantApplicationController
   # DELETE /imports/1.json
   def destroy
     #Chỉ xóa được khi Import rỗng
-    if Product.find_by_import_id(@import.id) != nil
+    if Product.find_by_import_id(@import.id) == nil
       @import.destroy
       respond_to do |format|
         format.html { redirect_to imports_url }

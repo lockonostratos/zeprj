@@ -2,7 +2,8 @@ class AreasController < MerchantApplicationController
   before_action :set_area, only: [:show, :edit, :update, :destroy,]
 
   def showAllCustomers
-    @customer = get_all_customers(1)
+    @customer = get_all_customers(params[:id])
+    render json: @customer
   end
 
   # GET /areas

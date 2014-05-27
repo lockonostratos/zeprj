@@ -85,18 +85,18 @@ class TempProductsController < MerchantApplicationController
     skull = Skull.find_by_id_and_merchant_id(@temp_product.skull_id, current_merchant_account.merchant_id)
     provider = Provider.find_by_id_and_merchant_id(@temp_product.provider_id, current_merchant_account.merchant_id)
     errors = ''
-    if warehouse == nil || (warehouse.branch.merchant_id != current_merchant_account.merchant_id)
-      errors +='Warehouse Sai '
-    end
+    # if warehouse == nil || (warehouse.branch.merchant_id != current_merchant_account.merchant_id)
+    #   errors +='Warehouse Sai '
+    # end
     if product_code == nil
       errors +='Product_Code Sai '
     end
-    if skull == nil
-      errors +='Skull Sai '
-    end
-    if provider == nil
-      errors +='Nha Phan Phoi Sai '
-    end
+    # if skull == nil
+    #   errors +='Skull Sai '
+    # end
+    # if provider == nil
+    #   errors +='Nha Phan Phoi Sai '
+    # end
     if @temp_product.import_quality < 0
       errors +='So Luong Sai '
     end

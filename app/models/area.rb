@@ -7,6 +7,7 @@ class Area < ActiveRecord::Base
   before_save :add_area
   before_destroy :destroy_area
 
+  # after_save :save_area
   private
   def add_area
     # if (Merchant.find(self.merchant_id).id==nil || MerchantAccount.find(self.merchant_account_id).id==nil)
@@ -18,4 +19,5 @@ class Area < ActiveRecord::Base
     #   MerchantBranche.create!
     # end
   end
+
 end

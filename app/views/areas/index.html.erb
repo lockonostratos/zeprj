@@ -22,7 +22,7 @@
         <td><%= area.description %></td>
         <td><%= link_to 'Show', area %></td>
         <td><%= link_to 'Edit', edit_area_path(area) %></td>
-        <td><%= link_to 'Custommer', areas_showAllCustomers_path(area) %></td>
+        <td><%= link_to 'Custommer', areas_showAllCustomers_url  + '/' + area.id.to_param %></td>
         <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

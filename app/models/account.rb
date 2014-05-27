@@ -16,13 +16,15 @@ class Account < ActiveRecord::Base
 
   #Khởi tạo merchant
   def initialize_merchant
-    if self.parent_id ==0
+    if self.parent_id == 0
       #1. Tạo mới Merchant
       current_merchant= Merchant.create! ({name: self.email + '\'s merchant', owner_id: self.id})
+      current_merchant.save()
 
 
       #2. Tạo mới Branch *chi nhánh*, gán headquater_id của merchant thành id chi nhánh mới (mặc định)
       current_branch= Branch.create! ({merchant_id: current_merchant.id, name: self.email + '\'s headquater'})
+      current_merchant.save()
       current_merchant.headquater_id = current_branch.id
 
       #3. Tạo mới Warehouse (kho),

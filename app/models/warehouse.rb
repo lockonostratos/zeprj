@@ -24,8 +24,24 @@ class Warehouse < ActiveRecord::Base
 
   #Tạo MetroSummary sao khi tạo Waregouse
   def created_mertro_summary
+    branch = Branch.find(self.branch_id)
+    merchant = Merchant.find(branch.merchant.id)
+    branches = Branch.where(merchant_id: merchant.id)
+    merchant_accounts = MerchantAccount.where(branch_id:branches.pluck(:id))
+    merchant_account = merchant_accounts.where(branch_id:self.branch_id)
+    staff_count = 0
+    staff_count_branch = 0
+    merchant_accounts.each do |ex|
+      staff_count += 1
+    end
+    merchant_account.each do |ex|
+      staff_count_branch += 1
+    end
+
     metro_summary = MetroSummary.new
     metro_summary.warehouse_id=self.id
+    metro_summary.staff_count = staff_count
+    metro_summary.staff_count_branch = staff_count_branch
     metro_summary.save()
   end
 

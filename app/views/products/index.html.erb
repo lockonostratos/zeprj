@@ -10,6 +10,8 @@
       <th>Import</th>
       <th>Name</th>
       <th>Import Quality</th>
+      <th>available Quality</th>
+      <th>instock Quality</th>
       <th>Import Price</th>
       <th>Expire</th>
     </tr>
@@ -25,6 +27,8 @@
         <td><%= product.import_id%></td>
         <td><%= product.name %></td>
         <td><%= product.import_quality %></td>
+        <td><%= product.available_quality %></td>
+        <td><%= product.instock_quality %></td>
         <td><%= product.import_price %></td>
         <td><%= product.expire %></td>
         <td><%= link_to 'Show', product %></td>

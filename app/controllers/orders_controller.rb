@@ -34,8 +34,8 @@ class OrdersController < MerchantApplicationController
   def create
 
     #TODO: Giả lập dữ liệu nhận. Xóa mấy cái này khi viết xong
-    selling_stocks = ProductSummary.find(8,9) #id, soluong....
-    dump_quality = 20
+    @selling_stocks = ProductSummary.find(1,2,3,4) #id, soluong....
+    dump_quality = 40
     # transaction_error = false;
 
     #pseduo
@@ -52,7 +52,7 @@ class OrdersController < MerchantApplicationController
     @current_order.save
 
     #2.Kiểm tra trường hợp số lượng không đủ bán [stockSummary] -> trả về lỗi!
-    selling_check_quality_before_sale selling_stocks, dump_quality
+    selling_check_quality_before_sale @selling_stocks, dump_quality
 
     #3.Bởi vì số lượng là hợp lý, thực hiện bán hàng, trừ số lượng tồn kho:
     #   Có 2 trường hợp:
@@ -60,7 +60,7 @@ class OrdersController < MerchantApplicationController
     #     Nếu [dilivery=false] thì trừ cả 2 khả dĩ [available_quality] và thực tế [instock_quality]
     #   Bởi vì hàng bán ra thực tế nằm trong bản [stock] không phải [stockSummary] nên, phải *trừ theo đợt
     #   (ví dụ có 2 đợt nhập cùng sản phẩm - và số lượng bán vượt qua một đợt thì sẽ phải trừ cả 2 đợt để cho đủ số sản phẩm)
-    selling_stocks.each do |item|
+    @selling_stocks.each do |item|
       stocking_items = Product.where(product_code: item.product_code, skull_id: nil, warehouse_id: item.warehouse_id)
                               .where('available_quality > ?', 0)
 
@@ -68,6 +68,7 @@ class OrdersController < MerchantApplicationController
       #Nếu như không giao hàng (bán luôn lúc đó) thì trừ số lượng
       if @current_order.delivery == false
         subtract_quality_on_direct_sale stocking_items, item, @current_order, dump_quality
+        @current_order.status = 1
       else #TODO Tạo phiếu giao hàng (chưa nhận được dữ liệu)
         #Chỉ tạo phiếu hàng nếu như chức năng trừ kho được thực hiện đúng!
         Delivery.create!(
@@ -88,11 +89,15 @@ class OrdersController < MerchantApplicationController
     #4.Cập nhật hóa đơn.
     #   1.Thêm các record vào bảng [OrderDetails] với id của hóa đơn đang tạo! (tức là thêm chi tiết vào cho hóa đơn)
     #   2.Cập nhật các số liệu khác: tổng tiền, giảm giá...
-      @current_order.final_price += (item.price * dump_quality)
+      @current_order.total_price += (item.price * dump_quality)
+      @current_order.final_price = @current_order.total_price - (@current_order.deposit + @current_order.discount_cash)
     end
     @current_order.save
 
-
+    respond_to do |format|
+        format.html { redirect_to @current_order, notice: 'Export detail was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @current_order }
+    end
 
 
 
@@ -170,7 +175,7 @@ class OrdersController < MerchantApplicationController
           :order_id=> current_order.id,
           :product_id=> stock.id,
           :quality=> takken_quality,
-          :price=> stock.import_price,
+          :price=>selling_item.price,
           :discount_cash=>0
       )
 
@@ -180,9 +185,9 @@ class OrdersController < MerchantApplicationController
       stock.save()
 
       #Cong Revenue vào bảng MetroSummary
-      metro_summary.revenue += (takken_quality * stock.import_price)
-      metro_summary.revenue_day += (takken_quality * stock.import_price)
-      metro_summary.revenue_month += (takken_quality * stock.import_price)
+      metro_summary.revenue += (takken_quality * selling_item.price)
+      metro_summary.revenue_day += (takken_quality * selling_item.price)
+      metro_summary.revenue_month += (takken_quality * selling_item.price)
 
       #Cộng dồn số lượng của đợt trước (nếu có) với số lượng vừa lấy khỏi kho!
       transactioned_quality += takken_quality

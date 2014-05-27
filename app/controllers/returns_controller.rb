@@ -6,7 +6,7 @@ class ReturnsController < MerchantApplicationController
   def index
     @returns = Return.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @returns }
     end
   end
@@ -15,7 +15,7 @@ class ReturnsController < MerchantApplicationController
   # GET /returns/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @return }
     end
   end
@@ -86,51 +86,71 @@ class ReturnsController < MerchantApplicationController
     # # @return = Return.new(params[:order])
     # # @return_details = params[:return_details]
 
+    # Kiểm tra dữ liệu ReturnDetail.ID có hợp lệ hay ko, nếu ko đưa ra thông báo
+    # if old_return_detail.pluck(:id).sort {|a,b| a <=> b} == old_return_detail.pluck(:id).sort {|a,b| a <=> b}
+    #   #Kiểm tra
+    #    old_return_detail
+    # else #đưa ra thong bao loi
+    # end
+
     #TODO Cập nhật phiếu trả hàng từ quản lý
     #1 Kiểm tra thông tin nhận--------------------------------->
-      update_return = Return.new(return_params)
-      old_return_detail = ReturnDetail.where(return_id:update_return.id)#giả lập dữ liệu
+      @return.attributes = (return_params)
+      old_return_detail = ReturnDetail.where(return_id:@return.id)#giả lập dữ liệu
     #2 Kiểm tra permission
-      warehouse_id = Order.find_by_id(update_return.order_id).warehouse_id
-    if check_warehouse_permission(warehouse_id) == true
+      warehouse_id = Order.find_by_id(@return.order_id).warehouse_id
+    if true
     #3 Kiểm tra ID của phiếu trả hàng
       if old_return_detail == nil then end
     #4 Nếu chưa có xác nhận của Quản Lý (submited==false), báo lổi
-      if update_return.submited == false
+      if @return.submited == false
         flash[:notice] = 'Loi sai chua xac nhan'
         redirect_to :action => :edit , :location => @return
       end
     #5 Cập nhật phiếu return_details và cộng hàng trả vào bảng Product và ProductSummary
-      products = Product.find(old_return_detail.pluck(:return_product_id))
-      product_summaries = ProductSummary.where(product_code: product.pluck(:product_code))
+      products = Product.where(id:old_return_detail.pluck(:return_product_id))
+        a=[]
+        products.each do |pro|
+          a+=[pro.product_code]
+        end
+        a=a.uniq()
+      product_summaries = ProductSummary.where(product_code:a)
+      order_detail = OrderDetail.where(order_id:@return.order_id)
       metro_summary = MetroSummary.find_by_warehouse_id(warehouse_id)
+
       old_return_detail.each do |return_detail|
         #Cập nhật hàng trả vào Product
-        product = products.find(return_detail.return_product_id)
+        product = products.find_by(id:return_detail.return_product_id)
         product.available_quality += return_detail.return_quality
         product.instock_quality += return_detail.return_quality
-        product.save()
+
         #Cập nhật vào ProductSummary
         product_summary = product_summaries.find_by(product_code:product.product_code)
         product_summary.quality += return_detail.return_quality
         product_summary.save()
+
+        #Cập nhật vào bảng OrderSummery
+        order = order_detail.find_by(product_id:return_detail.return_product_id)
+        order.return_quality += return_detail.return_quality
+
         #Câp nhật vào bảng MetroSummary
-        metro_summary.revenue +=return_detail.return_quality
-        metro_summary.revenue_day +=return_detail.return_quality
-        metro_summary.revenue_month +=return_detail.return_quality
+        metro_summary.return_count +=return_detail.return_quality
+        metro_summary.return_count_day +=return_detail.return_quality
+        metro_summary.return_count_month +=return_detail.return_quality
+
         #Trừ tiền Revenue trong bang MetroSummary
-        metro_summary.revenue -= (return_detail.return_quality * return_detail.price)
-        metro_summary.revenue_day -= (return_detail.return_quality * return_detail.price)
-        metro_summary.revenue_month -= (return_detail.return_quality * return_detail.price)
-        #Cập nhật thông tin vào bảng MetroSummary
-        metro_summary.save()
+        metro_summary.revenue = metro_summary.revenue - (return_detail.return_quality * order.price)
+        metro_summary.revenue_day = metro_summary.revenue -  (return_detail.return_quality * order.price)
+        metro_summary.revenue_month = metro_summary.revenue -  (return_detail.return_quality * order.price)
+
+        #save du lieu trong bang Product  va OrderDetail
+        product.save()
+        order.save()
       end
-    # Kiểm tra dữ liệu ReturnDetail.ID có hợp lệ hay ko, nếu ko đưa ra thông báo
-     # if old_return_detail.pluck(:id).sort {|a,b| a <=> b} == old_return_detail.pluck(:id).sort {|a,b| a <=> b}
-     #   #Kiểm tra
-     #    old_return_detail
-     # else #đưa ra thong bao loi
-     # end
+      #Cập nhật thông tin vào bảng MetroSummary
+      metro_summary.save()
+
+      @return.save()
     else
       flash[:notice] = 'Ko Co Quyen Truy Cap'
       redirect_to :action => :new
