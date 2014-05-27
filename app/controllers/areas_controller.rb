@@ -1,5 +1,9 @@
-class AreasController < ApplicationController
-  before_action :set_area, only: [:show, :edit, :update, :destroy]
+class AreasController < MerchantApplicationController
+  before_action :set_area, only: [:show, :edit, :update, :destroy,]
+
+  def showAllCustomers
+    @customer = get_all_customers(1)
+  end
 
   # GET /areas
   # GET /areas.json
@@ -69,6 +73,6 @@ class AreasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def area_params
-      params.require(:area).permit(:merchant_id, :name, :description)
+      params.require(:area).permit(:merchant_id, :merchant_account_id, :name, :description)
     end
 end

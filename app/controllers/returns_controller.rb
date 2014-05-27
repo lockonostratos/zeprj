@@ -53,7 +53,7 @@ class ReturnsController < MerchantApplicationController
     #2 Kiểm tra, nếu order có tồn tại hay ko, Kiểm tra độ toàn vẹn dữ liệu return_detail
     # xem product_id có chính xác hay ko(kiểm tra trong bảng OrderdDetail)
     unless data_validation old_products, return_quality, old_order
-      flash[:notice] = 'Loi sai so luong san pham'
+      flash[:notice] = 'Loi sai so luong san pham ko du'
       redirect_to :action => :new
     end
 
@@ -61,20 +61,18 @@ class ReturnsController < MerchantApplicationController
     @return.submited = false
     @return.save()
     #4 Tạo phiếu chi tiết trả hàng, cập nhật số lượng trả hàng trong bảng OrderDetail --------------------------------->
-    ReturnDetail.create(
-        :return_id=>@return.id,
-        :return_product_id=>product.product_id,
-        :return_quality=>return_quality,
-        :type_return=>false, # Giá trị true hay false là nhận từ return_details
-        :product_id=>nil,
-        :quality=>nil,
-        :price=>nil
-    )
-    #TODO coi lại cập nhật này trong Phần Quản lý
-    # Cập nhật số lượng trả hàng trong vào phếu OrderDetail
-    order = old_order.find_by (product_id:product.product_id)
-    order.return_quality += return_quality
-    order.save()
+    old_products.each do |product|
+      #Tạo phiếu ReturnDetail
+      ReturnDetail.create(
+          :return_id=>@return.id,
+          :return_product_id=>product.product_id,
+          :return_quality=>return_quality,
+          :type_return=>false, # Giá trị true hay false là nhận từ return_details
+          :product_id=>nil,
+          :quality=>nil,
+          :price=>nil
+      )
+    end
 
   end
 
@@ -93,22 +91,46 @@ class ReturnsController < MerchantApplicationController
       update_return = Return.new(return_params)
       old_return_detail = ReturnDetail.where(return_id:update_return.id)#giả lập dữ liệu
     #2 Kiểm tra permission
-    if check_warehouse_permission(Order.find_by_id(update_return.order_id).warehouse_id) == true
+      warehouse_id = Order.find_by_id(update_return.order_id).warehouse_id
+    if check_warehouse_permission(warehouse_id) == true
     #3 Kiểm tra ID của phiếu trả hàng
       if old_return_detail == nil then end
     #4 Nếu chưa có xác nhận của Quản Lý (submited==false), báo lổi
       if update_return.submited == false
-        flash[:notice] = 'Loi sai ID'
+        flash[:notice] = 'Loi sai chua xac nhan'
         redirect_to :action => :edit , :location => @return
       end
-    #5 Kiểm tra dữ liệu ReturnDetail.ID có hợp lệ hay ko, nếu ko đưa ra thông báo
-     if old_return_detail.pluck(:id).sort {|a,b| a <=> b} == old_return_detail.pluck(:id).sort {|a,b| a <=> b}
-
-     end
-
-
-
-
+    #5 Cập nhật phiếu return_details và cộng hàng trả vào bảng Product và ProductSummary
+      products = Product.find(old_return_detail.pluck(:return_product_id))
+      product_summaries = ProductSummary.where(product_code: product.pluck(:product_code))
+      metro_summary = MetroSummary.find_by_warehouse_id(warehouse_id)
+      old_return_detail.each do |return_detail|
+        #Cập nhật hàng trả vào Product
+        product = products.find(return_detail.return_product_id)
+        product.available_quality += return_detail.return_quality
+        product.instock_quality += return_detail.return_quality
+        product.save()
+        #Cập nhật vào ProductSummary
+        product_summary = product_summaries.find_by(product_code:product.product_code)
+        product_summary.quality += return_detail.return_quality
+        product_summary.save()
+        #Câp nhật vào bảng MetroSummary
+        metro_summary.revenue +=return_detail.return_quality
+        metro_summary.revenue_day +=return_detail.return_quality
+        metro_summary.revenue_month +=return_detail.return_quality
+        #Trừ tiền Revenue trong bang MetroSummary
+        metro_summary.revenue -= (return_detail.return_quality * return_detail.price)
+        metro_summary.revenue_day -= (return_detail.return_quality * return_detail.price)
+        metro_summary.revenue_month -= (return_detail.return_quality * return_detail.price)
+        #Cập nhật thông tin vào bảng MetroSummary
+        metro_summary.save()
+      end
+    # Kiểm tra dữ liệu ReturnDetail.ID có hợp lệ hay ko, nếu ko đưa ra thông báo
+     # if old_return_detail.pluck(:id).sort {|a,b| a <=> b} == old_return_detail.pluck(:id).sort {|a,b| a <=> b}
+     #   #Kiểm tra
+     #    old_return_detail
+     # else #đưa ra thong bao loi
+     # end
     else
       flash[:notice] = 'Ko Co Quyen Truy Cap'
       redirect_to :action => :new

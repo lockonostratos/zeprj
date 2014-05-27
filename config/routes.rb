@@ -13,6 +13,7 @@ Zeprj::Application.routes.draw do
   resources :products
 
   get 'warehouses/available', :to => 'warehouses#available'
+  get 'areas/showAllCustomers', :to => 'areas#showAllCustomers'
   resources :warehouses
   resources :skulls
   resources :merchant_accounts
@@ -20,6 +21,7 @@ Zeprj::Application.routes.draw do
   resources :branches
   resources :areas
   resources :agencies
+
   resources :customers
   resources :deliveries
   resources :exports

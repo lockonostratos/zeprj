@@ -4,7 +4,7 @@ class MerchantApplicationController < ApplicationController
   end
 
   helper_method :current_merchant_account
-
+  helper_method :get_all_customers
   def permission_merchant_account
     permission = Permission.all
     current_permission=[]
@@ -38,5 +38,9 @@ class MerchantApplicationController < ApplicationController
     warehoues.each do |ex|
       return true if (ex.to_param == warehouse_id )
     end
+  end
+
+  def get_all_customers(area_id)
+    @customers = Customer.where(area_id:area_id)
   end
 end

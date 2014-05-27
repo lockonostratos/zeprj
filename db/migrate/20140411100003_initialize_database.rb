@@ -546,13 +546,14 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :product_count, :default=>0 #Done
       t.integer :stock_count, :default=>0 #Done
       t.integer :customer_count, :default=>0 #Done
-      t.integer :staff_count, :default=>0 #Wating
+      t.integer :staff_count, :default=>0 #Done
+      t.integer :staff_count_branch, :default=>0 #Done
       t.integer :sale_count, :default=>0 #Done
       t.integer :sale_count_day, :default=>0 #Done
       t.integer :sale_count_month, :default=>0 #Done
-      t.integer :return_count, :default=>0 #Wating
-      t.integer :return_count_day, :default=>0 #Wating
-      t.integer :return_count_month, :default=>0 #Wating
+      t.integer :return_count, :default=>0 #Done
+      t.integer :return_count_day, :default=>0 #Done
+      t.integer :return_count_month, :default=>0 #Done
       t.integer :revenue ,:limit => 8, :default=>0 #Done
       t.integer :revenue_day ,:limit => 8, :default=>0 #Done
       t.integer :revenue_month ,:limit => 8, :default=>0 #Done
