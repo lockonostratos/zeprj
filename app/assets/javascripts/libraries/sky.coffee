@@ -97,36 +97,13 @@ class Sky.Editor
       result.push key
     result
 
-  @onStartEditHandler: (editor, model, editOptions, attribute) ->
-    editOptions.currentModel = model
-
-    currentOption = editOptions.optionOf attribute
-    if currentOption.mask isnt null
-      editor.inputmask currentOption.mask, currentOption.maskOptions
-    else editor.inputmask 'remove'
-    editor.val (model.get attribute)
-    editor.attr 'attr', attribute
-
-  @onTabNavigationHandler: (e, editOptions) ->
-    currentAttr = $(e.currentTarget).attr('attr')
-    if e.shiftKey
-      nextAttr = editOptions.previousKeyOf currentAttr
-      $(e.currentTarget).attr('attr', nextAttr)
-      $(e.currentTarget).val(editOptions.currentModel.get(nextAttr))
-    else
-      nextAttr = editOptions.nextKeyOf currentAttr
-      $(e.currentTarget).val(editOptions.currentModel.get(nextAttr))
-      $(e.currentTarget).attr('attr', nextAttr)
-
-  @onEditingHandler: (editor, editOptions) ->
-    editOptions.currentModel.set (editor.attr 'attr'), (editor.inputmask 'unmaskedvalue')
-
 class Sky.Editor.RenderOption
   constructor: (@editable = true, @mask=null, @maskOptions={} ) ->
 
-class Sky.Editor.EditOptions
-  currentModel: null
+class Sky.Editor.Wrapper
   attributes: []
+  currentModel: null
+  currentAttribute: null
   constructor: (@options) ->
     for key of options
       @attributes.push key if options[key]['editable']
@@ -139,3 +116,44 @@ class Sky.Editor.EditOptions
     if current >= 0 and current < @attributes.length
       @currentKey = @attributes[if current == 0 then @attributes.length - 1 else current - 1]
   optionOf: (key) -> @options[key]
+
+  handleEntering: (editor, model, attribute) ->
+    @currentModel = model
+    @currentAttribute = attribute
+    @currentOption = @optionOf attribute
+
+    if @currentOption.mask isnt null
+      editor.inputmask @currentOption.mask, @currentOption.maskOptions
+    else editor.inputmask 'remove'
+    editor.val (model.get attribute)
+    editor.focus()
+
+  setupEditor: (editor) ->
+    editor.on 'keyup', =>
+      @currentModel.set @currentAttribute, (@unmaskedValue editor)
+    editor.on 'keydown', (e) =>
+      if e.keyCode != 9 then return
+
+      e.preventDefault()
+      @clearMask editor
+      if e.shiftKey
+        nextAttr = @previousKeyOf @currentAttribute
+        editor.val @currentModel.get(nextAttr)
+        @currentAttribute = nextAttr
+        @applyMask editor, nextAttr
+      else
+        nextAttr = @nextKeyOf @currentAttribute
+        editor.val @currentModel.get(nextAttr)
+        @currentAttribute = nextAttr
+        @applyMask editor, nextAttr
+
+  unmaskedValue: (editor) ->
+    if @currentOption.mask isnt null and @currentOption.mask is 'vnd'
+      return (editor.inputmask 'unmaskedvalue').replace(/,/g, '')
+    editor.inputmask 'unmaskedvalue'
+  clearMask: (editor) ->
+    editor.inputmask 'remove'
+  applyMask: (editor, attribute) ->
+    option = @optionOf attribute
+    if option.mask isnt null
+      editor.inputmask option.mask, option.maskOptions

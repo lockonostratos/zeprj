@@ -8,20 +8,18 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       ThisApp.layout.secondaryPane.show ThisApp.productSummariesView
 
       ThisApp.productSummariesView.on 'item:click', (e, model, attribute) ->
-        Sky.Editor.onStartEditHandler $('#sky-editor'), model, ThisApp.productSummaryEditOptions, attribute
+        ThisApp.productSummaryEditOptions.handleEntering $('#sky-editor'), model, attribute
+      ThisApp.productSummaryEditOptions.setupEditor($('#sky-editor'))
 
-      ThisApp.productSummariesView.on 'editor:tab', (e) ->
-        Sky.Editor.onTabNavigationHandler e, ThisApp.productSummaryEditOptions
-
-      ThisApp.productSummariesView.on 'model:editing', ->
-        Sky.Editor.onEditingHandler $('#sky-editor'), ThisApp.productSummaryEditOptions
+      ThisApp.productSummariesView.onClose = ->
+        Zeprj.log 'Cloused!'
 
   ThisApp.addInitializer ->
     ThisApp.Caption = 'NHẬP KHO'
     ThisApp.layout = new Zeprj.DualVerticalLayout()
 
-    ThisApp.productSummaryEditOptions = new Sky.Editor.EditOptions
+    ThisApp.productSummaryEditOptions = new Sky.Editor.Wrapper
       product_code: new Sky.Editor.RenderOption true, 'barcode'
-      name: new Sky.Editor.RenderOption()
+      name: new Sky.Editor.RenderOption true, 'title'
       quality: new Sky.Editor.RenderOption false
-      price: new Sky.Editor.RenderOption true, '#'
+      price: new Sky.Editor.RenderOption true, 'vnd'
