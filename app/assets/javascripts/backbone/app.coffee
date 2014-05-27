@@ -4,6 +4,7 @@
 #= require libraries/backbone-ui
 #= require libraries/knockout
 #= require libraries/knockback
+#= require_directory ../libraries/jquery.inputmask
 #= require libraries/sky
 #= require libraries/jquery.splitter
 #= require libraries/hammer

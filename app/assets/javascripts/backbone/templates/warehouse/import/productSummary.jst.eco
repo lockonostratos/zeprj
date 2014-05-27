@@ -1,4 +1,4 @@
 <span editor='product_code'>Ma san pham: <%= @product_code %></span> <br/>
 <span editor='name'>Ten san pham: <%= @name %></span> <br/>
-<span editor='quality'>So luong: <%= @quality %></span> <br/>
+<span>So luong: <%= @quality %></span> <br/>
 <span editor='price'>Gia ban: <%= @price %></span> <br/>
