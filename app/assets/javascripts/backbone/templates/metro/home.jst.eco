@@ -35,10 +35,21 @@
         <span class='bottom middle caption'><h8>NHÀ CUNG CẤP</h8></span>
     </div>
 
-    <div class='dark-blue tile'>
+    <div class='light-green tile'>
         <span class='center middle caption'>
         <span class='table'> <i class="fa fa-reply-all fa-3x"></i></span></span>
         <span class='bottom middle caption'><h8>TRẢ HÀNG</h8></span>
+    </div>
+
+     <div class='lime tile double'>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+    </div>
+     <div class='dark-blue tile'>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
     </div>
   </div>
 
@@ -62,7 +73,7 @@
         <span class='top right caption'><h8>KIỂM KHO</h8></span>
     </div>
 
-    <div class='red tile'>
+    <div class='dark tile'>
         <span class='center middle caption'>
         <span class='table'><i class="fa fa-archive fa-3x"></i></span></span>
         <span class='bottom middle caption'><h8>NHẬT KÝ</h8></span>
@@ -74,10 +85,28 @@
     </div>
 
      <div class='orange tile'>
-            <span class='center middle caption'>
-            <span class='table'><i class="fa fa-signal fa-3x"></i></span></span>
-            <span class='bottom middle caption'><h8>THỐNG KÊ</h8>1</span>
-        </div>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-signal fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>THỐNG KÊ</h8>1</span>
+    </div>
+
+     <div class='green tile'>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+    </div>
+
+     <div class='blue tile'>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+    </div>
+
+     <div class='red tile'>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+    </div>
   </div>
 
 
@@ -99,5 +128,12 @@
         <span class='table'><i class="fa fa-print fa-3x"></i></span></span>
         <span class='bottom right caption'><h8>THIẾT BỊ</h8></span>
     </div>
+
+     <div class='gray tile'>
+        <span class='center middle caption'>
+        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+    </div>
   </div>
+
 </div>

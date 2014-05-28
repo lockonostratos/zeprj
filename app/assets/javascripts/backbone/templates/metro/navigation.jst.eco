@@ -1,13 +1,15 @@
-<div id='navigation-right-part' class='large-7 columns'>
-	<h1 class="light">
-		<span id='home-button' href='#'>
-		  <i class="fa fa-home fa-2x"></i>
-		</span>
-		<span class='app-name' data-bind='text: currentApp'></span>
-	</h1>
-</div>
-<div class='large-5 columns'>
-	<div id='account-region' class='right'>Welcome back, <%=@id%>-<%=@email%>!</div><br>
-	<div id='merchant-account-region' class='right'></div><br>
-	<div id='warehouse-selection-region' class='right'></div><br>
+<div class='fixed'>
+    <div class='application-navigation-wrapper'>
+        <nav class='top-bar'>
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li id='home-button'><span class='nav-button'><i class="fa fa-home fa-3x"></i></span></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="#">WAREHOUSE!</a></li>
+                    <li><span id='account-region' class='nav-button'>USER!</a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
 </div>

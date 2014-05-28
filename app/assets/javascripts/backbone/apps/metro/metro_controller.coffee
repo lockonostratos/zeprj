@@ -5,7 +5,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     renderGlobalUi: ->
       Zeprj.navigationRegion.show new MetroApp.NavigationLayout
       ko.applyBindings { currentApp: MetroApp.currentApp }, $('#navigation-right-part')[0]
-      Zeprj.optionRegion.show new MetroApp.OptionView()
+#      Zeprj.optionRegion.show new MetroApp.OptionView()
       Zeprj.afterMainRegion.show new MetroApp.Copyright()
 
     renderInto: (region) ->

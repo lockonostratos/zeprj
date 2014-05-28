@@ -27,11 +27,20 @@
 @mixin tile-gradient-background($color) {
 //  @include background(linear-gradient(top left, $color, darken($color, $darken-amount)));
   background-color: $color;
+  &:hover {
+    background-color: lighten($color, 5);
+  }
 }
 
 
 body {
   background-color: $background-default;
+  background-image: linear-gradient(90deg, #252525 1px, transparent 1px), linear-gradient(#252525 1px, transparent 1px);
+  background-size: 10px 10px;
+  background-clip: border-box border-box;
+  background-attachment: scroll scroll;
+  background-repeat: repeat repeat;
+  background-position: 0 0% 0 0;
   color: #333;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-size: 14px;
@@ -47,9 +56,9 @@ body {
 .pull-left  { float: left; }
 
 .application-wrapper {
-  background-color: #fff;
   min-height: 550px;
   margin-bottom: .25rem;
+  margin-top: 45px;
 
   //Chỉnh table style cho các elements
   .inner-wrap {
@@ -64,7 +73,7 @@ body {
     #main-region {
       height: 100%;
       width: 100%;
-      & > div { //container
+      & > div.row { //container
         height: 100%;
         width: 100%;
         display: table;
@@ -75,7 +84,7 @@ body {
         //Phần chưa content của Top Navigation Layout
         #tnl-content {
           height: 100%;
-          & > div { //container
+          & > div.row { //container
             height: 100%;
             width: 100%;
             display: table;
@@ -95,6 +104,7 @@ body {
     .copyright.row {
       padding-bottom: 0.2rem;
       padding-left: 0.3rem;
+      color: #ddd;
     }
   }
 
@@ -103,6 +113,7 @@ body {
     ul.inner-navigation {
       margin: 0;
       border-bottom: solid 2px $navigator-background;
+      background-color: #fff;
       > li {
         padding: 0.2rem 0.5rem;
         line-height: 2rem;
@@ -120,18 +131,37 @@ body {
   }
 
   #navigation-region {
+    .application-navigation-wrapper {
+      background-color: #333;
+      .top-bar {
+        max-width: 62.5rem;
+        margin: 0 auto;
+        background-color: $navigation-color;
+        ul {
+          background: none;
+        }
+        span.nav-button {
+          cursor: pointer;
+          line-height: 45px;
+          max-height: 45px;
+          padding: 0 15px;
+          display: block;
+          color: #fff;
+
+          &:hover {
+            background-color: $navigation-color-bright;
+          }
+        }
+
+        i {
+          color: #fff;
+        }
+      }
+    }
     span.app-name {
       margin: 10px;
       position: absolute;
     }
-    #navigation-right-part {
-      padding-left: 1rem;
-    }
-  }
-
-  //Chỉnh sửa margin cho metro home!
-  .inner-wrap {
-    .metro-wrapper { margin-left: 0.35rem; }
   }
 
   i { color: #999; }
@@ -141,6 +171,7 @@ body {
   }
   //Size, color, layout of metro UI.
   .metro {
+    margin-top: $tile-space !important;
     margin-right: -$application-padding;
 
     //Sửa lỗi tile group cuối cùng, sẽ không có right-margin!
@@ -156,9 +187,12 @@ body {
       width: $tile-size;
       margin-right: $tile-space;
       margin-bottom: $tile-space;
-      @include border-radius($tile-radius);
       background-color: #eee;
+      color: #fff;
       float: left;
+      position: relative;
+      box-shadow: 0px 0px 1px #FFC inset;
+      cursor: pointer;
 
       &.double {
         width: $tile-size * 2 + $tile-space;
@@ -169,20 +203,16 @@ body {
         @media #{$medium-up} { height: $tile-size * 2 + $tile-space; }
       }
 
-      //Tile Colors
-//      &.orange { background-color: #F37735; }
-//      &.yellow { background-color: #FFC425; }
-//      &.blue { background-color: #00AEDB; }
-//      &.dark-blue { background-color: #374961; }
-//      &.lime { background-color: #8ACF1A; }
-//      &.green { background-color: #00B159; }
-//      &.light-green { background-color: #1CBB9B; }
-//      &.purple { background-color: #91009B; }
-//      &.pink { background-color: #D845A0; }
-//      &.gray { background-color: #97A5A6; }
-//      &.light-gray { background-color: #BFC2C7; }
+      h1, h2, h3, h4, h5, h6, h7, h8, i {
+        color: #fff;
+        margin: 0;
+        tiny { font-size: 30%; }
+        tiny4 { font-size: 40%; }
+        tiny5 { font-size: 50%; }
+        tiny6 { font-size: 60%; }
+        tiny7 { font-size: 70%; }
+      }
 
-// Use gradients
       &.orange { @include tile-gradient-background($orange); }
       &.yellow { @include tile-gradient-background($yellow); }
       &.blue { @include tile-gradient-background($blue); }
@@ -193,69 +223,13 @@ body {
       &.purple { @include tile-gradient-background($purple); }
       &.pink { @include tile-gradient-background($pink); }
       &.red { @include tile-gradient-background($red); }
+      &.dark { @include tile-gradient-background($dark); }
+      &.gray { @include tile-gradient-background($gray); }
     }
   }
 
-//  .metro .tile {
-//   position: relative;
-//
-//
-//    .caption {
-//      position: absolute;
-//      width:100%;
-//      height:100%;
-//    }
-//
-//    .thumbnails{
-//      position: absolute;
-//      width:100%;
-//      height:100%;
-//    }
-//
-//    .top {
-//      margin-top: $tile-caption-padding;
-//    }
-//    .center {
-//       position: absolute;
-//       bottom: 0;
-//       top: 0;
-//       height: 15px;
-//       margin:auto;
-//       vertical-align: middle;
-//     }
-//    .bottom {
-//      bottom: 0;
-//      height: auto;
-//      margin-bottom: $tile-caption-padding !important;
-//    }
-//
-//    .left {
-//      text-align: left;
-//      margin-left: $tile-caption-padding;
-//    }
-//    .middle {
-//      text-align: center;
-//    }
-//    .right {
-//      text-align: right;
-//      right:$tile-caption-padding !important;
-//    }
-//  }
-
-
+  //Caption of tiles 9 places!
   .metro .tile {
-    position: relative;
-    color: #fff;
-    h1, h2, h3, h4, h5, h6, h7, h8, i {
-      color: #fff;
-      margin: 0;
-      tiny { font-size: 30%; }
-      tiny4 { font-size: 40%; }
-      tiny5 { font-size: 50%; }
-      tiny6 { font-size: 60%; }
-      tiny7 { font-size: 70%; }
-
-    }
     .caption {
       margin: auto;
       position: absolute;
@@ -268,11 +242,9 @@ body {
     }
     .center {
      bottom: 0;
-//     top: 0;
      height: 100%;
      margin: 35% 0 0 0%;
      display: table;
-
     }
     //Thuộc tính kèm theo của center
     .table{
@@ -302,9 +274,6 @@ body {
       right:$tile-caption-padding !important;
       text-align: right;
     }
-
-
-
   }
 
   .top-navigation-container {
@@ -434,7 +403,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 @media #{$medium-only} {
-  body { background-color: #fff; }
+  body {background-color: #fff;}
   .application-wrapper {
     height: 100%;
     max-width: none;
@@ -443,17 +412,8 @@ h1, h1, h3, h4, h5, h6 {
 
 @media #{$large-up} {
   .application-wrapper {
-    margin-top: 1rem;
-    @include border-radius(0.25rem);
-    @include box-shadow(#aaa 0 0 0.3rem);
-    border: 3px solid #DDD;
-
     .left-off-canvas-menu {
       margin: -$application-padding 0 -$application-padding -$application-padding;
-    }
-
-    .navigation.row {
-      margin: 1rem 0.2rem 0 0.2rem;
     }
     .right-navigation-container {
       margin-bottom: -$application-padding;

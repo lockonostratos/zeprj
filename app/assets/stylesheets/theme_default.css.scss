@@ -5,20 +5,24 @@ $font-main: 'Open Sans',sans-serif;
 $tone-main: #AEC785;
 $tone-dark: #A0B87E;
 $element-main: #1FB5AC;
-$background-default: #e5e5e5;
+$background-default: #202020;
 $background-login: #32323A;
 $darken-amount: 5;
+$navigation-color: #8ACF1A;
+$navigation-color-bright: lighten($navigation-color, 10);
 
-$green: #00B159;
-$light-green: #1CBB9B;
-$yellow: #FFC708;
-$orange: #F37735;
-$blue: #00AEDB;
-$dark-blue: #374961;
-$lime: #8ACF1A;
-$pink: #D845A0;
-$red: #C11918;
-$purple: #91009B;
+$green: #00B159;        //1  USED
+$light-green: #1CBB9B;  //2  USED
+$yellow: #FFC708;       //3  USED
+$orange: #F37735;       //4  USED
+$blue: #00AEDB;         //5  USED
+$dark-blue: #374961;    //6  USED
+$lime: #8ACF1A;         //7  USED
+$pink: #D845A0;         //8  USED
+$red: #C11918;          //9  USED
+$purple: #91009B;       //10 USED
+$dark: #454442;         //11 USED
+$gray: #999999;         //12 USED
 
 //navigator
 $navigator-background: red;
@@ -31,9 +35,9 @@ $navigator-font-reserve: darken($navigator-background-reserve, 50%);
 $application-padding: 0.3rem; //for large screen only!
 $tile-caption-padding: 0.5rem;
 
-$tile-size: 8.5rem;
-$tile-space: 0.2rem;
-$tile-group-space: 0.3rem;
+$tile-size: 8.7rem;
+$tile-space: 0.3rem;
+$tile-group-space: 0rem;
 $content-min-height:25rem;
 
 $tile-size-small: 6rem;

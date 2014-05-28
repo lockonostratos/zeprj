@@ -13,9 +13,9 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
 
     onShow: ->
       @accountRegion.show new MetroApp.NavigationAccountView()
-      @merchantAccountRegion.show new MetroApp.NavigationMerchantAccountView()
-      @warehouseSelectionRegion.show new MetroApp.NavigationWarehouseOptionView()
-      ko.applyBindings Zeprj.warehouseOptionVm, $(@warehouseSelectionRegion.el)[0]
+#      @merchantAccountRegion.show new MetroApp.NavigationMerchantAccountView()
+#      @warehouseSelectionRegion.show new MetroApp.NavigationWarehouseOptionView()
+#      ko.applyBindings Zeprj.warehouseOptionVm, $(@warehouseSelectionRegion.el)[0]
 
   MetroApp.NavigationView = Marionette.CompositeView.extend
     template: JST['backbone/templates/metro/navigation']
