@@ -5,6 +5,7 @@
 @import "font-awesome";
 //@import "jquery.ui.all";
 @import "libraries/*";
+@import "metro_components";
 
 //@mixin tile-wrapper-maker($size) {
 //  width: ($tile-size * $size) + ($tile-space * $size);
@@ -31,7 +32,6 @@
     background-color: lighten($color, 5);
   }
 }
-
 
 body {
   background-color: $background-default;
@@ -147,6 +147,9 @@ body {
           padding: 0 15px;
           display: block;
           color: #fff;
+          &.home {
+            padding-left: 5px;
+          }
 
           &:hover {
             background-color: $navigation-color-bright;
@@ -278,7 +281,7 @@ body {
 
   .top-navigation-container {
     border-top: solid 3px darken($navigator-background-reserve, 5%);
-
+    background-color: #fff;
     .navigation-wrapper {
       .navigator {
         min-height: $content-min-height;
@@ -319,20 +322,62 @@ body {
       ul.tile-container {
         margin: 0.1rem 0;
 
-        .product-summary-tile {
+        .item-tile {
           display: inline-block;
-          height: $tile-size-small;
-          width: $tile-size-small * 2;
-          @include border-radius($tile-radius);
-          background-color: #aaa;
-
+          width: 12rem;
           margin-right: $tile-space;
-
+          position: relative;
           list-style: none;
 
-          &:first-child {
-            @include border-top-left-radius(0);
-            @include border-bottom-left-radius(0);
+          i.fa { color: $component-theme; }
+          p { margin: 0; }
+
+          .item-head{
+            overflow: hidden;
+            &:hover .effect-hover-img {
+              transform: scale(1.1, 1.1)
+            }
+          }
+
+          .item-body {
+            margin: 0 auto 10px 0;
+            .avatar-picture {
+              margin: -20px auto 0 auto;
+              position: relative;
+              width: 95%;
+
+              .right {
+                margin-top: 20px;
+                height: 40px;
+                text-align: right;
+              }
+
+              img {
+                background-color: #E5E9EC;
+                border: 5px solid #FFFFFF;
+                border-radius: 100px;
+                display: inline-block;
+                height: 68px;
+                overflow: hidden;
+                width: 68px;
+              }
+            }
+
+            .info-wrapper {
+              width: 95%;
+              margin: 0 auto;
+              text-align: center;
+              .title {
+                font-weight: bold;
+              }
+            }
+          }
+
+          .item-footer {
+            .info-wrapper {
+              width: 95%;
+              margin: 0 auto;
+            }
           }
         }
       }
@@ -374,6 +419,18 @@ body {
         }
       }
     }
+  }
+
+  #entity-editor {
+    input {
+      display: inline-block;
+    }
+  }
+  //PAGE SECTIONS ---------------------------------------------->
+  .import-product-summary-wrapper {
+    #sky-editor {width: 250px;}
+    #import-quality { width: 90px; }
+    #import-price { width: 180px}
   }
 }
 //Overrides for difference screens

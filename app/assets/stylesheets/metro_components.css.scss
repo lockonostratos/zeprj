@@ -1,0 +1,57 @@
+@import "theme_default";
+
+input[type=text] {
+  &.metro {
+    margin-bottom: 0.1rem;
+    @include border-radius(0.1rem);
+    color: $component-theme;
+    &:first-child {
+      @include border-top-left-radius(0);
+      @include border-bottom-left-radius(0);
+    }
+  }
+  &.inline {
+    margin-left: 5px;
+    &.right {
+      margin-right: 5px;
+    }
+  }
+}
+
+input[type=button] {
+  &.metro {
+    background-color: $component-theme;
+    font-size: 0.94rem;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    text-align: center;
+    border: 0 solid;
+    transition: background-color 300ms ease-out 0s;
+    @include border-radius(0.1rem);
+    cursor: pointer;
+  }
+
+  &.inline {
+    margin: 0 0 0 5px;
+  }
+}
+
+//Effects
+.effect-hover-img {
+  transition: all 0.2s linear 0s;
+}
+
+i.fa {
+  &.green { color: $green; }
+  &.light-green { color: $light-green; }
+  &.yellow { color: $yellow; }
+  &.orange { color: $yellow; }
+  &.blue { color: $yellow; }
+  &.dark-blue { color: $yellow; }
+  &.lime { color: $yellow; }
+  &.pink { color: $yellow; }
+  &.red { color: $yellow; }
+  &.purple { color: $yellow; }
+  &.dark { color: $yellow; }
+  &.gray { color: $yellow; }
+}

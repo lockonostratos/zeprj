@@ -1,4 +1,33 @@
-<span editor='product_code'>Ma san pham: <%= @product_code %></span> <br/>
-<span editor='name'>Ten san pham: <%= @name %></span> <br/>
-<span>So luong: <%= @quality %></span> <br/>
-<span editor='price'>Gia ban: <%= @price %></span> <br/>
+<div class='controller'>
+
+</div>
+
+<div class='item-head'>
+  <img class="lazy effect-hover-img" alt="" src="assets/defaults/10.png">
+</div>
+
+<div class='item-body'>
+  <div class='avatar-picture' data-tooltip title='NGƯỜI BÁN SẢN PHẨM NÀY NHIỀU NHẤT'>
+    <img width="69" height="69" src="assets/defaults/dicaprio.jpg">
+    <div class='right'>
+      <p data-tooltip class='has-tip' title='MÃ SẢN PHẨM'>
+        <i class="fa fa-qrcode"></i>
+        <span editor='product_code'><%= @product_code %></span>
+      </p>
+
+      <p data-tooltip class='has-tip' title='TỒN KHO HIỆN TẠI'>
+        <i class="fa fa-signal"></i>
+        <span><%= @quality %></span>
+      <p>
+    </div>
+  </div>
+  <div class='info-wrapper'>
+    <p><span class='title' editor='name'><%= @name || 'CHƯA ĐẶT TÊN' %></span></p>
+  </div>
+</div>
+
+<div class='item-footer'>
+  <div class='info-wrapper'>
+    <p class='right'><span editor='price' data-tooltip class='has-tip' title='GIÁ BÁN'><%= accounting.formatNumber @price %> VNĐ</span></p>
+  </div>
+</div>

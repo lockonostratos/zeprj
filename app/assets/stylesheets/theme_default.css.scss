@@ -2,15 +2,6 @@
 $font-main: 'Open Sans',sans-serif;
 
 //Colors-------------------------------------------------------------->
-$tone-main: #AEC785;
-$tone-dark: #A0B87E;
-$element-main: #1FB5AC;
-$background-default: #202020;
-$background-login: #32323A;
-$darken-amount: 5;
-$navigation-color: #8ACF1A;
-$navigation-color-bright: lighten($navigation-color, 10);
-
 $green: #00B159;        //1  USED
 $light-green: #1CBB9B;  //2  USED
 $yellow: #FFC708;       //3  USED
@@ -24,8 +15,20 @@ $purple: #91009B;       //10 USED
 $dark: #454442;         //11 USED
 $gray: #999999;         //12 USED
 
+$tone-main: #AEC785;
+$tone-dark: #A0B87E;
+$element-main: #1FB5AC;
+$background-default: #202020;
+$background-login: #32323A;
+$darken-amount: 5;
+$navigation-color: $dark;
+$navigation-color-bright: lighten($navigation-color, 10);
+$navigation-color-dark: darken($navigation-color, 10);
+
+$component-theme: $orange;
+
 //navigator
-$navigator-background: red;
+$navigator-background: $dark;
 $navigator-background-reserve: #666;
 $navigator-font: lighten($navigator-background, 50%);
 $navigator-font-reserve: darken($navigator-background-reserve, 50%);
