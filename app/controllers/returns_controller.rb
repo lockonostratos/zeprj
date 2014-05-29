@@ -141,8 +141,11 @@ class ReturnsController < MerchantApplicationController
         #Cập nhật vào bảng OrderSummery
         order = order_detail.find_by(product_id:return_detail.return_product_id)
         order.return_quality += return_detail.return_quality
-        b=order.pluck(:price)
-        b
+        product_price = 0
+        order.each do |ex|
+          product_price = ex.price
+        end
+
         #Câp nhật vào bảng MetroSummary
         metro_summary.return_count +=return_detail.return_quality
         metro_summary.return_count_day +=return_detail.return_quality
