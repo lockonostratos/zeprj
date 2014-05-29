@@ -8,12 +8,18 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       ThisApp.layout.mainPane.show ThisApp.temporaryProductsView
 
       ThisApp.productSummariesView = new ThisApp.ProductSummariesView
-        collection: Zeprj.request 'productSummary:entities'#, {action: 'import_availables'}
+        collection: Zeprj.request 'productSummary:entities', {action: 'import_availables'}
       ThisApp.layout.secondaryPane.show ThisApp.productSummariesView
 
       #NEW IMPORTS -> TOP PANE
       ThisApp.temporaryProductsView.on 'edit:click', (e, model, attribute) ->
         ThisApp.temporaryEditWrapper.startEdit $('#sky-editor'), model, attribute
+      ThisApp.temporaryProductsView.on 'item:delete', (e, model) ->
+        model.destroy
+          wait: true
+          success: (model) ->
+            Zeprj.request 'productSummary:entity', model.get 'product_id'
+            ThisApp.productSummariesView.collection.add model #TODO: Unsafe!
 
       #PRODUCT SUMMARY -> BOTTOM PANE
       ThisApp.productSummariesView.on 'edit:click', (e, model, attribute) ->
@@ -23,7 +29,23 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
         quality = accounting.parse(@ui.importQuality.inputmask('unmaskedvalue'))
         price = accounting.parse(@ui.importPrice.inputmask('unmaskedvalue'))
         ThisApp.temporaryProductsView.addImport model, quality, price
-        @collection.remove model
+        @collection.remove model #TODO: Unsafe!
+
+      ThisApp.productSummariesView.on 'item:save', (model) ->
+        model.save({
+          product_code: model.get 'product_code'
+          skull_id: model.get 'skull_id'
+          warehouse_id: Zeprj.currentMerchantAccount.get 'current_warehouse_id'
+          merchant_account_id: Zeprj.currentMerchantAccount.get 'id'
+          name: model.get 'name'
+          quality: model.get 'quality'
+          price: model.get 'price'
+        }, {
+          success: -> Zeprj.log 'success'
+          error: -> Zeprj.log 'error'
+        })
+
+
 
       ThisApp.productSummariesView.onClose = ->
         Zeprj.log 'Cloused!'

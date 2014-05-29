@@ -56,10 +56,10 @@ class ProductSummariesController < MerchantApplicationController
     respond_to do |format|
       if @product_summary.save
         format.html { redirect_to @product_summary, notice: 'Product summary was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @product_summary }
+        format.json { render json: @product_summary }
       else
         format.html { render action: 'new' }
-        format.json { render json: @product_summary.errors, status: :unprocessable_entity }
+        format.json { render json: { errors: @product_summary } }
       end
     end
   end

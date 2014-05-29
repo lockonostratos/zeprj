@@ -388,7 +388,7 @@ body {
             position: absolute;
             z-index: 200;
             display: block;
-            top: 20px;
+            right: 10px;
             &.right { right: 20px; }
             &.left { left: 20px; }
           }
@@ -442,7 +442,7 @@ body {
   //PAGE SECTIONS ---------------------------------------------->
   .import-product-summary-wrapper {
     #sky-editor {width: 250px;}
-    #import-quality { width: 90px; }
+    #import-quality { width: 100px; }
     #import-price { width: 180px}
   }
 }

@@ -1,6 +1,8 @@
 Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) ->
   Entities.ProductSummary = Backbone.Model.extend
     urlRoot: 'product_summaries'
+    defaults:
+      quality: 0
 
   Entities.ProductSummaries = Sky.Collection.extend
     url: 'product_summaries'
@@ -14,6 +16,7 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
 
     getProductSummaryEntity: (id) ->
       result = new Entities.ProductSummary({id: id})
+      Zeprj.log id
       result.fetch()
       result
 

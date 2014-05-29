@@ -493,9 +493,9 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "warehouses", force: true do |t|
-    t.integer  "merchant_id",  null: false
-    t.integer  "branch_id",  null: false
-    t.string   "name",       null: false
+    t.integer  "warehouse_id", null: false
+    t.integer  "branch_id",    null: false
+    t.string   "name",         null: false
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
