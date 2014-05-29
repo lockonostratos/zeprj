@@ -19,7 +19,7 @@ class ProductSummariesController < MerchantApplicationController
     end
     @product_summaries = current_product_summaries
     respond_to do |format|
-      format.html
+      format.html {render action: 'index'}
       format.json {render json: @product_summaries}
     end
   end
