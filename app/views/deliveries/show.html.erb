@@ -50,5 +50,11 @@
   <%= @delivery.status %>
 </p>
 
+<p>
+  <strong>Status:</strong>
+  <%= @delivery.success %>
+</p>
+
+
 <%= link_to 'Edit', edit_delivery_path(@delivery) %> |
 <%= link_to 'Back', deliveries_path %>

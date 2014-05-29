@@ -42,13 +42,14 @@ class InventoriesController < AccountsController
 
         #2. add tat ca product vao bang tam
         Product.transaction do
-          @a=Product.where(:warehouse_id => @inventory.warehouse_id).each do |product|
-            @temp_inventory = TempInventoryDetail.new(
+          Product.where(:warehouse_id => @inventory.warehouse_id).each do |product|
+            @inventory_inventory = TempInventoryDetail.new(
                 :product_id=>product.id,
                 :inventory_id=>@inventory.id,
                 :original_quality=>product.instock_quality,
-                :real_quality=>0)
-            @temp_inventory.save
+                :real_quality=>0,
+                :submited=>0)
+            @inventory_inventory.save
           end
         end
       else
@@ -61,65 +62,65 @@ class InventoriesController < AccountsController
   # PATCH/PUT /inventories/1
   # PATCH/PUT /inventories/1.json
   def update
-    respond_to do |format|
-      @temp = Inventory.new(inventory_params)
-      inventory_submmited = Inventory.find(@temp.id).submited == false
-      inventory_success = Inventory.find(@temp.id).success == false
-      inventory_resolved = Inventory.find(@temp.id).resolved == false
-      temp_submmited = @temp.submited == true
-      temp_resolved = @temp.resolved == false
-      temp_success = @temp.success == false
 
-      #cập nhật lần đầu tiên của nhân viên kiểm kho
-      if inventory_submmited and inventory_resolved and inventory_success
-        if temp_submmited and temp_resolved and temp_success
-          @temp_inventory = TempInventoryDetail.find_all_by_inventory_id(@temp.id)
-          #kiểm tra bảng tạm cập nhật sản phẩm nếu ok thi true
-          cheack_all=true
-            @temp_inventory.each do |temp|
-                if temp.updated_at == temp.created_at
-                  cheack_all=false
-                end
-              end
-          #save vào bảng InventoryDetail
-            if cheack_all=true
-              @temp_inventory.each do |temp|
-                if temp.original_quality > temp.real_quality
-                  InventoryDetail.create!(
-                      :product_id=>temp.product_id,
-                      :inventory_id=>temp.inventory_id,
-                      :original_quality=>temp.original_quality,
-                      :real_quality=>temp.real_quality,
-                      :sale_quality=> temp.quality,
-                      :resolved=>false
-                  )
-                end
-                 temp.destroy
-              end
-            end
-          #cập nhật phiếu kiểm kho
-          @inventory.update(inventory_params)
-          format.html { redirect_to @inventory, notice: 'Inventory was successfully updated.' }
-          format.json { head :no_content }
-        end
+    # 0 Nhận thông tin từ Clienl------------------------------------------------------------>
+    @inventory.attributes = (inventory_params)
+    inventory = Inventory.find(@inventory.id)
+    #1 Kiểm tra quyền truy cập nếu nhân viên, quản lý , khách----------------------------------->
 
-        #cập nhật lần 2 khi Quản lý kiểm duyệt lại phiếu kiểm kho
-        inventory_submmited = Inventory.find(@temp.id).submited == true
-        inventory_success = Inventory.find(@temp.id).success == false
-        inventory_resolved = Inventory.find(@temp.id).resolved == false
-        temp_submmited = @temp.submited == true
-        temp_resolved = @temp.resolved == true
-        temp_success = @temp.success == false
-      elsif inventory_submmited and inventory_success and inventory_resolved
-        if temp_submmited and temp_resolved and temp_success
+    #2.Xử lý nếu là quyền truy cập là khách lạ-------------------------------------------------------->
 
-        end
-
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @inventory.errors, status: :unprocessable_entity }
-      end
+    #3.Xử lý nếu là quyền truy cập là quản lý-------------------------------------------------------->
+    if temp_inventory.submited == true and temp_inventory.success == false and temp_inventory.resolved == false and @inventory.submited == true and @inventory.resolved == true and @inventory.success == false
     end
+
+    #4.Xử lý nếu là quyền truy cập là nhân viên-------------------------------------------------------->
+      if inventory.submited == false and inventory.success == false and inventory.resolved == false and @inventory.submited == true and @inventory.resolved == false and @inventory.success == false
+      #Kiểm tra bảng temp_inventory_detail mọi hàng hóa submited = true
+        #lấy tất cả thong tin từ bảng TempInventoryDetail
+        temp_inventory = TempInventoryDetail.where(inventory_id:@inventory.id)
+        submmited = true
+        #kiểm tra temp_inventory đã submited chưa
+        temp_inventory.each do |temp|
+          if temp.submited == false then submmited = false end
+        end
+        if submmited == false
+        # thông báo lỗi chưa kiểm tra hết kho hàng
+          respond_to do |format|
+            format.html { redirect_to @inventory, notice: 'Loi chua kiem tra het kho hang' }
+            format.json { render action: 'show', status: :created, location: @inventory }
+          end
+        end
+      #Tạo các InventoryDetail
+        temp_inventory.each do |temp|
+          if temp.original_quality > temp.real_quality
+            InventoryDetail.create!(
+                :product_id=>temp.product_id,
+                :inventory_id=>temp.inventory_id,
+                :original_quality=>temp.original_quality,
+                :real_quality=>temp.real_quality,
+                :sale_quality=> temp.quality,
+                :resolved=>false)
+          end
+      #Xóa dữ liệu trong bảng temp_inventory_detail
+          temp.destroy
+        end
+      #Cập nhật inventory.submited = true
+        @inventory.save()
+      else
+        #thông báo lỗi thông tin inventory ko chính xác
+        respond_to do |format|
+          format.html { redirect_to @inventory, notice: 'Thong tin khong chinh xac' }
+          format.json { render action: 'show', status: :created, location: @inventory }
+        end
+      end
+
+
+
+
+
+
+
   end
 
   # DELETE /inventories/1

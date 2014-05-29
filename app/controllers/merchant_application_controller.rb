@@ -44,4 +44,107 @@ class MerchantApplicationController < ApplicationController
     @customers = Customer.where(area_id:area_id)
     @customers
   end
+
+  def all_warehouse_on_merchant(merchant_id)
+    branch = Branch.where(merchant_id:merchant_id)
+    warehouses = Warehouse.where(branch_id: branch.pluck(:id), location:[1,0,nil])
+    return warehouses.pluck(:id)
+  end
+
+
+  #Report-------------------------------------------------------------------------------->
+
+  #Report bán hàng theo Ngày , Merchant, Branch , Warehouse (chưa lọc dữ liệu, chỉ nhận dữ liệu chính xác)
+  #Trả về tổng quát trong bản Order theo(loai phieu, kieu phieu, xac nhan, ngay bat dau, ngay ket thuc, merchant, branch, warehouse, nhan vien)
+  def report_all_time_and_warehouse_account(report, type_report, success, time_begin, time_end, merchant, branch, warehouse, merchant_account)
+    #Xu ly Order, Return, Delivery
+    if report == 'order' || report == 'return' || report == 'delivery'
+      #lấy tất cả cua Merchant
+      if time_begin != nil and time_end !=nil and merchant !=nil and merchant_account == nil and (type_report == 0 || type_report == 1)
+       orders = Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, warehouse_id: all_warehouse_on_merchant(merchant))
+      elsif time_begin != nil and time_end !=nil and merchant !=nil and merchant_account != nil and (type_report == 0 || type_report == 1)
+       orders = Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, warehouse_id:all_warehouse_on_merchant(merchant), merchant_account_id:merchant_account)
+      end
+
+      #lấy theo Branch
+      if time_begin != nil and time_end !=nil and merchant ==nil and branch !=nil and merchant_account == nil and (type_report == 0 || type_report == 1)
+        orders = Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, branch_id: branch)
+      elsif time_begin != nil and time_end !=nil and merchant ==nil and branch !=nil and merchant_account != nil and (type_report == 0 || type_report == 1)
+        orders = Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, branch_id: branch, merchant_account_id:merchant_account)
+      end
+
+      #lấy theo Branch và Warehouse
+      if time_begin != nil and time_end !=nil and merchant ==nil and branch !=nil and warehouse !=nil and merchant_account == nil and (type_report == 0 || type_report == 1)
+        orders = Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, branch_id: branch)
+        orders += Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, warehouse_id:warehouse)
+      elsif time_begin != nil and time_end !=nil and merchant ==nil and branch !=nil and warehouse !=nil and merchant_account != nil
+         orders = Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, branch_id: branch, merchant_account_id:merchant_account)
+         orders += Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day, warehouse_id:warehouse, merchant_account_id:merchant_account)
+      end
+
+      #Tra ve Order
+      if orders == []
+        return nil
+      elsif report == 'order' and type_report == 0 and success == nil
+        return orders.uniq()
+      elsif report == 'order' and type_report == 0 and success == 0
+        return orders.where(delivery:0).uniq()
+      elsif report == 'order' and type_report == 0 and success == 1
+        return orders.where(delivery:1).uniq()
+      elsif report == 'order' and type_report == 0 and success == nil
+        return OrderDetail.where(order_id: orders.uniq())
+      elsif report == 'order' and type_report == 1 and success == 0
+        return OrderDetail.where(order_id: orders.where(delivery:0).uniq())
+      elsif report == 'order' and type_report == 1 and success == 1
+        return OrderDetail.where(order_id: orders.where(delivery:1).uniq())
+      end
+
+      #Tra Ve Return
+      if orders == []
+        return nil
+      elsif report == 'return' and type_report == 0 and success == nil
+        returns = Return.where(order_id:orders.pluck(:id))
+        return  returns.uniq()
+      elsif report == 'return' and type_report == 0 and success == 0
+        returns = Return.where(order_id:orders.where(deliveries:0).pluck(:id))
+        return  returns.uniq()
+      elsif report == 'return' and type_report == 0 and success == 1
+        returns = Return.where(order_id:orders.where(deliveries:1).pluck(:id))
+        return  returns.uniq()
+      elsif report == 'return' and type_report == 1 and success == nil
+        returns = Return.where(order_id:orders.pluck(:id))
+        return ReturnDetail.where(return_id:returns.pluck(:id)).uniq()
+      elsif report == 'return' and type_report == 1 and success == 0
+        returns = Return.where(order_id:orders.where(deliveries:0).pluck(:id))
+        return ReturnDetail.where(return_id:returns.pluck(:id)).uniq()
+      elsif report == 'return' and type_report == 1 and success == 1
+        returns = Return.where(order_id:orders.where(deliveries:1).pluck(:id))
+        return ReturnDetail.where(return_id:returns.pluck(:id)).uniq()
+      end
+
+      #Tra Ve Delivery
+      if orders == []
+        return nil
+      elsif report == 'delivery' and (type_report == 0 || type_report == 1) and success == nul
+        delivery = Delivery.where(order_id:orders.pluck(:id))
+        return  delivery.uniq()
+      elsif report == 'delivery' and (type_report == 0 || type_report == 1) and success == 0
+        delivery = Delivery.where(order_id:orders.pluck(:id), success:0)
+        return  delivery.uniq()
+      elsif report == 'delivery' and (type_report == 0 || type_report == 1) and success == 1
+        delivery = Delivery.where(order_id:orders.pluck(:id), success:1)
+        return  delivery.uniq()
+      end
+
+    #Xu ly Import, Export, Inventory
+    elsif report =='import' || report == 'export' || report == 'inventory'
+
+    end
+
+  end
+
+
+
+
+
 end

@@ -468,11 +468,12 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "temp_inventory_details", force: true do |t|
-    t.integer  "product_id",                   null: false
-    t.integer  "inventory_id",                 null: false
-    t.integer  "original_quality",             null: false
-    t.integer  "real_quality",     default: 0, null: false
+    t.integer  "product_id",                       null: false
+    t.integer  "inventory_id",                     null: false
+    t.integer  "original_quality",                 null: false
+    t.integer  "real_quality",     default: 0,     null: false
     t.integer  "quality"
+    t.boolean  "submited",         default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

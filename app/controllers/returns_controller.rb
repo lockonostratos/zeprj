@@ -41,7 +41,7 @@ class ReturnsController < MerchantApplicationController
     #
     # #TODO: Tạo dữ liệu giả lập, xóa khi test xong
     old_products = OrderDetail.where(:order_id => @return.order_id)#giả lập dữ liệu
-    return_quality = 5 #số lượng trả hàng
+    return_quality = 4 #số lượng trả hàng
 
     # #1 Kiểm tra, nếu order có tồn tại hay ko ------------------------------------------------------------------------>
     # #TODO: Nếu như đơn bán hàng không tồn tại thì trả về lỗi!
@@ -72,6 +72,11 @@ class ReturnsController < MerchantApplicationController
           :quality=>nil,
           :price=>nil
       )
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @return }
     end
 
   end
@@ -155,6 +160,11 @@ class ReturnsController < MerchantApplicationController
       flash[:notice] = 'Ko Co Quyen Truy Cap'
       redirect_to :action => :new
     end
+
+      respond_to do |format|
+        format.html { redirect_to @return, notice: 'Update' }
+        format.json { render :json => @return }
+      end
   end
 
   # DELETE /returns/1

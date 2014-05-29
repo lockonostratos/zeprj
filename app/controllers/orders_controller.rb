@@ -35,7 +35,7 @@ class OrdersController < MerchantApplicationController
 
     #TODO: Giả lập dữ liệu nhận. Xóa mấy cái này khi viết xong
     @selling_stocks = ProductSummary.find(1,2,3,4) #id, soluong....
-    dump_quality = 40
+    dump_quality = 5
     # transaction_error = false;
 
     #pseduo
@@ -71,20 +71,8 @@ class OrdersController < MerchantApplicationController
         @current_order.status = 1
       else #TODO Tạo phiếu giao hàng (chưa nhận được dữ liệu)
         #Chỉ tạo phiếu hàng nếu như chức năng trừ kho được thực hiện đúng!
-        Delivery.create!(
-             :order_id=>@current_order.id,
-             :merchant_account_id=>current_merchant_account.id,
-             :success=>false,
-             :creation_date=>@current_order.created_at,
-             :delivery_date=>@current_order.updated_at,
-             :delivery_address=>'Ho Chi Minh',
-             :contact_name=>'Sang',
-             :contact_phone=>'0123456789',
-             :transportation_fee=>200,
-             :comment=>'Giao Hang Tan Noi',
-             :status=>1
-        ) if subtract_quality_on_dilivery_sale stocking_items, item, @current_order, dump_quality
-
+        if subtract_quality_on_dilivery_sale stocking_items, item, @current_order, dump_quality
+        end
       end
     #4.Cập nhật hóa đơn.
     #   1.Thêm các record vào bảng [OrderDetails] với id của hóa đơn đang tạo! (tức là thêm chi tiết vào cho hóa đơn)
@@ -92,6 +80,25 @@ class OrdersController < MerchantApplicationController
       @current_order.total_price += (item.price * dump_quality)
       @current_order.final_price = @current_order.total_price - (@current_order.deposit + @current_order.discount_cash)
     end
+
+    #Tạo phiếu giao hàng
+    if @current_order.delivery == true
+    Delivery.create!(
+        :order_id => @current_order.id,
+        :merchant_account_id => current_merchant_account.id,
+        :success => false,
+        :creation_date => @current_order.created_at,
+        :delivery_date => @current_order.updated_at,
+        :delivery_address => 'Ho Chi Minh',
+        :contact_name => 'Sang',
+        :contact_phone => '0123456789',
+        :transportation_fee => 200,
+        :comment => 'Giao Hang Tan Noi',
+        :status => 1
+    )
+    end
+
+    #Cập nhật phiếu Order
     @current_order.save
 
     respond_to do |format|
@@ -150,14 +157,15 @@ class OrdersController < MerchantApplicationController
     end
 
     def subtract_quality_on_dilivery_sale (stocking_items, selling_item, current_order, dump_quality)
-      subtract_quality_on_sale stocking_items, selling_item, current_order, dump_quality
+      subtract_quality_on_sale stocking_items, selling_item, current_order, dump_quality, false
     end
 
     def subtract_quality_on_direct_sale (stocking_items, selling_item, current_order, dump_quality)
       subtract_quality_on_sale stocking_items, selling_item, current_order, dump_quality, true
     end
 
-    def subtract_quality_on_sale (stocking_items, selling_item, current_order, dump_quality, is_direct_sale = true)
+
+  def subtract_quality_on_sale (stocking_items, selling_item, current_order, dump_quality, is_direct_sale)
     transactioned_quality = 0
 
     #Tìm Bang Metro_Summary
@@ -181,13 +189,13 @@ class OrdersController < MerchantApplicationController
 
       #trừ số lượng khả dĩ và số lượng tồn thực tế!
       stock.available_quality -= takken_quality
-      stock.instock_quality -= takken_quality if is_direct_sale
+      stock.instock_quality -= takken_quality if is_direct_sale == true
       stock.save()
 
       #Cong Revenue vào bảng MetroSummary
-      metro_summary.revenue += (takken_quality * selling_item.price)
-      metro_summary.revenue_day += (takken_quality * selling_item.price)
-      metro_summary.revenue_month += (takken_quality * selling_item.price)
+      metro_summary.revenue += (takken_quality * selling_item.price) if is_direct_sale == true
+      metro_summary.revenue_day += (takken_quality * selling_item.price) if is_direct_sale == true
+      metro_summary.revenue_month += (takken_quality * selling_item.price) if is_direct_sale == true
 
       #Cộng dồn số lượng của đợt trước (nếu có) với số lượng vừa lấy khỏi kho!
       transactioned_quality += takken_quality
@@ -201,10 +209,10 @@ class OrdersController < MerchantApplicationController
     selling_item.save
 
     #Chỉ tru so luong khi is_direct_sale = true
-    metro_summary.stock_count -= dump_quality if is_direct_sale
-    metro_summary.sale_count += dump_quality if is_direct_sale
-    metro_summary.sale_count_day += dump_quality if is_direct_sale
-    metro_summary.sale_count_month += dump_quality if is_direct_sale
+    metro_summary.stock_count -= dump_quality if is_direct_sale == true
+    metro_summary.sale_count += dump_quality if is_direct_sale == true
+    metro_summary.sale_count_day += dump_quality if is_direct_sale == true
+    metro_summary.sale_count_month += dump_quality if is_direct_sale == true
     #Cập nhật vào Bảng MetroSummary
     metro_summary.save()
 

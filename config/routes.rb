@@ -14,6 +14,7 @@ Zeprj::Application.routes.draw do
 
   get 'warehouses/available', :to => 'warehouses#available'
 
+
   get 'areas/showAllCustomers', :to => 'areas#showAllCustomers'
   get 'areas/showAllCustomers/:id', :to => 'areas#showAllCustomers'
   resources :warehouses
@@ -45,6 +46,8 @@ Zeprj::Application.routes.draw do
   resources :merchant_account_permission_details
   resources :permissions
   resources :permission_details
+  resources :metro_summaries
+
 
 
 

@@ -5,11 +5,20 @@ class TempProductsController < MerchantApplicationController
   # GET /temp_products.json
   def index
     @temp_products = TempProduct.all
+    respond_to do |format|
+      format.html
+      format.json { render :json => @temp_products }
+    end
   end
 
   # GET /temp_products/1
   # GET /temp_products/1.json
   def show
+    @temp_products = TempProduct.where(:merchant_account_id => current_merchant_account.id)
+    respond_to do |format|
+      format.html
+      format.json { render :json => @temp_products}
+    end
   end
 
   # GET /temp_products/new
@@ -81,7 +90,7 @@ class TempProductsController < MerchantApplicationController
     #kiểm tra dữ liệu nhận thông báo khi loi, trong @errors
   def check_validate_temp_product
     warehouse = Warehouse.find_by_id(@temp_product.warehouse_id)
-    product_code = ProductSummary.find_by_product_code_and_warehouse_id(@temp_product.product_code, @temp_product.warehouse_id)
+    product_code = ProductSummary.find_by_product_code_and_warehouse_id(@temp_product.product_code, @temp_product.warehouse_id, @temp_product.skull_id)
     skull = Skull.find_by_id_and_merchant_id(@temp_product.skull_id, current_merchant_account.merchant_id)
     provider = Provider.find_by_id_and_merchant_id(@temp_product.provider_id, current_merchant_account.merchant_id)
     errors = ''
@@ -89,7 +98,7 @@ class TempProductsController < MerchantApplicationController
     #   errors +='Warehouse Sai '
     # end
     if product_code == nil
-      errors +='Product_Code Sai '
+      errors +='Product_Code Sai hoac Skull sai '
     end
     # if skull == nil
     #   errors +='Skull Sai '

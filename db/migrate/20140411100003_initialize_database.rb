@@ -426,7 +426,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :original_quality, :null => false #số lượng trong kho
       t.integer :real_quality, :null => false , :default=>0#số kiem tra
       t.integer :quality #SO LUONG HANG DA BAN TRONG KHI KIEM KHO
-
+      t.boolean :submited, :default =>0
       t.timestamps
     end
 
