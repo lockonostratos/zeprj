@@ -4,7 +4,7 @@ class TempProductsController < MerchantApplicationController
   # GET /temp_products
   # GET /temp_products.json
   def index
-    @temp_products = TempProduct.all
+    @temp_products =  TempProduct.where(:merchant_account_id => current_merchant_account.id, :warehouse_id => @current_merchant_account.current_warehouse_id)
     respond_to do |format|
       format.html
       format.json { render :json => @temp_products }
@@ -14,7 +14,6 @@ class TempProductsController < MerchantApplicationController
   # GET /temp_products/1
   # GET /temp_products/1.json
   def show
-    @temp_products = TempProduct.where(:merchant_account_id => current_merchant_account.id, :warehouse_id => @current_merchant_account.current_warehouse_id)
     respond_to do |format|
       format.html
       format.json { render :json => @temp_products}

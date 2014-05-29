@@ -33,7 +33,7 @@ class ReturnsController < MerchantApplicationController
   # POST /returns.json
   def create
     #Nhận: [return] là id của phiếu mua hàng cũ (phải trả hàng)
-    #      Array[order_detail]
+    #      Array[order_details]
     # #TODO: Nhận dữ liệu
     # # @return = Return.new(params[:order])
     # # @return_details = params[:return_details]
@@ -41,7 +41,7 @@ class ReturnsController < MerchantApplicationController
     #
     # #TODO: Tạo dữ liệu giả lập, xóa khi test xong
     old_products = OrderDetail.where(:order_id => @return.order_id)#giả lập dữ liệu
-    return_quality = 4 #số lượng trả hàng
+    return_quality = 10 #số lượng trả hàng
 
     # #1 Kiểm tra, nếu order có tồn tại hay ko ------------------------------------------------------------------------>
     # #TODO: Nếu như đơn bán hàng không tồn tại thì trả về lỗi!
@@ -49,12 +49,14 @@ class ReturnsController < MerchantApplicationController
       if old_order.first == nil
         flash[:notice] = 'Loi sai  Order'
         redirect_to :action => :new
+        return
       end
     #2 Kiểm tra, nếu order có tồn tại hay ko, Kiểm tra độ toàn vẹn dữ liệu return_detail
     # xem product_id có chính xác hay ko(kiểm tra trong bảng OrderdDetail)
     unless data_validation old_products, return_quality, old_order
       flash[:notice] = 'Loi sai so luong san pham ko du'
       redirect_to :action => :new
+      return
     end
 
     #3 Tạo Phiếu Trả Hàng --------------------------------------------------------------------------------------------->
@@ -76,7 +78,7 @@ class ReturnsController < MerchantApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @return }
+      format.json { render action: 'show', status: :created, location: @return }
     end
 
   end
@@ -103,7 +105,8 @@ class ReturnsController < MerchantApplicationController
       @return.attributes = (return_params)
       old_return_detail = ReturnDetail.where(return_id:@return.id)#giả lập dữ liệu
     #2 Kiểm tra permission
-      warehouse_id = Order.find_by_id(@return.order_id).warehouse_id
+      order = Order.find_by_id(@return.order_id)
+      warehouse_id = order.warehouse_id
     if true
     #3 Kiểm tra ID của phiếu trả hàng
       if old_return_detail == nil then end
@@ -111,20 +114,41 @@ class ReturnsController < MerchantApplicationController
       if @return.submited == false
         flash[:notice] = 'Loi sai chua xac nhan'
         redirect_to :action => :edit , :location => @return
+        return
       end
     #5 Cập nhật phiếu return_details và cộng hàng trả vào bảng Product và ProductSummary
+      #Lấy tất cả product_id của return
       product_id = []
       old_return_detail.each do |ex|
         product_id += [ex.return_product_id]
       end
+
+      #Lấy tất cả product_code trong bảng Product
       products = Product.where(id:product_id)
         a=[]
         products.each do |pro|
           a+=[pro.product_code]
         end
         a=a.uniq()
+      # Lấy tất cả OrderDetail có return_id
+       order_details = OrderDetail.where(order_id:@return.order_id)
+      #Kiểm tra số lượng trả hàng không quá số lượng mua
+       old_return_detail.each do |return_detail|
+        order_detail = order_details.find_by(product_id:return_detail.return_product_id)
+
+
+
+        if order_detail.quality < (order_detail.return_quality + return_detail.return_quality)
+          flash[:notice] = 'Loi sai chua xac nhan'
+          redirect_to :action => :edit , :location => @return
+          return
+        end
+      end
+
+
+      # Lấy tất cả ProductSummary có
       product_summaries = ProductSummary.where(product_code:a)
-      order_detail = OrderDetail.where(order_id:@return.order_id)
+      # Lấy dữ liệu MetroSummary
       metro_summary = MetroSummary.find_by_warehouse_id(warehouse_id)
 
       old_return_detail.each do |return_detail|
@@ -138,13 +162,12 @@ class ReturnsController < MerchantApplicationController
         product_summary.quality += return_detail.return_quality
         product_summary.save()
 
-        #Cập nhật vào bảng OrderSummery
-        order = order_detail.find_by(product_id:return_detail.return_product_id)
-        order.return_quality += return_detail.return_quality
-        product_price = 0
-        order.each do |ex|
-          product_price = ex.price
-        end
+        #Cập nhật vào bảng OrderSummary
+        order_detail = order_details.find_by(product_id:return_detail.return_product_id)
+        order_detail.return_quality += return_detail.return_quality
+        order_detail.price = order_detail.price
+        product_price =  order_detail.price
+
 
         #Câp nhật vào bảng MetroSummary
         metro_summary.return_count +=return_detail.return_quality
@@ -154,20 +177,25 @@ class ReturnsController < MerchantApplicationController
 
         #Trừ tiền Revenue trong bang MetroSummary
         metro_summary.revenue = metro_summary.revenue - (return_detail.return_quality * product_price)
-        metro_summary.revenue_day = metro_summary.revenue -  (return_detail.return_quality * product_price)
-        metro_summary.revenue_month = metro_summary.revenue -  (return_detail.return_quality * product_price)
+        metro_summary.revenue_day = metro_summary.revenue_day -  (return_detail.return_quality * product_price)
+        metro_summary.revenue_month = metro_summary.revenue_month -  (return_detail.return_quality * product_price)
 
         #save du lieu trong bang Product  va OrderDetail
         product.save()
-        order.save()
+        order_detail.save()
       end
-      #Cập nhật thông tin vào bảng MetroSummary
-      metro_summary.save()
 
+      #Cập nhật tất cả thông tin vào bảng MetroSummary
+      metro_summary.save()
+      #Cập nhật vào phiếu Order có trả hàng (return = true)
+      order.return = true
+      order.save()
+      #Cập nhật phiếu bán hàng đã xác nhận quản lý
       @return.save()
     else
       flash[:notice] = 'Ko Co Quyen Truy Cap'
       redirect_to :action => :new
+      return
     end
 =begin
       respond_to do |format|
