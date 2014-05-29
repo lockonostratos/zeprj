@@ -113,7 +113,11 @@ class ReturnsController < MerchantApplicationController
         redirect_to :action => :edit , :location => @return
       end
     #5 Cập nhật phiếu return_details và cộng hàng trả vào bảng Product và ProductSummary
-      products = Product.where(id:old_return_detail.pluck(:return_product_id))
+      product_id = []
+      old_return_detail.each do |ex|
+        product_id += [ex.return_product_id]
+      end
+      products = Product.where(id:product_id)
         a=[]
         products.each do |pro|
           a+=[pro.product_code]
@@ -137,16 +141,17 @@ class ReturnsController < MerchantApplicationController
         #Cập nhật vào bảng OrderSummery
         order = order_detail.find_by(product_id:return_detail.return_product_id)
         order.return_quality += return_detail.return_quality
-
+        b=order.pluck(:price)
+        b
         #Câp nhật vào bảng MetroSummary
         metro_summary.return_count +=return_detail.return_quality
         metro_summary.return_count_day +=return_detail.return_quality
         metro_summary.return_count_month +=return_detail.return_quality
 
         #Trừ tiền Revenue trong bang MetroSummary
-        metro_summary.revenue = metro_summary.revenue - (return_detail.return_quality * order.price)
-        metro_summary.revenue_day = metro_summary.revenue -  (return_detail.return_quality * order.price)
-        metro_summary.revenue_month = metro_summary.revenue -  (return_detail.return_quality * order.price)
+        metro_summary.revenue = metro_summary.revenue - (return_detail.return_quality * product_price)
+        metro_summary.revenue_day = metro_summary.revenue -  (return_detail.return_quality * product_price)
+        metro_summary.revenue_month = metro_summary.revenue -  (return_detail.return_quality * product_price)
 
         #save du lieu trong bang Product  va OrderDetail
         product.save()
@@ -160,11 +165,12 @@ class ReturnsController < MerchantApplicationController
       flash[:notice] = 'Ko Co Quyen Truy Cap'
       redirect_to :action => :new
     end
-
+=begin
       respond_to do |format|
         format.html { redirect_to @return, notice: 'Update' }
         format.json { render :json => @return }
       end
+=end
   end
 
   # DELETE /returns/1

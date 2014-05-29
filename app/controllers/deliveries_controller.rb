@@ -47,17 +47,20 @@ class DeliveriesController < ApplicationController
         format.html { redirect_to @delivery, notice: 'Ko the success' }
         format.json { head :no_content }
       end
-      #TODO cap nhat neu Delivery ok
+
       if @delivery.success==true
         order = Order.find(@delivery.order_id)
         order_detail = OrderDetail.where(order_id:order.id)
-        product_id = order_detail.pluck(:product_id)
-        products = Product.find(product_id)
+        product_id = []
+        order_detail.each do |ex|
+          product_id += [ex.product_id]
+        end
+        products = Product.where(id:product_id)
 
         #Cap nhat stock_count, sale_count, sale_count_day, sale_count_month vao MetroSummary
         metro_summary = MetroSummary.find_by_warehouse_id(order.warehouse_id)
         order_detail.each do |order|
-          product = products.find(order.product_id)
+          product = products.find(order.product_id.to_param)
           product.instock_quality = product.instock_quality - order.quality
           product.save()
           #Cong san pham vao bang MetroSummary
@@ -74,8 +77,6 @@ class DeliveriesController < ApplicationController
         #Cap nhat order
         order.save(:status=>2)
         @delivery.save()
-      else# TODO Xử lý hủy đơn đặt hàng
-
       end
       format.html { redirect_to @delivery, notice: 'ok' }
       format.json { head :no_content }

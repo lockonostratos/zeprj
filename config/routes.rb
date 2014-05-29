@@ -14,6 +14,7 @@ Zeprj::Application.routes.draw do
 
   get 'warehouses/available', :to => 'warehouses#available'
   get 'product_summaries/import_availables', :to => 'product_summaries#import_availables'
+  get 'productSummaries/import_availables', :to => 'product_summaries#import_availables'
 
   get 'areas/showAllCustomers', :to => 'areas#showAllCustomers'
   get 'areas/showAllCustomers/:id', :to => 'areas#showAllCustomers'

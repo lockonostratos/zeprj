@@ -54,7 +54,13 @@ class MerchantApplicationController < ApplicationController
   #Report-------------------------------------------------------------------------------->
 
   #Report bán hàng theo Ngày , Merchant, Branch , Warehouse (chưa lọc dữ liệu, chỉ nhận dữ liệu chính xác)
-  #Trả về tổng quát trong bản Order theo(loai phieu, kieu phieu, xac nhan, ngay bat dau, ngay ket thuc, merchant, branch, warehouse, nhan vien)
+  #Trả về tổng quát trong bản Order theo
+  # (Loai phieu, kieu phieu, xac nhan, ngay bat dau, ngay ket thuc, merchant, branch, warehouse, nhan vien)
+  # Loai Phieu(report): order, return, delivery, import, export, inventory
+  # Kieu Phieu(type_report): 0(Chua Xac Nhan), 1(Xac Nhan)
+  # Merchant: nil(lấy tất cả)
+  #
+
   def report_all_time_and_warehouse_account(report, type_report, success, time_begin, time_end, merchant, branch, warehouse, merchant_account)
     #Xu ly Order, Return, Delivery
     if report == 'order' || report == 'return' || report == 'delivery'
