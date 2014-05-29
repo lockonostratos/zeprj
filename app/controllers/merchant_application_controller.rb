@@ -39,6 +39,10 @@ class MerchantApplicationController < ApplicationController
       return true if (ex.to_param == warehouse_id )
     end
   end
+  #Kiểm tra Warehouse mà người dùng hiện tại có quyền truy cập
+  def eqwe
+
+  end
 
   def get_all_customers(area_id)
     @customers = Customer.where(area_id:area_id)

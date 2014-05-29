@@ -14,10 +14,12 @@ class ProductSummariesController < MerchantApplicationController
   def import_availables
     current_product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
     current_temproduct = TempProduct.where(warehouse_id:current_merchant_account.current_warehouse_id, merchant_account_id:current_merchant_account.id)
+    product_summaries = []
     current_temproduct.each do |temproduct|
-       current_product_summaries = current_product_summaries - current_product_summaries.where(product_code:temproduct.product_code, skull_id:temproduct.skull_id)
+       product_summaries += current_product_summaries.where(product_code:temproduct.product_code, skull_id:temproduct.skull_id)
     end
-    @product_summaries = current_product_summaries
+    @product_summaries = current_product_summaries - product_summaries
+    # @product_summaries = current_product_summaries
     respond_to do |format|
       format.html {render action: 'index'}
       format.json {render json: @product_summaries}

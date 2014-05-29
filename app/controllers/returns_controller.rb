@@ -147,6 +147,7 @@ class ReturnsController < MerchantApplicationController
         metro_summary.return_count +=return_detail.return_quality
         metro_summary.return_count_day +=return_detail.return_quality
         metro_summary.return_count_month +=return_detail.return_quality
+        metro_summary.stock_count +=return_detail.return_quality
 
         #Trừ tiền Revenue trong bang MetroSummary
         metro_summary.revenue = metro_summary.revenue - (return_detail.return_quality * product_price)

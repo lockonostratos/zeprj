@@ -71,8 +71,8 @@ class InventoriesController < AccountsController
     #2.Xử lý nếu là quyền truy cập là khách lạ-------------------------------------------------------->
 
     #3.Xử lý nếu là quyền truy cập là quản lý-------------------------------------------------------->
-    if temp_inventory.submited == true and temp_inventory.success == false and temp_inventory.resolved == false and @inventory.submited == true and @inventory.resolved == true and @inventory.success == false
-    end
+    # if temp_inventory.submited == true and temp_inventory.success == false and temp_inventory.resolved == false and @inventory.submited == true and @inventory.resolved == true and @inventory.success == false
+    # end
 
     #4.Xử lý nếu là quyền truy cập là nhân viên-------------------------------------------------------->
       if inventory.submited == false and inventory.success == false and inventory.resolved == false and @inventory.submited == true and @inventory.resolved == false and @inventory.success == false

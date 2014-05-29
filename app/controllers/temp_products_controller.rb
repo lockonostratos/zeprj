@@ -35,8 +35,8 @@ class TempProductsController < MerchantApplicationController
   def create
     @temp_product = TempProduct.new(temp_product_params)
     respond_to do |format|
-       if check_validate_temp_product
-        @temp_product.save
+        # check_validate_temp_product
+      if @temp_product.save
         format.html { redirect_to @temp_product, notice: 'Temp product was successfully created.'  }
         format.json { render action: 'show', status: :created, location: @temp_product }
       else
