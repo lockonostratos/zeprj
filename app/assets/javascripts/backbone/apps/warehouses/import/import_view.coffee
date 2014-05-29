@@ -14,7 +14,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
 
   class ThisApp.ProductSummaryView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/productSummary']
-    className: 'product-summary-tile'
+    className: 'item-tile'
     tagName: 'li'
     events:
       'click span[editor]': (e)-> @trigger 'clicked', @model, $(e.currentTarget).attr('editor')
@@ -23,13 +23,21 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
 
   class ThisApp.ProductSummariesView extends Marionette.CompositeView
     template: JST['backbone/templates/warehouse/import/productSummaries']
+    className: 'import-product-summary-wrapper'
     itemView: ThisApp.ProductSummaryView
-    itemViewContainer: ".tile-container",
+    itemViewContainer: ".tile-container"
     emptyView: ThisApp.EmptyProductSummariesView
     ui:
       skyEditor: '#sky-editor'
+      importQuality: '#import-quality'
+      importPrice: '#import-price'
+
     initialize: ->
       @on 'itemview:clicked', (e, model, attribute) -> @trigger 'item:click', e, model, attribute
+    onShow: ->
+      $('input[inputmask-alias]').each ->
+        $(@).inputmask($(@).attr('inputmask-alias'))
+        Zeprj.log $(@).attr('inputmask-alias')
     events:
       'keyup #sky-editor': 'editAction'
       'keydown #sky-editor': 'keydownAction'

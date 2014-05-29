@@ -3,7 +3,7 @@
         <nav class='top-bar'>
             <section class="top-bar-section">
                 <ul class="left">
-                    <li id='home-button'><span class='nav-button'><i class="fa fa-home fa-3x"></i></span></li>
+                    <li id='home-button'><span class='home nav-button'><i class="fa fa-arrow-circle-o-left fa-3x"></i></span></li>
                 </ul>
                 <ul class="right">
                     <li><a href="#">WAREHOUSE!</a></li>

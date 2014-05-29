@@ -154,3 +154,5 @@ Optional extensions on the jquery.inputmask base
         }
     });
 })(jQuery);
+
+//=require jquery.inputmask.sky.extensions
