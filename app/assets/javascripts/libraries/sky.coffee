@@ -117,7 +117,8 @@ class Sky.Editor.Wrapper
       @currentKey = @attributes[if current == 0 then @attributes.length - 1 else current - 1]
   optionOf: (key) -> @options[key]
 
-  handleEntering: (editor, model, attribute) ->
+  startEdit: (editor, model, attribute) ->
+    editor.off() #remove all previous listener!
     @currentModel = model
     @currentAttribute = attribute
     @currentOption = @optionOf attribute
@@ -127,8 +128,9 @@ class Sky.Editor.Wrapper
     else editor.inputmask 'remove'
     editor.val (model.get attribute)
     editor.focus()
+    @setupKeyEvents editor
 
-  setupEditor: (editor) ->
+  setupKeyEvents: (editor) ->
     editor.on 'keyup', =>
       @currentModel.set @currentAttribute, (@unmaskedValue editor)
     editor.on 'keydown', (e) =>

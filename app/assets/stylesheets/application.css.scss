@@ -320,16 +320,14 @@ body {
 //      height: $content-min-height;
 
       ul.tile-container {
-        margin: 0.1rem 0;
+        margin: 0.1rem (-$tile-space) 0.1rem 0;
 
         .item-tile {
           display: inline-block;
-          width: 12rem;
+          width: 12.25rem;
           margin-right: $tile-space;
           position: relative;
           list-style: none;
-
-          i.fa { color: $component-theme; }
           p { margin: 0; }
 
           .item-head{
@@ -361,6 +359,12 @@ body {
                 overflow: hidden;
                 width: 68px;
               }
+
+              .up {
+                margin-top: 35px;
+                margin-left: -10px;
+                position: absolute;
+              }
             }
 
             .info-wrapper {
@@ -375,9 +379,18 @@ body {
 
           .item-footer {
             .info-wrapper {
-              width: 95%;
+              width: 97%;
               margin: 0 auto;
             }
+          }
+
+          .controller {
+            position: absolute;
+            z-index: 200;
+            display: block;
+            top: 20px;
+            &.right { right: 20px; }
+            &.left { left: 20px; }
           }
         }
       }

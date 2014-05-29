@@ -1,23 +1,48 @@
 Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
-  class ThisApp.TemporaryProductView extends Marionette.ItemView
-    template: JST['backbone/templates/warehouse/import/temporaryProduct']
-
   class ThisApp.EmptyTemporaryProductsView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/emptyTemporaryProduct']
 
   class ThisApp.EmptyProductSummariesView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/emptyProductSummaries']
 
+
+# TEMP PRODUCTS
+  class ThisApp.TemporaryProductView extends Marionette.ItemView
+    template: JST['backbone/templates/warehouse/import/temporaryProduct']
+    className: 'item-tile'
+    tagName: 'li'
+    events:
+      'click span[editor]': (e) -> @trigger 'edit:click', @model, $(e.currentTarget).attr('editor')
+    initialize: ->
+      @listenTo @model, 'change', -> @render()
+
   class ThisApp.TemporaryProductsView extends Marionette.CollectionView
     itemView: ThisApp.TemporaryProductView
     emptyView: ThisApp.EmptyTemporaryProductsView
+    tagName: 'ul'
+    className: 'tile-container'
+    initialize: ->
+      @on 'itemview:edit:click', (e, model, attribute) ->
+        @trigger 'edit:click', e, model, attribute
 
+    addImport: (model, importQuality, importPrice) ->
+      @collection.add new Zeprj.Entities.TempProduct
+        product_code: model.get 'product_code'
+        warehouse_id: Zeprj.currentMerchantAccount.current_warehouse_id
+        merchant_account_id: Zeprj.currentMerchantAccount.id
+        name: model.get 'name'
+        import_quality: importQuality
+        import_price: importPrice
+        skull_id: model.get 'skull_id'
+
+  # PRODUCT SUMMARIES
   class ThisApp.ProductSummaryView extends Marionette.ItemView
     template: JST['backbone/templates/warehouse/import/productSummary']
     className: 'item-tile'
     tagName: 'li'
     events:
-      'click span[editor]': (e)-> @trigger 'clicked', @model, $(e.currentTarget).attr('editor')
+      'click span[editor]': (e) -> @trigger 'edit:click', @model, $(e.currentTarget).attr('editor')
+      'click .up.link': -> @trigger 'import:click', @model
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
@@ -33,11 +58,11 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       importPrice: '#import-price'
 
     initialize: ->
-      @on 'itemview:clicked', (e, model, attribute) -> @trigger 'item:click', e, model, attribute
+      @on 'itemview:edit:click', (e, model, attribute) -> @trigger 'edit:click', e, model, attribute
+      @on 'itemview:import:click', (e, model) ->  @trigger 'import:click', model
     onShow: ->
       $('input[inputmask-alias]').each ->
         $(@).inputmask($(@).attr('inputmask-alias'))
-        Zeprj.log $(@).attr('inputmask-alias')
     events:
       'keyup #sky-editor': 'editAction'
       'keydown #sky-editor': 'keydownAction'

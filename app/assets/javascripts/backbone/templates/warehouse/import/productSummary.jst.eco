@@ -1,5 +1,4 @@
-<div class='controller'>
-
+<div class=' right controller'>
 </div>
 
 <div class='item-head'>
@@ -9,6 +8,7 @@
 <div class='item-body'>
   <div class='avatar-picture' data-tooltip title='NGƯỜI BÁN SẢN PHẨM NÀY NHIỀU NHẤT'>
     <img width="69" height="69" src="assets/defaults/dicaprio.jpg">
+    <i class="up link fa fa-arrow-circle-up fa-2x"></i>
     <div class='right'>
       <p data-tooltip class='has-tip' title='MÃ SẢN PHẨM'>
         <i class="fa fa-qrcode"></i>
@@ -22,12 +22,15 @@
     </div>
   </div>
   <div class='info-wrapper'>
-    <p><span class='title' editor='name'><%= @name || 'CHƯA ĐẶT TÊN' %></span></p>
+    <p><span class='title link' editor='name'><%= @name || 'CHƯA ĐẶT TÊN' %></span></p>
   </div>
 </div>
 
 <div class='item-footer'>
   <div class='info-wrapper'>
-    <p class='right'><span editor='price' data-tooltip class='has-tip' title='GIÁ BÁN'><%= accounting.formatNumber @price %> VNĐ</span></p>
+    <span><i class="fa fa-arrow-circle-up"></i></span>
+    <span class='right' data-tooltip class='has-tip' title='GIÁ BÁN'>
+      GIÁ BÁN: <span editor='price'><%= accounting.formatNumber @price %></span> VNĐ
+    </span>
   </div>
 </div>

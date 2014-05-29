@@ -41,7 +41,15 @@ input[type=button] {
   transition: all 0.2s linear 0s;
 }
 
-i.fa {
+i.fa, span {
+  &.component-theme { color: $component-theme; }
+  &[editor] {
+    color: darken($component-theme, 5);
+    font-size: 110%;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
   &.green { color: $green; }
   &.light-green { color: $light-green; }
   &.yellow { color: $yellow; }
@@ -54,4 +62,9 @@ i.fa {
   &.purple { color: $yellow; }
   &.dark { color: $yellow; }
   &.gray { color: $yellow; }
+}
+
+i.link, span.link, p.link {
+  cursor: pointer;
+  color: $component-theme !important;
 }
