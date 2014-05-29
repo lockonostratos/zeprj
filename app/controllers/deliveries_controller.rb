@@ -50,13 +50,14 @@ class DeliveriesController < ApplicationController
       #TODO cap nhat neu Delivery ok
       if @delivery.success==true
         order = Order.find(@delivery.order_id)
+        order_detail = OrderDetail.where(order_id:order.id)
+        product_id = order_detail.pluck(:product_id)
+        products = Product.find(product_id)
+
         #Cap nhat stock_count, sale_count, sale_count_day, sale_count_month vao MetroSummary
         metro_summary = MetroSummary.find_by_warehouse_id(order.warehouse_id)
-
-        order_detail = OrderDetail.where(order_id:@delivery.order_id)
-        products = Product.find(order.pluck(:id))
         order_detail.each do |order|
-          product = products.find_by(order.product_id)
+          product = products.find(order.product_id)
           product.instock_quality = product.instock_quality - order.quality
           product.save()
           #Cong san pham vao bang MetroSummary
@@ -67,7 +68,6 @@ class DeliveriesController < ApplicationController
           metro_summary.revenue +=(order.quality * order.price)
           metro_summary.revenue_day +=(order.quality * order.price)
           metro_summary.revenue_month +=(order.quality * order.price)
-
         end
         # Cap Nhat Bang MetroSummary
         metro_summary.save()

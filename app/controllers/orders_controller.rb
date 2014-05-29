@@ -1,6 +1,5 @@
 class OrdersController < MerchantApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
   # GET /orders
   # GET /orders.json
   def index
@@ -35,7 +34,7 @@ class OrdersController < MerchantApplicationController
 
     #TODO: Giả lập dữ liệu nhận. Xóa mấy cái này khi viết xong
     @selling_stocks = ProductSummary.find(1,2,3,4) #id, soluong....
-    dump_quality = 5
+    dump_quality = 10
     # transaction_error = false;
 
     #pseduo

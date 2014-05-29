@@ -46,9 +46,8 @@ class MerchantApplicationController < ApplicationController
   end
 
   def all_warehouse_on_merchant(merchant_id)
-    branch = Branch.where(merchant_id:merchant_id)
-    warehouses = Warehouse.where(branch_id: branch.pluck(:id), location:[1,0,nil])
-    return warehouses.pluck(:id)
+    warehouses = Warehouse.where(merchant_id:merchant_id)
+    return warehouses
   end
 
 

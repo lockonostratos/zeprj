@@ -90,7 +90,7 @@ class TempProductsController < MerchantApplicationController
     #kiểm tra dữ liệu nhận thông báo khi loi, trong @errors
   def check_validate_temp_product
     warehouse = Warehouse.find_by_id(@temp_product.warehouse_id)
-    product_code = ProductSummary.find_by_product_code_and_warehouse_id(@temp_product.product_code, @temp_product.warehouse_id, @temp_product.skull_id)
+    product_code = ProductSummary.find_by_product_code_and_warehouse_id_and_skull_id(@temp_product.product_code, @temp_product.warehouse_id,@temp_product.skull_id)
     skull = Skull.find_by_id_and_merchant_id(@temp_product.skull_id, current_merchant_account.merchant_id)
     provider = Provider.find_by_id_and_merchant_id(@temp_product.provider_id, current_merchant_account.merchant_id)
     errors = ''

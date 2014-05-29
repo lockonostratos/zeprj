@@ -9,6 +9,7 @@ class Warehouse < ActiveRecord::Base
   has_many :metro_summaries
 
   belongs_to :branch
+  belongs_to :merchant
 
 
   before_create :on_create_warehouse

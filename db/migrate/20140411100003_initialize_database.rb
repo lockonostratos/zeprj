@@ -318,6 +318,7 @@ class InitializeDatabase < ActiveRecord::Migration
 
     #Kho----------------------------------------------------->
     create_table :warehouses do |t|
+      t.belongs_to :warehouse, :null => false
       t.belongs_to :branch, :null => false
       t.string :name, :null => false
       t.string :location

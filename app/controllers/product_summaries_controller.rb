@@ -4,15 +4,27 @@ class ProductSummariesController < MerchantApplicationController
   # GET /product_summaries
   # GET /product_summaries.json
   def index
-    #@pro=Product.find(1)
-    #@product_summaries=ProductSummary.where(:product_code => @pro.product_code, :skull_id => @pro.skull_id)
-    @product_summaries = ProductSummary.all
-
+    @product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
     respond_to do |format|
       format.html
       format.json {render json: @product_summaries}
     end
   end
+
+  def import_availables
+    current_product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
+    current_temproduct = TempProduct.where(warehouse_id:current_merchant_account.current_warehouse_id, merchant_account_id:current_merchant_account.id)
+    current_temproduct.each do |temproduct|
+      current_product_summaries = current_product_summaries - current_product_summaries.where(product_code:temproduct.product_code, skull_id:temproduct.skull_id)
+    end
+    @product_summaries = current_product_summaries
+    respond_to do |format|
+      format.html
+      format.json {render json: @product_summaries}
+    end
+  end
+
+
 
   # GET /product_summaries/1
   # GET /product_summaries/1.json
@@ -22,6 +34,8 @@ class ProductSummariesController < MerchantApplicationController
       format.json {render json: @product_summary}
     end
   end
+
+
 
   # GET /product_summaries/new
   def new
