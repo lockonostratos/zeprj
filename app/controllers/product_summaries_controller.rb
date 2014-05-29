@@ -50,24 +50,11 @@ class ProductSummariesController < MerchantApplicationController
   # POST /product_summaries.json
   def create
     @product_summary = ProductSummary.new(product_summary_params)
-
+    @product_summary.quality = 0
     respond_to do |format|
       if @product_summary.save
         format.html { redirect_to @product_summary, notice: 'Product summary was successfully created.' }
         format.json { render action: 'show', status: :created, location: @product_summary }
-        if @product_summary.quality==0
-          #TODO Tạo đỡ trên ProductSummary add sản phẩm vào bảng tạm
-          TempProduct.create! ({
-              :product_code=>@product_summary.product_code,
-              :skull_id=>@product_summary.skull_id,
-              :warehouse_id=>@product_summary.warehouse_id,
-              :merchant_account_id=>@product_summary.merchant_account_id,
-              :name=>@product_summary.name,
-              :import_quality=>300,
-              :import_price=>@product_summary.price})
-        else
-          @product_summary.destroy
-        end
       else
         format.html { render action: 'new' }
         format.json { render json: @product_summary.errors, status: :unprocessable_entity }
