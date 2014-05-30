@@ -13,7 +13,7 @@ class ProductSummariesController < MerchantApplicationController
 
   def import_availables
     current_product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
-    current_temproduct = TempProduct.where(product_summary_id:current_product_summaries.returnspluck(:id), merchant_account_id:current_merchant_account.id)
+    current_temproduct = TempProduct.where(product_summary_id:current_product_summaries.pluck(:id), merchant_account_id:current_merchant_account.id)
     product_summaries = []
     current_temproduct.each do |temproduct|
        product_summaries += current_product_summaries.find(temproduct.product_summary_id)

@@ -479,10 +479,10 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "temp_products", force: true do |t|
-    t.integer  "product_summary_id",               null: false
-    t.integer  "merchant_account_id",              null: false
+    t.integer  "product_summary_id",                                       null: false
+    t.integer  "merchant_account_id",                                      null: false
     t.integer  "provider_id"
-    t.integer  "import_quality",      default: 0
+    t.integer  "import_quality",                               default: 0
     t.decimal  "import_price",        precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"

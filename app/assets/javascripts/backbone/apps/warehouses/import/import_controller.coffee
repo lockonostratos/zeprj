@@ -18,8 +18,15 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
         model.destroy
           wait: true
           success: (model) ->
-            Zeprj.request 'productSummary:entity', model.get 'product_id'
-            ThisApp.productSummariesView.collection.add model #TODO: Unsafe!
+#            Zeprj.log model
+#            Zeprj.log 'xx'
+#            newModel = Zeprj.request 'productSummary:entity', model.get 'product_summary_id'
+#            ThisApp.productSummariesView.addItemView newModel, ThisApp.ProductSummaryView, 0
+
+      ThisApp.temporaryProductsView.on 'item:create', (model) ->
+        collection = ThisApp.productSummariesView.collection
+        deletingModel = collection.where { product_code: model.get 'product_code' }
+        ThisApp.productSummariesView.collection.remove deletingModel if deletingModel
 
       #PRODUCT SUMMARY -> BOTTOM PANE
       ThisApp.productSummariesView.on 'edit:click', (e, model, attribute) ->
@@ -29,7 +36,6 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
         quality = accounting.parse(@ui.importQuality.inputmask('unmaskedvalue'))
         price = accounting.parse(@ui.importPrice.inputmask('unmaskedvalue'))
         ThisApp.temporaryProductsView.addImport model, quality, price
-        @collection.remove model #TODO: Unsafe!
 
       ThisApp.productSummariesView.on 'item:save', (model) ->
         model.save({
@@ -44,8 +50,6 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
           success: -> Zeprj.log 'success'
           error: -> Zeprj.log 'error'
         })
-
-
 
       ThisApp.productSummariesView.onClose = ->
         Zeprj.log 'Cloused!'

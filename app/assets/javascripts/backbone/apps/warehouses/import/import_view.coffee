@@ -27,7 +27,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       @on 'itemview:item:delete', (e, model) -> @trigger 'item:delete', e, model
 
     addImport: (model, importQuality, importPrice) ->
-      newImport = @collection.create
+      newImport = @collection.create {
         product_code: model.get 'product_code'
         warehouse_id: Zeprj.currentMerchantAccount.get 'current_warehouse_id'
         merchant_account_id: Zeprj.currentMerchantAccount.get 'id'
@@ -35,11 +35,11 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
         import_quality: importQuality
         import_price: importPrice
         skull_id: model.get 'skull_id'
-        ,
+      } , {
         wait: true
-        success: (model, message)-> Zeprj.log 'success'
-        error: (model, error)->
-          Zeprj.log error
+        success: (model, message) => @trigger 'item:create', model
+        error: (model, error) -> Zeprj.log error
+      }
 
   # PRODUCT SUMMARIES
   class ThisApp.ProductSummaryView extends Marionette.ItemView
