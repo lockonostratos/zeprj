@@ -5,7 +5,7 @@ class TempProductsController < MerchantApplicationController
   # GET /temp_products.json
   def index
     @temp_products =  TempProduct.where(:merchant_account_id => current_merchant_account.id)
-    product_summary = ProductSummary.where(id:@temp_products.returnspluck(:product_summary_id))
+    product_summary = ProductSummary.where(id:@temp_products.pluck(:product_summary_id))
     temp_products_detail = []
     @temp_products.each do |ex|
       current_product_summary = product_summary.find(ex.product_summary_id)
