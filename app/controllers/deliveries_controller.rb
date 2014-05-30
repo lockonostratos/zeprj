@@ -59,7 +59,7 @@ class DeliveriesController < MerchantApplicationController
       if @delivery.success==true
         order = Order.find(@delivery.order_id)
         order_detail = OrderDetail.where(order_id:order.id)
-        products = Product.where(id:order_detail.returnspluck(:product_id))
+        products = Product.where(id:order_detail.pluck(:product_id))
 
         #Cap nhat stock_count, sale_count, sale_count_day, sale_count_month vao MetroSummary
         metro_summary = MetroSummary.find_by_warehouse_id(order.warehouse_id)

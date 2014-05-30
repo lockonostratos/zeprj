@@ -51,7 +51,7 @@ class MerchantApplicationController < ApplicationController
   end
   #Lấy tất cả order của một merchant
   def all_order_on_merchant(merchant_id)
-    orders = Order.where(warehouse_id: (all_warehouse_on_merchant merchant_id).returnspluck(:id))
+    orders = Order.where(warehouse_id: (all_warehouse_on_merchant merchant_id).pluck(:id))
     return orders
   end
 
@@ -201,17 +201,17 @@ class MerchantApplicationController < ApplicationController
       return nil
     #Trả về theo dạng Tổng Quát
     elsif type_report == 0
-      return Return.where(order_id: orders.returnspluck(:id)).uniq() if success == nil
-      return Return.where(order_id: orders.where(deliveries: success).returnspluck(:id)).uniq() if (success == 0 || success == 1)
+      return Return.where(order_id: orders.pluck(:id)).uniq() if success == nil
+      return Return.where(order_id: orders.where(deliveries: success).pluck(:id)).uniq() if (success == 0 || success == 1)
     #Trả về theo dạng Bảng Kê
     elsif type_report == 1
       if success == nil
-        returns = Return.where(order_id: orders.returnspluck(:id))
-        return ReturnDetail.where(return_id: returns.returnspluck(:id)).uniq()
+        returns = Return.where(order_id: orders.pluck(:id))
+        return ReturnDetail.where(return_id: returns.pluck(:id)).uniq()
       end
       if (success == 0 || success == 1)
         returns = Return.where(order_id: orders.where(deliveries: success))
-        return ReturnDetail.where(return_id: returns.returnspluck(:id)).uniq()
+        return ReturnDetail.where(return_id: returns.pluck(:id)).uniq()
       end
     end
   end
@@ -219,8 +219,8 @@ class MerchantApplicationController < ApplicationController
     if orders == []
       return nil
     elsif (type_report == 0 || type_report == 1)
-      return Delivery.where(order_id:orders.returnspluck(:id)).uniq() if success == nil
-      return Delivery.where(order_id:orders.returnspluck(:id), success:success).uniq() if (success == 0 || success == 1)
+      return Delivery.where(order_id:orders.pluck(:id)).uniq() if success == nil
+      return Delivery.where(order_id:orders.pluck(:id), success:success).uniq() if (success == 0 || success == 1)
     end
   end
   #-------------------------------------------------------------------------------------------------------------------->
