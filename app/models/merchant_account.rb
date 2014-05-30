@@ -12,7 +12,7 @@ class MerchantAccount < ActiveRecord::Base
   has_many :merchant_account_roles
   has_many :merchant_account_permissions
   has_many :merchant_account_permission_details
-
+  has_many :temp_products
   belongs_to :account
   belongs_to :merchant
   belongs_to :branch
@@ -31,20 +31,24 @@ class MerchantAccount < ActiveRecord::Base
   def add_staff_count_metro_summary
     #Tìm Các Branch cùng thuộc 1 merchant
     branches = Branch.where(merchant_id:self.merchant_id)
-    # a=[]
-    # branches.each do |brach|
-    #   a+=[branch.id]
-    # end
+     branch_id=[]
+     branches.each do |brach|
+       branch_id+=[brach.id]
+     end
 
     #Tìm tất cả MerchantAccount thuộc 1 merchant
-    merchant_accounts = MerchantAccount.where(branch_id:branches.pluck(:id))
+    merchant_accounts = MerchantAccount.where(branch_id:branch_id)
     #Lọc các merchant_account cùng 1 branch
     merchant_account = merchant_accounts.where(branch_id:self.branch_id)
 
     #Tìm tất cả Warehouse cùng thuộc 1 merchant
-    warehouses = Warehouse.where(branch_id:branches.pluck(:id))
+    warehouses = Warehouse.where(branch_id:branch_id)
     #Tìm tất cả Warehouse cùng 1 branch
     warehouse = warehouses.where(branch_id:self.branch_id)
+    warehouses_id= []
+    warehouses.each do |ware|
+      warehouses_id+=[ware.id]
+    end
 
 
     staff_count = 0
@@ -59,8 +63,8 @@ class MerchantAccount < ActiveRecord::Base
     end
 
     #lấy thông tin của bản MetroSummary
-    metro_summaries = MetroSummary.where(warehouse_id:warehouses.pluck(:id))
-    metro_summary = metro_summaries.where(warehouse_id:warehouse.pluck(:id))
+    metro_summaries = MetroSummary.where(warehouse_id:warehouses_id)
+    metro_summary = metro_summaries.where(warehouse_id:warehouses_id)
 
     #Save thông tin của bảng Metrosummary
     metro_summaries.each do |metro|

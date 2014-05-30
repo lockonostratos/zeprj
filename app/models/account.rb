@@ -46,7 +46,6 @@ class Account < ActiveRecord::Base
       MerchantAccount.create!({account_id: self.id, merchant_id: account.merchant_id,
                                branch_id: account.branch_id, current_warehouse_id: account.current_warehouse_id})
     end
-
   end
 
   def destroy_account

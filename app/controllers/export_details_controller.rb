@@ -1,10 +1,18 @@
-class ExportDetailsController < ApplicationController
+class ExportDetailsController < MerchantApplicationController
   before_action :set_export_detail, only: [:show, :edit, :update, :destroy]
 
   # GET /export_details
   # GET /export_details.json
   def index
     @export_details = ExportDetail.all
+    respond_to do |format|
+      format.html
+      format.json { render :json => @export_details }
+    end
+  end
+
+  def show_export_details_on_export(export)
+    @export_details = ExportDetail.where(export_id: export)
     respond_to do |format|
       format.html
       format.json { render :json => @export_details }

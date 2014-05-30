@@ -351,16 +351,12 @@ class InitializeDatabase < ActiveRecord::Migration
     end
     #Bang CHI TIET san pham Bảng tãm!--------------------------------->
     create_table :temp_products do |t|
-      t.string :product_code, :null => false
-      t.belongs_to :skull
-      t.belongs_to :provider
-      t.belongs_to :warehouse, :null => false
+      t.belongs_to :product_summary, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.belongs_to :provider
 
-      t.string :name, :null => false
       t.integer :import_quality, :default => 0 #so luong nhap
       t.decimal :import_price, :presence => 15 #gia
-      t.datetime :expire
 
       t.timestamps
     end

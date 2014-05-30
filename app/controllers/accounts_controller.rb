@@ -17,7 +17,6 @@ class AccountsController < ApplicationController
   # GET /accounts/1.json
   def show
     @account = params[:id] == '0' ? @current_account :  Account.find(params[:id])
-
     unless @account.nil?
       respond_to do |format|
         format.html

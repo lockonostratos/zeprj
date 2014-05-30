@@ -4,7 +4,7 @@ class BranchesController < MerchantApplicationController
   # GET /branches
   # GET /branches.json
   def index
-    @branches = Branch.all
+    @branches = Branch.where(merchant_id: current_merchant_account.merchant_id)
     respond_to do |format|
       format.html
       format.json { render :json => @branches }

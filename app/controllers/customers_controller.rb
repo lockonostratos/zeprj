@@ -4,12 +4,20 @@ class CustomersController < MerchantApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.where(merchant_id: current_merchant_account.merchant_id)
+    respond_to do |format|
+      format.html
+      format.json { render :json => @customers }
+    end
   end
 
   # GET /customers/1
   # GET /customers/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render :json => @customer }
+    end
   end
 
   # GET /customers/new

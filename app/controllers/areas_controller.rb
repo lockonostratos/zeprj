@@ -9,12 +9,20 @@ class AreasController < MerchantApplicationController
   # GET /areas
   # GET /areas.json
   def index
-    @areas = Area.all
+    @areas = Area.where(merchant_id: current_merchant_account.merchant_id)
+    respond_to do |format|
+      format.html
+      format.json { render :json => @areas }
+    end
   end
 
   # GET /areas/1
   # GET /areas/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render :json => @area }
+    end
   end
 
   # GET /areas/new

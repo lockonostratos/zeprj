@@ -4,7 +4,7 @@ class SkullsController < ApplicationController
   # GET /skulls
   # GET /skulls.json
   def index
-    @skulls = Skull.all
+    # @skulls = Skull.where(:)
     respond_to do |format|
       format.html
       format.json { render :json => @skulls }

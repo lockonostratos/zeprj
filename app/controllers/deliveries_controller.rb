@@ -1,15 +1,23 @@
-class DeliveriesController < ApplicationController
+class DeliveriesController < MerchantApplicationController
   before_action :set_delivery, only: [:show, :edit, :update, :destroy]
 
   # GET /deliveries
   # GET /deliveries.json
   def index
-    @deliveries = Delivery.all
+    @deliveries = Delivery.where(order_id: all_order_on_merchant(current_merchant_account.merchant_id))
+    respond_to do |format|
+      format.html
+      format.json { render :json => @deliveries}
+    end
   end
 
   # GET /deliveries/1
   # GET /deliveries/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render :json => @delivery }
+    end
   end
 
   # GET /deliveries/new
@@ -51,11 +59,7 @@ class DeliveriesController < ApplicationController
       if @delivery.success==true
         order = Order.find(@delivery.order_id)
         order_detail = OrderDetail.where(order_id:order.id)
-        product_id = []
-        order_detail.each do |ex|
-          product_id += [ex.product_id]
-        end
-        products = Product.where(id:product_id)
+        products = Product.where(id:order_detail.returnspluck(:product_id))
 
         #Cap nhat stock_count, sale_count, sale_count_day, sale_count_month vao MetroSummary
         metro_summary = MetroSummary.find_by_warehouse_id(order.warehouse_id)

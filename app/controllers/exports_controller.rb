@@ -1,10 +1,10 @@
-class ExportsController < ApplicationController
+class ExportsController < MerchantApplicationController
   before_action :set_export, only: [:show, :edit, :update, :destroy]
 
   # GET /exports
   # GET /exports.json
   def index
-    @exports = Export.all
+    @exports = Export.where(warehouse_id: current_merchant_account.warehouse_id)
     respond_to do |format|
       format.html
       format.json { render :json => @exports }
