@@ -68,43 +68,36 @@ class MerchantApplicationController < ApplicationController
   #
 
    def report_all_time_and_warehouse_account(report, type_report, success, time_begin, time_end,
-      merchant, branch, warehouse, merchant_account, cusrommer)
-    #Xu ly Order, Return, Delivery
-    if (report == 'order' || report == 'return' || report == 'delivery') and
-        (type_report == 0 || type_report == 1) and
-        (success ==nil || success == 0 || success == 1)
-      if time_begin != nil and time_end !=nil
-        #lấy tất cả cua Merchant
-        if merchant !=nil
-         orders = retrun_order_by_warehouse time_begin,
-                                            time_end,
-                                            all_warehouse_on_merchant(merchant) if merchant_account == nil
-         orders = retrun_order_by_warehouse_merchant_account time_begin,
-                                                             time_end,
-                                                             all_warehouse_on_merchant(merchant),
-                                                             merchant_account if merchant_account != nil
-        end
-        #lấy theo Branch
-        if merchant ==nil and branch !=nil
-          orders = retrun_order_by_branch time_begin,
-                                          time_end,
-                                          branch if merchant_account == nil
-          orders = retrun_order_by_branch_merchant_account time_begin,
-                                                           time_end,
-                                                           branch,
-                                                           merchant_account if merchant_account != nil
-        end
-        #lấy theo Branch và Warehouse
-        if merchant ==nil and branch !=nil and warehouse !=nil
-          orders += retrun_order_by_warehouse time_begin,
-                                              time_end,
-                                              warehouse if merchant_account == nil
-          orders += retrun_order_by_warehouse_merchant_account time_begin,
-                                                               time_end,
-                                                               warehouse,
-                                                               merchant_account if merchant_account != nil
-        end
-      end
+                                             merchant, branch, warehouse, merchant_account, customer)
+      #Xu ly Order, Return, Delivery
+      if (report == 'order' || report == 'return' || report == 'delivery') and
+          (type_report == 0 || type_report == 1) and
+          (success ==nil || success == 0 || success == 1)
+         #lấy tất cả order của Merchant
+         if merchant !=nil
+         orders = retrun_order_by_warehouse_and_merchant_account_and_customer time_begin,
+                                                                               time_end,
+                                                                               all_warehouse_on_merchant(merchant),
+                                                                               merchant_account,
+                                                                               customer
+         end
+         #lấy order theo Branch
+         if merchant ==nil and branch !=nil
+         orders = retrun_order_by_branch_and_merchant_account_and_customer time_begin,
+                                                                           time_end,
+                                                                           branch,
+                                                                           merchant_account,
+                                                                           customer if merchant_account != nil
+         end
+         #lấy order theo Branch và Warehouse
+         if merchant ==nil and branch !=nil and warehouse !=nil
+         orders += retrun_order_by_warehouse_and_merchant_account_and_customer time_begin,
+                                                                               time_end,
+                                                                               warehouse,
+                                                                               merchant_account,
+                                                                               customer if merchant_account != nil
+         end
+
         #Tra ve Order
         if report == 'order'
           returns_order_report orders, type_report, success
@@ -117,55 +110,100 @@ class MerchantApplicationController < ApplicationController
         if report == 'delivery'
           returns_delivery_report orders, type_report, success
         end
+      #Xu ly Import, Export, Inventory
+      elsif (report =='import' || report == 'export' || report == 'inventory') and
+          (type_report == 0 || type_report == 1) and
+          (success ==nil || success == 0 || success == 1)
 
-    #Xu ly Import, Export, Inventory
-    elsif report =='import' || report == 'export' || report == 'inventory'
-    end
+
+      end
   end
 
 
   private
   #-------------------------------------------------------------------------------------------------------------------->
-  def retrun_order_by_branch (time_begin, time_end, branch)
-    return Order.where(
-        :created_at => time_begin.beginning_of_day..time_end.end_of_day,
-        :branch_id => branch)
+  def retrun_order_by_warehouse_and_merchant_account_and_customer (time_begin, time_end, warehouse, merchant_account, customer)
+    if time_begin != nil and time_end == nil
+    else #time_begin == nil and time_end != nil
+    end
+
+    if merchant_account == nil
+      if customer == nil
+        return Order.where(
+            :created_at => time_begin.beginning_of_day..time_end.end_of_day,
+            :warehouse_id => warehouse)
+      else
+        return Order.where(
+            :created_at => time_begin.beginning_of_day..time_end.end_of_day,
+            :warehouse_id => warehouse,
+            :customer_id => customer)
+      end
+    else
+      if customer == nil
+        return Order.where(
+            :created_at => time_begin.beginning_of_day..time_end.end_of_day,
+            :warehouse_id => warehouse,
+            :merchant_account_id => merchant_account)
+      else
+        return Order.where(
+            :created_at => time_begin.beginning_of_day..time_end.end_of_day,
+            :warehouse_id => warehouse,
+            :merchant_account_id => merchant_account,
+            :customer_id => customer)
+      end
+    end
   end
-  def retrun_order_by_warehouse (time_begin, time_end, warehouse)
-    return Order.where(
-        :created_at => time_begin.beginning_of_day..time_end.end_of_day,
-        :warehouse_id => warehouse)
+
+  def retrun_order_by_branch_and_merchant_account_and_customer (time_begin, time_end, branch, merchant_account, customer)
+    if merchant_account == nil
+      if customer == nil
+        return Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day,
+                           :branch_id => branch)
+      else
+        return Order.where(:created_at => time_begin.beginning_of_day..time_end.end_of_day,
+                           :branch_id => branch,
+                           :customer_id => customer)
+      end
+    else
+      if customer == nil
+        return Order.where(
+            :created_at => time_begin.beginning_of_day..time_end.end_of_day,
+            :branch_id => branch,
+            :merchant_account_id => merchant_account)
+      else
+        return Order.where(
+            :created_at => time_begin.beginning_of_day..time_end.end_of_day,
+            :branch_id => branch,
+            :merchant_account_id => merchant_account,
+            :customer_id => customer)
+      end
+    end
   end
-  def retrun_order_by_branch_merchant_account (time_begin, time_end, branch, merchant_account)
-    return Order.where(
-        :created_at => time_begin.beginning_of_day..time_end.end_of_day,
-        :branch_id => branch,
-        :merchant_account_id => merchant_account)
-  end
-  def retrun_order_by_warehouse_merchant_account (time_begin, time_end, warehouse, merchant_account)
-    return Order.where(
-        :created_at => time_begin.beginning_of_day..time_end.end_of_day,
-        :warehouse_id => warehouse,
-        :merchant_account_id => merchant_account)
-  end
+
   #-------------------------------------------------------------------------------------------------------------------->
   def returns_order_report (orders, type_report, success)
+    #Trả về nil nếu order trống
     if orders == []
       return nil
+    #Trả về theo dạng Tổng Quát
     elsif type_report == 0
       return orders.uniq() if success == nil
       return orders.where(delivery:success).uniq() if (success == 0 || success == 1)
+    #Trả về theo dạng Bảng Kê
     elsif type_report == 1
       return OrderDetail.where(order_id: orders.uniq()) if success == nil
       return OrderDetail.where(order_id: orders.where(delivery:success).uniq()) if (success == 0 || success == 1)
     end
   end
   def returns_return_report (orders, type_report, success)
+    #Trả về nil nếu order trống
     if orders == []
       return nil
+    #Trả về theo dạng Tổng Quát
     elsif type_report == 0
       return Return.where(order_id: orders.returnspluck(:id)).uniq() if success == nil
       return Return.where(order_id: orders.where(deliveries: success).returnspluck(:id)).uniq() if (success == 0 || success == 1)
+    #Trả về theo dạng Bảng Kê
     elsif type_report == 1
       if success == nil
         returns = Return.where(order_id: orders.returnspluck(:id))

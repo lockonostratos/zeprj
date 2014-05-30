@@ -4,10 +4,46 @@ class TempProductsController < MerchantApplicationController
   # GET /temp_products
   # GET /temp_products.json
   def index
-    @temp_products =  TempProduct.where(:merchant_account_id => current_merchant_account.id, :warehouse_id => @current_merchant_account.current_warehouse_id)
+    @temp_products =  TempProduct.where(:merchant_account_id => current_merchant_account.id)
+    product_summary = ProductSummary.where(id:@temp_products.returnspluck(:product_summary_id))
+    temp_products_detail = []
+    @temp_products.each do |ex|
+      current_product_summary = product_summary.find(ex.product_summary_id)
+      params = ActionController::Parameters.new({
+                                                    temp_products_detail: {
+                                                        id: ex.id,
+                                                        product_summary_id: ex.product_summary_id,
+                                                        merchant_account: ex.merchant_account_id,
+                                                        import_quality:ex.import_quality,
+                                                        import_price:ex.import_price,
+                                                        provider: ex.provider_id,
+                                                        warehouse: current_product_summary.warehouse_id,
+                                                        price:current_product_summary.price,
+                                                        quality:current_product_summary.quality,
+                                                        product_code: current_product_summary.product_code,
+                                                        skull: current_product_summary.skull_id,
+                                                        name: current_product_summary.name
+                                                    }
+                                                })
+      permitted = params.require(:temp_products_detail).permit(
+                                                               :id,
+                                                               :product_summary_id,
+                                                               :merchant_account,
+                                                               :warehouse,
+                                                               :provider,
+                                                               :product_code,
+                                                               :skull,
+                                                               :name,
+                                                               :price,
+                                                               :quality,
+                                                               :import_price,
+                                                               :import_quality
+                                                               )
+      temp_products_detail += [permitted]
+    end
     respond_to do |format|
       format.html
-      format.json { render :json => @temp_products }
+      format.json { render :json => temp_products_detail }
     end
   end
 
