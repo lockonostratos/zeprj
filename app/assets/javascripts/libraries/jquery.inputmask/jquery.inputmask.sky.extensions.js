@@ -27,7 +27,7 @@
             alias: 'numeric',
             autoGroup: true,
             groupSeparator: ',',
-            integerDigits: 9,
+            integerDigits: 11,
             digits: 0
         }
   });

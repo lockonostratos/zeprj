@@ -13,6 +13,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     tagName: 'li'
     events:
       'click span[editor]': (e) -> @trigger 'edit:click', @model, $(e.currentTarget).attr('editor')
+      'click .delete.link': (e) -> @trigger 'item:delete', @model
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
@@ -22,18 +23,23 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     tagName: 'ul'
     className: 'tile-container'
     initialize: ->
-      @on 'itemview:edit:click', (e, model, attribute) ->
-        @trigger 'edit:click', e, model, attribute
+      @on 'itemview:edit:click', (e, model, attribute) -> @trigger 'edit:click', e, model, attribute
+      @on 'itemview:item:delete', (e, model) -> @trigger 'item:delete', e, model
 
     addImport: (model, importQuality, importPrice) ->
-      @collection.add new Zeprj.Entities.TempProduct
+      newImport = @collection.create
         product_code: model.get 'product_code'
-        warehouse_id: Zeprj.currentMerchantAccount.current_warehouse_id
-        merchant_account_id: Zeprj.currentMerchantAccount.id
+        warehouse_id: Zeprj.currentMerchantAccount.get 'current_warehouse_id'
+        merchant_account_id: Zeprj.currentMerchantAccount.get 'id'
         name: model.get 'name'
         import_quality: importQuality
         import_price: importPrice
         skull_id: model.get 'skull_id'
+        ,
+        wait: true
+        success: (model, message)-> Zeprj.log 'success'
+        error: (model, error)->
+          Zeprj.log error
 
   # PRODUCT SUMMARIES
   class ThisApp.ProductSummaryView extends Marionette.ItemView
@@ -43,6 +49,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     events:
       'click span[editor]': (e) -> @trigger 'edit:click', @model, $(e.currentTarget).attr('editor')
       'click .up.link': -> @trigger 'import:click', @model
+      'click .save.link': -> @trigger 'item:save', @model
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
@@ -60,6 +67,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     initialize: ->
       @on 'itemview:edit:click', (e, model, attribute) -> @trigger 'edit:click', e, model, attribute
       @on 'itemview:import:click', (e, model) ->  @trigger 'import:click', model
+      @on 'itemview:item:save', (e, model) -> @trigger 'item:save', model
     onShow: ->
       $('input[inputmask-alias]').each ->
         $(@).inputmask($(@).attr('inputmask-alias'))

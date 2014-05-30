@@ -1,3 +1,6 @@
+<div class='controller'>
+  <i class="white delete link fa fa-trash-o"></i>
+</div>
 <div class='item-head'>
   <img class="lazy effect-hover-img" alt="" src="assets/defaults/10.png">
 </div>
@@ -7,13 +10,13 @@
     <img width="69" height="69" src="assets/defaults/dicaprio.jpg">
     <div class='right'>
       <p data-tooltip class='has-tip' title='MÃ SẢN PHẨM'>
-        <i class="fa fa-qrcode"></i>
         <span><%= @product_code %></span>
+        <i class="fa fa-qrcode"></i>
       </p>
 
       <p data-tooltip class='has-tip link' title='SỐ LƯỢNG NHẬP'>
-        <i class="fa fa-download"></i>
         <span editor='import_quality'><%= @import_quality %></span>
+        <i class="fa fa-download"></i>
       <p>
     </div>
   </div>

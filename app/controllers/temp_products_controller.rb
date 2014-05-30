@@ -37,10 +37,10 @@ class TempProductsController < MerchantApplicationController
         # check_validate_temp_product
       if @temp_product.save
         format.html { redirect_to @temp_product, notice: 'Temp product was successfully created.'  }
-        format.json { render action: 'show', status: :created, location: @temp_product }
+        format.json { render json: @temp_product }
       else
         format.html { render action: 'new' }
-        format.json { render json: @temp_product.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @temp_product.errors } }
       end
     end
   end
