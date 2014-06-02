@@ -10,8 +10,9 @@
 #= require libraries/jquery.splitter
 #= require libraries/hammer
 #= require libraries/jquery.hammer
-#= require_tree ./templates
 #= require_self
+#= require_tree ../views
+#= require_tree ../controllers
 #= require_tree .
 
 window.Zeprj = new Marionette.Application()

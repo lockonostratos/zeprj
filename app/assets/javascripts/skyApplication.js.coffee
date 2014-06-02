@@ -1,4 +1,6 @@
+#= require_tree ./templates
 #= require backbone/app.coffee
+
 Zeprj.Account = Backbone.Model.extend()
 
 Zeprj.Accounts = Backbone.Collection.extend
@@ -6,17 +8,17 @@ Zeprj.Accounts = Backbone.Collection.extend
 
 
 Zeprj.AccountView = Backbone.Marionette.ItemView.extend
-  template: JST['backbone/templates/accountView']
+  template: JST['templates/accountView']
 
 Zeprj.NoAccountsView = Backbone.Marionette.ItemView.extend
-  template: JST['backbone/templates/noAccountsView']
+  template: JST['templates/noAccountsView']
 
 Zeprj.AccountsView = Backbone.Marionette.CollectionView.extend
   itemView: Zeprj.AccountView
   emptyView: Zeprj.NoAccountsView
 
 Zeprj.FormView = Backbone.Marionette.ItemView.extend
-  template: JST['backbone/templates/formView']
+  template: JST['templates/formView']
   events: {
     'click button': 'createNewAccount'
     'click .debug': 'debugTracer'

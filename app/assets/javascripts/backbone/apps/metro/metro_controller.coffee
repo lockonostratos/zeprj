@@ -1,5 +1,3 @@
-#=require ./metro_view
-
 Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
   MetroApp.Controller =
     renderGlobalUi: ->

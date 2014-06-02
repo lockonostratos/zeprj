@@ -119,7 +119,7 @@ class TempProductsController < MerchantApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def temp_product_params
-      params.require(:temp_product).permit(:product_code, :skull_id, :provider_id, :warehouse_id, :merchant_account_id, :name, :import_quality, :import_price, :expire)
+      params.require(:temp_product).permit(:product_summary_id, :provider_id, :warehouse_id, :merchant_account_id, :import_quality, :import_price)
     end
 
     #kiểm tra dữ liệu nhận thông báo khi loi, trong @errors
