@@ -16,7 +16,7 @@ class ProductSummariesController < MerchantApplicationController
     current_temproduct = TempProduct.where(product_summary_id:current_product_summaries.pluck(:id), merchant_account_id:current_merchant_account.id)
     product_summaries = []
     current_temproduct.each do |temproduct|
-       product_summaries += current_product_summaries.find(temproduct.product_summary_id)
+       product_summaries += [current_product_summaries.find(temproduct.product_summary_id)]
     end
     @product_summaries = current_product_summaries - product_summaries
     # @product_summaries = current_product_summaries
