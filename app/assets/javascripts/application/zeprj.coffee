@@ -10,10 +10,17 @@
 #= require libraries/jquery.splitter
 #= require libraries/hammer
 #= require libraries/jquery.hammer
+
+#= require_tree ../templates
 #= require_self
 #= require_tree ../views
 #= require_tree ../controllers
-#= require_tree .
+#= require_tree ../models
+
+#TODO: OBSOLETE - WILL BE DELETE
+#= require_tree ./viewmodels
+#= require_tree ./apps
+
 
 window.Zeprj = new Marionette.Application()
 #Debugger & Options
@@ -44,7 +51,6 @@ Zeprj.on 'initialize:after', (options) ->
       Zeprj.trigger 'navigate:metro'
     else
       Zeprj.trigger 'navigate:' + @getCurrentRoute()
-
 
 
 

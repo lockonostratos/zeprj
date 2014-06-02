@@ -1,75 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="Very close to finish warehouseImport function, working on call back!&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/copyright.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_horizontal.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_vertical.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/layouts/dummer.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_views.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/home.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/inner_navigation.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_account.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_layout.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_merchant_account.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_warehouse_option.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/metro/option.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/product_summaries.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/layouts/top_navigation.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\metro\metro_view.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\import\import_view.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\layouts.coffee" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\import\import_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\warehouse_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\accountView.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/accountView.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\accountsView.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/accountsView.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\formView.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/formView.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\layouts\dualHorizontal.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/layouts/dualHorizontal.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\layouts\dualVertical.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/layouts/dualVertical.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\layouts\dummer.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/layouts/dummer.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\layouts\innerNavigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/layouts/innerNavigation.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\layouts\topNavigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/layouts/topNavigation.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\copyright.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/copyright.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\home.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/home.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\navigation.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/navigation.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\navigationAccount.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/navigationAccount.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\navigationMerchantAccount.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/navigationMerchantAccount.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\navigationWarehouse.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/navigationWarehouse.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\metro\option.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/metro/option.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\noAccountsView.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/noAccountsView.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\sale\home\index.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/index.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\sale\skull.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/sale/skull.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\sale\skull\emptyProductSummaries.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/sale/skull/emptyProductSummaries.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\sale\skull\emptyTemporaryProduct.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/sale/skull/emptyTemporaryProduct.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\sale\skull\productSummary.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/sale/skull/productSummary.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\sale\skull\temporaryProduct.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/sale/skull/temporaryProduct.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\warehouse\import.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\warehouse\import\emptyProductSummaries.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/emptyProductSummaries.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\warehouse\import\emptyTemporaryProduct.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/emptyTemporaryProduct.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\warehouse\import\productSummaries.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/productSummaries.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\warehouse\import\productSummary.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/productSummary.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\templates\warehouse\import\temporaryProduct.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/temporaryProduct.jst.eco" />
-      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\welcomes.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/skyApplication.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_view.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/temp_products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/temp_products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee" />
+    <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/account.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/branch.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/delivery.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/export.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/exportDetail.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/import.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/inventory.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/inventoryDetail.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/merchant.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/merchantAccount.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/metro.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/order.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/orderDetail.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/permission.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/product.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/productSummary.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/provider.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/return.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/returnDetail.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/role.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/rolePermission.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/skull.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/tempInventoryDetail.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/tempProduct.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/warehouse.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/welcomes.coffee" />
+      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\metro\metro_app.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\metro\metro_controller.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\warehouse_app.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\warehouse_controller.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\warehouse_view.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\skyApplication.js.coffee" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/zeprj.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\home\home_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/home/home_controller.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\home\home_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/home/home_view.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\sale_app.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/sale_app.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\sale_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/sale_controller.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\sale_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/sale_view.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\skull\skull_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/skull/skull_controller.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\sales\skull\skull_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/skull/skull_view.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\inventory\inventory_controller.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/warehouses/inventory/inventory_controller.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\inventory\inventory_view.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/apps/warehouses/inventory/inventory_view.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\account.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/account.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\branch.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/branch.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\delivery.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/delivery.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\export.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/export.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\exportDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/exportDetail.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\import.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/import.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\inventory.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/inventory.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\inventoryDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/inventoryDetail.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\merchant.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/merchant.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\merchantAccount.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/merchantAccount.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\order.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/order.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\orderDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/orderDetail.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\permission.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/permission.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\product.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/product.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\productSummary.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/productSummary.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\provider.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/provider.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\return.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/return.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\returnDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/returnDetail.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\role.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/role.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\rolePermission.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/rolePermission.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\skull.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/skull.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\tempInventoryDetail.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/tempInventoryDetail.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\tempProduct.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/tempProduct.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\entities\warehouse.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/entities/warehouse.coffee" />
+      <change type="MOVED" beforePath="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\viewmodels\metro\commons.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application/viewmodels/metro/commons.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/welcomes.haml" afterPath="$PROJECT_DIR$/app/views/home/welcomes.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zeprj.iml" afterPath="$PROJECT_DIR$/.idea/zeprj.iml" />
     </list>
     <ignored path="zeprj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,18 +96,46 @@
     <favorites_list name="zeprj" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="skyApplication.js.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/skyApplication.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14750542" vertical-offset="0" max-vertical-offset="922">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="metro.coffee" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/metro.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.5347071" vertical-offset="0" max-vertical-offset="922">
+                  <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="import.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1258">
+                  <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="warehouse.coffee" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6084599" vertical-offset="0" max-vertical-offset="1088">
+                  <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -122,21 +152,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app.ts" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/darius/application.ts" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/layout/topNavigation.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/layout/dual_horizontal.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/layout/dual_vertical.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/layout/dummer.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/layouts.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/welcomes.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/skyApplication.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/metro_controller.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/metro_app.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/metro_view.coffee" />
-        <option value="$PROJECT_DIR$/app/views/home/welcomes.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_layout.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_view.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_account.coffee" />
@@ -147,7 +168,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/home.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/inner_navigation.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_temporary_product.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_product_summaries.coffee" />
@@ -168,11 +188,21 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/empty_views.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/skyApplication.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/sky_application.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/home/welcomes.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/zeprj.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/welcomes.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application/zeprj.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/metro.coffee" />
       </list>
     </option>
   </component>
@@ -263,7 +293,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -274,229 +304,14 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zeprj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backbone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="settings" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.4369748" />
     <property name="options.searchVisible" value="true" />
@@ -523,11 +338,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\models" />
       <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\import" />
       <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\views\warehouse\import" />
       <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\views\metro" />
       <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\views\warehouse\import" />
@@ -791,7 +606,11 @@
       <created>1401450499121</created>
       <updated>1401450499121</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Very close to finish warehouseImport function, working on call back!&#10;">
+      <created>1401698778343</created>
+      <updated>1401698778343</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -823,7 +642,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27132195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23347548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3168421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6894737" sideWeight="0.2980614" order="8" side_tool="true" content_ui="tabs" />
@@ -840,24 +659,24 @@
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270349" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5821053" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6810526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46842104" sideWeight="0.78753996" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4105263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3168421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6894737" sideWeight="0.2980614" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18210863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23347548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29547843" sideWeight="0.70113087" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -902,18 +721,34 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="748">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1088">
+          <caret line="44" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/metro.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="765">
+          <caret line="39" column="81" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1258">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="1088">
+          <caret line="58" column="62" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -922,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="850">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -930,15 +764,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
           <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/entities/productSummary.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/entities/productSummary.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18453188" vertical-offset="0" max-vertical-offset="3961">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -985,33 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_view.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05629139" vertical-offset="0" max-vertical-offset="302">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22262774" vertical-offset="626" max-vertical-offset="1207">
           <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77440345" vertical-offset="0" max-vertical-offset="461">
-          <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1125654" vertical-offset="0" max-vertical-offset="561">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1022,11 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/home/home_view.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/home/home_view.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,11 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/sales/skull/skull_view.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/skull/skull_view.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,15 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1976" max-vertical-offset="2822">
           <caret line="141" column="51" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9615386" vertical-offset="594" max-vertical-offset="986">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,56 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.230769" vertical-offset="900" max-vertical-offset="1292">
           <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_vertical.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12906724" vertical-offset="0" max-vertical-offset="922">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/welcomes.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018973215" vertical-offset="0" max-vertical-offset="896">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22125813" vertical-offset="0" max-vertical-offset="922">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dummer.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_horizontal.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/top_navigation.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33188722" vertical-offset="0" max-vertical-offset="922">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_layout.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33188722" vertical-offset="0" max-vertical-offset="922">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1129,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,14 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16594361" vertical-offset="0" max-vertical-offset="922">
           <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25813448" vertical-offset="0" max-vertical-offset="922">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1187,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26385808" vertical-offset="0" max-vertical-offset="8500">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,15 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5049505" vertical-offset="1581" max-vertical-offset="2788">
           <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,70 +946,141 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
           <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/warehouses/inventory/inventory_view.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/warehouses/inventory/inventory_controller.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0055803573" vertical-offset="90" max-vertical-offset="986">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/welcomes.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019473081" vertical-offset="0" max-vertical-offset="873">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/top_navigation.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3403782" vertical-offset="0" max-vertical-offset="899">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dummer.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.036876354" vertical-offset="0" max-vertical-offset="922">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_vertical.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12906724" vertical-offset="0" max-vertical-offset="922">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_horizontal.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25813448" vertical-offset="0" max-vertical-offset="922">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_layout.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29501083" vertical-offset="0" max-vertical-offset="922">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/entities/account.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/account.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42407808" vertical-offset="0" max-vertical-offset="922">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46095446" vertical-offset="0" max-vertical-offset="922">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66377443" vertical-offset="0" max-vertical-offset="922">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/welcomes.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.018438177" vertical-offset="0" max-vertical-offset="922">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/zeprj.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.829718" vertical-offset="153" max-vertical-offset="1105">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1258">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4349277" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.6084599" vertical-offset="0" max-vertical-offset="1088">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/metro.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8865406" vertical-offset="359" max-vertical-offset="1258">
-          <caret line="68" column="59" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.004338395" vertical-offset="64" max-vertical-offset="1003">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/inventory/inventory_controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07375271" vertical-offset="0" max-vertical-offset="922">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/skyApplication.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14750542" vertical-offset="0" max-vertical-offset="922">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5347071" vertical-offset="0" max-vertical-offset="922">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding />
         </state>
       </provider>
