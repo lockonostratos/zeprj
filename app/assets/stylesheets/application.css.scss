@@ -1,9 +1,8 @@
+@import "framework_and_overrides";
 @import "compass";
 @import "theme_default";
-@import "framework_and_overrides";
 @import "scaffolds";
 @import "font-awesome";
-//@import "jquery.ui.all";
 @import "libraries/*";
 @import "metro_components";
 
@@ -132,7 +131,7 @@ body {
 
   #navigation-region {
     .application-navigation-wrapper {
-      background-color: #333;
+      background-color: #2d2d2d;
       .top-bar {
         max-width: 62.5rem;
         margin: 0 auto;

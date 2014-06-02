@@ -41,6 +41,7 @@ gem 'rake', '10.3.1'
 gem 'simple_form'
 gem 'foundation-rails'
 
+gem 'compass'
 gem 'compass-rails'
 gem 'font-awesome-sass'
 
