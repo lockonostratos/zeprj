@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Warehouse:
+  = @metro_summary.warehouse_id
+%p
+  %b Product count:
+  = @metro_summary.product_count
+%p
+  %b Stock count:
+  = @metro_summary.stock_count
+%p
+  %b Customer count:
+  = @metro_summary.customer_count
+%p
+  %b Staff count:
+  = @metro_summary.staff_count
+%p
+  %b Sale count:
+  = @metro_summary.sale_count
+%p
+  %b Sale count day:
+  = @metro_summary.sale_count_day
+%p
+  %b Sale count month:
+  = @metro_summary.sale_count_month
+%p
+  %b Return count:
+  = @metro_summary.return_count
+%p
+  %b Return count day:
+  = @metro_summary.return_count_day
+%p
+  %b Return count month:
+  = @metro_summary.return_count_month
+%p
+  %b Revenue:
+  = @metro_summary.revenue
+%p
+  %b Revenue day:
+  = @metro_summary.revenue_day
+%p
+  %b Revenue month:
+  = @metro_summary.revenue_month
+
+= link_to 'Edit', edit_metro_summary_path(@metro_summary)
+\|
+= link_to 'Back', metro_summaries_path
