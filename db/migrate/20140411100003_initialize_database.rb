@@ -532,9 +532,6 @@ class InitializeDatabase < ActiveRecord::Migration
       t.decimal :price, :default=>0 #giá tiền sản phẩm
       t.boolean :submited, :default =>false #xác nhận
 
-
-
-
       t.timestamps
     end
 

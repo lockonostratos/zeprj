@@ -1,0 +1,52 @@
+= form_for @metro_summary do |f|
+  - if @metro_summary.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@metro_summary.errors.count, "error")} prohibited this metro_summary from being saved:"
+      %ul
+        - @metro_summary.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :warehouse_id
+    = f.number_field :warehouse_id
+  .field
+    = f.label :product_count
+    = f.number_field :product_count
+  .field
+    = f.label :stock_count
+    = f.number_field :stock_count
+  .field
+    = f.label :customer_count
+    = f.number_field :customer_count
+  .field
+    = f.label :staff_count
+    = f.number_field :staff_count
+  .field
+    = f.label :sale_count
+    = f.number_field :sale_count
+  .field
+    = f.label :sale_count_day
+    = f.number_field :sale_count_day
+  .field
+    = f.label :sale_count_month
+    = f.number_field :sale_count_month
+  .field
+    = f.label :return_count
+    = f.number_field :return_count
+  .field
+    = f.label :return_count_day
+    = f.number_field :return_count_day
+  .field
+    = f.label :return_count_month
+    = f.number_field :return_count_month
+  .field
+    = f.label :revenue
+    = f.number_field :revenue
+  .field
+    = f.label :revenue_day
+    = f.number_field :revenue_day
+  .field
+    = f.label :revenue_month
+    = f.number_field :revenue_month
+  .actions
+    = f.submit 'Save'

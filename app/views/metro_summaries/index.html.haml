@@ -1,0 +1,45 @@
+%h1 Listing metro_summaries
+
+%table
+  %tr
+    %th Warehouse
+    %th Product count
+    %th Stock count
+    %th Customer count
+    %th Staff count
+    %th Sale count
+    %th Sale count day
+    %th Sale count month
+    %th Return count
+    %th Return count day
+    %th Return count month
+    %th Revenue
+    %th Revenue day
+    %th Revenue month
+    %th
+    %th
+    %th
+
+  - @metro_summaries.each do |metro_summary|
+    %tr
+      %td= metro_summary.warehouse_id
+      %td= metro_summary.product_count
+      %td= metro_summary.stock_count
+      %td= metro_summary.customer_count
+      %td= metro_summary.staff_count
+      %td= metro_summary.sale_count
+      %td= metro_summary.sale_count_day
+      %td= metro_summary.sale_count_month
+      %td= metro_summary.return_count
+      %td= metro_summary.return_count_day
+      %td= metro_summary.return_count_month
+      %td= metro_summary.revenue
+      %td= metro_summary.revenue_day
+      %td= metro_summary.revenue_month
+      %td= link_to 'Show', metro_summary
+      %td= link_to 'Edit', edit_metro_summary_path(metro_summary)
+      %td= link_to 'Destroy', metro_summary, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Metro summary', new_metro_summary_path
