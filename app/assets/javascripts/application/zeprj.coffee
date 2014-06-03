@@ -1,6 +1,7 @@
 #= require libraries/underscore
 #= require libraries/backbone
 #= require libraries/backbone.marionette
+#= require libraries/darius/darius
 #= require libraries/backbone-ui
 #= require libraries/knockout
 #= require libraries/knockback
@@ -46,7 +47,7 @@ Zeprj.addRegions
 Zeprj.on 'initialize:after', (options) ->
   Zeprj.MetroApp.Controller.renderGlobalUi()
   if Backbone.history
-    Backbone.history.start()
+    Backbone.history.start()#{pushState: true})
     if @getCurrentRoute() == ''
       Zeprj.trigger 'navigate:metro'
     else

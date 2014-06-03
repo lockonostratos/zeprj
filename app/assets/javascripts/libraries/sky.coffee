@@ -46,6 +46,13 @@ class Sky.SelectionControl extends Marionette.ItemView
       el.append option
 
 #Structural classes! -------------------------------------------------------------->
+mixOf = (base, mixins...) ->
+  class Mixed extends base
+  for mixin in mixins by -1 #earlier mixins override later ones
+    for name, method of mixin::
+      Mixed::[name] = method
+  Mixed
+
 Sky.moduleKeywords = ['included', 'extended']
 
 class Sky.MultiExtensible
@@ -79,6 +86,11 @@ class Sky.b extends Sky.MultiExtensible
   logger: ->
     Sky.a::logger.call @
     Sky.c::printer.call @
+
+class Sky.x extends mixOf Sky.a, Sky.c
+  mixed: ->
+    @logger()
+    @printer()
 
 #Static helpers! -------------------------------------------------------------->
 class Sky.Helpers

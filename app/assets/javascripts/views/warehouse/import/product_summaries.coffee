@@ -6,7 +6,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     className: 'item-tile'
     tagName: 'li'
     events:
-      'click span[editor]': (e) -> @trigger 'edit:click', @model, $(e.currentTarget).attr('editor')
+      'click span[editor]': (e) -> @trigger 'edit:model:property', @model, $(e.currentTarget).attr('editor')
       'click .up.link': -> @trigger 'import:click', @model
       'click .save.link': -> @trigger 'item:save', @model
     initialize: ->
@@ -25,7 +25,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       importPrice: '#import-price'
 
     initialize: ->
-      @on 'itemview:edit:click', (e, model, attribute) -> @trigger 'edit:click', e, model, attribute
+      @on 'itemview:edit:model:property', (e, model, attribute) -> @trigger 'edit:model:property', e, model, attribute
       @on 'itemview:import:click', (e, model) ->  @trigger 'import:click', model
       @on 'itemview:item:save', (e, model) -> @trigger 'item:save', model
     onShow: ->
