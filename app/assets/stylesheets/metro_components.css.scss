@@ -3,11 +3,11 @@
 input[type=text] {
   &.metro {
     margin-bottom: 0.1rem;
-    @include border-radius(0.1rem);
+//    @include border-radius(0.1rem);
     color: $component-theme;
     &:first-child {
-      @include border-top-left-radius(0);
-      @include border-bottom-left-radius(0);
+//      @include border-top-left-radius(0);
+//      @include border-bottom-left-radius(0);
     }
   }
   &.inline {
@@ -27,7 +27,7 @@ input[type=button] {
     text-align: center;
     border: 0 solid;
     transition: background-color 300ms ease-out 0s;
-    @include border-radius(0.1rem);
+//    @include border-radius(0.1rem);
     cursor: pointer;
   }
 

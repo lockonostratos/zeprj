@@ -34,24 +34,33 @@ class InventoriesController < AccountsController
   def create
     @inventory = Inventory.new(inventory_params)
     #1. Kiem tra phiếu trước ok hay chua neu chua ok thì quay lai làm cho ok moi dc tao phieu moi
+    temp_inventory = Inventory.where(warehouse_id: @inventory.warehouse_id, merchant_account_id: @inventory.merchant_account_id)
+    check = true
+    temp_inventory.each do |temp|
+      check = temp.submited
+      break if !check # check == false
 
+    end
     respond_to do |format|
-      if @inventory.save
+      if check
+        if @inventory.save
+          #2. add tat ca product vao bang tam
+          Product.where(:warehouse_id => @inventory.warehouse_id).each do |product|
+              temp_inventory = TempInventoryDetail.new(
+                  :product_id=>product.id,
+                  :inventory_id=>@inventory.id,
+                  :original_quality=>product.instock_quality,
+                  :real_quality=>0,
+                  :submited=>0)
+              if product.instock_quality >0
+                temp_inventory.save
+              end
+
+          end
+
+        end
         format.html { redirect_to @inventory, notice: 'Inventory was successfully created.' }
         format.json { render action: 'show', status: :created, location: @inventory }
-
-        #2. add tat ca product vao bang tam
-        Product.transaction do
-          Product.where(:warehouse_id => @inventory.warehouse_id).each do |product|
-            @inventory_inventory = TempInventoryDetail.new(
-                :product_id=>product.id,
-                :inventory_id=>@inventory.id,
-                :original_quality=>product.instock_quality,
-                :real_quality=>0,
-                :submited=>0)
-            @inventory_inventory.save
-          end
-        end
       else
         format.html { render action: 'new' }
         format.json { render json: @inventory.errors, status: :unprocessable_entity }

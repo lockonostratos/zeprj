@@ -55,8 +55,8 @@ class TempInventoryDetailsController < ApplicationController
         #Nếu ok thi update sản phẩm
         @temp_inventory_detail.update(temp_inventory_detail_params)
 
-        # @temp_inventory_detail.updated_at
         #Cập nhật sản phẩm đã bán trong kiểm kho
+        OrderDetail.where(created_at: @temp_inventory_detail.time_end.end_of_day, product_id: @temp_inventory_detail.product_id)
         @temp_inventory_detail.update(:quality=>0)
 
         format.html { redirect_to @temp_inventory_detail, notice: 'Temp inventory detail was successfully updated.' }

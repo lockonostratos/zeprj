@@ -90,11 +90,12 @@ class WarehousesController < MerchantApplicationController
   #Trả về những Warehouse mà người dùng hiện tại có quyền truy cập
   def available
     check_warehouse_permission(params[:id])
-    render json: Time.new.to_date
-    # render json: report_all_time_and_warehouse_account('order', 0, 0, "28/05/2014".to_date, "28/05/2014".to_date, nil, 1, 1, nil)
-
+    render json: @warehouse
+    #                 report, type_report, deliveries, returns, success, current_time_begin, current_time_end, merchant, branch, warehouse, merchant_account, customer
+    #  render :json => report_all_time_and_warehouse_account('order', 0, nil, nil, nil, nil, nil, nil, nil, nil, nil, 1)
   end
-  
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_warehouse

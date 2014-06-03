@@ -487,8 +487,8 @@ h1, h1, h3, h4, h5, h6 {
     .right-navigation-container {
       margin-bottom: -$application-padding;
 
-      .navigator { @include  border-bottom-left-radius(0.25rem) }
-      .content { @include  border-bottom-right-radius(0.25rem) }
+//      .navigator { @include  border-bottom-left-radius(0.25rem) }
+//      .content { @include  border-bottom-right-radius(0.25rem) }
     }
   }
 }
