@@ -7,8 +7,8 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     tagName: 'li'
     events:
       'click span[editor]': (e) -> @trigger 'edit:model:property', @model, $(e.currentTarget).attr('editor')
-      'click .up.link': -> @trigger 'import:click', @model
-      'click .save.link': -> @trigger 'item:save', @model
+      'click .up.link': -> @trigger 'add:import', @model
+      'click .save.link': -> @trigger 'sync:edit', @model
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
@@ -26,8 +26,8 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
 
     initialize: ->
       @on 'itemview:edit:model:property', (e, model, attribute) -> @trigger 'edit:model:property', e, model, attribute
-      @on 'itemview:import:click', (e, model) ->  @trigger 'import:click', model
-      @on 'itemview:item:save', (e, model) -> @trigger 'item:save', model
+      @on 'itemview:add:import', (e, model) ->  @trigger 'add:import', model
+      @on 'itemview:save:model', (e, model) -> @trigger 'sync:edit', model
     onShow: ->
       $('input[inputmask-alias]').each ->
         $(@).inputmask($(@).attr('inputmask-alias'))

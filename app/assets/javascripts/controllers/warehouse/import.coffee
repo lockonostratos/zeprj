@@ -51,15 +51,15 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       ThisApp.layout.secondaryPane.show ThisApp.productSummariesView
 
     handleProductSummariesEvent: ->
-      ThisApp.productSummariesView.on 'edit:click', (e, model, attribute) ->
+      ThisApp.productSummariesView.on 'edit:model:property', (e, model, attribute) ->
         ThisApp.productSummaryEditOptions.startEdit $('#sky-editor'), model, attribute
 
-      ThisApp.productSummariesView.on 'import:click', (model) ->
+      ThisApp.productSummariesView.on 'add:import', (model) ->
         quality = accounting.parse(@ui.importQuality.inputmask('unmaskedvalue'))
         price = accounting.parse(@ui.importPrice.inputmask('unmaskedvalue'))
         ThisApp.temporaryProductsView.addImport model, quality, price
 
-      ThisApp.productSummariesView.on 'item:save', (model) ->
+      ThisApp.productSummariesView.on 'sync:edit', (model) ->
         model.save({
           product_code: model.get 'product_code'
           skull_id: model.get 'skull_id'
@@ -72,7 +72,3 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
           success: -> Zeprj.log 'success'
           error: -> Zeprj.log 'error'
         })
-
-      ThisApp.productSummariesView.onClose = ->
-        Zeprj.log 'Cloused!'
-
