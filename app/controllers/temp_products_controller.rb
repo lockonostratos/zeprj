@@ -73,7 +73,7 @@ class TempProductsController < MerchantApplicationController
         # check_validate_temp_product
       if @temp_product.save
         format.html { redirect_to @temp_product, notice: 'Temp product was successfully created.'  }
-        format.json { render json: @temp_product }
+        format.json { render json: return_json_temp_product(@temp_product)}
       else
         format.html { render action: 'new' }
         format.json { render json: {errors: @temp_product.errors } }
@@ -122,7 +122,7 @@ class TempProductsController < MerchantApplicationController
       params.require(:temp_product).permit(:product_summary_id, :provider_id, :warehouse_id, :merchant_account_id, :import_quality, :import_price)
     end
 
-    #kiểm tra dữ liệu nhận thông báo khi loi, trong @errors
+  #kiểm tra dữ liệu nhận thông báo khi loi, trong @errors
   def check_validate_temp_product
     warehouse = Warehouse.find_by_id(@temp_product.warehouse_id)
     product_code = ProductSummary.find_by_product_code_and_warehouse_id_and_skull_id(@temp_product.product_code, @temp_product.warehouse_id,@temp_product.skull_id)
@@ -155,5 +155,38 @@ class TempProductsController < MerchantApplicationController
     end
 
   end
-
+  def return_json_temp_product (temp_product)
+    current_product_summary = ProductSummary.find(temp_product.product_summary_id)
+    params = ActionController::Parameters.new({
+                                                  temp_products_detail: {
+                                                      id: temp_product.id,
+                                                      product_summary_id: temp_product.product_summary_id,
+                                                      merchant_account: temp_product.merchant_account_id,
+                                                      import_quality:temp_product.import_quality,
+                                                      import_price:temp_product.import_price,
+                                                      provider: temp_product.provider_id,
+                                                      warehouse: current_product_summary.warehouse_id,
+                                                      price:current_product_summary.price,
+                                                      quality:current_product_summary.quality,
+                                                      product_code: current_product_summary.product_code,
+                                                      skull: current_product_summary.skull_id,
+                                                      name: current_product_summary.name
+                                                  }
+                                              })
+    permitted = params.require(:temp_products_detail).permit(
+        :id,
+        :product_summary_id,
+        :merchant_account,
+        :warehouse,
+        :provider,
+        :product_code,
+        :skull,
+        :name,
+        :price,
+        :quality,
+        :import_price,
+        :import_quality
+    )
+    return [permitted]
+  end
 end
