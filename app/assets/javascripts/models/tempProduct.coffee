@@ -6,6 +6,7 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
     url: 'temp_products'
     model: Entities.TempProduct
 
+
   API =
     getTempProductEntities: (options)->
       result = new Entities.TempProducts()

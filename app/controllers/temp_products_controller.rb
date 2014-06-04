@@ -86,8 +86,7 @@ class TempProductsController < MerchantApplicationController
   def update
     @temp_product.attributes = (temp_product_params)
     respond_to do |format|
-      if check_validate_temp_product
-      @temp_product.save()
+      if @temp_product.save()
         format.html { redirect_to @temp_product, notice: 'Temp product was successfully updated.' + @errors}
         format.json { head :no_content }
       else

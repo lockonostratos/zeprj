@@ -7,7 +7,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     tagName: 'li'
     events:
       'click span[editor]': (e) -> @trigger 'edit:model:property', @model, $(e.currentTarget).attr('editor')
-      'click .up.link': -> @trigger 'add:import', @model
+      'click .up.link': -> @trigger 'create:import', @model
       'click .save.link': -> @trigger 'sync:edit', @model
     initialize: ->
       @listenTo @model, 'change', -> @render()
@@ -23,22 +23,21 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       skyEditor: '#sky-editor'
       importQuality: '#import-quality'
       importPrice: '#import-price'
+      itemContainer: '.title-container'
+    events:
+      'click #sky-new': 'createAction'
 
     initialize: ->
       @on 'itemview:edit:model:property', (e, model, attribute) -> @trigger 'edit:model:property', e, model, attribute
-      @on 'itemview:add:import', (e, model) ->  @trigger 'add:import', model
-      @on 'itemview:save:model', (e, model) -> @trigger 'sync:edit', model
+      @on 'itemview:create:import', (e, model) ->  @trigger 'create:import', model
+      @on 'itemview:sync:edit', (e, model) -> @trigger 'sync:edit', model
+
     onShow: ->
-      $('input[inputmask-alias]').each ->
-        $(@).inputmask($(@).attr('inputmask-alias'))
-    events:
-      'keyup #sky-editor': 'editAction'
-      'keydown #sky-editor': 'keydownAction'
-      'click #sky-new': 'createAction'
-    editAction: -> @trigger 'model:editing'
-    keydownAction: (e)->
-      if e.keyCode == 9
-        e.preventDefault()
-        @trigger 'editor:tab', e
+      $('input[inputmask-alias]').each -> $(@).inputmask($(@).attr('inputmask-alias'))
+      $(@ui.itemContainer).mousewheel (event, delta) ->
+        @scrollleft -= delta * 30
+        event.preventDefault()
+
     createAction: ->
       @collection.add(new Zeprj.Entities.ProductSummary)
+

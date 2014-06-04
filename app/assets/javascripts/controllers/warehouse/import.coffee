@@ -25,46 +25,41 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     renderTemporaryProducts: ->
       ThisApp.temporaryProductsView = new ThisApp.TemporaryProductsView
         collection: Zeprj.request 'tempProduct:entities'
-      ThisApp.layout.mainPane.show ThisApp.temporaryProductsView
+      ThisApp.layout.secondaryPane.show ThisApp.temporaryProductsView
 
     handleTemporaryProductsEvent: ->
-      ThisApp.temporaryProductsView.on 'edit:click', (e, model, attribute) ->
+      ThisApp.temporaryProductsView.on 'edit:model:property', (e, model, attribute) ->
         ThisApp.temporaryEditWrapper.startEdit $('#sky-editor'), model, attribute
 
-      ThisApp.temporaryProductsView.on 'item:delete', (e, model) ->
-        model.destroy
-          wait: true
-          success: (model) ->
-  #            Zeprj.log model
-  #            Zeprj.log 'xx'
-  #            newModel = Zeprj.request 'productSummary:entity', model.get 'product_summary_id'
-  #            ThisApp.productSummariesView.addItemView newModel, ThisApp.ProductSummaryView, 0
 
-      ThisApp.temporaryProductsView.on 'item:create', (model) ->
+      #SAU KHI XÓA IMPORT, THÊM VÀO PRODUCT_SUMMARY SẢN PHẨM TƯƠNG ĐƯƠNG.
+      ThisApp.temporaryProductsView.on 'destroy:model:success', (model, message) ->
+        newProductSummary = Zeprj.request 'productSummary:entity', (model.get 'product_summary_id')
+        ThisApp.productSummariesView.collection.add newProductSummary
+
+      #SAU KHI TẠO IMPORT THÀNH CÔNG, XÓA PRODUCT_SUMMARY ĐÃ IMPORT TỪ VIEW.
+      ThisApp.temporaryProductsView.on 'item:create:success', (model) ->
         collection = ThisApp.productSummariesView.collection
-        deletingModel = collection.where { product_code: model.get 'product_code' }
+        deletingModel = collection.where { id: model.get 'product_summary_id' }
         ThisApp.productSummariesView.collection.remove deletingModel if deletingModel
 
     renderProductSummaries: ->
       ThisApp.productSummariesView = new ThisApp.ProductSummariesView
         collection: Zeprj.request 'productSummary:entities', {action: 'import_availables'}
-      ThisApp.layout.secondaryPane.show ThisApp.productSummariesView
+      ThisApp.layout.mainPane.show ThisApp.productSummariesView
 
     handleProductSummariesEvent: ->
       ThisApp.productSummariesView.on 'edit:model:property', (e, model, attribute) ->
         ThisApp.productSummaryEditOptions.startEdit $('#sky-editor'), model, attribute
 
-      ThisApp.productSummariesView.on 'add:import', (model) ->
+      ThisApp.productSummariesView.on 'create:import', (model) ->
         quality = accounting.parse(@ui.importQuality.inputmask('unmaskedvalue'))
         price = accounting.parse(@ui.importPrice.inputmask('unmaskedvalue'))
-        ThisApp.temporaryProductsView.addImport model, quality, price
+        ThisApp.temporaryProductsView.createImport model, quality, price
 
       ThisApp.productSummariesView.on 'sync:edit', (model) ->
         model.save({
           product_code: model.get 'product_code'
-          skull_id: model.get 'skull_id'
-          warehouse_id: Zeprj.currentMerchantAccount.get 'current_warehouse_id'
-          merchant_account_id: Zeprj.currentMerchantAccount.get 'id'
           name: model.get 'name'
           quality: model.get 'quality'
           price: model.get 'price'

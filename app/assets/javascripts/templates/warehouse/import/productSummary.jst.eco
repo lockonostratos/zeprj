@@ -8,7 +8,7 @@
 <div class='item-body'>
   <div class='avatar-picture' data-tooltip title='NGƯỜI BÁN SẢN PHẨM NÀY NHIỀU NHẤT'>
     <img width="69" height="69" src="assets/defaults/dicaprio.jpg">
-    <i class="up link fa fa-arrow-circle-up fa-2x"></i>
+    <i class="up link fa fa-arrow-circle-down fa-2x"></i>
     <div class='right'>
       <p data-tooltip class='has-tip' title='MÃ SẢN PHẨM'>
         <span editor='product_code'><%= @product_code || 'MÃ SẢN PHẨM' %></span>

@@ -11,6 +11,7 @@
 #= require libraries/jquery.splitter
 #= require libraries/hammer
 #= require libraries/jquery.hammer
+#= require libraries/jquery.mousewheel
 
 #= require_tree ../templates
 #= require_self
