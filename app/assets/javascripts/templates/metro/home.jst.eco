@@ -1,7 +1,7 @@
 <div class='metro'>
 
   <div class='tile-wrapper-3 tile-wrapper-small-2'>
-    <div class='orange tile huge'>
+    <div id='sale-home' class='orange tile huge'>
         <span class='top left caption'><i class="fa fa-tags fa-5x"></i></span>
         <span class='top right caption'><h6>BÁN HÀNG</h6></span>
         <span class='bottom left caption'><h2>1024 <tiny>SẢN PHẨM ĐÃ BÁN</tiny></h2></span>

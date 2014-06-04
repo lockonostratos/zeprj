@@ -1,0 +1,36 @@
+<div class=' right controller'>
+</div>
+
+<div class='item-head'>
+    <img class="lazy effect-hover-img" alt="" src="assets/defaults/10.png">
+</div>
+
+<div class='item-body'>
+    <div class='avatar-picture' data-tooltip title='NGƯỜI BÁN SẢN PHẨM NÀY NHIỀU NHẤT'>
+        <img width="69" height="69" src="assets/defaults/dicaprio.jpg">
+        <i class="up link fa fa-arrow-circle-up fa-2x"></i>
+        <div class='right'>
+            <p data-tooltip class='has-tip' title='MÃ SẢN PHẨM'>
+                <span editor='product_code'><%= @product_code || 'MÃ SẢN PHẨM' %></span>
+                <i class="fa fa-qrcode"></i>
+            </p>
+
+            <p data-tooltip class='has-tip' title='TỒN KHO HIỆN TẠI'>
+                <span><%= @quality || 0 %></span>
+                <i class="fa fa-signal"></i>
+            <p>
+        </div>
+    </div>
+    <div class='info-wrapper'>
+        <p><span class='title link' editor='name'><%= @name || 'TÊN SẢN PHẨM' %></span></p>
+    </div>
+</div>
+
+<div class='item-footer'>
+    <div class='info-wrapper'>
+        <span class='save link'><i class="fa fa-arrow-circle-up"></i></span>
+    <span class='right' data-tooltip class='has-tip' title='GIÁ BÁN'>
+      GIÁ BÁN: <span editor='price'><%= accounting.formatNumber @price %></span> VNĐ
+    </span>
+    </div>
+</div>
