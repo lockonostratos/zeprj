@@ -82,19 +82,19 @@ class ProductSummariesController < MerchantApplicationController
                 Product.update(pro.id,name:@product_summary.name)
               end
           end
-          #cập nhật vảo bảng tạm
-          @pro = TempProduct.where(
-              :product_code => @product_summary.product_code,
-              :skull_id => @product_summary.skull_id,
-              :warehouse_id => @product_summary.warehouse_id).first(1)
-          #Cập nhật trong bảng TempProduct
-            @pro.each do |pro|
-              TempProduct.update(
-                  pro.id,
-                  name:@product_summary.name,
-                  import_price:@product_summary.price
-              )
-            end
+        #   #cập nhật vảo bảng tạm
+        #   temp_product = TempProduct.where(
+        #       :product_summary => @product_summary.product_code,
+        #       :merchant_account => @product_summary.skull_id,)
+        #
+        #   #Cập nhật trong bảng TempProduct
+        # temp_product.each do |pro|
+        #       TempProduct.update(
+        #           pro.id,
+        #           name:@product_summary.name,
+        #           import_price:@product_summary.price
+        #       )
+        #     end
       else
         format.html { render action: 'edit' }
         format.json { render json: @product_summary.errors, status: :unprocessable_entity }
