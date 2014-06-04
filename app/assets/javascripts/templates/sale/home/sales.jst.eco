@@ -1,0 +1,16 @@
+<div class='large-3 columns'>
+    <input type='text' />
+    <div class='current-product'>Current product</div>
+</div>
+
+<div class='large-9 columns'>
+    <div class='editor row'>Editors</div>
+    <div class='sale-content row'>
+        <ul class='tile-container order-details-container'>
+
+        </ul>
+    </div>
+    <div class='summary row'>
+        <span>Số lượng: </span><span data-bind="text: productCount"></span>
+    </div>
+</div>

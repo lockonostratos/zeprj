@@ -1,11 +1,11 @@
-Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
+Zeprj.module "SaleApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
   # CONTROLLER ----------------------------------------------------------------------------------------------------->
   ThisApp.addInitializer ->
-    ThisApp.childApps = ['Import', 'Inventory', 'Transport']
+    ThisApp.childApps = ['Home', 'Skull', 'Provider']
 
   ThisApp.Controller =
-    renderInto: (region, appName = 'Import') ->
+    renderInto: (region, appName = 'Home') ->
       ThisApp.layout = new Zeprj.TopNavigationLayout()
       ThisApp.navigationVm = new Zeprj.ViewModels.InnerNavigationVm ThisApp.childApps, appName
       ThisApp.region = region
@@ -27,7 +27,7 @@ Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
         ThisApp.navigationVm.navigateTo appName
 
     navigateTo: (appName)->
-      Zeprj.navigate 'warehouse/' + appName
+      Zeprj.navigate 'sale/' + appName
       ThisApp[appName].Controller.renderInto ThisApp.layout.content
       Zeprj.currentApp = ThisApp[appName]
       Zeprj.MetroApp.currentApp ThisApp[appName].Caption
@@ -41,22 +41,20 @@ Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
   # API & ROUTES SETUP --------------------------------------------------------------------------------------------->
   ThisApp.Router = Marionette.AppRouter.extend
     appRoutes:
-      'warehouse': 'warehouseHome'
+      'sale': 'saleHome'
 
   API =
-    warehouseHome: ->
+    saleHome: ->
       ThisApp.Controller.renderInto Zeprj.mainRegion
-    warehouseImport: ->
-      ThisApp.Controller.renderInto Zeprj.mainRegion, 'Import'
-    warehouseInventory: ->
-      ThisApp.Controller.renderInto Zeprj.mainRegion, 'Inventory'
-    warehouseTransport: ->
-      ThisApp.Controller.renderInto Zeprj.mainRegion, 'Transport'
-
-
-  Zeprj.on 'navigate:warehouse', -> API.warehouseHome()
-  Zeprj.on 'navigate:warehouseHome', -> API.warehouseHome()
-  Zeprj.on 'navigate:warehouse/Import', -> API.warehouseImport()
-  Zeprj.on 'navigate:warehouse/Inventory', -> API.war ehouseInventory()
+    saleHome: ->
+      ThisApp.Controller.renderInto Zeprj.mainRegion, 'Home'
+    saleSkull: ->
+      ThisApp.Controller.renderInto Zeprj.mainRegion, 'Skull'
+    saleProvider: ->
+      ThisApp.Controller.renderInto Zeprj.mainRegion, 'Provider'
+  Zeprj.on 'navigate:sale', -> API.saleHome()
+  Zeprj.on 'navigate:sale/Home', -> API.saleHome()
+  Zeprj.on 'navigate:sale/Skull', -> API.saleSkull()
+  Zeprj.on 'navigate:sale/Provider', -> API.saleProvider()
 
   Zeprj.addInitializer -> new ThisApp.Router {controller: API}

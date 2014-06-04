@@ -5,6 +5,7 @@ Zeprj.module "MetroApp", (MetroApp, Zeprj, Backbone, Marionette, $, _) ->
     events:
       'click #warehouse-manager': 'navigateWarehouseApp'
       'click #sale-skull': 'navigateSaleApp'
+      'click #sale-home': 'navigateSaleApp'
 
     navigateWarehouseApp: -> Zeprj.trigger 'navigate:warehouse'
     navigateSaleApp: -> Zeprj.trigger 'navigate:sale'
