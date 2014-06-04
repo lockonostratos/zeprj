@@ -90,9 +90,12 @@ class WarehousesController < MerchantApplicationController
   #Trả về những Warehouse mà người dùng hiện tại có quyền truy cập
   def available
     check_warehouse_permission(params[:id])
-    render json: @warehouse
+    # render json: @warehouses
     #                 report, type_report, deliveries, returns, success, current_time_begin, current_time_end, merchant, branch, warehouse, merchant_account, customer
-    #  render :json => report_all_time_and_warehouse_account('order', 0, nil, nil, nil, nil, nil, nil, nil, nil, nil, 1)
+    # orders = (return_order_all nil, nil, nil, 1, 1, nil, nil).uniq()
+    # a = all_warehouse_on_branch([1]).pluck(:id) + [1]
+    # render :json => a
+     render :json => report_all_time_and_warehouse_account('inventory',0, nil, nil, nil, nil, nil, [1], [], [], nil, nil)
   end
 
 
