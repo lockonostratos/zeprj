@@ -1,6 +1,5 @@
 Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
-  # SINGLE -------------------------------------------------------------------------------------------------------->
   class ThisApp.ProductSummaryView extends Marionette.ItemView
     template: JST['templates/warehouse/import/productSummary']
     className: 'item-tile'

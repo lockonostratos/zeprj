@@ -12,7 +12,7 @@ class Customer < ActiveRecord::Base
 
   belongs_to :merchant
   belongs_to :merchant_account
-  belongs_to :area
+  belongs_to :merchant_area
 
   after_create :created_mertro_summary_add_customer
 

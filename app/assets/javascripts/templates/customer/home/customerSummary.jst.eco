@@ -1,0 +1,35 @@
+<div class='item-body'>
+  <div class='avatar-picture' data-tooltip title='NGƯỜI BÁN SẢN PHẨM NÀY NHIỀU NHẤT'>
+      <div class="row" style="margin-top: 20px; width: 250px; height: 100px;">
+          <div class='large-3 columns' >
+             <img width="80" height="80"  src="assets/defaults/dicaprio.jpg" style="margin-top: 10px;">
+          </div>
+          <div class='large-1 columns' STYLE="text-align: center" >
+              <p data-tooltip title='CẬP NHẬT KHÁCH HÀNG'><i class="update link fa fa-pencil-square-o" style="margin-top: 10px;"></i></p>
+              <p data-tooltip title='CHI TIẾT KHÁCH HÀNG'> <i class="detail link fa fa-list-alt"></i></p>
+              <p data-tooltip title='XÓA KHÁCH HÀNG'><i class="delete link fa fa-trash-o" ></i></p>
+          </div>
+          <div class='large-8 columns' style="padding-top: 5px; padding-left: 5px;">
+              <p data-tooltip  title='TÊN KHÁCH HÀNG'>
+                  <span editor='name'><%= @name || 'Tên Khách Hàng' %></span>
+              </p>
+              <p data-tooltip title='CHỨC VỤ'>
+                <span editor='position_company'><small><%= @position_company || 'Chức Vụ' %></small></span>
+              </p>
+              <p data-tooltip title='TÊN CÔNG TY'>
+                 <span editor='name_company'><%= @name_company || 'Tên Công Ty' %></span>
+              </p>
+              <p data-tooltip title='ĐỊA CHỈ'>
+              <span editor='address'><small><%= @address || 'Địa Chỉ Khách Hàng' %></small></span>
+              </p>
+              <p data-tooltip title='SỐ ĐIỆN THOẠI'>
+                <span editor='phone'><small>Tel: <%= @phone || '0000-000-000' %></small></span>
+              </p>
+              <p data-tooltip title='EMAIL'>
+                <span editor='email'><small>Email: <%= @email || 'Email Khách Hàng' %></small></span>
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+

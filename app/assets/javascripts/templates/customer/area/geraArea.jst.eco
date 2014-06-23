@@ -1,0 +1,14 @@
+    <dl class="accordion" data-accordion>
+        <dd class="active">
+            <a href="#panel1">Tạo Mới Khu Vực Khách Hàng</a>
+            <div id="panel1" class="content active">
+                <div id='entity-area' class='row'>
+                    <div class='large-4 columns'>
+                        <input type="text" id="area-name" class='inline metro' placeholder='TÊN KHU VỰC' value="<%=@name%>" />
+                        <input type="text" id="area-description" class='inline metro'  placeholder='MÔ TẢ' value="<%=@description%>"/>
+                        <input id='sky-new' type='button' class='inline metro' value='THÊM MỚI' />
+                    </div>
+                </div>
+            </div>
+        </dd>
+    </dl>

@@ -1,0 +1,90 @@
+<form data-abide>
+    <div class="row">
+        <div class="large-4 columns">
+            <label> Họ Và Chữ Lót Của Khách Hàng:</label>
+            <input id="last_name" placeholder="large-4.columns" type="text" value="<%=@last_name%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Tên Khách Hàng:</label>
+            <input id="first_name" placeholder="large-4.columns" type="text" value="<%=@first_name%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Chức Danh:</label>
+            <input id="position" placeholder="small-9.columns" type="text" value="<%=@position%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Tên Công Ty:</label>
+            <input id="company_name" placeholder="large-4.columns" type="text" value="<%=@company_name%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Địa Chỉ Công Ty:</label>
+            <input id="company_address" placeholder="large-4.columns" type="text" value="<%=@company_address%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Số Điện Thoại Công Ty</label>
+            <input id="company_phone" placeholder="small-9.columns" type="text" value="<%=@company_phone%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Ngày Sinh</label>
+            <input id="date_of_birth" placeholder="large-4.columns" type="text" value="<%=@date_of_birth%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Nơi Sinh</label>
+            <input id="place_of_birth" placeholder="large-4.columns" type="text" value="<%=@place_of_birth%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Quê Quán</label>
+            <input id="home_town" placeholder="small-9.columns" type="text" value="<%=@home_town%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Đia Chỉ Nhà</label>
+            <input id="home_address" placeholder="large-4.columns" type="text" value="<%=@home_address%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Đia Chỉ Nhà:</label>
+            <input id="home_addres" placeholder="large-4.columns" type="text" value="<%=@home_address%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Số Điện Thoại Nhà:</label>
+            <input id="home_phone" placeholder="small-9.columns" type="text" value="<%=@home_phone%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Chiều Cao</label>
+            <input id="height" placeholder="large-4.columns" type="text" value="<%=@height%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Cân Nặng</label>
+            <input id="weight" placeholder="large-4.columns" type="text" value="<%=@weight%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Đặc Điểm Riêng</label>
+            <input id="comment" placeholder="small-9.columns" type="text" value="<%=@comment%>">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <input id="update-personal" type="submit" class="button" value='CẬP NHẬT' />
+    </div>
+</form>

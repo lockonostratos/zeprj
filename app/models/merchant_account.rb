@@ -7,7 +7,7 @@ class MerchantAccount < ActiveRecord::Base
   has_many :deliveries
   has_many :returns
   has_many :imports
-  has_many :areas
+  has_many :merchant_areas
   has_many :product_summaries
   has_many :merchant_account_roles
   has_many :merchant_account_permissions

@@ -59,6 +59,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
 
       ThisApp.productSummariesView.on 'sync:edit', (model) ->
         model.save({
+          warehouse_id: Zeprj.currentMerchantAccount.get 'current_warehouse_id'
           product_code: model.get 'product_code'
           name: model.get 'name'
           quality: model.get 'quality'

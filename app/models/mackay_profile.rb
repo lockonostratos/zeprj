@@ -9,4 +9,5 @@ class MackayProfile < ActiveRecord::Base
   has_many :mackay_and_companies
 
   belongs_to :customer
+  belongs_to :gera_customer
 end

@@ -5,6 +5,7 @@ class Merchant < ActiveRecord::Base
   has_many :skulls
   has_many :providers
   has_many :warehouses
+  has_many :merchant_areas
 
 
 end

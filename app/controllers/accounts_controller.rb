@@ -44,9 +44,43 @@ class AccountsController < ApplicationController
   def create
     @account = Account.new(account_params)
     @account.password ||= params[:password]
-    @account.account_type = 1 #1 tức là Merchant, sẽ chuyển thành enum sau
     @account.password_confirmation = @account.password
-    @account.parent_id = current_account.id if current_account != nil
+    #Đăng ký mới Merchant (có thể thau đổi về sao)
+    if current_account == nil
+      @account.account_type = 3 #1 tức là Merchant, sẽ chuyển thành enum sau
+      @account.parent_id = 0
+      @account.headquater = 0
+
+    #Tạo tài khản con cho Gera khi đã đăng nhập bằng tài khoản chính Gera
+    elsif current_account.account_type == 1
+      @account.account_type = 2
+      @account.parent_id = current_account.id
+      @account.headquater = current_account.id
+    #Tạo tài khản con cho Agency khi đã đăng nhập bằng tài khoản chính Agency
+    elsif current_account.account_type == 3
+      @account.account_type = 4
+      @account.parent_id = current_account.id
+      @account.headquater = current_account.id
+    #Tạo tài khản con cho Merchant khi đã đăng nhập bằng tài khoản chính Merchant
+    elsif current_account.account_type == 5
+      @account.account_type = 6
+      @account.parent_id = current_account.id
+      @account.headquater = current_account.id
+
+    elsif current_account.account_type == 2
+      @account.account_type = 2
+      @account.parent_id = current_account.id
+      @account.headquater = current_account.headquater
+    elsif current_account.account_type == 4
+      @account.account_type = 4
+      @account.parent_id = current_account.id
+      @account.headquater = current_account.headquater
+    elsif current_account.account_type == 6
+      @account.account_type = 6
+      @account.parent_id = current_account.id
+      @account.headquater = current_account.headquater
+
+    end
 
     respond_to do |format|
       if @account.save
@@ -95,4 +129,5 @@ class AccountsController < ApplicationController
     def account_params
       params.require(:account).permit(:display_name, :login_name, :email, :phone, :status, :password)
     end
+
 end

@@ -1,12 +1,12 @@
 class MerchantApplicationController < ApplicationController
   def current_merchant_account
-    @current_merchant_account ||= MerchantAccount.find(@current_account.id) if @current_account
+    @current_merchant_account ||= MerchantAccount.where(@current_account.id).first if @current_account
   end
 
   helper_method :current_merchant_account
   helper_method :get_all_customers
 
-  #
+  #Trả về Permission của merchant_account
   def permission_merchant_account
     permission = Permission.all
     current_permission=[]
@@ -35,10 +35,7 @@ class MerchantApplicationController < ApplicationController
       return true if (ex.to_param == warehouse_id )
     end
   end
-  #Kiểm tra Warehouse mà người dùng hiện tại có quyền truy cập
-  def eqwe
 
-  end
   #Lấy tất cả customers của một area
   def get_all_customers(area_id)
     @customers = Customer.where(area_id:area_id)

@@ -69,6 +69,6 @@ class MerchantAccountPermissionDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def merchant_account_permission_detail_params
-      params.require(:merchant_account_permission_detail).permit(:merchant_account_id, :permission_id, :permission_text)
+      params.require(:merchant_account_permission_detail).permit(:merchant_account_id, :role_id, :permission_text)
     end
 end

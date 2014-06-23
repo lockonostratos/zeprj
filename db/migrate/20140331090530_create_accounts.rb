@@ -3,6 +3,7 @@ class CreateAccounts < ActiveRecord::Migration
     create_table :accounts do |t|
       t.string :auth_token, :null => false
       t.integer :account_type, :null => false
+      t.integer :headquater, :default =>0
       t.integer :parent_id, :default => 0
       t.integer :status, :default => 0
       t.string :display_name

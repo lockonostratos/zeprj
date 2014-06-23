@@ -1,0 +1,8 @@
+<div id='entity-editor' class='row'>
+  <input id='sky-new' type='button' class='inline metro ' value='THÊM MỚI' />
+  <input type="text" id="sky-editor" class='inline metro '/> <!--placeholder="<%= @product_code || 'Maketing Executive' %>"-->
+</div>
+
+<div class='row'>
+  <ul class='tile-container'></ul>
+</div>

@@ -1,0 +1,124 @@
+<form data-abide>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Tên Công Ty Cũ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Tên Công Ty Hiên Tại</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Có Tham Gia Hội Thương Hiệp Nào:</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Địa Chỉ Cty Cũ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Địa Chỉ Công Ty Hiên Tại:</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Có Cố Vấn Hay Không</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Ngày Gia Nhập Công Ty Cũ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Ngày Gia Nhập Công Ty Hiện Tại</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Có Mối Quan Hệ Nào Với Công Ty</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Chức Vụ Công Ty Cũ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Chức Vụ Công Ty Hiện Tại</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Có Mối Quan Hệ Với Nhân Viên</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Được Giải Thưởng Gì Công Ty Cũ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Được Giải Thưởng Gì Công Ty Mới</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Mối Quan Hệ Có Tốt Hay Không</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Mục Tiêu Kinh Doanh Dài Hạn Của Họ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Mục Tiêu Kinh Doanh Trung Hạn Của Họ</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Mục Tiêu Kinh Doanh Ngắn Hạn Của Họ</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Mối Lo Ngại Lớn Nhất Khách Hàng Tại Thời Điểm Hiên Tại:</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Khách Hàng Có Nghĩ Đến Tương Lai Hay Không</label>
+            <input placeholder="large-4.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Tại Sao</label>
+            <input placeholder="small-9.columns" type="text">
+            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
+        </div>
+    </div>
+    <div class="row">
+        <input id="update-career" type="submit" class="button" value='CẬP NHẬT' />
+    </div>
+</form>

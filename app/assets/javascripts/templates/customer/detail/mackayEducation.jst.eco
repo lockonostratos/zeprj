@@ -1,0 +1,75 @@
+<form data-abide>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Trường Trung Học Phổ Thông:</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@high_school_name%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Niên Khóa</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@high_school_name%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Loai Bằng Tốt Nghiệp</label>
+            <input placeholder="small-9.columns" type="text" value="<%=@high_school_graduation_grade%>">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Trường Đai Học:</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@university_name%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Niên Khóa:</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@university_start_year%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Loại Bằng Tốt Nghiệp</label>
+            <input placeholder="small-9.columns" type="text" value="<%=@university_graduate_year%>">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Giải Thưởng Đạt Được Ở Đại Học</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@university_award%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Câu Lạc Bộ Tham Gia ở Trường</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@university_club%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Môn Thể Thao Tham Gia</label>
+            <input placeholder="small-9.columns" type="text" value="<%=@sports%>">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Đã Tham Gia HDNK</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@activities%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Cảm Nhận Không Học ĐH</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@feeling_university%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Học Cái Gì Khác</label>
+            <input placeholder="small-9.columns" type="text" value="<%=@alternative%>">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Có Phục Vụ Quân Đội</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@army_name%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Cấp Bật Khi Xuất Ngủ</label>
+            <input placeholder="large-4.columns" type="text" value="<%=@army_name%>">
+        </div>
+        <div class="large-4 columns">
+            <label>Thái Độ Trong Quân Đội</label>
+            <input placeholder="small-9.columns" type="text" value="<%=@army_atitude%>">
+        </div>
+    </div>
+    <div class="row">
+        <input id="update-education" type="submit" class="button" value='CẬP NHẬT' />
+    </div>
+</form>

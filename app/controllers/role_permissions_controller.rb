@@ -6,7 +6,7 @@ class RolePermissionsController < ApplicationController
   def index
     @role_permissions = RolePermission.all
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @role_permissions }
     end
   end
@@ -15,7 +15,7 @@ class RolePermissionsController < ApplicationController
   # GET /role_permissions/1.json
   def show
     respond_to do |format|
-      format.html { redirect_to imports_url }
+      format.html
       format.json { render :json => @role_permission }
     end
   end
@@ -36,7 +36,7 @@ class RolePermissionsController < ApplicationController
 
     respond_to do |format|
       if @role_permission.save
-        update_merchant_account_permission_detail_by_role_permission(@role_permission)
+        update_merchant_role_permission_text(@role_permission)
         format.html { redirect_to @role_permission, notice: 'Role permission was successfully created.' }
         format.json { render action: 'show', status: :created, location: @role_permission }
       else
@@ -51,7 +51,7 @@ class RolePermissionsController < ApplicationController
   def update
     respond_to do |format|
       if @role_permission.update(role_permission_params)
-        update_merchant_account_permission_detail_by_role_permission(@role_permission)
+        update_merchant_role_permission_text(@role_permission)
 
         format.html { redirect_to @role_permission, notice: 'Role permission was successfully updated.' }
         format.json { head :no_content }
@@ -66,7 +66,7 @@ class RolePermissionsController < ApplicationController
   # DELETE /role_permissions/1.json
   def destroy
     @role_permission.destroy
-    update_merchant_account_permission_detail_by_role_permission(@role_permission)
+    update_merchant_role_permission_text(@role_permission)
     respond_to do |format|
       format.html { redirect_to role_permissions_url }
       format.json { head :no_content }
@@ -81,7 +81,7 @@ class RolePermissionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def role_permission_params
-      params.require(:role_permission).permit(:role_id, :permission_id, :active)
+      params.require(:role_permission).permit(:role_id, :permission_id)
     end
 
 

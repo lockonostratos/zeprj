@@ -87,25 +87,25 @@
      <div class='orange tile'>
         <span class='center middle caption'>
         <span class='table'><i class="fa fa-signal fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h8>THỐNG KÊ</h8>1</span>
+        <span class='bottom middle caption'><h8>THỐNG KÊ</h8></span>
     </div>
 
      <div class='green tile'>
         <span class='center middle caption'>
-        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+        <span class='table'><i class="fa fa-barcode fa-3x"></i></span></span>
+        <span class='bottom middle caption'><h8>QL MÃ VẠCH</h8></span>
     </div>
 
      <div class='blue tile'>
         <span class='center middle caption'>
         <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+        <span class='bottom middle caption'><h8>HẠN SỬ DỤNG</h8></span>
     </div>
 
      <div class='red tile'>
         <span class='center middle caption'>
         <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+        <span class='bottom middle caption'><h8>QL DOANH MỤC</h8></span>
     </div>
   </div>
 
@@ -129,10 +129,10 @@
         <span class='bottom right caption'><h8>THIẾT BỊ</h8></span>
     </div>
 
-     <div class='gray tile'>
-        <span class='center middle caption'>
-        <span class='table'><i class="fa fa-question fa-3x"></i></span></span>
-        <span class='bottom middle caption'><h8>LOREM IPSUM</h8>1</span>
+     <div id='customer-home' class='gray tile'>
+        <span class='center right caption'>
+        <span class='table'><i class="fa fa-sliders fa-3x"></i></span></span>
+        <span class='bottom right caption'><h8>Gera Customer</h8></span>
     </div>
   </div>
 

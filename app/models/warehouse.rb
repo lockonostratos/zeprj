@@ -54,4 +54,8 @@ class Warehouse < ActiveRecord::Base
 
   end
 
+  def self.search(search)
+    where(merchant_id LIKE 1).where('name LIKE ?' , "%#{search}%")
+  end
+
 end

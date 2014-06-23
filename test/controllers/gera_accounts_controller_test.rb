@@ -2,13 +2,13 @@ require 'test_helper'
 
 class GeraAccountsControllerTest < ActionController::TestCase
   setup do
-    @account = gera_accounts(:one)
+    @gera_account = gera_accounts(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:accounts)
+    assert_not_nil assigns(:gera_accounts)
   end
 
   test "should get new" do
@@ -16,32 +16,32 @@ class GeraAccountsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create account" do
-    assert_difference('Account.count') do
-      post :create, account: { display_name: @account.display_name, email: @account.email, login_name: @account.login_name, password: @account.password, phone: @account.phone, status: @account.status }
+  test "should create gera_account" do
+    assert_difference('GeraAccount.count') do
+      post :create, gera_account: { account_id: @gera_account.account_id }
     end
 
-    assert_redirected_to gera_account_path(assigns(:account))
+    assert_redirected_to gera_account_path(assigns(:gera_account))
   end
 
-  test "should show account" do
-    get :new, id: @account
+  test "should show gera_account" do
+    get :show, id: @gera_account
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @account
+    get :edit, id: @gera_account
     assert_response :success
   end
 
-  test "should update account" do
-    patch :update, id: @account, account: { display_name: @account.display_name, email: @account.email, login_name: @account.login_name, password: @account.password, phone: @account.phone, status: @account.status }
-    assert_redirected_to gera_account_path(assigns(:account))
+  test "should update gera_account" do
+    patch :update, id: @gera_account, gera_account: { account_id: @gera_account.account_id }
+    assert_redirected_to gera_account_path(assigns(:gera_account))
   end
 
-  test "should destroy account" do
-    assert_difference('Account.count', -1) do
-      delete :destroy, id: @account
+  test "should destroy gera_account" do
+    assert_difference('GeraAccount.count', -1) do
+      delete :destroy, id: @gera_account
     end
 
     assert_redirected_to gera_accounts_path

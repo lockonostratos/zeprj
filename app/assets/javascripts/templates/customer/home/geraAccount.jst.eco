@@ -1,0 +1,23 @@
+<div class="row" >
+    <div class="large-3 columns" style=" border-bottom: 2px solid #BBBBBB; !important;">
+        <div class="row">
+            <div class="large-4 columns">
+                <img src="assets/defaults/dicaprio.jpg" height="80" width="80" style="border-top: 6px solid #0099ff; !important;">
+            </div>
+            <div class="large-8 columns" style="padding-top: 20px; padding-left: 5px;">
+                <p style="margin-bottom: 5px;">
+                    <small id="gera-account-position" style="font-size: 11px; color: #999999">
+                        <%= @position_company %>
+                    </small></p>
+                <p style="margin-bottom: 5px; font-size: 20px; color: #00AEDB">
+                    <span id="gera-account-name">
+                        <%= @name %>
+                    </span></p>
+            </div>
+        </div>
+    </div>
+    <div class="large-5 columns">
+    </div>
+    <div class="large-4 columns">
+    </div>
+</div>

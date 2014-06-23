@@ -4,7 +4,6 @@
   %tr
     %th Role
     %th Permission
-    %th Active
     %th
     %th
     %th
@@ -13,7 +12,6 @@
     %tr
       %td= role_permission.role_id
       %td= role_permission.permission_id
-      %td= role_permission.active
       %td= link_to 'Show', role_permission
       %td= link_to 'Edit', edit_role_permission_path(role_permission)
       %td= link_to 'Destroy', role_permission, :method => :delete, :data => { :confirm => 'Are you sure?' }

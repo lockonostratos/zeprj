@@ -3,7 +3,7 @@
 %table
   %tr
     %th Merchant account
-    %th Permission
+    %th role
     %th Permission text
     %th
     %th
@@ -12,7 +12,7 @@
   - @merchant_account_permission_details.each do |merchant_account_permission_detail|
     %tr
       %td= merchant_account_permission_detail.merchant_account_id
-      %td= merchant_account_permission_detail.permission_id
+      %td= merchant_account_permission_detail.role_id
       %td= merchant_account_permission_detail.permission_text
       %td= link_to 'Show', merchant_account_permission_detail
       %td= link_to 'Edit', edit_merchant_account_permission_detail_path(merchant_account_permission_detail)
