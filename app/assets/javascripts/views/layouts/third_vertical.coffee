@@ -5,5 +5,5 @@ Zeprj.ThirdVerticalLayout = Backbone.Marionette.Layout.extend
   regions: {
     mainPane: '#third-top'
     secondaryPane: '#third-center'
-    thirdaryPane: '#third-bottom'
+    thirdPane: '#third-bottom'
   }

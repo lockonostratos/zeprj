@@ -324,6 +324,8 @@ class InitializeDatabase < ActiveRecord::Migration
       t.integer :return_quality, :null => false, :default => 0
       t.decimal :price, :null => false
       t.decimal :discount_cash, :null => false, :default => 0
+      t.decimal :discount_percent, :null => false, :default => 0
+      t.decimal :total_amount, :null => false, :default => 0
 
       t.timestamps
     end
@@ -515,20 +517,25 @@ class InitializeDatabase < ActiveRecord::Migration
     #Ho so mackay cong viec (sự nghiệp) ---------------------------------------------->
     create_table :mackay_careers do |t|
       t.belongs_to :mackay_profile
+
       t.string :last_company_name
       t.string :last_company_address
-      t.string :last_position
       t.date :last_start_working_date
+      t.string :last_position
+      t.string :last_company_award
+      t.string :last_company_attitude
 
+      t.string :current_company_name
+      t.string :current_company_address
       t.string :current_position
-      t.string :comany_award
-      t.string :company_atitude #thái độ với c.ty hiện tại
+      t.date :current_start_working_date
+      t.string :current_company_award
+      t.string :current_company_attitude
+
       t.string :short_term_career_plan
       t.string :medium_term_career_plan
       t.string :long_term_career_plan
-
-      t.string :current_concerns #mối lo ngại
-
+      t.string :current_concerns #mối lo ngại khach hang
       t.string :relation_with_our_staffs #mối quan hệ với nhân viên nào trong c.ty mình
       t.string :relation_status #tình trạng, mối quan hệ có tốt không?
       t.string :relation_description #lý do của tình trạng đó, tại sao tốt, tại sao không
@@ -539,6 +546,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :mackay_profile
       t.string :club_name
       t.string :community_activity
+      t.string :political_activity
       t.string :religious
       t.string :conversation_avoids #những thứ tuyệt đối phải tránh khi trò chuyện với họ!
       t.string :conversation_enjoy #những thứ họ rất thích nói về (ngoài kinh doanh)
@@ -548,10 +556,14 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :mackay_profile
       t.string :sickness_history
       t.string :current_heath_status
+
       t.boolean :enjoy_drink
-      t.string :famous_drink
+      # nếu có uống rượu-------------------------->
+      t.string :famous_drink #thích loại nào
       t.string :drink_tolarence #tửu lượng
+      # nếu không uống rượu-------------------->
       t.boolean :dislike_drink
+
       t.boolean :smoke
       t.string :dislike_smoke
       t.string :famous_lunch_restaurant

@@ -4,7 +4,7 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
     className: 'content'
     ui:
       last_name: '#last_name'
-      firt_name: '#first_name'
+      first_name: '#first_name'
       position: '#position'
       company_name: '#company_name'
       company_address: '#company_address'
@@ -22,13 +22,14 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
     initialize: ->
      @listenTo @model, 'change', -> @render()
 
+
     onShow: ->
-      $(document).foundation()
+
     events:
       'click input[id=update-personal]': ->
         @model.save({
           last_name: @ui.last_name.val()
-          firt_name: @ui.firt_name.val()
+          first_name: @ui.first_name.val()
           position: @ui.position.val()
           company_name: @ui.company_name.val()
           company_address: @ui.company_address.val()
@@ -46,4 +47,7 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
           success: -> Zeprj.log 'success'
           error: -> Zeprj.log 'error'
         })
+      'click span[editor]': (e) ->
+        @trigger 'edit:mackayPersonal:model:property', @model, $(e.currentTarget).attr('editor')
+
 

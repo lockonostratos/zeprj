@@ -22,6 +22,8 @@ class WarehousesController < MerchantApplicationController
     end
   end
 
+
+
   # GET /warehouses/new
   def new
     @warehouse = Warehouse.new

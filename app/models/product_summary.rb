@@ -8,8 +8,7 @@ class ProductSummary < ActiveRecord::Base
   after_create :create_temp_product
 
   private
-
-  def create_temp_product
-
+  def self.search(search)
+    where('name LIKE ?' , "%#{search}%")
   end
 end

@@ -13,7 +13,10 @@ class Product < ActiveRecord::Base
   #validates_presence_of :product_code, :provider, :warehouse, :import, :name, :import_quality, :import_price, :import_id
   #validates_numericality_of :warehouse_id, message: "nhap so"
 
-
+  private
+  def self.search(search)
+    where(merchant_id LIKE 1).where('name LIKE ?' , "%#{search}%")
+  end
 
 
 end

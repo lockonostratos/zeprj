@@ -33,7 +33,9 @@ class OrdersController < MerchantApplicationController
   def create
 
     #TODO: Giả lập dữ liệu nhận. Xóa mấy cái này khi viết xong
-    @selling_stocks = ProductSummary.find(1,2,3,4) #id, soluong....
+    @selling_stocks = ProductSummary.find(1,2,3,4) #id, soluong, giam gia % , tien mat
+
+
     dump_quality = 10
     # transaction_error = false;
 

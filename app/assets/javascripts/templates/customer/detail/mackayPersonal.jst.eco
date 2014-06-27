@@ -1,90 +1,57 @@
-<form data-abide>
-    <div class="row">
-        <div class="large-4 columns">
-            <label> Họ Và Chữ Lót Của Khách Hàng:</label>
-            <input id="last_name" placeholder="large-4.columns" type="text" value="<%=@last_name%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Tên Khách Hàng:</label>
-            <input id="first_name" placeholder="large-4.columns" type="text" value="<%=@first_name%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Chức Danh:</label>
-            <input id="position" placeholder="small-9.columns" type="text" value="<%=@position%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-    </div>
-    <div class="row">
-        <div class="large-4 columns">
-            <label>Tên Công Ty:</label>
-            <input id="company_name" placeholder="large-4.columns" type="text" value="<%=@company_name%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Địa Chỉ Công Ty:</label>
-            <input id="company_address" placeholder="large-4.columns" type="text" value="<%=@company_address%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Số Điện Thoại Công Ty</label>
-            <input id="company_phone" placeholder="small-9.columns" type="text" value="<%=@company_phone%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-    </div>
-    <div class="row">
-        <div class="large-4 columns">
-            <label>Ngày Sinh</label>
-            <input id="date_of_birth" placeholder="large-4.columns" type="text" value="<%=@date_of_birth%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Nơi Sinh</label>
-            <input id="place_of_birth" placeholder="large-4.columns" type="text" value="<%=@place_of_birth%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Quê Quán</label>
-            <input id="home_town" placeholder="small-9.columns" type="text" value="<%=@home_town%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-    </div>
-    <div class="row">
-        <div class="large-4 columns">
-            <label>Đia Chỉ Nhà</label>
-            <input id="home_address" placeholder="large-4.columns" type="text" value="<%=@home_address%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Đia Chỉ Nhà:</label>
-            <input id="home_addres" placeholder="large-4.columns" type="text" value="<%=@home_address%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Số Điện Thoại Nhà:</label>
-            <input id="home_phone" placeholder="small-9.columns" type="text" value="<%=@home_phone%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-    </div>
-    <div class="row">
-        <div class="large-4 columns">
-            <label>Chiều Cao</label>
-            <input id="height" placeholder="large-4.columns" type="text" value="<%=@height%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Cân Nặng</label>
-            <input id="weight" placeholder="large-4.columns" type="text" value="<%=@weight%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-        <div class="large-4 columns">
-            <label>Đặc Điểm Riêng</label>
-            <input id="comment" placeholder="small-9.columns" type="text" value="<%=@comment%>">
-            <small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>
-        </div>
-    </div>
-    <div class="row">
-        <input id="update-personal" type="submit" class="button" value='CẬP NHẬT' />
-    </div>
-</form>
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+       1. Họ tên:
+        <span editor='last_name'><%= @last_name || 'Email Khách Hàng' %></span>
+        <span editor='first_name'><%= @first_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        2. Chức danh :
+        <span editor='position'><%= @position || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        3. Tên công ty:
+        <span editor='company_name'><%= @company_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        4. Địa chỉ công ty :
+        <span editor='company_address'><%= @company_address || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        5. Địa chỉ công ty :
+        <span editor='company_phone'><%= @company_phone || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        6. Ngày Sinh :
+        <span editor='date_of_birth'><%= @date_of_birth || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        7. Nơi Sinh :
+        <span editor='place_of_birth'><%= @place_of_birth || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        8. Quê Quán :
+        <span editor='home_town'><%= @home_town || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        9. Đia Chỉ Nhà :
+        <span editor='home_address'><%= @home_address || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        10. Số Điện Thoại Nhà :
+        <span editor='home_phone'><%= @home_phone || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        11. Chiều Cao :
+        <span editor='height'><%= @height || 'Email Khách Hàng' %></span>
+        cm
+    </p>
+    <p data-tooltip title='EMAIL'>
+        12. Cân Nặng :
+        <span editor='weight'><%= @weight || 'Email Khách Hàng' %></span>
+        kg
+    </p>
+    <p data-tooltip title='EMAIL'>
+        13. Đặc Điểm Riêng :
+        <span editor='comment'><%= @comment || 'Email Khách Hàng' %></span>
+    </p>
+</div>

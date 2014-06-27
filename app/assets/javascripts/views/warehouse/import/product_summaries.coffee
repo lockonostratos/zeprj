@@ -11,6 +11,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
     initialize: ->
       @listenTo @model, 'change', -> @render()
 
+
   # COLLECTION ---------------------------------------------------------------------------------------------------->
   class ThisApp.ProductSummariesView extends Marionette.CompositeView
     template: JST['templates/warehouse/import/productSummaries']

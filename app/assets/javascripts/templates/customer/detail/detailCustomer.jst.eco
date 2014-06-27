@@ -1,423 +1,57 @@
+<div id='entity-editor' class='row'>
+
+    <input id='mackay-model-save' type='button' class='inline metro ' value='Save' style="width: 300px !important;"/>
+    <input type="text" id="sky-editor" class='inline metro '/>
+</div>
 <div>
-    <div class="collapsible" id="section1"><a id="mackay_personal">Khách Hàng</a><span></span></div>
+    <div class="collapsible" id="section1"><a id="mackay_profile">Profile</a><span></span></div>
     <div class="container">
         <div class="content">
-            <div id="mackay_personal_view">Hồ Sơ Khách Hàng</div>
+            <div id="mackay_profile_view">Đang tải thông tin......</div>
         </div>
     </div>
-    <div class="collapsible" id="section2"><a id="mackay_education">Học Vấn</a><span></span></div>
+    <div class="collapsible" id="section2"><a id="mackay_personal">Khách Hàng</a><span></span></div>
     <div class="container">
         <div class="content">
-            <div id="mackay_education_view">Hồ Sơ Khách Hàng</div>
+            <div id="mackay_personal_view">Đang tải thông tin......</div>
         </div>
     </div>
-    <div class="collapsible" id="section3">Công Việc<span></span></div>
+    <div class="collapsible" id="section3"><a id="mackay_education">Học Vấn</a><span></span></div>
     <div class="container">
         <div class="content">
-            <div id="mackay">Hồ Sơ Khách Hàng</div>
+            <div id="mackay_education_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section4"><a id="mackay_career">Công Việc</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_career_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section5"><a id="mackay_family">Gia Đình</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_family_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section6"><a id="mackay_hobby">Sở Thích</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_hobby_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section7"><a id="mackay_life_style">Phong Cánh Sống</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_life_style_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section8"><a id="mackay_and_company">Khách Hàng Và Công Ty</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_and_company_view">Đang tải thông tin......</div>
         </div>
     </div>
 </div>
-
-<!--<div><span><%=@name%></span></div>-->
-<!--<dl class="accordion" data-accordion>-->
-    <!--<dd>-->
-        <!--<a type="text" id="mackay_personal" href="#show_mackay_personal">Khách Hàng</a>-->
-        <!--<div id="show_mackay_personal" class="content">-->
-        <!--</div>-->
-    <!--</dd>-->
-    <!--<dd>-->
-        <!--<a href="#panel2-2">Học Vấn</a>-->
-        <!--<div id="panel2-12" class="content">-->
-        <!--</div>-->
-    <!--</dd>-->
-<!--</dl>-->
-
-    <!--<dd>-->
-        <!--<a href="#panel2-3">Công Việc</a>-->
-        <!--<div id="panel2-3" class="content">-->
-        <!--</div>-->
-    <!--</dd>-->
-    <!--<dd>-->
-        <!--<a href="#panel2-4">Gia Đình</a>-->
-        <!--<div id="panel2-4" class="content">-->
-            <!--<form data-abide>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label> Họ Và Chữ Lót Của Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chức Danh:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Địa Chỉ Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Công Ty</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Ngày Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Nơi Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Quê Quán</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Nhà:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chiều Cao</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Cân Nặng</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đặc Điểm Riêng</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<input id="update-personal" type="submit" class="button" value='CẬP NHẬT' />-->
-                <!--</div>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</dd>-->
-    <!--<dd>-->
-        <!--<a href="#panel2-5">Sở Thích Riêng</a>-->
-        <!--<div id="panel2-5" class="content">-->
-            <!--<form data-abide>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label> Họ Và Chữ Lót Của Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chức Danh:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Địa Chỉ Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Công Ty</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Ngày Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Nơi Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Quê Quán</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Nhà:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chiều Cao</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Cân Nặng</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đặc Điểm Riêng</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<input id="update-personal" type="submit" class="button" value='CẬP NHẬT' />-->
-                <!--</div>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</dd>-->
-    <!--<dd>-->
-        <!--<a href="#panel2-6">Phong Cách Sống</a>-->
-        <!--<div id="panel2-6" class="content">-->
-            <!--<form data-abide>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label> Họ Và Chữ Lót Của Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chức Danh:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Địa Chỉ Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Công Ty</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Ngày Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Nơi Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Quê Quán</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Nhà:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chiều Cao</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Cân Nặng</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đặc Điểm Riêng</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<input id="update-personal" type="submit" class="button" value='CẬP NHẬT' />-->
-                <!--</div>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</dd>-->
-    <!--<dd>-->
-        <!--<a href="#panel2-7">Khách Hàng Và Bạn</a>-->
-        <!--<div id="panel2-7" class="content">-->
-            <!--<form data-abide>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label> Họ Và Chữ Lót Của Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Khách Hàng:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chức Danh:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Tên Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Địa Chỉ Công Ty:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Công Ty</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Ngày Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Nơi Sinh</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Quê Quán</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đia Chỉ Nhà:</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Số Điện Thoại Nhà:</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Chiều Cao</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Cân Nặng</label>-->
-                        <!--<input placeholder="large-4.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                    <!--<div class="large-4 columns">-->
-                        <!--<label>Đặc Điểm Riêng</label>-->
-                        <!--<input placeholder="small-9.columns" type="text">-->
-                        <!--<small class="error" style="margin-top: -7px;">Bạn chưa nhập tên khách hàng</small>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                    <!--<input id="update-personal" type="submit" class="button" value='CẬP NHẬT' />-->
-                <!--</div>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</dd>-->
-
 
 

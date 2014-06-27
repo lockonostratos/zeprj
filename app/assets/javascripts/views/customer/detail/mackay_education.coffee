@@ -4,7 +4,7 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
     className: 'content'
     ui:
       high_school_name: '#high_school_name'
-      high_school_year: '#high_school_name'
+      high_school_year: '#high_school_year'
       high_school_graduation_grade: '#high_school_graduation_grade'
       university_name: '#university_name'
       university_start_year: '#university_start_year'
@@ -17,14 +17,16 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
       feeling_university: '#feeling_university'
       alternative: '#alternative'
       army_name: '#army_name'
-      army_grade: '#army_name'
+      army_grade: '#army_grade'
       army_atitude: '#army_atitude'
 
 
     initialize: ->
       @listenTo @model, 'change', -> @render()
+    onShow: ->
+      $(document).foundation()
     events:
-      'click input[id=update-personal]': ->
+      'click input[id=update-education]': ->
         @model.save({
           high_school_name: @ui.high_school_name.val()
           high_school_year: @ui.high_school_year.val()
@@ -46,3 +48,7 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
           success: -> Zeprj.log 'success'
           error: -> Zeprj.log 'error'
         })
+
+      'click span[editor]': (e) ->
+        @trigger 'edit:mackayEducation:model:property', @model, $(e.currentTarget).attr('editor')
+

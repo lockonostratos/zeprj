@@ -1,0 +1,10 @@
+<tr>
+    <th>"<%= @product_code%>"</th>
+    <th>"<%= @product_name%>"</th>
+    <th>"<%= @price%>"</th>
+    <th>"<%= @quality%>"</th>
+    <th>"<%= @discount_cash%>"</th>
+    <th>"<%= @discount_percent%>"</th>
+    <th>"<%= @total_amount%>"</th>
+    <th>"<%= @total_amount_disount%>"</th>
+</tr>

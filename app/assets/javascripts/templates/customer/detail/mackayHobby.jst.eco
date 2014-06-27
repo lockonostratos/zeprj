@@ -1,0 +1,44 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+        Tên Câu Lạc Bộ Họ Tham Gia :
+        <span editor='club_name'><%= @club_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Có Hoạt Động Chính Trị:
+        <span editor='community_activity'><%= @community_activity || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tham Gia Vào Đảng Nào :
+        <span editor='last_start_working_date'><%= @last_start_working_date || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tầm Quan Trọng Với Họ :
+        <span editor='university_name'><%= @university_name || 'Email Khách Hàng' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Có Tham Gia Hoạt Động Xã Hội :
+        <span editor='current_company_name'><%= @current_company_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Hoạt Động Gì:
+        <span editor='current_company_address'><%= @current_company_address || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tôn Giáo :
+        <span editor='current_start_working_date'><%= @current_start_working_date || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Có Hoạt Động Gì Không:
+        <span editor='current_position'><%= @current_position || 'Email Khách Hàng' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Những Khía Cạnh Tuyệt Đối Tránh Khi Trò Chuyện Với Khách Hàng (ví vụ ly hôn, thành viên tổ chức, v.v...) :
+        <span editor='university_award'><%= @university_award || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách Hàng Thích Nói Về Những Chủ Đề Gì (Ngoài Kinh Doanh) :
+        <span editor='university_club'><%= @university_club || 'Email Khách Hàng' %></span>
+    </p>
+</div>

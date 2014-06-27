@@ -1,0 +1,26 @@
+<div class="row" style="text-align: center">
+    <div class='large-3 columns'>
+        <input type="text" class="inline metro" placeholder="Phương Thức Thanh Toán"/>
+        <input type="text" class="inline metro" placeholder="Khách Hàng"/>
+
+    </div>
+    <div class='large-8 columns'>
+        <div class='large-3 columns' style="text-align: center">
+            <input type="text" class="inline metro" placeholder="Voucher"/>
+            <input type="text" class="inline metro" placeholder="Tổng Tiền Thu Vào"/>
+        </div>
+        <div class='large-3 columns'>
+            <input type="text" class="inline metro" placeholder="Tổng Bill Tạm Tính"/>
+            <input type="text" class="inline metro" placeholder="Số Tiền Thối Lại"/>
+
+        </div>
+        <div class='large-3 columns'>
+            <input type="text" class="inline metro" placeholder="Giả Giá Theo %"/>
+            <input type="text" class="inline metro" placeholder="Thực Thu Vào"/>
+        </div>
+        <div class='large-3 columns'>
+            <input type="text" class="inline metro" placeholder="Giảm Giá Tiền Mặt"/>
+            <input id='sky-new' type='button' class='inline metro' value='Hoàn Tất' />
+        </div>
+    </div>
+</div>

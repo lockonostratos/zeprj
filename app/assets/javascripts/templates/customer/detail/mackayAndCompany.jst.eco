@@ -1,0 +1,31 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+        Bạn cần cẩn trọng những gì trong đao đức khi làm việc với khách hàng nay :
+        <span editor='ethic_cautious'><%= @ethic_cautious || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng có cảm thấy có nghĩa dụ với bạn, công ty bạn, hay đối với thủ cạnh tranh của bạn không?
+        <span editor='customer_feel_obligation'><%= @customer_feel_obligation || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Nếu có, thì đó là nghĩa vụ gì?
+        <span editor='obligation_descriptions'><%= @obligation_descriptions || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Đề xuất trong kế hoạch của bạn có làm khách hàng phải thay đổi thói quen, hoặc hàng động khách trước không?
+        <span editor='very_focus'><%= @very_focus || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng có để tâm tới các đề xuất khách không?
+        <span editor='very_ethic'><%= @very_ethic || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Họ rất tập trung?
+        <span editor='customer_key_aspect'><%= @customer_key_aspect || 'Email Khách Hàng' %></span>
+    </p>
+</div>
+
+
+
+
+
