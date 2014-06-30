@@ -1,10 +1,9 @@
-<tr>
-    <th>"<%= @product_code%>"</th>
-    <th>"<%= @product_name%>"</th>
-    <th>"<%= @price%>"</th>
-    <th>"<%= @quality%>"</th>
-    <th>"<%= @discount_cash%>"</th>
-    <th>"<%= @discount_percent%>"</th>
-    <th>"<%= @total_amount%>"</th>
-    <th>"<%= @total_amount_disount%>"</th>
-</tr>
+<td><%= @product_code%></td>
+<td><%= @product_name%></td>
+<td><%= @price%> VND</td>
+<td><%= @quality%> SP</td>
+<td><%= @discount_cash%> %</td>
+<td><%= @discount_percent%> VND</td>
+<td><%= @total_amount%> VND</td>
+<td><%= @total_amount_disount%> VND</td>
+<td> <input type='button' class='inline metro' value='Xóa'/></td>

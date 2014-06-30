@@ -19,6 +19,8 @@ Zeprj::Application.routes.draw do
 
   get 'areas/showAllCustomers', :to => 'areas#showAllCustomers'
   get 'areas/showAllCustomers/:id', :to => 'areas#showAllCustomers'
+  get 'warehouses/search', :to => 'warehouses#search'
+
 
   resources :gera_accounts
   resources :gera_areas
