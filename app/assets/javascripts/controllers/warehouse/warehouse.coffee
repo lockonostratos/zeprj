@@ -2,7 +2,7 @@ Zeprj.module "WarehouseApp", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
   # CONTROLLER ----------------------------------------------------------------------------------------------------->
   ThisApp.addInitializer ->
-    ThisApp.childApps = ['Import', 'Inventory']
+    ThisApp.childApps = ['Import', 'Inventory', 'Transport']
 
   ThisApp.Controller =
     renderInto: (region, appName = 'Import') ->

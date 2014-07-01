@@ -69,3 +69,8 @@ i.link, span.link, p.link {
   cursor: pointer;
   color: $component-theme !important;
 }
+
+table.metro {
+  tr:nth-of-type(even) { background-color: #ddd !important; }
+  tr:hover { background-color: #FFFFCC !important; }
+}

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="large-8 columns">
+    <table width="100%" class="metro">
+      <thead>
+        <tr>
+          <%for column in @columns:%>
+            <th <%="width='#{column.width}'" if column.width%>><%=column.caption%></th>
+          <%end%>
+        </tr>
+      </thead>
+      <tbody class="grid-content">
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row-detail large-4 columns">
+    Details
+  </div>
+</div>

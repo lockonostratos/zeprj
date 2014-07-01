@@ -1,0 +1,3 @@
+<%for column, i in @options.columns:%>
+  <td><%= @model[column.key] %></td>
+<%end%>
