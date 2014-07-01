@@ -34,9 +34,19 @@ class ProductSummariesController < MerchantApplicationController
   def show
     respond_to do |format|
       format.html
-      format.json {render json: @product_summary}
+      format.json {render json: @product_summary , :include => :skull}
     end
   end
+
+  def search
+    @product_summaries = ProductSummary.search { fulltext 'Ao' }
+    respond_to do |format|
+      format.html
+      format.json {render json: @product_summaries}
+    end
+
+  end
+
 
 
 

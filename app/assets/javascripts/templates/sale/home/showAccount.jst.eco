@@ -1,0 +1,5 @@
+<%for item, i in @:%>
+<option value="<%=item.id%>"><%=item.email%></option>
+<%end%>
+
+

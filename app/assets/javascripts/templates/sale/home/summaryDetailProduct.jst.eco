@@ -1,25 +1,27 @@
 <div class="row" style="text-align: center">
-    <div class='large-3 columns'>
-        <input type="text" class="inline metro" placeholder="Phương Thức Thanh Toán"/>
-        <input type="text" class="inline metro" placeholder="Khách Hàng"/>
-
+    <div class='large-2 columns'>
+       <small>Phương Thức Thanh Toán</small>
+        <select class="item-tile" style="margin-bottom: 0px; margin-left: 10px;">
+            <option value="0">Trả Tiền Mặt</option>
+            <option value="1">Chuyển Khoản</option>
+        </select>
     </div>
     <div class='large-8 columns'>
         <div class='large-3 columns' style="text-align: center">
-            <input type="text" class="inline metro" placeholder="Voucher"/>
-            <input type="text" class="inline metro" placeholder="Tổng Tiền Thu Vào"/>
+            <input type="text" class="inline metro" id="Voucher" placeholder="Voucher"/>
+            <input type="text" class="inline metro" id="Total-All-Price" value="0" placeholder="Tổng Tiền Thu Vào"/>
         </div>
         <div class='large-3 columns'>
-            <input type="text" class="inline metro" placeholder="Tổng Bill Tạm Tính"/>
-            <input type="text" class="inline metro" placeholder="Số Tiền Thối Lại"/>
+            <input type="text" class="inline metro" id="Total-All-Price-Final" value="0" placeholder="Tổng Bill Tạm Tính"/>
+            <input type="text" class="inline metro" id="Change" value="0" placeholder="Số Tiền Thối Lại"/>
 
         </div>
         <div class='large-3 columns'>
-            <input type="text" class="inline metro" placeholder="Giả Giá Theo %"/>
-            <input type="text" class="inline metro" placeholder="Thực Thu Vào"/>
+            <input type="text" class="inline metro" id="Discount-Cash" value="0" placeholder="Giảm Giá Theo %"/>
+            <input type="text" class="inline metro" id="Imported" value="0" placeholder="Thực Thu Vào"/>
         </div>
         <div class='large-3 columns'>
-            <input type="text" class="inline metro" placeholder="Giảm Giá Tiền Mặt"/>
+            <input type="text" class="inline metro" id="Discount" value="0" placeholder="Giảm Giá Tiền Mặt"/>
             <input id='sky-new' type='button' class='inline metro' value='Hoàn Tất' />
         </div>
     </div>

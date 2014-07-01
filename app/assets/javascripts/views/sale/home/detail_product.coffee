@@ -27,7 +27,5 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
         total_amount: PriceAll
         total_amount_disount: PriceAllFinal
       }
-      @collection.each
-      @trigger
 
 

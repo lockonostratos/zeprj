@@ -15,6 +15,7 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
     renderAddProduct:->
       ThisApp.addProductView = new ThisApp.AddProductView()
+#        model: Zeprj.request 'productSummary:entity',1
       ThisApp.layout.mainPane.show ThisApp.addProductView
     handleAddProductEvent:->
 
@@ -26,7 +27,10 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
     handleDetailProductsEvent:->
       ThisApp.addProductView.on 'create:product:model', (model, SaleQuality, Discount, DiscountCash, PriceAll, PriceAllFinal)->
         ThisApp.detailProductView.createOrderDetail model, SaleQuality, Discount, DiscountCash, PriceAll, PriceAllFinal
-
+        collection= ThisApp.detailProductView.collection
+        #        collection.
+        ThisApp.summaryDetailProductView.sumarryOrderDetail
     renderSummaryDetailProducts:->
-      ThisApp.summaryDetailProductView = new ThisApp.SummaryDetailProductView()
+      ThisApp.summaryDetailProductView = new ThisApp.SummaryDetailProductView
+        model: new Backbone.Model()
       ThisApp.layout.thirdPane.show ThisApp.summaryDetailProductView

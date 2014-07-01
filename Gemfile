@@ -3,9 +3,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+# Search
+gem 'sunspot_rails'
+gem 'sunspot_solr'# optional pre-packaged Solr distribution for use in development
+
 gem 'whenever', :require => false
 # Use mysql as the database for Active Record
- gem 'mysql2'
+gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

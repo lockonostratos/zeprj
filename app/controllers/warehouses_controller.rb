@@ -24,12 +24,12 @@ class WarehousesController < MerchantApplicationController
 
   # GET /warehouses/new
   def search
-
-    @warehouse = Warehouse.search(params[:name])
+    @warehouses = ProductSummary.search { fulltext 'Ao' }
     respond_to do |format|
       format.html
-      format.json {render json: @warehouse}
+      format.json {render json: @warehouses}
     end
+
   end
 
   # GET /warehouses/new
