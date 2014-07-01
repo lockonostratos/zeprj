@@ -12,6 +12,8 @@
 #= require libraries/hammer
 #= require libraries/jquery.hammer
 #= require libraries/jquery.mousewheel
+#= require libraries/jquery.collapsible
+
 
 #= require_tree ../templates
 #= require_self
@@ -22,6 +24,7 @@
 #TODO: OBSOLETE - WILL BE DELETE
 #= require_tree ./viewmodels
 #= require_tree ./apps
+#= require_tree ../geraApplication/models
 
 
 window.Zeprj = new Marionette.Application()

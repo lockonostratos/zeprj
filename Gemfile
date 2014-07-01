@@ -5,7 +5,7 @@ gem 'rails', '4.0.4'
 
 gem 'whenever', :require => false
 # Use mysql as the database for Active Record
-gem 'mysql2'
+ gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

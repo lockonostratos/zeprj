@@ -1,0 +1,90 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+        Tên Công Ty Cũ :
+        <span editor='last_company_name'><%= @last_company_name || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Địa Chỉ Công Ty Cũ :
+        <span editor='last_company_address'><%= @last_company_address || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Ngày Gia Nhập Công Ty Cũ :
+        <span editor='last_start_working_date'><%= @last_start_working_date || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Chức Vụ Công Ty Cũ :
+        <span editor='last_position'><%= @last_position || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Được Giải Thưởng Gì Công Ty Cũ :
+        <span editor='last_company_award'><%= @last_company_award || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Thái Độ Với Công Ty Cũ :
+        <span editor='last_company_attitude'><%= @last_company_attitude || 'Chưa có thông tin' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Tên Công Ty Hiên Tại :
+        <span editor='current_company_name'><%= @current_company_name || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Địa Chỉ Công Ty Hiên Tại: :
+        <span editor='current_company_address'><%= @current_company_address || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Ngày Gia Nhập Công Ty Hiện Tại :
+        <span editor='current_start_working_date'><%= @current_start_working_date || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Chức Vụ Công Ty Hiện Tại :
+        <span editor='current_position'><%= @current_position || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Được Giải Thưởng Gì Công Ty Hiện Tại :
+        <span editor='current_company_award'><%= @current_company_award || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Thái Độ Với Công Ty Hiện Tại :
+        <span editor='current_company_attitude'><%= @current_company_attitude || 'Chưa có thông tin' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Mục Tiêu Kinh Doanh Dài Hạn Của Họ :
+        <span editor='long_term_career_plan'><%= @long_term_career_plan || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Mục Tiêu Kinh Doanh Trung Hạn Của Họ :
+        <span editor='medium_term_career_plan'><%= @medium_term_career_plan || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Mục Tiêu Kinh Doanh Ngắn Hạn Của Họ :
+        <span editor='short_term_career_plan'><%= @short_term_career_plan || 'Chưa có thông tin' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Có Mối Quan Hệ Nào Với Công Ty :
+        <span editor='relation_with_our_staffs'><%= @relation_with_our_staffs || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Mối Quan Hệ Có Tốt Hay Không :
+        <span editor='relation_status'><%= @relation_status || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tại Sao :
+        <span editor='relation_description'><%= @relation_description || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Bản Chất Mối Quan Hệ :
+        <span editor='relation_essense'><%= @relation_essense || 'Chưa có thông tin' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Mối Lo Ngại Lớn Nhất Khách Hàng Tại Thời Điểm Hiên Tại: :
+        <span editor='current_concerns'><%= @current_concerns || 'Chưa có thông tin' %></span>
+    </p>
+</div>
+
+
+
+
+

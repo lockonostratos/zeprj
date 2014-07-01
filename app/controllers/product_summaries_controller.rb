@@ -18,6 +18,7 @@ class ProductSummariesController < MerchantApplicationController
     current_temproduct.each do |temproduct|
        product_summaries += [current_product_summaries.find(temproduct.product_summary_id)]
     end
+
     @product_summaries = current_product_summaries - product_summaries
     # @product_summaries = current_product_summaries
     respond_to do |format|

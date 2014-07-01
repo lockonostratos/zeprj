@@ -54,4 +54,8 @@ class Warehouse < ActiveRecord::Base
 
   end
 
+  def self.search(val)
+    where('name LIKE ?',  "%#{val}%")
+  end
+
 end

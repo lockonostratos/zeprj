@@ -1,0 +1,65 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+        1. Trường Trung Học Phổ Thông:
+        <span editor='high_school_name'><%= @high_school_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        2. Niên Khóa :
+        <span editor='high_school_year'><%= @high_school_year || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        3. Loai Bằng Tốt Nghiệp:
+        <span editor='high_school_graduation_grade'><%= @high_school_graduation_grade || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        4. Trường Đai Học :
+        <span editor='university_name'><%= @university_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        5. Niên Khóa :
+        <span editor='university_start_year'><%= @university_start_year || 'Email Khách Hàng' %></span>
+        <span editor='university_graduate_year'><%= @university_graduate_year || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        6. Loại Bằng Tốt Nghiệp :
+        <span editor='university_graduation_grade'><%= @university_graduation_grade || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        7. Giải Thưởng Đạt Được Ở Đại Học :
+        <span editor='university_award'><%= @university_award || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        8. Câu Lạc Bộ Tham Gia ở Trường :
+        <span editor='university_club'><%= @university_club || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        9. Môn Thể Thao Tham Gia :
+        <span editor='sports'><%= @sports || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        10. Đã Tham Gia HDNK :
+        <span editor='activities'><%= @activities || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        11. Cảm Nhận Không Học ĐH :
+        <span editor='feeling_university'><%= @feeling_university || 'Email Khách Hàng' %></span>
+        cm
+    </p>
+    <p data-tooltip title='EMAIL'>
+        12. Học Cái Gì Khác :
+        <span editor='alternative'><%= @alternative || 'Email Khách Hàng' %></span>
+        kg
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Có Phục Vụ Quân Đội :
+        <span editor='army_name'><%= @army_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Cấp Bật Khi Xuất Ngủ :
+        <span editor='army_grade'><%= @army_grade || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Thái Độ Trong Quân Đội :
+        <span editor='army_atitude'><%= @army_atitude || 'Email Khách Hàng' %></span>
+    </p>
+</div>

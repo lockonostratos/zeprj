@@ -1,0 +1,22 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+        Tình Trạng Hôn Nhân :
+        <span editor='mariage_status'><%= @mariage_status || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tên Vợ/Chồng :
+        <span editor='spouse_name'><%= @spouse_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Học Vấn Của Vợ/Chồng :
+        <span editor='spouse_education'><%= @spouse_education || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Sở Thích/Hoạt Động/Hội Hè Của Vợ/Chồng :
+        <span editor='spouse_hobbies'><%= @spouse_hobbies || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Ngày Cưới :
+        <span editor='mariage_at'><%= @mariage_at || 'Email Khách Hàng' %></span>
+    </p>
+</div>

@@ -1,0 +1,114 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+        Tiền sử bệnh tật :
+        <span editor='sickness_history'><%= @sickness_history || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tình trạng sức khỏe hiện tại :
+        <span editor='current_heath_status'><%= @current_heath_status || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng có uống rượu hay không ?
+        <span editor='enjoy_drink'><%= @enjoy_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Uống loại nào :
+        <span editor='famous_drink'><%= @famous_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Tửu lượng bao nhiêu :
+        <span editor='drink_tolarence'><%= @drink_tolarence || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng có khó chịu khi người khác uống hay không :
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Khách hàng có hút thuốc hay không:
+        <span editor='current_start_working_date'><%= @current_start_working_date || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Hút loại nào ?:
+        <span editor='current_position'><%= @current_position || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Nếu không hút thuốc, khách hàng có khó chịu khi ngồi giữa những người hút thuốc không?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Quán ăn sáng ưa thích?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Quán ăn trưa ưa thích?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Quán ăn tối ưa thích?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+
+    <p data-tooltip title='EMAIL'>
+        Món ăn ưa thích?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Có khó chịu khi người khác mua đồ cho mình ?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Sở thích:
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Cách giải trí ?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng thích đọc gì (bao gồm cả website ưa thích)?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Thói quen về kỳ nghỉ?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Sở thích về thể thao: môn thể thao và câu lạc bộ ưa thích?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng thích loại ô tô nào?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Sở thích nói chuyện?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng muốn gây ấn tượng với ai?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng muốn người đó nhìn nhận như thế nào?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Những tính từ mô tả khách hàng?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Khách hàng tự hào nhất về thành tích nào?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Theo cảm nhận của bạn, mục tiêu cá nhân dài hạn của khách hàng là gì?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        Theo cảm nhận của bạn, mục tiêu cá nhân trung hạn của khách hàng là gì?
+        <span editor='dislike_drink'><%= @dislike_drink || 'Email Khách Hàng' %></span>
+    </p>
+
+
+</div>

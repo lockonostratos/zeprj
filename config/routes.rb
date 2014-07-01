@@ -9,8 +9,9 @@ Zeprj::Application.routes.draw do
 
   resources :accounts
   resources :sessions
-  resources :merchants
   resources :products
+  resources :merchants
+
 
   get 'warehouses/available', :to => 'warehouses#available'
   get 'product_summaries/import_availables', :to => 'product_summaries#import_availables'
@@ -18,28 +19,38 @@ Zeprj::Application.routes.draw do
 
   get 'areas/showAllCustomers', :to => 'areas#showAllCustomers'
   get 'areas/showAllCustomers/:id', :to => 'areas#showAllCustomers'
-  resources :warehouses
-  resources :skulls
-  resources :merchant_accounts
-  resources :providers
-  resources :branches
+  get 'warehouses/search', :to => 'warehouses#search'
+
+
+  resources :gera_accounts
+  resources :gera_areas
+  resources :gera_customers
   resources :areas
   resources :agencies
-
+  resources :merchant_accounts
   resources :customers
+
+
+  resources :branches
+  resources :warehouses
+  resources :skulls
+  resources :providers
+  resources :product_summaries
+  resources :metro_summaries
+
+  resources :imports
   resources :deliveries
   resources :exports
   resources :export_details
-  resources :imports
   resources :inventories
   resources :inventory_details
   resources :orders
   resources :order_details
-  resources :product_summaries
   resources :returns
   resources :return_details
   resources :temp_products
   resources :temp_inventory_details
+
   resources :roles
   resources :role_permissions
   resources :merchant_account_roles
@@ -47,8 +58,16 @@ Zeprj::Application.routes.draw do
   resources :merchant_account_permission_details
   resources :permissions
   resources :permission_details
-  resources :metro_summaries
 
+  resources :mackay_profiles
+  resources :mackay_families
+  resources :mackay_educations
+  resources :mackay_personals
+  resources :mackay_children
+  resources :mackay_life_styles
+  resources :mackay_hobbies
+  resources :mackay_careers
+  resources :mackay_and_companies
 
 
 

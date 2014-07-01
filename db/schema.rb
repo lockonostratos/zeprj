@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   create_table "accounts", force: true do |t|
     t.string   "auth_token",                  null: false
     t.integer  "account_type",                null: false
+    t.integer  "headquater",      default: 0
     t.integer  "parent_id",       default: 0
     t.integer  "status",          default: 0
     t.string   "display_name"
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "agencies", force: true do |t|
+    t.integer  "gera_accounts_id", null: false
     t.string   "name"
     t.integer  "headquater_id"
     t.datetime "created_at"
@@ -36,18 +38,26 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "agency_accounts", force: true do |t|
-    t.integer  "account_id"
-    t.integer  "agency_id"
-    t.integer  "role_id"
+    t.integer  "account_id", null: false
+    t.integer  "agency_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "areas", force: true do |t|
-    t.integer  "merchant_id",         null: false
-    t.integer  "merchant_account_id", null: false
-    t.string   "name",                null: false
+  create_table "agency_areas", force: true do |t|
+    t.integer  "agency_id",         null: false
+    t.integer  "agency_account_id", null: false
+    t.string   "name",              null: false
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "agency_customers", force: true do |t|
+    t.integer  "agency_id",         null: false
+    t.integer  "agency_area_id"
+    t.integer  "agency_account_id", null: false
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,7 +72,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   create_table "customers", force: true do |t|
     t.integer  "merchant_id",         null: false
     t.integer  "merchant_account_id", null: false
-    t.integer  "area_id"
+    t.integer  "merchant_area_id"
     t.string   "account_name"
     t.string   "password"
     t.string   "email"
@@ -105,7 +115,90 @@ ActiveRecord::Schema.define(version: 20140411100003) do
 
   create_table "gera_accounts", force: true do |t|
     t.integer  "account_id"
-    t.integer  "role_id"
+    t.string   "name"
+    t.string   "name_company"
+    t.string   "position_company"
+    t.string   "phone"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gera_activities", force: true do |t|
+    t.integer  "gera_area_id"
+    t.integer  "gera_account_id",           null: false
+    t.integer  "gera_customers_company_id"
+    t.integer  "gera_customer_id"
+    t.string   "name"
+    t.string   "name_company"
+    t.string   "position_company"
+    t.string   "phone"
+    t.string   "address"
+    t.boolean  "sex"
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gera_areas", force: true do |t|
+    t.integer  "gera_account_id", null: false
+    t.string   "name",            null: false
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gera_customers", force: true do |t|
+    t.integer  "gera_area_id"
+    t.integer  "gera_account_id",  null: false
+    t.string   "name"
+    t.string   "name_company"
+    t.string   "position_company"
+    t.string   "phone"
+    t.string   "address"
+    t.boolean  "sex"
+    t.integer  "age"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gera_customers_companies", force: true do |t|
+    t.integer  "gera_area_id"
+    t.integer  "gera_account_id",  null: false
+    t.string   "name_company"
+    t.string   "industry_company"
+    t.string   "revenue"
+    t.text     "description"
+    t.string   "address_street"
+    t.string   "address_city"
+    t.string   "address_state"
+    t.string   "address_postcode"
+    t.string   "address_country"
+    t.date     "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gera_opportunities", force: true do |t|
+    t.integer  "gera_area_id"
+    t.integer  "gera_account_id",           null: false
+    t.integer  "gera_customers_company_id"
+    t.integer  "gera_customer_id"
+    t.string   "name"
+    t.string   "name_company"
+    t.string   "position_company"
+    t.string   "phone"
+    t.string   "address"
+    t.boolean  "sex"
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gera_products", force: true do |t|
+    t.integer  "gera_account_id", null: false
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -164,6 +257,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.string  "comany_award"
     t.string  "company_atitude"
     t.string  "short_term_career_plan"
+    t.string  "medium_term_career_plan"
     t.string  "long_term_career_plan"
     t.string  "current_concerns"
     t.string  "relation_with_our_staffs"
@@ -178,6 +272,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.string  "last_name"
     t.integer "gender"
     t.string  "education"
+    t.date    "birthday"
     t.integer "age"
     t.string  "hobbies"
     t.text    "comment"
@@ -187,10 +282,11 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer "mackay_profile_id"
     t.string  "high_school_name"
     t.date    "high_school_year"
+    t.string  "high_school_graduation_grade"
     t.string  "university_name"
     t.date    "university_start_year"
     t.date    "university_graduate_year"
-    t.string  "graduation_grade"
+    t.string  "university_graduation_grade"
     t.string  "university_award"
     t.string  "university_club"
     t.string  "sports"
@@ -261,23 +357,25 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.string  "place_of_birth"
     t.string  "home_town"
     t.integer "gender"
-    t.integer "height"
-    t.integer "weight"
+    t.float   "height"
+    t.float   "weight"
     t.text    "comment"
   end
 
   create_table "mackay_profiles", force: true do |t|
+    t.integer  "gera_customer_id"
+    t.integer  "agency_customer_id"
     t.integer  "customer_id"
-    t.integer  "last_updator_id", null: false
+    t.integer  "last_updator_id",    null: false
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "merchant_account_permission_details", force: true do |t|
+  create_table "merchant_account_permissions", force: true do |t|
     t.integer  "merchant_account_id"
-    t.integer  "role_id"
-    t.string   "permission_text"
+    t.integer  "permission_id"
+    t.boolean  "active",              default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -296,6 +394,15 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer  "merchant_id",                      null: false
     t.integer  "branch_id",            default: 0, null: false
     t.integer  "current_warehouse_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchant_areas", force: true do |t|
+    t.integer  "merchant_id",         null: false
+    t.integer  "merchant_account_id", null: false
+    t.string   "name",                null: false
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -326,17 +433,6 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.integer "revenue_month",      limit: 8, default: 0
   end
 
-  create_table "modules", force: true do |t|
-    t.string   "name"
-    t.integer  "type"
-    t.boolean  "show"
-    t.boolean  "create"
-    t.boolean  "edit"
-    t.boolean  "delete"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "order_details", force: true do |t|
     t.integer  "order_id",                                            null: false
     t.integer  "product_id",                                          null: false
@@ -365,14 +461,8 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "updated_at"
   end
 
-  create_table "permission_details", force: true do |t|
-    t.integer  "permission_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "permissions", force: true do |t|
+    t.integer  "headquater_id"
     t.string   "permission_key"
     t.string   "permission_name"
     t.datetime "created_at"
@@ -445,14 +535,8 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.datetime "updated_at"
   end
 
-  create_table "role_warehouse", force: true do |t|
-    t.integer  "role_id"
-    t.integer  "warehouse_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "roles", force: true do |t|
+    t.integer  "headquater_id"
     t.string   "role_name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -489,9 +573,9 @@ ActiveRecord::Schema.define(version: 20140411100003) do
   end
 
   create_table "warehouses", force: true do |t|
-    t.integer  "warehouse_id", null: false
-    t.integer  "branch_id",    null: false
-    t.string   "name",         null: false
+    t.integer  "merchant_id", null: false
+    t.integer  "branch_id",   null: false
+    t.string   "name",        null: false
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"

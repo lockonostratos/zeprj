@@ -1,0 +1,9 @@
+<td><%= @product_code%></td>
+<td><%= @product_name%></td>
+<td><%= @price%> VND</td>
+<td><%= @quality%> SP</td>
+<td><%= @discount_cash%> %</td>
+<td><%= @discount_percent%> VND</td>
+<td><%= @total_amount%> VND</td>
+<td><%= @total_amount_disount%> VND</td>
+<td> <input type='button' class='inline metro' value='Xóa'/></td>

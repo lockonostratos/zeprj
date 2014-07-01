@@ -1,0 +1,57 @@
+<div id='entity-editor' class='row'>
+
+    <input id='mackay-model-save' type='button' class='inline metro ' value='Save' style="width: 300px !important;"/>
+    <input type="text" id="sky-editor" class='inline metro '/>
+</div>
+<div>
+    <div class="collapsible" id="section1"><a id="mackay_profile">Profile</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_profile_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section2"><a id="mackay_personal">Khách Hàng</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_personal_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section3"><a id="mackay_education">Học Vấn</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_education_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section4"><a id="mackay_career">Công Việc</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_career_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section5"><a id="mackay_family">Gia Đình</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_family_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section6"><a id="mackay_hobby">Sở Thích</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_hobby_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section7"><a id="mackay_life_style">Phong Cánh Sống</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_life_style_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+    <div class="collapsible" id="section8"><a id="mackay_and_company">Khách Hàng Và Công Ty</a><span></span></div>
+    <div class="container">
+        <div class="content">
+            <div id="mackay_and_company_view">Đang tải thông tin......</div>
+        </div>
+    </div>
+</div>
+
+

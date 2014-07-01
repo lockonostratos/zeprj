@@ -23,6 +23,16 @@ class WarehousesController < MerchantApplicationController
   end
 
   # GET /warehouses/new
+  def search
+
+    @warehouse = Warehouse.search(params[:name])
+    respond_to do |format|
+      format.html
+      format.json {render json: @warehouse}
+    end
+  end
+
+  # GET /warehouses/new
   def new
     @warehouse = Warehouse.new
   end

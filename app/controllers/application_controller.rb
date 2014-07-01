@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   #  true
   #end
 
-  def update_merchant_account_permission_detail_by_role_permission(role_permission)
+  def update_merchant_role_permission_text(role_permission)
     current_permission = Permission.all
     MerchantAccountRole.where(role_id:role_permission.role_id).each do |merchant_account_role|
       a=[]

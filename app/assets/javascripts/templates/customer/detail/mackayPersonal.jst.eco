@@ -1,0 +1,57 @@
+<div class="row">
+    <p data-tooltip title='EMAIL'>
+       1. Họ tên:
+        <span editor='last_name'><%= @last_name || 'Email Khách Hàng' %></span>
+        <span editor='first_name'><%= @first_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        2. Chức danh :
+        <span editor='position'><%= @position || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        3. Tên công ty:
+        <span editor='company_name'><%= @company_name || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        4. Địa chỉ công ty :
+        <span editor='company_address'><%= @company_address || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        5. Địa chỉ công ty :
+        <span editor='company_phone'><%= @company_phone || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        6. Ngày Sinh :
+        <span editor='date_of_birth'><%= @date_of_birth || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        7. Nơi Sinh :
+        <span editor='place_of_birth'><%= @place_of_birth || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        8. Quê Quán :
+        <span editor='home_town'><%= @home_town || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        9. Đia Chỉ Nhà :
+        <span editor='home_address'><%= @home_address || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        10. Số Điện Thoại Nhà :
+        <span editor='home_phone'><%= @home_phone || 'Email Khách Hàng' %></span>
+    </p>
+    <p data-tooltip title='EMAIL'>
+        11. Chiều Cao :
+        <span editor='height'><%= @height || 'Email Khách Hàng' %></span>
+        cm
+    </p>
+    <p data-tooltip title='EMAIL'>
+        12. Cân Nặng :
+        <span editor='weight'><%= @weight || 'Email Khách Hàng' %></span>
+        kg
+    </p>
+    <p data-tooltip title='EMAIL'>
+        13. Đặc Điểm Riêng :
+        <span editor='comment'><%= @comment || 'Email Khách Hàng' %></span>
+    </p>
+</div>

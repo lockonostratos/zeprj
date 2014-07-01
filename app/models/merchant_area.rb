@@ -1,4 +1,4 @@
-class Area < ActiveRecord::Base
+class MerchantArea < ActiveRecord::Base
   has_many :customers
 
   belongs_to :merchant
