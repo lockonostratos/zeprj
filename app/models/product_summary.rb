@@ -7,9 +7,8 @@ class ProductSummary < ActiveRecord::Base
   after_create :create_temp_product
 
   #Search-------------------------------->
-  searchable do
-    integer :warehouse_id
-  end
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   private
   # def self.search(search)

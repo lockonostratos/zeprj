@@ -1,11 +1,15 @@
 Zeprj.module "WarehouseApp.Inventory", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
   ThisApp.addInitializer ->
     ThisApp.Caption = 'KIỂM KHO'
-    ThisApp.view = new Darius.GridView
+
+    ThisApp.rowDetailView = new ThisApp.ProductSummaryView
+      model: new Backbone.Model
+    ThisApp.view = new Darius.Grid
       columns: [
         caption: "MÃ"
         key: 'product_code'
         width: '80px'
+        format: ''
       ,
         caption: 'TÊN'
         key: 'name'
@@ -19,6 +23,7 @@ Zeprj.module "WarehouseApp.Inventory", (ThisApp, Zeprj, Backbone, Marionette, $,
         width: '150px'
       ]
       collection: Zeprj.request 'productSummary:entities'
+      rowDetail: ThisApp.rowDetailView
 
 
   ThisApp.Controller =

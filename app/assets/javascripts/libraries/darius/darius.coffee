@@ -33,15 +33,16 @@ class Darius.GridRowView extends Marionette.ItemView
   events:
     'click': 'onClick'
 
-  onClick: -> Zeprj.log @model
+  onClick: -> @trigger 'row:click', @model
 
   render: ->
 #    @$el.attr 'class', 'alt' if @options.index % 2
     @$el.empty().append (@template {model: @model.toJSON(), options: @options})
 
-class Darius.GridView extends Marionette.CompositeView
+class Darius.Grid extends Marionette.CompositeView
   template: JST['templates/darius/grid/grid']
   itemView: Darius.GridRowView
+  itemViewContainer: ".grid-content"
   itemViewOptions: (model) ->
     @options.index = @collection.indexOf(model) + 1
     @options
@@ -50,16 +51,22 @@ class Darius.GridView extends Marionette.CompositeView
     data = Backbone.Marionette.ItemView.prototype.serializeData.apply(this, arguments)
     data.columns = @options.columns
     data
-
-#  emptyView: Darius.GridEmptyView
-  itemViewContainer: ".grid-content"
+  ui:
+    rowDetail: '.row-detail'
 
   initialize: ->
+    Zeprj.testGird = @
+    @on 'itemview:row:click', (e, model) -> @onRowClick(model)
     @collection = @options.collection
-    @collection.on 'reset', -> @render()
-#
-#  render: ->
-#    @$el.html (@template @collection)
+    @collection.on 'reset', ->
+      @render()
 
-class Darius.Grid extends Marionette.ItemView
-  constructor: (@url, @columns) ->
+  onRowClick: (model) ->
+    return if !@options.rowDetail
+    @options.rowDetail.model.set model.toJSON()
+    @options.rowDetail.render()
+    @ui.rowDetail.empty().append @options.rowDetail.$el
+
+  add: (model) ->
+    @collection.add model
+    @onRowClick(model)
