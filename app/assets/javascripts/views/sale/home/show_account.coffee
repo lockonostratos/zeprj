@@ -7,9 +7,8 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
     tagName: 'select'
 
     initialize: ->
-      @listenTo @model, 'change', ->
-        @render()
-        @trigger 'show:model'
+      @listenTo @model, 'change', -> @render()
+
 
 
 

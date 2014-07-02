@@ -3,7 +3,7 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
   # SINGLE -------------------------------------------------------------------------------------------------------->
   class ThisApp.AddProductView extends Marionette.ItemView
     template: JST['templates/sale/home/addProduct']
-    className: 'item-tile'
+    className: 'row'
     ui:
       IdBill: '#bill-id'
       UserAccount: '#user-account-id'
@@ -21,8 +21,7 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
     initialize: ->
 #      @model = Zeprj.request 'productSummary:entity',1
-#      @listenTo @model, 'change', ->
-#        @render()
+      @listenTo @model, 'change', -> @render()
 #        @ui.SaleQuality.val(0)
 #        @ui.Discount.val(0)
 #        @ui.DiscountCash.val(0)
@@ -34,14 +33,13 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
     onShow: ->
       if !ThisApp.showAccountView
         ThisApp.showAccountView = new ThisApp.ShowAccountView
-          model: Zeprj.request 'account:entities'
-      ThisApp.showAccountView.on 'show:model' :->
-        @ui.UserAccount.html(ThisApp.showAccountView.render().$el)
+          model: @model.get 'merchant_account'
+      @ui.UserAccount.html(ThisApp.showAccountView.render().$el)
 
       if !ThisApp.showCustomerView
         ThisApp.showCustomerView = new ThisApp.ShowCustomerView
-          model: Zeprj.request 'customer:entities'
-#      @ui.CustomerAccount.html(ThisApp.showCustomerView.render().$el)
+          model: @model.get 'merchant_customer'
+      @ui.CustomerAccount.html(ThisApp.showCustomerView.render().$el)
 
     events:
       'click #search-product': 'searchProduct'

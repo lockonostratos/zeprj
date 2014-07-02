@@ -191,6 +191,7 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :imports do |t|
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.string :name
       t.integer :export
       t.text :description, :null => false
 
@@ -243,6 +244,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :warehouse, :null => false
       t.integer :target_warehouse_id
 
+      t.string :name
       t.text :description, :null => false
 
       t.timestamps
@@ -250,6 +252,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #Chi tiet xuat kho--------------------------------------->
     create_table :export_details do |t|
       t.belongs_to :export, :null => false
+      t.string :name
       t.belongs_to :product, :null => false
 
       t.integer :quality, :null => false
@@ -260,6 +263,7 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :inventories do |t|
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.string :name
 
       t.boolean :submited, :default => false #của nhân viên
       t.text :decription
@@ -285,6 +289,7 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :inventory_details do |t|
       t.belongs_to :product, :null => false
       t.belongs_to :inventory, :null => false
+      t.string :name
 
       t.integer :original_quality, :null => false #số lượng trong kho
       t.integer :real_quality, :null => false #số kiem tra
@@ -302,6 +307,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :warehouse, :null => false
       t.belongs_to :merchant_account, :null => false
       t.belongs_to :customer, :null => false
+      t.string :name
       t.boolean :return, :null => false, :default => false #Id don tra hang (neu co)
       t.boolean :delivery,:null => false, :default =>false #true có giao hàng, false ko co giao hàng
 
@@ -318,6 +324,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #Chi tiet don hang---------------------------------------->
     create_table :order_details do |t|
       t.belongs_to :order, :null => false
+      t.string :name
       t.belongs_to :product, :null => false
 
       t.integer :quality, :null => false
@@ -333,6 +340,7 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :deliveries do |t|
       t.belongs_to :order, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.string :name
       t.boolean :success, :default=>true
 
       t.datetime :creation_date,:null => false #ngay dat hang
@@ -350,6 +358,7 @@ class InitializeDatabase < ActiveRecord::Migration
     create_table :returns do |t|
       t.belongs_to :order, :null => false
       t.belongs_to :merchant_account, :null => false
+      t.string :name
       t.boolean :submited, :default =>false
 
       t.decimal :total_return_money
@@ -361,6 +370,7 @@ class InitializeDatabase < ActiveRecord::Migration
     #Chi tiet tra hang---------------------------------------->
     create_table :return_details do |t|
       t.belongs_to :return, :null => false
+      t.string :name
       t.integer :return_product_id, :null => false #id product tra hang
       t.integer :return_quality, :null => false #so luong tra
       t.boolean :type_return, :default =>false #loai hinh tra hang =false thi doi, =true tra tien

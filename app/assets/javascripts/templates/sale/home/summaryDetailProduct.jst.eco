@@ -8,20 +8,26 @@
     </div>
     <div class='large-8 columns'>
         <div class='large-3 columns' style="text-align: center">
-            <input type="text" class="inline metro" id="Voucher" placeholder="Voucher"/>
             <input type="text" class="inline metro" id="Total-All-Price" value="0" placeholder="Tổng Tiền Thu Vào"/>
+            <input type="text" class="inline metro" id="Change" value="0" placeholder="Số Tiền Thối Lại"/>
+        </div>
+        <div class='large-2 columns'>
+            <input type="text" class="inline metro" id="Discount" value="0" placeholder="Giảm Giá Tiền Mặt"/>
+            <input type="text" class="inline metro" id="Discount-Cash" value="0" placeholder="Giảm Giá Theo %"/>
         </div>
         <div class='large-3 columns'>
             <input type="text" class="inline metro" id="Total-All-Price-Final" value="0" placeholder="Tổng Bill Tạm Tính"/>
-            <input type="text" class="inline metro" id="Change" value="0" placeholder="Số Tiền Thối Lại"/>
-
-        </div>
-        <div class='large-3 columns'>
-            <input type="text" class="inline metro" id="Discount-Cash" value="0" placeholder="Giảm Giá Theo %"/>
             <input type="text" class="inline metro" id="Imported" value="0" placeholder="Thực Thu Vào"/>
         </div>
-        <div class='large-3 columns'>
-            <input type="text" class="inline metro" id="Discount" value="0" placeholder="Giảm Giá Tiền Mặt"/>
+        <div class='large-4 columns'>
+            <div class="row">
+                <div class='large-6 columns'  style="text-align: center">
+                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Voucher</label>
+                </div>
+                <div id="id_voucher" class='large-6 columns' style="display:none">
+                    <input type="text" class="inline metro" id="Voucher" placeholder="Voucher"/>
+                </div>
+            </div>
             <input id='sky-new' type='button' class='inline metro' value='Hoàn Tất' />
         </div>
     </div>

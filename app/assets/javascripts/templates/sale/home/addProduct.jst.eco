@@ -1,43 +1,27 @@
-<div class="row" style="text-align: center">
-    <div class='large-2 columns'>
-        <div id="user-account-id" class="row">
-            <select class="item-tile">
-                <option value="">Nhân Viên</option>
-            </select>
-        </div>
-        <div id="customer-account-id" class="row">
-            <select class="item-tile">
-                <option value="">Khách Hàng</option>
-            </select>
-        </div>
-        <input id="bill-id" type="text" class="inline metro" placeholder="Số Phiếu"/>
-    </div>
-    <div class='large-9 columns'>
-        <div class='large-3 columns'>
-            <input id="product-code" type="text" class="inline metro"  placeholder="Mã Vạch" value="<%= @product_code%>" />
+<div class='large-3 columns'>
+    <input id="product-code" type="text" class="inline metro"  placeholder="Mã Vạch" value="<%= @product_code%>" />
 
-            <div class="row">
-            <input id="search-product" class='search product' type='button' class='inline metro' value='Tìm Kiếm' />
-            <input id="confirm-product" class='confirm product' type='button' class='inline metro' value='Xác Nhận' />
-            </div>
+    <div class="row">
+    <input id="search-product" class='search product' type='button' class='inline metro' value='Tìm Kiếm' />
+    <input id="confirm-product" class='confirm product' type='button' class='inline metro' value='Xác Nhận' />
+    </div>
+</div>
+<div class='large-6 columns'>
+        <input id="product-name" type="text" class="inline metro" placeholder="Tên Sản Phẩm" value="<%= @name%> <%= @skull?.skull_code%>"/>
+    <div class="row">
+        <div class='large-6 columns'>
+            <input id="warehouse-quality" type="text" class="inline metro" placeholder="Tồn Kho" value="<%= @quality%>"/>
+            <input id="sale-quality" type="text" class="inline metro" placeholder="Số Lượng Bán" />
         </div>
         <div class='large-6 columns'>
-                <input id="product-name" type="text" class="inline metro" placeholder="Tên Sản Phẩm" value="<%= @name%> <%= @skull?.skull_code%>"/>
-            <div class="row">
-                <div class='large-6 columns'>
-                    <input id="warehouse-quality" type="text" class="inline metro" placeholder="Tồn Kho" value="<%= @quality%>"/>
-                    <input id="sale-quality" type="text" class="inline metro" placeholder="Số Lượng Bán" />
-                </div>
-                <div class='large-6 columns'>
-                    <input id="discount" type="text" class="inline metro" placeholder="Giảm Giá Tiền Mặt"/>
-                    <input id="discount-cash" type="text" class="inline metro" placeholder="Giảm Giá %" />
-                </div>
-            </div>
-        </div>
-        <div class='large-3 columns'>
-            <input id="product-price" type="text" class="inline metro" placeholder="Giá Bán" value="<%= @price%>"/>
-            <input id="all-price" type="text" class="inline metro" placeholder="Tạm Tính" />
-            <input id="all-price-final" type="text" class="inline metro" placeholder="Thành Tiền" />
+            <input id="discount" type="text" class="inline metro" placeholder="Giảm Giá Tiền Mặt"/>
+            <input id="discount-cash" type="text" class="inline metro" placeholder="Giảm Giá %" />
         </div>
     </div>
 </div>
+<div class='large-3 columns'>
+    <input id="product-price" type="text" class="inline metro" placeholder="Giá Bán" value="<%= @price%>"/>
+    <input id="all-price" type="text" class="inline metro" placeholder="Tạm Tính" />
+    <input id="all-price-final" type="text" class="inline metro" placeholder="Thành Tiền" />
+</div>
+
