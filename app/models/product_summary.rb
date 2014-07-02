@@ -4,7 +4,6 @@ class ProductSummary < ActiveRecord::Base
   belongs_to :merchant_account
   has_many :temp_products
 
-  after_create :create_temp_product
 
   #Search-------------------------------->
   include Elasticsearch::Model

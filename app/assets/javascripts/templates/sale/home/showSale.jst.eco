@@ -1,0 +1,21 @@
+<div>
+    <div class="row" style="text-align: center">
+        <div class='large-2 columns'>
+            <div id="user-account-id" class="row">
+                <select class="item-tile">
+                    <option value="">Nhân Viên</option>
+                </select>
+            </div>
+            <div id="customer-account-id" class="row">
+                <select class="item-tile">
+                    <option value="">Khách Hàng</option>
+                </select>
+            </div>
+            <input id="bill-id" type="text" class="inline metro" placeholder="Số Phiếu"/>
+        </div>
+        <div id='third-top' class='large-9 columns'>
+        </div>
+    </div>
+</div>
+<div id='third-center'></div>
+<div id='third-bottom'></div>

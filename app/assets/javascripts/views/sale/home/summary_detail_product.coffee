@@ -15,8 +15,17 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
       DiscountCash:"#Discount-Cash"
       Imported:"#Imported"
       Discount:"#Discount"
-#    onshow:->
-#      @sumaryOrderDetail
+    onshow: ->
+    events:
+      'click #checkbox1': 'showVoucher'
+
+    showVoucher:->
+
+      if $('#checkbox1').attr('checked') == 'checked'
+        Zeprj.log $('#checkbox1').attr('checked')
+        $('#id_voucher').style.display = ''
+      else
+        $('#id_voucher').display
 
     sumaryOrderDetail:  ->
 

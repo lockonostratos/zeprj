@@ -24,6 +24,14 @@ class OrdersController < MerchantApplicationController
     @order = Order.new
   end
 
+  def bill_code
+    @order
+    respond_to do |format|
+      format.html
+      format.json { render :json => @order }
+    end
+  end
+
   # GET /orders/1/edit
   def edit
   end
@@ -143,7 +151,7 @@ class OrdersController < MerchantApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:branch_id, :warehouse_id, :merchant_account_id, :customer_id, :return, :delivery, :total_price, :deposit, :discount_cash, :final_price, :payment_method, :status)
+      params.require(:order).permit(:branch_id, :warehouse_id, :merchant_account_id, :name, :customer_id, :return, :delivery, :total_price, :deposit, :discount_cash, :final_price, :payment_method, :status)
     end
 
     #Kiểm tra số lượng tồn kho so vớ số lượng bán, trên bảng ProductSummary

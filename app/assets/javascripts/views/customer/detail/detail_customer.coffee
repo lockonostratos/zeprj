@@ -19,7 +19,7 @@ Zeprj.module "CustomerApp.Detail", (ThisApp, Zeprj, Backbone, Marionette, $, _) 
         @render()
         @.$el.find('.collapsible').collapsible()
     onShow: ->
-      $
+
 
     events:
       'click a[id=mackay_personal]': (e) ->
