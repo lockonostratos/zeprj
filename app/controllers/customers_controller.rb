@@ -1,10 +1,10 @@
-class CustomersController < MerchantApplicationController
+class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.where(merchant_id: current_merchant_account.merchant_id)
+    @customers = Customer.all
     respond_to do |format|
       format.html
       format.json { render :json => @customers }
@@ -36,9 +36,8 @@ class CustomersController < MerchantApplicationController
 
     respond_to do |format|
       if @customer.save
-
         format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @customer }
+        format.json { render :json => @customer, status: :created, location: @customer }
       else
         format.html { render action: 'new' }
         format.json { render json: @customer.errors, status: :unprocessable_entity }
@@ -52,7 +51,7 @@ class CustomersController < MerchantApplicationController
     respond_to do |format|
       if @customer.update(customer_params)
         format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
-        format.json { head :no_content }
+        format.json { render :json => @customer }
       else
         format.html { render action: 'edit' }
         format.json { render json: @customer.errors, status: :unprocessable_entity }
@@ -78,6 +77,6 @@ class CustomersController < MerchantApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:merchant_id, :merchant_account_id, :area_id, :account_name, :password, :email)
+      params.require(:customer).permit(:merchant_id, :merchant_account_id, :merchant_area_id, :name, :company_name, :phone, :address, :email, :sex)
     end
 end
