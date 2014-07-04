@@ -28,7 +28,7 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
       product_search: []
       product_select: []
       product_summary: new Backbone.Collection
-      product_sumary_detail: []
+      product_summary_detail: []
       delivery: ''
       payment_methods: ''
     }
