@@ -20,7 +20,6 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
       PriceAllFinal: '#all-price-final'
 
     initialize: ->
-#      @model = Zeprj.request 'productSummary:entity',1
       @listenTo @model, 'change', -> @render()
 #        @ui.SaleQuality.val(0)
 #        @ui.Discount.val(0)
@@ -31,15 +30,15 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
 
     onShow: ->
-      if !ThisApp.showAccountView
-        ThisApp.showAccountView = new ThisApp.ShowAccountView
-          model: @model.get 'merchant_account'
-      @ui.UserAccount.html(ThisApp.showAccountView.render().$el)
-
-      if !ThisApp.showCustomerView
-        ThisApp.showCustomerView = new ThisApp.ShowCustomerView
-          model: @model.get 'merchant_customer'
-      @ui.CustomerAccount.html(ThisApp.showCustomerView.render().$el)
+#      if !ThisApp.showAccountView
+#        ThisApp.showAccountView = new ThisApp.ShowAccountView
+#          model: @model.get 'merchant_account'
+#      @ui.UserAccount.html(ThisApp.showAccountView.render().$el)
+#
+#      if !ThisApp.showCustomerView
+#        ThisApp.showCustomerView = new ThisApp.ShowCustomerView
+#          model: @model.get 'merchant_customer'
+#      @ui.CustomerAccount.html(ThisApp.showCustomerView.render().$el)
 
     events:
       'click #search-product': 'searchProduct'

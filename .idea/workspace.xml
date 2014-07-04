@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="Darius.Grid Lib">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/inventory/product_summaries.coffee" />
+    <list default="true" id="963bde24-1c88-4a53-9520-fbb82b9a63f6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/add_product.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/add_product.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/libraries/darius/darius.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/libraries/darius/darius.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product_summary.rb" afterPath="$PROJECT_DIR$/app/models/product_summary.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/detail_product.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/detail_product.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/sale/home.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/sale/home.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_sale.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_sale.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zeprj.iml" afterPath="$PROJECT_DIR$/.idea/zeprj.iml" />
+      <change type="MOVED" beforePath="D:\softwareProjects\zeprj\app\assets\javascripts\models\viewModels\viewSale.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/models/viewModels/sale_vm.coffee" />
     </list>
     <ignored path="zeprj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +25,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1404288402503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
+    <SUITE FILE_PATH="coverage/zeprj@Development__zeprj.coverage" NAME="Development: zeprj Coverage Results" MODIFIED="1404436687543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="zeprj" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,56 +38,46 @@
     <favorites_list name="zeprj" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6785714">
+    <splitter split-orientation="horizontal" split-proportion="0.63233376">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.76736844">
+        <splitter split-orientation="vertical" split-proportion="0.82402706">
           <split-first>
             <leaf>
-              <file leaf-file-name="import.coffee" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+              <file leaf-file-name="show_sale.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_sale.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1292">
-                      <caret line="46" column="69" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="69" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="1802">
+                      <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="product_summaries.coffee" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/inventory/product_summaries.coffee">
+              <file leaf-file-name="account.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/account.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="289">
-                      <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+                      <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+              <file leaf-file-name="customer.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/customer.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="8041" max-vertical-offset="9027">
-                      <caret line="473" column="19" selection-start-line="473" selection-start-column="19" selection-end-line="473" selection-end-column="19" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+                      <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="product_summary.rb" pinned="false" current="true" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/models/product_summary.rb">
+              <file leaf-file-name="sale_vm.coffee" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/viewModels/sale_vm.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.3157143" vertical-offset="0" max-vertical-offset="700">
-                      <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="product_summaries_controller.rb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/controllers/product_summaries_controller.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2278">
-                      <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+                    <state vertical-scroll-proportion="0.5565217" vertical-offset="203" max-vertical-offset="663">
+                      <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
                       <folding />
                     </state>
                   </provider>
@@ -94,12 +87,34 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="grid.jst.eco" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/darius/grid/grid.jst.eco">
+              <file leaf-file-name="home.coffee" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/sale/home.coffee">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.425" vertical-offset="153" max-vertical-offset="425">
-                      <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+                    <state vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="357">
+                      <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
                       <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="add_product.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/add_product.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1649">
+                      <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="showSale.jst.eco" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showSale.jst.eco">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="442">
+                      <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+                      <folding>
+                        <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -109,28 +124,66 @@
         </splitter>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="product_summaries.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/product_summaries.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="833">
-                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="inventory.coffee" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5610561" vertical-offset="0" max-vertical-offset="909">
-                  <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.85157895">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="import.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1292">
+                      <caret line="28" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="inventory.coffee" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="1.0384616" vertical-offset="0" max-vertical-offset="612">
+                      <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="detail_product.coffee" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/detail_product.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+                      <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="20140411100003_initialize_database.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="2273" max-vertical-offset="10489">
+                      <caret line="155" column="20" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="20" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="detail_product.coffee" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/detail_product.coffee">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="5.6666665" vertical-offset="0" max-vertical-offset="357">
+                      <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
@@ -149,57 +202,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/copyright.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/home.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/metro/inner_navigation.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/metro/metro_controller.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_temporary_product.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_product_summaries.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_temporary_products.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/product_summary.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_product.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/temporary_product.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/empty_product_summaries.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/empty_temporary_products.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/temporary_products_view.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/product_summary.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/product_summaries.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/temporary_products.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_views.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/empty_views.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/import/import_controller.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/app.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_app.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/warehouses/warehouse_view.coffee" />
-        <option value="$PROJECT_DIR$/app/views/home/welcomes.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/welcomes.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/temp_products_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/transport.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/models/productSummary.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/models/tempProduct.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/product_summaries.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application/zeprj.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_views.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/emptyTemporaryProduct.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/emptyProductSummaries.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/productSummary.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/darius/grid/row.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/darius/grid/grid.jst.eco" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/metro_components.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/inventory/product_summaries.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/libraries/darius/darius.coffee" />
-        <option value="C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sunspot_solr-2.1.1/lib/sunspot/solr/java.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/customer/home/gera_customer.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/detailProducts.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/detailProduct.jst.eco" />
+        <option value="$PROJECT_DIR$/app/models/warehouse.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/account.coffee" />
+        <option value="$PROJECT_DIR$/config/sunspot.yml" />
+        <option value="$PROJECT_DIR$/app/views/product_summaries/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/product_summaries_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showAccount.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showCustomer.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/customer.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_customer.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/summaryDetailProduct.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/summary_detail_product.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/home.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/home.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/sale.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/customer/home.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/viewModels/sale.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/customer/area/area.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/layouts/thirdVertical.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/customer/detail/detail_customer.coffee" />
         <option value="$PROJECT_DIR$/app/models/product_summary.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_account.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/addProduct.jst.eco" />
+        <option value="$PROJECT_DIR$/app/views/orders/index.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/orders/show.json.jbuilder" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/viewModels/viewSale.coffee" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/libraries/darius/darius.coffee" />
+        <option value="$PROJECT_DIR$/app/views/customers/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/customers/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/customers/index.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/customers/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/customers/show.json.jbuilder" />
+        <option value="$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showSale.jst.eco" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/add_product.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/detail_product.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/sale/home.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/models/viewModels/sale_vm.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_sale.coffee" />
       </list>
     </option>
   </component>
@@ -303,7 +356,6 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,6 +371,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,8 +470,461 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewModels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="warehouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeprj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewmodels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,14 +932,14 @@
     <property name="recentsLimit" value="5" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="preferences.fileTypes" />
+    <property name="options.lastSelected" value="reference.idesettings.emmet" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.4369748" />
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistory" value="system&#10;applicss&#10;gem&#10;productSum&#10;routes&#10;account&#10;merchant_account&#10;gemfile&#10;init&#10;routes.rb&#10;routs&#10;routes.r&#10;test.rb&#10;development&#10;productio&#10;applicationcontroller&#10;application&#10;newerb&#10;session&#10;application.rb&#10;route&#10;sess&#10;ro&#10;frame&#10;over&#10;app&#10;appli&#10;scss&#10;scaff&#10;applierb&#10;login&#10;home&#10;home.css.scss" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="gemfile&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/Gemfile&#10;gemfil&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/Gemfile&#10;applicss&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;application&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;temp_product&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;gemfi&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/Gemfile&#10;temp_productcontroller&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;app&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;warehouse.rb&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/warehouses_controller.rb&#10;warehouse&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee&#10;temp_pr&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp_&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;product_summa&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/product_summaries_controller.rb&#10;temp_pro&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp_p&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;gem&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/Gemfile&#10;product_summar&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/product_summaries_controller.rb&#10;skyex&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/jquery.inputmask/jquery.inputmask.sky.extensions.js&#10;routes&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/config/routes.rb&#10;ge&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/Gemfile&#10;temp_prod&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;empty&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/templates/warehouse/import/emptyProductSummaries.jst.eco&#10;&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/templates/warehouse/import/productSummary.jst.eco&#10;emptyProd&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/templates/sale/skull/emptyProductSummaries.jst.eco&#10;emptyProductView&#9;null&#9;null&#10;app.c&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/app.coffee&#10;sky.cof&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/sky.coffee&#10;applicat&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;sky&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/sky.coffee&#10;Sky&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/sky.coffee&#10;haml&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/views/home/welcomes.haml&#10;boot.rb&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/config/boot.rb&#10;applica&#9;FILE&#9;file://E:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;applicati&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;system&#9;null&#9;null&#10;warehousecontroller&#9;null&#9;null&#10;environ&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;applicationrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/application.rb&#10;environmentrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;index.html.erb&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/views/accounts/index.html.erb&#10;route&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;gemf&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile" />
+    <property name="SearchEverywhereHistoryKey" value="gemf&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;darius&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/libraries/darius/darius.coffee&#10;rou&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb&#10;ge&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;invencoffee&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/controllers/warehouse/inventory.coffee&#10;inv&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/javascripts/models/inventory.coffee&#10;se&#9;FILE&#9;file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sunspot_solr-2.1.1/lib/sunspot/solr/server.rb&#10;&#9;FILE&#9;file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sunspot_solr-2.1.1/lib/sunspot/solr/java.rb&#10;gem&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;ap&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;seed&#9;FILE&#9;file://D:/softwareProjects/zeprj/db/seeds.rb&#10;gemfi&#9;FILE&#9;file://D:/softwareProjects/zeprj/Gemfile&#10;applicationcss&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;sc&#9;FILE&#9;file://D:/softwareProjects/zeprj/db/schema.rb&#10;temp_productcontroller&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;app&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;gemfile&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/Gemfile&#10;warehouse.rb&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/warehouses_controller.rb&#10;warehouse&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/apps/warehouses/warehouse_controller.coffee&#10;temp_pr&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp_product&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp_&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;product_summa&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/product_summaries_controller.rb&#10;temp_pro&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;temp_p&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;product_summar&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/product_summaries_controller.rb&#10;skyex&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/jquery.inputmask/jquery.inputmask.sky.extensions.js&#10;routes&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/config/routes.rb&#10;temp_prod&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/controllers/temp_products_controller.rb&#10;empty&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/templates/warehouse/import/emptyProductSummaries.jst.eco&#10;emptyProd&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/templates/sale/skull/emptyProductSummaries.jst.eco&#10;emptyProductView&#9;null&#9;null&#10;app.c&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/backbone/app.coffee&#10;sky.cof&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/sky.coffee&#10;applicat&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;application&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/stylesheets/application.css.scss&#10;sky&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/sky.coffee&#10;Sky&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/assets/javascripts/libraries/sky.coffee&#10;haml&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/app/views/home/welcomes.haml&#10;boot.rb&#9;FILE&#9;file://C:/Users/WIN 8 64BIT/Documents/Projects/zeprj/config/boot.rb&#10;applica&#9;FILE&#9;file://E:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;applicati&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/assets/stylesheets/application.css.scss&#10;system&#9;null&#9;null&#10;warehousecontroller&#9;null&#9;null&#10;environ&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;applicationrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/application.rb&#10;environmentrb&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/environment.rb&#10;index.html.erb&#9;FILE&#9;file://D:/softwareProjects/zeprj/app/views/accounts/index.html.erb&#10;route&#9;FILE&#9;file://D:/softwareProjects/zeprj/config/routes.rb" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="290" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="289" />
@@ -390,18 +959,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\libraries" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\import" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\views\warehouse\import" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\views\metro" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\views\sale\home" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\models" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\sale\home" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\stylesheets" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\customer\detail" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\views\warehouse\import" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\javascripts\backbone\apps\warehouses\import" />
-      <recent name="C:\Users\WIN 8 64BIT\Documents\Projects\zeprj\app\assets\images\defaults" />
-      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\backbone\templates\layouts" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\models\viewModels" />
       <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\libraries" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\libraries\jquery.inputmask" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\customer\customer_detail" />
+      <recent name="D:\softwareProjects\zeprj\app\assets\javascripts\templates\customer\area" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: zeprj">
@@ -538,9 +1107,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <method />
-    </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Rake.test: zeprj" />
       <item index="1" class="java.lang.String" itemvalue="Rake.spec: zeprj" />
@@ -658,22 +1224,58 @@
       <created>1401450499121</created>
       <updated>1401450499121</updated>
     </task>
-    <task id="LOCAL-00026" summary="Resolve conflits">
-      <created>1401710086984</created>
-      <updated>1401710086984</updated>
+    <task id="LOCAL-00026" summary="Fix Report&#10;">
+      <created>1401800834820</created>
+      <updated>1401800834820</updated>
     </task>
-    <task id="LOCAL-00027" summary="Import, very close!">
-      <created>1401885237399</created>
-      <updated>1401885237399</updated>
+    <task id="LOCAL-00027" summary="FIx&#10;">
+      <created>1401852262169</created>
+      <updated>1401852262169</updated>
     </task>
-    <task id="LOCAL-00028" summary="Darius.Grid Lib">
-      <created>1404183402306</created>
-      <updated>1404183402306</updated>
+    <task id="LOCAL-00028" summary="Very close to finish warehouseImport function, working on call back!&#10;">
+      <created>1401863999298</created>
+      <updated>1401863999298</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Very close to finish warehouseImport function, working on call back!&#10;">
+      <created>1401864021768</created>
+      <updated>1401864021768</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Very close to finish warehouseImport function, working on call back!&#10;">
+      <created>1401865765706</created>
+      <updated>1401865765706</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Sales function on flying.">
+      <created>1401885069626</created>
+      <updated>1401885069626</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Very close to finish warehouseImport function, working on call back!&#10;">
+      <created>1403515675429</created>
+      <updated>1403515675429</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Sale&#10;">
+      <created>1403860522947</created>
+      <updated>1403860522947</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Sale fix&#10;">
+      <created>1404096165184</created>
+      <updated>1404096165184</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Sale fix Home&#10;">
+      <created>1404185036758</created>
+      <updated>1404185036758</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fix Controller Sale Home (ModelView)&#10;">
+      <created>1404294751485</created>
+      <updated>1404294751485</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fix Customer Controller &#10;">
+      <created>1404376101250</created>
+      <updated>1404376101250</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -697,47 +1299,26 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41368422" sideWeight="0.78753996" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.71218485" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26842105" sideWeight="0.78732544" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.299787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1988273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3168421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18317358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48421052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6894737" sideWeight="0.2980614" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3863158" sideWeight="0.70113087" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17857143" sideWeight="0.21267454" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37920168" sideWeight="0.70139635" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.032563027" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4105263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13473684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5821053" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6810526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27052632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18210863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -769,452 +1350,404 @@
     <MESSAGE value="Nearly done refactoring the skyEditor..." />
     <MESSAGE value="Much things,  item-tile display template.&#10;More inputmask options, preloaded - sky.extensions.&#10;Foundation's tooltip.&#10;Install accounting.js&#10;Initialized global style called metro_components.&#10;" />
     <MESSAGE value="Very close to finish warehouseImport function.&#10;" />
+    <MESSAGE value="Fix Report&#10;" />
+    <MESSAGE value="FIx&#10;" />
+    <MESSAGE value="Sales function on flying." />
     <MESSAGE value="Very close to finish warehouseImport function, working on call back!&#10;" />
-    <MESSAGE value="Resolve conflits" />
-    <MESSAGE value="Import, very close!" />
-    <MESSAGE value="Darius.Grid Lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="Darius.Grid Lib" />
+    <MESSAGE value="Sale&#10;" />
+    <MESSAGE value="Sale fix&#10;" />
+    <MESSAGE value="Sale fix Home&#10;" />
+    <MESSAGE value="Fix Controller Sale Home (ModelView)&#10;" />
+    <MESSAGE value="Fix Customer Controller &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Customer Controller &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="15" />
+      <option name="time" value="148" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_account.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/layouts/thirdVertical.jst.eco">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09219089" vertical-offset="0" max-vertical-offset="922">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_merchant_account.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/navigation_warehouse_option.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/option.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/inner_navigation.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038812786" vertical-offset="0" max-vertical-offset="876">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/home.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16594361" vertical-offset="0" max-vertical-offset="922">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/welcomes.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035196688" vertical-offset="0" max-vertical-offset="483">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/welcomes.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.036876354" vertical-offset="0" max-vertical-offset="922">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="683">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dummer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/metro/copyright.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/customer/detail/detail_customer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055314533" vertical-offset="0" max-vertical-offset="922">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.34931508" vertical-offset="51" max-vertical-offset="1445">
+          <caret line="18" column="17" selection-start-line="17" selection-start-column="6" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_horizontal.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/customer/customer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="426" max-vertical-offset="1156">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/layouts/dualVertical.jst.eco">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/customer/detail_customer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018438177" vertical-offset="0" max-vertical-offset="922">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="13" />
+        <state vertical-scroll-proportion="1.1630137" vertical-offset="1157" max-vertical-offset="2193">
+          <caret line="118" column="45" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/product_summaries_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47413793" vertical-offset="282" max-vertical-offset="2193">
+          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product_summary.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07513812" vertical-offset="0" max-vertical-offset="905">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_customer.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18619934" vertical-offset="0" max-vertical-offset="913">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/show.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+          <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035343036" vertical-offset="0" max-vertical-offset="481">
+          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82735425" vertical-offset="7434" max-vertical-offset="10047">
+          <caret line="459" column="18" selection-start-line="459" selection-start-column="18" selection-end-line="459" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/sale/provider.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10828026" vertical-offset="0" max-vertical-offset="471">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/order.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46011397" vertical-offset="0" max-vertical-offset="702">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showCustomer.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02514793" vertical-offset="0" max-vertical-offset="676">
+          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27101448" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="341" max-vertical-offset="4182">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/darius/darius.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9456366" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/warehouses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2193">
+          <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/third_vertical.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085" vertical-offset="0" max-vertical-offset="800">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/geraApplication/models/geraArea.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04347826" vertical-offset="0" max-vertical-offset="476">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/layouts/dual_vertical.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11062907" vertical-offset="0" max-vertical-offset="922">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.14494519" vertical-offset="0" max-vertical-offset="821">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/metro.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/customers/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/temp_products_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/customers/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8509455" vertical-offset="510" max-vertical-offset="2771">
-          <caret line="75" column="48" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="48" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="680">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/tempProduct.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/customers/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/sale_controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="31" column="52" selection-start-line="29" selection-start-column="27" selection-end-line="31" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/jquery.mousewheel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3740">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="534">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/emptyProductSummaries.jst.eco">
+    <entry file="file://$PROJECT_DIR$/app/views/customers/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.7248062" vertical-offset="0" max-vertical-offset="731">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/emptyTemporaryProduct.jst.eco">
+    <entry file="file://$PROJECT_DIR$/app/views/customers/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.28922495" vertical-offset="0" max-vertical-offset="529">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/dbbedfb7-89d1-4320-8d33-3508335d92a9">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>dbbedfb7-89d1-4320-8d33-3508335d92a9</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="757.0" y="448.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://RailsDependency/#zeprj">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>RailsDependency</ID>
-          <OriginalElement>#zeprj</OriginalElement>
-          <nodes>
-            <node x="" y="">Warehouse</node>
-            <node x="" y="">Branch</node>
-            <node x="" y="">RolePermission</node>
-            <node x="" y="">Import</node>
-            <node x="" y="">InventoryDetail</node>
-            <node x="" y="">Merchant</node>
-            <node x="" y="">Area</node>
-            <node x="" y="">Order</node>
-            <node x="" y="">Report</node>
-            <node x="" y="">MackayHobby</node>
-            <node x="" y="">Account</node>
-            <node x="" y="">OrderDetail</node>
-            <node x="" y="">Inventory</node>
-            <node x="" y="">MerchantAccountRole</node>
-            <node x="" y="">MerchantAccount</node>
-            <node x="" y="">Module</node>
-            <node x="" y="">MackayChildren</node>
-            <node x="" y="">Skull</node>
-            <node x="" y="">MerchantAccountPermissionDetail</node>
-            <node x="" y="">MackayCareer</node>
-            <node x="" y="">TempProduct</node>
-            <node x="" y="">Customer</node>
-            <node x="" y="">Delivery</node>
-            <node x="" y="">Permission</node>
-            <node x="" y="">Product</node>
-            <node x="" y="">MackayPersonal</node>
-            <node x="" y="">MackayLifeStyle</node>
-            <node x="" y="">GeraAccount</node>
-            <node x="" y="">ReturnDetail</node>
-            <node x="" y="">MackayAndCompany</node>
-            <node x="" y="">ProductSummary</node>
-            <node x="" y="">MackayFamily</node>
-            <node x="" y="">RoleWarehouse</node>
-            <node x="" y="">MackayProfile</node>
-            <node x="" y="">AgencyAccount</node>
-            <node x="" y="">Export</node>
-            <node x="" y="">MerchantAccountPermission</node>
-            <node x="" y="">MackayEducation</node>
-            <node x="" y="">Return</node>
-            <node x="" y="">Role</node>
-            <node x="" y="">ExportDetail</node>
-            <node x="" y="">Provider</node>
-            <node x="" y="">TempInventoryDetail</node>
-            <node x="" y="">MetroSummary</node>
-            <node x="" y="">PermissionDetail</node>
-            <node x="" y="">Agency</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8860746720484357" x="2667.0" y="2241.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Migration fields</Category>
-            <Category>Association fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/zeprj.coffee">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27657267" vertical-offset="0" max-vertical-offset="1156">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/account.coffee">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140411100003_initialize_database.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23943663" vertical-offset="51" max-vertical-offset="493">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/sale_app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/apps/sales/sale_view.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/temporary_products.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2063882" vertical-offset="53" max-vertical-offset="867">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/warehouse.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07480748" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/transport.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1309131" vertical-offset="0" max-vertical-offset="909">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/empty_views.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09219089" vertical-offset="0" max-vertical-offset="922">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/backbone.marionette.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323442" vertical-offset="34218" max-vertical-offset="51646">
-          <caret line="2033" column="0" selection-start-line="2033" selection-start-column="0" selection-end-line="2033" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/productSummary.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41144115" vertical-offset="0" max-vertical-offset="909">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme_default.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5851735" vertical-offset="326" max-vertical-offset="986">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/metro_components.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1377">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/warehouse/import/productSummary.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5996473" vertical-offset="0" max-vertical-offset="714">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1292">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2273" max-vertical-offset="10489">
+          <caret line="155" column="20" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/customers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0477273" vertical-offset="0" max-vertical-offset="1496">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/customers/show.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="76" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/inventory/product_summaries.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.02556391" vertical-offset="0" max-vertical-offset="665">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/addProduct.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/customers/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="534">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/darius/grid/grid.jst.eco">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showAccount.jst.eco">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.425" vertical-offset="153" max-vertical-offset="425">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="508">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/warehouse/import/product_summaries.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_account.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/sale/home/showSale.jst.eco">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="442">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/customer/area.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.086440675" vertical-offset="0" max-vertical-offset="590">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/customer/area/area.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0265625" vertical-offset="0" max-vertical-offset="640">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/entities/import.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/import.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1292">
+          <caret line="28" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/detail_product.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/add_product.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/summary_detail_product.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3480176" vertical-offset="357" max-vertical-offset="918">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/warehouse/inventory.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5610561" vertical-offset="0" max-vertical-offset="909">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        <state vertical-scroll-proportion="1.0384616" vertical-offset="0" max-vertical-offset="612">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/account.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/entities/delivery.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.255" vertical-offset="0" max-vertical-offset="1768">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries/darius/darius.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7763819" vertical-offset="626" max-vertical-offset="1326">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/darius/grid/row.jst.eco">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.045698926" vertical-offset="0" max-vertical-offset="372">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6285" max-vertical-offset="9010">
-          <caret line="473" column="19" selection-start-line="473" selection-start-column="19" selection-end-line="473" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.33512545" vertical-offset="0" max-vertical-offset="558">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/sale/home.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17321688" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="357">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.4/lib/action_controller/metal/mime_responds.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/account.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33285713" vertical-offset="6516" max-vertical-offset="7429">
-          <caret line="397" column="10" selection-start-line="397" selection-start-column="10" selection-end-line="397" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_summaries/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22700296" vertical-offset="0" max-vertical-offset="748">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/product_summaries_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product_summary.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/customer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3157143" vertical-offset="0" max-vertical-offset="700">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/sale/home/show_sale.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="1802">
+          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/models/viewModels/sale_vm.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5565217" vertical-offset="203" max-vertical-offset="663">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding />
         </state>
       </provider>

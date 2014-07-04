@@ -25,11 +25,21 @@ class OrdersController < MerchantApplicationController
   end
 
   def bill_code
-    @order
-    respond_to do |format|
-      format.html
-      format.json { render :json => @order }
+    bill_code=''
+    Order.where(warehouse_id:1).order(name: :desc).first(1).each do |item|
+      bill_code =  item.name
     end
+    if bill_code == '' and bill_code.length == 15
+      bill_code = Date.today.strftime("%d/%m/%y")+'-'+("%03d" % 1).to_s+("%03d" % 1)
+    elsif  bill_code != '' and bill_code.length == 15
+      a=bill_code[12,3]
+      a=a.to_i + 1
+      bill_code = Date.today.strftime("%d/%m/%y")+'-'+("%03d" % 1).to_s+("%03d" % a)
+    else
+      bill_code=''
+    end
+    bill_code = '{'+'"bill_code":'+'"'+bill_code+'"'+'}'
+    render json: bill_code
   end
 
   # GET /orders/1/edit
