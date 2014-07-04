@@ -23,12 +23,12 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
       merchant_account: Zeprj.request 'account:entities'
       merchant_customer: Zeprj.request 'customer:entities'
       bill_code: Zeprj.request 'show:bill'
-      merchant_customer_new: []
+      merchant_customer_new: new Backbone.Model
       bill_print_show: ''
       product_search: []
-      product_select: []
+      product_select: new Backbone.Model
       product_summary: new Backbone.Collection
       product_summary_detail: []
-      delivery: ''
+      delivery: Zeprj.request 'show:bill'
       payment_methods: ''
     }

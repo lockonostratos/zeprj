@@ -8,8 +8,3 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
 
 
 
-#    collection: new Backbone.Collection
-#    rowDetail: ThisApp.rowDetailView
-
-
-

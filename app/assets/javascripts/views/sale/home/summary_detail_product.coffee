@@ -4,8 +4,8 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
   ThisApp.SummaryDetailProductView = Backbone.Marionette.ItemView.extend
     template: JST['templates/sale/home/summaryDetailProduct']
     className: 'item-tile'
-#    initialize:->
-#      @listenTo @model, 'change', -> @render()
+    initialize:->
+      @listenTo @model, 'change', -> @render()
 
     ui:
       Voucher:"#Voucher"
