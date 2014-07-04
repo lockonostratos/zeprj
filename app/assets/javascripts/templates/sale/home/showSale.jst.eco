@@ -11,7 +11,7 @@
                     <option value="">Khách Hàng</option>
                 </select>
             </div>
-            <input id="bill-id" type="text" class="inline metro" placeholder="Số Phiếu"/>
+            <input id="bill-id" type="text" class="inline metro" placeholder="Số Phiếu" value="<%= @bill_code.get 'bill_code'%>"/>
         </div>
         <div id='third-top' class='large-9 columns'>
         </div>

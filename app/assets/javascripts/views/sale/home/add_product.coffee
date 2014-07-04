@@ -20,16 +20,14 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
       PriceAllFinal: '#all-price-final'
 
     initialize: ->
-      @listenTo @model, 'change', -> @render()
-#        @ui.SaleQuality.val(0)
-#        @ui.Discount.val(0)
-#        @ui.DiscountCash.val(0)
-#        @ui.PriceAll.val(0)
-#        @ui.PriceAllFinal.val(0)
+      @listenTo @model, 'change', ->
+        @render()
+
 
 
 
     onShow: ->
+
 #      if !ThisApp.showAccountView
 #        ThisApp.showAccountView = new ThisApp.ShowAccountView
 #          model: @model.get 'merchant_account'

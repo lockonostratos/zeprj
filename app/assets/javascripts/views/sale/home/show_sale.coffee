@@ -15,9 +15,12 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
       CustomerAccount: '#customer-account-id'
     initialize: ->
       ThisApp.Model = @model
-      @listenTo @model, 'change', ->
-        @render
+      ThisApp.productsummaryEditOptions = new Sky.Editor.Wrapper
+        quality: new Sky.Editor.RenderOption true
+        discount_percent: new Sky.Editor.RenderOption true
+        discount_cash: new Sky.Editor.RenderOption true
 
+      @listenTo @model, 'change', -> @render
 
 
     onShow:->
@@ -25,7 +28,6 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
       ThisApp.addProductView = new ThisApp.AddProductView
         model: @model
       @mainPane.show ThisApp.addProductView
-
       #Load @secondaryPane
       ThisApp.rowDetailView = new ThisApp.ProductSaleView
         model: new Backbone.Model
@@ -33,7 +35,6 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
         columns: [
           caption: "MÃ SẢN PHẨM"
           key: 'product_code'
-          format: ''
         ,
           caption: 'TÊN SẢN PHẨM'
           key: 'name'
@@ -56,26 +57,27 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
         collection: ThisApp.Model.get 'product_summary'
         rowDetail: ThisApp.rowDetailView
       @secondaryPane.show ThisApp.ProductsSaleView
-
       #Load @thirdPane
       ThisApp.summaryDetailProductView = new ThisApp.SummaryDetailProductView
         model: @model
       @thirdPane.show ThisApp.summaryDetailProductView
-
+#---------------------------------------------------------------------------------------------------------------------->
       #Load danh sách Nhân Viên Bán Hàng
       if !ThisApp.ModelAccountView
         ThisApp.ModelAccountView = new ThisApp.ShowAccountView
          model: @model.get 'merchant_account'
-      @ui.UserAccount.html(ThisApp.ModelAccountView.render().$el)#
+      @ui.UserAccount.html(ThisApp.ModelAccountView.render().$el)
       #Load danh sách Khách Hàng
       if !ThisApp.ModelCustomerView
         ThisApp.ModelCustomerView = new ThisApp.ShowCustomerView
           model: @model.get 'merchant_customer'
       @ui.CustomerAccount.html(ThisApp.ModelCustomerView.render().$el)
-
+#---------------------------------------------------------------------------------------------------------------------->
       #Bắt Event add product vào grid view
       ThisApp.addProductView.on 'create:product:model', (model, SaleQuality, Discount, DiscountCash, PriceAll, PriceAllFinal)->
         product_model = new Backbone.Model
+          ids: model.get 'id'
+          skull_id: model.get 'skull_id'
           product_code: model.get 'product_code'
           name: model.get 'name'
           quality: SaleQuality
@@ -89,6 +91,19 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
         product_collection.add(product_model)
         ThisApp.Model.set(product_summary:product_collection)
         ThisApp.ProductsSaleView.collection.add(product_model)
+        Zeprj.log ThisApp.Model.get 'product_summary'
+        Zeprj.log ThisApp.ProductsSaleView.collection
+#---------------------------------------------------------------------------------------------------------------------->
+      #Bắt Edit Single Item
+      ThisApp.rowDetailView.on 'edit:model:property', (model, attribute)->
+        ThisApp.productsummaryEditOptions.startEdit $('#sky-editor'), model, attribute
+
+
+
+
+
+
+
 
 
 

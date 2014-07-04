@@ -38,7 +38,8 @@ class OrdersController < MerchantApplicationController
     else
       bill_code=''
     end
-    bill_code = '{'+'"bill_code":'+'"'+bill_code+'"'+'}'
+     bill_code = '{'+'"bill_code":'+'"'+bill_code+'"'+'}'
+    # bill_code = '"'+bill_code+'"'
     render json: bill_code
   end
 
@@ -49,9 +50,12 @@ class OrdersController < MerchantApplicationController
   # POST /orders
   # POST /orders.json
   def create
-
+      bill_code = params[:bill_code]
+      delivery_code = params[:delivery]
+      selling_stocks = params[:product_summary]
+      product_summary_detail= params[:product_summary_detail]
     #TODO: Giả lập dữ liệu nhận. Xóa mấy cái này khi viết xong
-    @selling_stocks = ProductSummary.find(1,2,3,4) #id, soluong, giam gia % , tien mat
+    @selling_stocks = ProductSummary.find(1,2,3) #id, soluong, giam gia % , tien mat
 
 
     dump_quality = 10
@@ -167,7 +171,7 @@ class OrdersController < MerchantApplicationController
     #Kiểm tra số lượng tồn kho so vớ số lượng bán, trên bảng ProductSummary
     def selling_check_quality_before_sale(product_array, dump_quality)
       product_array.each do |item|
-        if ProductSummary.find_by_id(item.id).quality < dump_quality #item.buying_quality
+        if ProductSummary.find_by_id(item.ids).quality < dump_quality #item.buying_quality
           #TODO: gửi về lỗi chi tiết trên từng sản phẩm, cái nào thiếu bao nhiêu!
           flash.now.alert = 'So luong ton kho hien tai khong du!'
           render 'new'

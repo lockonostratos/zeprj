@@ -16,22 +16,15 @@ Zeprj.module "SaleApp.Home", (ThisApp, Zeprj, Backbone, Marionette, $, _) ->
       Imported:"#Imported"
       Discount:"#Discount"
     onshow: ->
+
     events:
-      'click #checkbox1': 'showVoucher'
+      'click input[type=button]': ->
+        model = new Zeprj.Entities.showSale
+        model = @model
+        model.save()
 
-    showVoucher:->
 
-      if $('#checkbox1').attr('checked') == 'checked'
-        Zeprj.log $('#checkbox1').attr('checked')
-        $('#id_voucher').style.display = ''
-      else
-        $('#id_voucher').display
 
-    sumaryOrderDetail:  ->
-
-#      @ui.TotalAllPrice.val(parseFloat(@ui.TotalAllPrice.val())+parseFloat(PriceAll))
-#      @ui.Discount.val(parseFloat(@ui.Discount.val())+parseFloat(Discount))
-#      @ui.TotalAllPriceFinal.val(parseFloat(@ui.TotalAllPriceFinal.val())+parseFloat(PriceAllFinal))
     sumarryOrderDetail: (SaleQuality, Discount, DiscountCash, PriceAll, PriceAllFinal) ->
       @model.add {
         product_code: model.get 'product_code'

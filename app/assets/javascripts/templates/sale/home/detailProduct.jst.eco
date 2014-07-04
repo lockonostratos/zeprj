@@ -1,9 +1,30 @@
-<td><%= @product_code%></td>
-<td><%= @product_name%></td>
-<td><%= @price%> VND</td>
-<td><%= @quality%> SP</td>
-<td><%= @discount_cash%> %</td>
-<td><%= @discount_percent%> VND</td>
-<td><%= @total_amount%> VND</td>
-<td><%= @total_amount_disount%> VND</td>
-<td> <input type='button' class='inline metro' value='Xóa'/></td>
+<div class='item-body'>
+    <div class='avatar-picture' data-tooltip title='NGƯỜI BÁN SẢN PHẨM NÀY NHIỀU NHẤT' style="width: 300px; margin-top: 5px; margin-left: 5px;">
+        <input id="sky-editor" class="inline metro right" type="text">
+        <img width="120" height="120" src="assets/defaults/dicaprio.jpg">
+        <div class='right'>
+            <p style="margin-bottom: 0px;">
+               Mã: <span><%= @product_code%></span>
+            </p>
+            <p style="margin-bottom: 0px;">
+                Tên SP: <span><%= @name %></span>
+            </p>
+            <p  id="quality" style="margin-bottom: 0px;">
+                Số Lượng: <span editor='quality'><%= @quality %></span>
+            </p>
+            <p style="margin-bottom: 0px;">
+                Giá Bán: <span ><%= accounting.formatNumber @price %></span> VND
+            </p>
+            <p style="margin-bottom: 0px;">
+                Giảm Giá: <span id="discount_percent" editor='discount_percent'><%= @discount_percent %></span> %
+            </p>
+            <p style="margin-bottom: 0px;">
+                Giảm Giá TM: <span id="discount_cash" editor='discount_cash'><%= accounting.formatNumber @discount_cash %></span> VND
+            </p>
+            <p style="margin-bottom: 0px;">
+                Tổng Tiền: <span><%= accounting.formatNumber @total_amount_disount %></span> VND
+            </p>
+        </div>
+    </div>
+    <div></div>
+</div>
