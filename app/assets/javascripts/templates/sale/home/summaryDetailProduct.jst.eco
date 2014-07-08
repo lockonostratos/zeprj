@@ -28,7 +28,7 @@
                     <input type="text" class="inline metro" id="Voucher" placeholder="Voucher"/>
                 </div>
             </div>
-            <input id='sky-new' type='button' class='inline metro' value='Hoàn Tất' />
+            <input id='summit' type='button' class='inline metro' value='Hoàn Tất' />
         </div>
     </div>
 </div>

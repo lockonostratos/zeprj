@@ -148,9 +148,13 @@ class InitializeDatabase < ActiveRecord::Migration
       t.belongs_to :merchant_account, :null => false
       t.belongs_to :merchant_area
 
-      t.string :account_name
-      t.string :password
+      t.string :name, :null => false
+      t.string :company_name
+      t.string :phone, :null => false
+      t.string :address
       t.string :email
+      t.boolean :sex
+
 
       t.timestamps
     end

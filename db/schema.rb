@@ -457,6 +457,7 @@ ActiveRecord::Schema.define(version: 20140411100003) do
     t.decimal  "final_price",         precision: 10, scale: 0, default: 0,     null: false
     t.integer  "payment_method",                                               null: false
     t.integer  "status",                                       default: 0,     null: false
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

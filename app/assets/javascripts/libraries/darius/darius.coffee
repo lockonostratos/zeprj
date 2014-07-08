@@ -70,3 +70,12 @@ class Darius.Grid extends Marionette.CompositeView
   add: (model) ->
     @collection.add model
     @onRowClick(model)
+
+
+class Darius.Model
+  @SingleFetch: (url, option = null)->
+    result = new Backbone.Model()
+    result.url = url
+
+    if option then result.fetch(option) else result.fetch()
+    result
