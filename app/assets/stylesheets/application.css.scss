@@ -454,7 +454,8 @@ body {
   .import-product-summary-wrapper {
     #sky-editor {width: 250px;}
     #import-quality { width: 100px; }
-    #import-price { width: 180px}
+    #import-price { width: 180px; }
+    #suggestion { width: 250px; }
     .tile-container {
       @include scroll-bar-style;
       white-space: nowrap;

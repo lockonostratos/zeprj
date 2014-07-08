@@ -6,6 +6,7 @@
 #= require libraries/knockout
 #= require libraries/knockback
 #= require_directory ../libraries/jquery.inputmask
+#= require libraries/typeahead
 #= require libraries/accounting
 #= require libraries/sky
 #= require libraries/jquery.splitter

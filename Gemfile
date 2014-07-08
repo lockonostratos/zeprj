@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
+gem 'tire'
 
 gem 'whenever', :require => false
 # Use mysql as the database for Active Record
@@ -38,6 +37,7 @@ group :doc do
 end
 
 # Custom gems
+gem 'rack-mini-profiler'
 gem 'haml'
 gem 'haml-rails'
 gem 'eco'

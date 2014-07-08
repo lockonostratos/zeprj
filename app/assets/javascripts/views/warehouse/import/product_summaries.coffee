@@ -24,6 +24,7 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       importQuality: '#import-quality'
       importPrice: '#import-price'
       itemContainer: '.title-container'
+      suggestion: '#suggestion'
     events:
       'click #sky-new': 'createAction'
 
@@ -37,6 +38,19 @@ Zeprj.module "WarehouseApp.Import", (ThisApp, Zeprj, Backbone, Marionette, $, _)
       $(@ui.itemContainer).mousewheel (event, delta) ->
         @scrollleft -= delta * 30
         event.preventDefault()
+
+      Zeprj.log $(@ui.suggestion)
+      products = new Bloodhound
+        datumTokenizer: (datum) -> Bloodhound.tokenizers.obj.whitespace datum.value
+        queryTokenizer: Bloodhound.tokenizers.whitespace
+        limit: 4
+        remote: 'product_summaries/search?query=%QUERY'
+      products.initialize()
+
+      $(@ui.suggestion).typeahead null,
+        name: 'suggestion'
+        displayKey: 'name'
+        source: products.ttAdapter()
 
     createAction: ->
       @collection.add(new Zeprj.Entities.ProductSummary)

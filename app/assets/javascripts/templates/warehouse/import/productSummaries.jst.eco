@@ -2,7 +2,7 @@
   <input type="text" id="import-quality" class='inline metro' inputmask-alias='quality' placeholder='SỐ LƯỢNG' />
   <input type="text" id="import-price" class='inline metro' inputmask-alias='vnd' placeholder='GIÁ NHẬP' />
   <input id='sky-new' type='button' class='inline metro' value='THÊM MỚI' />
-
+  <input id='suggestion' type="text" placeholder="tìm sản phẩm" class='inline metro right' />
   <input type="text" id="sky-editor" class='inline metro right' />
 </div>
 

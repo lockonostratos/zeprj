@@ -6,8 +6,8 @@ class ProductSummary < ActiveRecord::Base
 
 
   #Search-------------------------------->
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
 
   private
   # def self.search(search)

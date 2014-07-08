@@ -4,12 +4,7 @@ class ProductSummariesController < MerchantApplicationController
   # GET /product_summaries
   # GET /product_summaries.json
   def index
-    if params[:query].present?
-      @product_summaries = ProductSummary.search(params[:query]).records
-    else
-      @product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
-    end
-
+    @product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
     respond_to do |format|
       format.html
       format.json {render json: @product_summaries}
@@ -44,16 +39,17 @@ class ProductSummariesController < MerchantApplicationController
   end
 
   def search
-    @product_summaries = ProductSummary.search { fulltext 'Ao' }
+    if params[:query].present?
+      @product_summaries = ProductSummary.search(params[:query])
+    else
+      @product_summaries = ProductSummary.where(warehouse_id:current_merchant_account.current_warehouse_id)
+    end
+
     respond_to do |format|
       format.html
       format.json {render json: @product_summaries}
     end
-
   end
-
-
-
 
   # GET /product_summaries/new
   def new
