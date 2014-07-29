@@ -31,7 +31,6 @@ Zeprj.module "Entities", (Entities, ContactManager, Backbone, Marionette, $, _) 
       product_summary: new Backbone.Collection
       product_summary_detail:{
         payment_methods: ''
-        merchant_account
       }
 
     }

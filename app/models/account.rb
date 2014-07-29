@@ -59,20 +59,26 @@ class Account < ActiveRecord::Base
     role_admin = Role.create(:headquater_id=> self.id, :role_name =>'Admin')
     role_user = Role.create(:headquater_id => self.id, :role_name =>'User')
     role_member = Role.create(:headquater_id => self.id, :role_name =>'Member')
+
     per1 = Permission.create(:headquater_id => self.id, :permission_key =>'BanHang' , :permission_name=>'Ban Hang')
     per2 = Permission.create(:headquater_id => self.id, :permission_key =>'XemBaoCao' , :permission_name=>'Xem Bao Cao')
     per3 = Permission.create(:headquater_id => self.id, :permission_key =>'PhanQuyen' , :permission_name=>'Phan Quyen')
+
     RolePermission.create(:role_id =>role_admin.id, :permission_id=>per1.id)
     RolePermission.create(:role_id =>role_admin.id, :permission_id=>per2.id)
     RolePermission.create(:role_id =>role_admin.id, :permission_id=>per3.id)
+
     RolePermission.create(:role_id =>role_user.id, :permission_id=>per1.id)
     RolePermission.create(:role_id =>role_user.id, :permission_id=>per2.id)
     RolePermission.create(:role_id =>role_user.id, :permission_id=>per3.id)
+
     RolePermission.create(:role_id =>role_member.id, :permission_id=>per1.id)
     RolePermission.create(:role_id =>role_member.id, :permission_id=>per2.id)
     RolePermission.create(:role_id =>role_member.id, :permission_id=>per3.id)
+
     MerchantAccountRole.create(:merchant_account_id =>self.id, :role_id=>role_admin.id,
                               :permission_text=>'BanHang,XemBaoCao,PhanQuyen')
+
     if self.account_type == 2 || self.account_type == 4 || self.account_type == 6
       MerchantAccountRole.where()
       MerchantAccountRole.create(:merchant_account_id =>self.id, :role_id=>role_admin.id,

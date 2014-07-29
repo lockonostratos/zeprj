@@ -337,6 +337,7 @@ class InitializeDatabase < ActiveRecord::Migration
       t.decimal :discount_cash, :null => false, :default => 0
       t.decimal :discount_percent, :null => false, :default => 0
       t.decimal :total_amount, :null => false, :default => 0
+      t.integer :status, :null => false, :default => 0 #tinh trang don hang
 
       t.timestamps
     end
